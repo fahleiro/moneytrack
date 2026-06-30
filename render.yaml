@@ -1,0 +1,21 @@
+# Blueprint do Render: 1 banco PostgreSQL gerenciado + 1 web service (Docker).
+# No painel do Render: New > Blueprint > aponte para este repositório.
+# O seed é carregado automaticamente na primeira subida (server.js, se a base estiver vazia).
+databases:
+  - name: moneytrack-db
+    plan: free
+    databaseName: moneytrack
+    user: moneytrack
+
+services:
+  - type: web
+    name: moneytrack-web
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: moneytrack-db
+          property: connectionString

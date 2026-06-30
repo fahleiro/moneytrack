@@ -1,0 +1,47 @@
+# Sobe a base (imagem pública postgres) + o painel web juntos.
+# Uso local:  docker compose up --build   ->  http://localhost:3000
+services:
+  db:
+    image: postgres:16-alpine            # imagem pública oficial
+    container_name: moneytrack-db
+    environment:
+      POSTGRES_USER: moneytrack
+      POSTGRES_PASSWORD: moneytrack
+      POSTGRES_DB: moneytrack
+    # Sem `ports`: o banco fica acessível APENAS na rede interna do compose
+    # (o serviço `web` o alcança pelo hostname `db`). Nada exposto no host.
+    expose:
+      - "5432"
+    volumes:
+      - moneytrack-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U moneytrack -d moneytrack"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  web:
+    # Local: roda direto da imagem pública node (sem build), com o projeto montado.
+    # Rode `npm install` no host uma vez para popular node_modules.
+    # No Render o web é construído pelo Dockerfile (ver render.yaml).
+    image: node:20-alpine
+    container_name: moneytrack-web
+    working_dir: /app
+    command: node web/server.js
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGHOST: db
+      PGPORT: "5432"
+      PGUSER: moneytrack
+      PGPASSWORD: moneytrack
+      PGDATABASE: moneytrack
+      PORT: "3000"
+    volumes:
+      - ./:/app
+    ports:
+      - "3010:3000"   # host 3010 (3000 já em uso na máquina) -> container 3000
+
+volumes:
+  moneytrack-pgdata:

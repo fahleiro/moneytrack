@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>moneytrack — Ibovespa</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #0d1117; color: #e6edf3; padding: 24px;
+    }
+    h1 { font-size: 20px; margin: 0 0 4px; }
+    .sub { color: #8b949e; font-size: 13px; margin-bottom: 20px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .card {
+      background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+      padding: 14px 18px; min-width: 150px;
+    }
+    .card .label { color: #8b949e; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    .card .value { font-size: 22px; font-weight: 600; margin-top: 4px; }
+    .up { color: #3fb950; } .down { color: #f85149; }
+    .toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .toolbar button {
+      background: #21262d; color: #e6edf3; border: 1px solid #30363d;
+      border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 13px;
+    }
+    .toolbar button.active { background: #1f6feb; border-color: #1f6feb; }
+    .chart-wrap { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; }
+    canvas { max-height: 420px; }
+  </style>
+</head>
+<body>
+  <h1>Ibovespa <span style="color:#8b949e;font-weight:400;">· INDEXBVMF: IBOV</span></h1>
+  <div class="sub">Histórico diário · fonte migrada de my-finance · base PostgreSQL</div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="toolbar" id="ranges">
+    <button data-range="365">1A</button>
+    <button data-range="1825">5A</button>
+    <button data-range="3650">10A</button>
+    <button data-range="0" class="active">Tudo</button>
+  </div>
+
+  <div class="chart-wrap"><canvas id="chart"></canvas></div>
+
+  <script>
+    let full = [];
+    let chart;
+
+    const fmt = (n) => n.toLocaleString("pt-BR", { maximumFractionDigits: 0 });
+
+    function renderCards(series) {
+      if (!series.length) return;
+      const first = series[0], last = series[series.length - 1];
+      const change = ((last.value - first.value) / first.value) * 100;
+      let max = series[0], min = series[0];
+      for (const p of series) {
+        if (p.value > max.value) max = p;
+        if (p.value < min.value) min = p;
+      }
+      const cls = change >= 0 ? "up" : "down";
+      const sign = change >= 0 ? "+" : "";
+      document.getElementById("cards").innerHTML = `
+        <div class="card"><div class="label">Último (${last.d})</div><div class="value">${fmt(last.value)}</div></div>
+        <div class="card"><div class="label">Variação no período</div><div class="value ${cls}">${sign}${change.toFixed(1)}%</div></div>
+        <div class="card"><div class="label">Máxima</div><div class="value">${fmt(max.value)} <span style="font-size:12px;color:#8b949e">${max.d}</span></div></div>
+        <div class="card"><div class="label">Mínima</div><div class="value">${fmt(min.value)} <span style="font-size:12px;color:#8b949e">${min.d}</span></div></div>
+        <div class="card"><div class="label">Pregões</div><div class="value">${fmt(series.length)}</div></div>`;
+    }
+
+    function draw(series) {
+      renderCards(series);
+      const data = {
+        labels: series.map((p) => p.d),
+        datasets: [{
+          label: "IBOV", data: series.map((p) => p.value),
+          borderColor: "#1f6feb", backgroundColor: "rgba(31,111,235,.12)",
+          borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.05,
+        }],
+      };
+      const opts = {
+        responsive: true, animation: false,
+        interaction: { mode: "index", intersect: false },
+        scales: {
+          x: { ticks: { maxTicksLimit: 12, color: "#8b949e" }, grid: { color: "#21262d" } },
+          y: { ticks: { color: "#8b949e", callback: (v) => fmt(v) }, grid: { color: "#21262d" } },
+        },
+        plugins: { legend: { display: false } },
+      };
+      if (chart) { chart.data = data; chart.options = opts; chart.update(); }
+      else chart = new Chart(document.getElementById("chart"), { type: "line", data, options: opts });
+    }
+
+    function applyRange(days) {
+      if (!days) return draw(full);
+      const cutoff = new Date(full[full.length - 1].d);
+      cutoff.setDate(cutoff.getDate() - days);
+      const iso = cutoff.toISOString().slice(0, 10);
+      draw(full.filter((p) => p.d >= iso));
+    }
+
+    document.getElementById("ranges").addEventListener("click", (e) => {
+      if (e.target.tagName !== "BUTTON") return;
+      document.querySelectorAll("#ranges button").forEach((b) => b.classList.remove("active"));
+      e.target.classList.add("active");
+      applyRange(Number(e.target.dataset.range));
+    });
+
+    fetch("/api/ibovespa")
+      .then((r) => r.json())
+      .then((d) => { full = d.series; draw(full); })
+      .catch(() => { document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar a base.</div>"; });
+  </script>
+</body>
+</html>
