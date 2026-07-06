@@ -1,84 +1,48 @@
 # moneytrack
 
-Painel web simples do **histórico do Ibovespa** (INDEXBVMF: IBOV), com base **PostgreSQL**.
-Migrado de `my-finance` — por enquanto apenas o índice Ibovespa.
+Painel **estático** do histórico do **Ibovespa** (INDEXBVMF: IBOV) — dados versionados em **JSON**, sem backend.
+Pensado para rodar no **GitHub Pages**: aqui se orquestram os **dados**; a carteira vive no `my-finance`.
 
 ```
 moneytrack/
-├── db/
-│   ├── 01_schema.sql          # tabelas (idx_index, index_hist)
-│   └── 02_seed_ibovespa.sql   # 8.214 pregões (1993 → 2026), gerado do my-finance
-├── web/
-│   ├── server.js              # Express + pg: API + serve o painel; carrega o seed na subida
-│   └── public/index.html      # painel (Chart.js): série, variação, máx/mín
-├── scripts/convert_ibovespa.py # converte o .sql T-SQL (SQL Server) -> Postgres
-├── Dockerfile                 # imagem do web (node:20-alpine)
-├── docker-compose.yml         # postgres (imagem pública) + web
-└── render.yaml                # blueprint do Render (DB gerenciado + web Docker)
+├── index.html                        # painel (HTML + CSS + JS puros; Chart.js via CDN)
+└── data/
+    └── market_history/
+        └── IBOV.json                 # 8.214 pregões (1993 → 2026), 1 registro por linha
 ```
 
-## Rodar local (Docker)
+## Formato dos dados
 
-O compose sobe **duas imagens públicas**: `postgres:16-alpine` (banco) e
-`node:20-alpine` (painel, com o projeto montado via volume). Não há build local —
-o `Dockerfile` é usado só no Render.
+`data/market_history/<CODIGO>.json` — array de objetos, espelhando o formato do `my-finance`:
+
+```json
+[
+  {"tradingDay":"1993-04-27","value":24.5},
+  {"tradingDay":"2026-06-26","value":173295}
+]
+```
+
+- `tradingDay` — data do pregão (`YYYY-MM-DD`)
+- `value` — fechamento do índice
+
+Origem: `my-finance` (branch `finance-db`, `db/data/insert_ibovespa_index_hist.sql`), convertido de T-SQL para JSON.
+Por enquanto apenas o Ibovespa; demais índices/ativos entram como novos arquivos em `data/market_history/`.
+
+## Rodar local
+
+Qualquer servidor estático serve (o `fetch` do JSON exige http):
 
 ```bash
-npm install            # popula node_modules no host (uma vez)
-docker compose up -d
+npx http-server -p 3010
+# ou: python -m http.server 3010
 ```
 
-Acesse **http://localhost:3010** (host 3010 → container 3000; a 3000 estava em uso
-nesta máquina — ajuste em `docker-compose.yml` se quiser). Na primeira subida o
-`server.js` cria o schema e carrega o seed automaticamente (só se a tabela estiver
-vazia). Os dados ficam no volume `moneytrack-pgdata`.
+Acesse **http://localhost:3010**.
 
-Para zerar a base: `docker compose down -v`.
+## GitHub Pages
 
-## Rodar sem Docker
+Settings → Pages → Deploy from branch → `main` / root. Nada para buildar.
 
-```bash
-# 1. suba um Postgres e exporte a conexão
-export DATABASE_URL="postgres://moneytrack:moneytrack@localhost:5432/moneytrack"
-export PGSSL=false
-# 2. instale e rode
-npm install
-npm start            # http://localhost:3000
-```
+## Histórico
 
-## Deploy no Render
-
-O `render.yaml` é um **Blueprint**: cria um PostgreSQL gerenciado (free) e um web
-service Docker, já ligando a `DATABASE_URL` do banco no app.
-
-1. Suba este repositório no GitHub.
-2. No Render: **New → Blueprint** e aponte para o repo.
-3. O Render constrói a imagem pelo `Dockerfile` e sobe o web. Na primeira subida o
-   app cria o schema e carrega o seed na base gerenciada.
-
-> Observação: no plano free do Render o web "dorme" após inatividade e o banco tem
-> limite de retenção — adequado para painel de demonstração.
-
-## API
-
-| Rota | Descrição |
-|------|-----------|
-| `GET /api/ibovespa` | série completa `{ d, value }` (filtro opcional `?from=YYYY-MM-DD`) |
-| `GET /api/health`   | healthcheck (usado pelo Render) |
-
-## Por que PostgreSQL (e não SQL Server)?
-
-A origem (`my-finance`) usa SQL Server. Para um painel simples que sobe no Render a
-partir de **imagem pública**, o Postgres é mais leve (`postgres:16-alpine`), é o banco
-**nativo gerenciado do Render** e dispensa licença/EULA e os ~2 GB de RAM do SQL Server.
-O `scripts/convert_ibovespa.py` faz a conversão do dump T-SQL para o seed Postgres.
-
-## Migrar outros índices/ativos depois
-
-```bash
-python scripts/convert_ibovespa.py \
-  /caminho/my-finance/db/data/insert_<algo>_index_hist.sql \
-  db/03_seed_<algo>.sql
-```
-
-Ajuste o `code`/insert no script conforme o índice e some o arquivo ao load do `server.js`.
+A versão anterior (PostgreSQL + Express + Docker/Render) está preservada na branch **`postgres-legacy`**.

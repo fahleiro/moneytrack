@@ -34,7 +34,7 @@
 </head>
 <body>
   <h1>Ibovespa <span style="color:#8b949e;font-weight:400;">· INDEXBVMF: IBOV</span></h1>
-  <div class="sub">Histórico diário · fonte migrada de my-finance · base PostgreSQL</div>
+  <div class="sub">Histórico diário · dados em JSON versionado (data/market_history) · estático, sem backend</div>
 
   <div class="cards" id="cards"></div>
 
@@ -65,17 +65,17 @@
       const cls = change >= 0 ? "up" : "down";
       const sign = change >= 0 ? "+" : "";
       document.getElementById("cards").innerHTML = `
-        <div class="card"><div class="label">Último (${last.d})</div><div class="value">${fmt(last.value)}</div></div>
+        <div class="card"><div class="label">Último (${last.tradingDay})</div><div class="value">${fmt(last.value)}</div></div>
         <div class="card"><div class="label">Variação no período</div><div class="value ${cls}">${sign}${change.toFixed(1)}%</div></div>
-        <div class="card"><div class="label">Máxima</div><div class="value">${fmt(max.value)} <span style="font-size:12px;color:#8b949e">${max.d}</span></div></div>
-        <div class="card"><div class="label">Mínima</div><div class="value">${fmt(min.value)} <span style="font-size:12px;color:#8b949e">${min.d}</span></div></div>
+        <div class="card"><div class="label">Máxima</div><div class="value">${fmt(max.value)} <span style="font-size:12px;color:#8b949e">${max.tradingDay}</span></div></div>
+        <div class="card"><div class="label">Mínima</div><div class="value">${fmt(min.value)} <span style="font-size:12px;color:#8b949e">${min.tradingDay}</span></div></div>
         <div class="card"><div class="label">Pregões</div><div class="value">${fmt(series.length)}</div></div>`;
     }
 
     function draw(series) {
       renderCards(series);
       const data = {
-        labels: series.map((p) => p.d),
+        labels: series.map((p) => p.tradingDay),
         datasets: [{
           label: "IBOV", data: series.map((p) => p.value),
           borderColor: "#1f6feb", backgroundColor: "rgba(31,111,235,.12)",
@@ -97,10 +97,10 @@
 
     function applyRange(days) {
       if (!days) return draw(full);
-      const cutoff = new Date(full[full.length - 1].d);
+      const cutoff = new Date(full[full.length - 1].tradingDay);
       cutoff.setDate(cutoff.getDate() - days);
       const iso = cutoff.toISOString().slice(0, 10);
-      draw(full.filter((p) => p.d >= iso));
+      draw(full.filter((p) => p.tradingDay >= iso));
     }
 
     document.getElementById("ranges").addEventListener("click", (e) => {
@@ -110,10 +110,10 @@
       applyRange(Number(e.target.dataset.range));
     });
 
-    fetch("/api/ibovespa")
+    fetch("data/market_history/IBOV.json")
       .then((r) => r.json())
-      .then((d) => { full = d.series; draw(full); })
-      .catch(() => { document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar a base.</div>"; });
+      .then((d) => { full = d; draw(full); })
+      .catch(() => { document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar data/market_history/IBOV.json.</div>"; });
   </script>
 </body>
 </html>
