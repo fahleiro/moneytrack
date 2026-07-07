@@ -1,98 +1,98 @@
 [
-  {
-    "code": "BR_IPCA",
-    "name": "IPCA — variação mensal (IBGE/BCB SGS 433)",
-    "country": "BR",
-    "unit": "pct_mom",
-    "description": "Inflação oficial do Brasil (IBGE): variação mensal dos preços ao consumidor. Base para a meta de inflação do país.",
-    "file": "market_history/IPCA.json"
-  },
-  {
-    "code": "US_CPI",
-    "name": "US CPI — inflação ao consumidor (YoY)",
-    "country": "US",
-    "unit": "pct_yoy",
-    "description": "Inflação ao consumidor dos EUA (CPI), em variação anual (YoY). Principal medida de inflação americana (fonte FRED).",
-    "file": "market_history/CPI.json"
-  },
-  {
-    "code": "BR_CONS",
-    "name": "Índice de Confiança do Consumidor (FGV)",
-    "country": "BR",
-    "unit": "index",
-    "description": "Índice de Confiança do Consumidor (FGV): mede o otimismo dos consumidores brasileiros.",
-    "file": null
-  },
-  {
-    "code": "US_CONS",
-    "name": "US Consumer Confidence (Conference Board)",
-    "country": "US",
-    "unit": "index",
-    "description": "US Consumer Confidence (Conference Board): mede o otimismo dos consumidores americanos.",
-    "file": null
-  },
-  {
-    "code": "BR_IBOV",
-    "name": "Ibovespa (INDEXBVMF: IBOV)",
-    "country": "BR",
-    "unit": "index",
-    "description": "Principal índice da bolsa brasileira (B3), com as ações mais negociadas. É o termômetro médio do mercado acionário do Brasil.",
-    "file": "market_history/IBOV.json"
-  },
-  {
-    "code": "BTC",
-    "name": "Bitcoin (BTC-USD)",
-    "country": "US",
-    "unit": "usd",
-    "description": "Preço do Bitcoin em dólar (BTC-USD), a maior criptomoeda por capitalização de mercado.",
-    "file": "market_history/BTC.json"
-  },
-  {
-    "code": "NASDAQ",
-    "name": "Nasdaq Composite (^IXIC)",
-    "country": "US",
-    "unit": "index",
-    "description": "Nasdaq Composite: reúne praticamente todas as empresas listadas na Nasdaq, com forte peso de tecnologia.",
-    "file": "market_history/NASDAQ.json"
-  },
-  {
-    "code": "US_SP500",
-    "name": "S&P 500 (^GSPC)",
-    "country": "US",
-    "unit": "index",
-    "description": "S&P 500: índice das 500 maiores empresas dos EUA por valor de mercado. Principal termômetro do mercado acionário americano.",
-    "file": "market_history/SP500.json"
-  },
-  {
-    "code": "WTI",
-    "name": "Petróleo WTI (CL=F)",
-    "country": "US",
-    "unit": "usd",
-    "description": "Petróleo WTI (West Texas Intermediate) em dólar por barril; referência de preço do petróleo nos EUA.",
-    "file": "market_history/WTI.json"
-  },
-  {
-    "code": "GOLD",
-    "name": "Ouro (GC=F)",
-    "country": "US",
-    "unit": "usd",
-    "description": "Preço do ouro em dólar por onça-troy; reserva de valor e proteção clássica contra inflação.",
-    "file": "market_history/GOLD.json"
-  },
-  {
-    "code": "SILVER",
-    "name": "Prata (SI=F)",
-    "country": "US",
-    "unit": "usd",
-    "description": "Preço da prata em dólar por onça-troy; metal precioso com uso industrial e de investimento.",
-    "file": "market_history/SILVER.json"
-  },
-  {
-    "code": "BR_SELIC",
-    "name": "Selic anualizada (% a.a.) - BCB SGS 4189",
-    "country": "BR",
-    "unit": "pct_year",
-    "description": "Taxa básica de juros do Brasil (% ao ano), definida pelo Copom/BCB. Referência para o custo do dinheiro na economia.",
-    "file": "market_history/SELIC.json"
-  }
+ {
+  "code": "BR_IPCA",
+  "name": "IPCA — variação mensal (IBGE/BCB SGS 433)",
+  "country": "BR",
+  "unit": "pct_mom",
+  "description": "Inflação oficial do Brasil (IBGE): variação mensal dos preços ao consumidor. Base para a meta de inflação do país.",
+  "file": "market_history/IPCA.json"
+ },
+ {
+  "code": "US_CPI",
+  "name": "US CPI — inflação ao consumidor (YoY)",
+  "country": "US",
+  "unit": "pct_yoy",
+  "description": "Inflação ao consumidor dos EUA (CPI), em variação anual (YoY). Principal medida de inflação americana (fonte FRED).",
+  "file": "market_history/CPI.json"
+ },
+ {
+  "code": "BR_CONS",
+  "name": "Índice de Confiança do Consumidor (FGV)",
+  "country": "BR",
+  "unit": "index",
+  "description": "Índice de Confiança do Consumidor (FGV): mede o otimismo dos consumidores brasileiros.",
+  "file": "market_history/BR_CONS.json"
+ },
+ {
+  "code": "US_CONS",
+  "name": "US Consumer Confidence (Conference Board)",
+  "country": "US",
+  "unit": "index",
+  "description": "US Consumer Confidence (Conference Board): mede o otimismo dos consumidores americanos.",
+  "file": "market_history/US_CONS.json"
+ },
+ {
+  "code": "BR_IBOV",
+  "name": "Ibovespa (INDEXBVMF: IBOV)",
+  "country": "BR",
+  "unit": "index",
+  "description": "Principal índice da bolsa brasileira (B3), com as ações mais negociadas. É o termômetro médio do mercado acionário do Brasil.",
+  "file": "market_history/IBOV.json"
+ },
+ {
+  "code": "BTC",
+  "name": "Bitcoin (BTC-USD)",
+  "country": "US",
+  "unit": "usd",
+  "description": "Preço do Bitcoin em dólar (BTC-USD), a maior criptomoeda por capitalização de mercado.",
+  "file": "market_history/BTC.json"
+ },
+ {
+  "code": "NASDAQ",
+  "name": "Nasdaq Composite (^IXIC)",
+  "country": "US",
+  "unit": "index",
+  "description": "Nasdaq Composite: reúne praticamente todas as empresas listadas na Nasdaq, com forte peso de tecnologia.",
+  "file": "market_history/NASDAQ.json"
+ },
+ {
+  "code": "US_SP500",
+  "name": "S&P 500 (^GSPC)",
+  "country": "US",
+  "unit": "index",
+  "description": "S&P 500: índice das 500 maiores empresas dos EUA por valor de mercado. Principal termômetro do mercado acionário americano.",
+  "file": "market_history/SP500.json"
+ },
+ {
+  "code": "WTI",
+  "name": "Petróleo WTI (CL=F)",
+  "country": "US",
+  "unit": "usd",
+  "description": "Petróleo WTI (West Texas Intermediate) em dólar por barril; referência de preço do petróleo nos EUA.",
+  "file": "market_history/WTI.json"
+ },
+ {
+  "code": "GOLD",
+  "name": "Ouro (GC=F)",
+  "country": "US",
+  "unit": "usd",
+  "description": "Preço do ouro em dólar por onça-troy; reserva de valor e proteção clássica contra inflação.",
+  "file": "market_history/GOLD.json"
+ },
+ {
+  "code": "SILVER",
+  "name": "Prata (SI=F)",
+  "country": "US",
+  "unit": "usd",
+  "description": "Preço da prata em dólar por onça-troy; metal precioso com uso industrial e de investimento.",
+  "file": "market_history/SILVER.json"
+ },
+ {
+  "code": "BR_SELIC",
+  "name": "Selic anualizada (% a.a.) - BCB SGS 4189",
+  "country": "BR",
+  "unit": "pct_year",
+  "description": "Taxa básica de juros do Brasil (% ao ano), definida pelo Copom/BCB. Referência para o custo do dinheiro na economia.",
+  "file": "market_history/SELIC.json"
+ }
 ]
