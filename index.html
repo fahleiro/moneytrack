@@ -239,12 +239,15 @@
     <div class="cards" id="cards"></div>
     <div class="toolbar" id="ranges">
       <select id="serie"></select>
-      <button data-months="3">3M</button>
-      <button data-months="6">6M</button>
-      <button data-months="12">12M</button>
-      <button data-months="24">2A</button>
-      <button data-months="60">5A</button>
-      <button data-months="0" class="active">Tudo</button>
+      <button data-key="1w">1W</button>
+      <button data-key="2w">2W</button>
+      <button data-key="1m">1M</button>
+      <button data-key="3m">3M</button>
+      <button data-key="6m">6M</button>
+      <button data-key="12m">12M</button>
+      <button data-key="2y">2Y</button>
+      <button data-key="5y">5Y</button>
+      <button data-key="all" class="active">All</button>
     </div>
     <div class="chart-wrap"><canvas id="chart"></canvas></div>
   </div>
@@ -336,30 +339,36 @@
     /* ---- módulo de painel de série: usado por todo card que mostra histórico ----
        filtros de período: 3M / 6M / 12M / 2A / 5A / Tudo (meses; 0 = tudo) */
     const RANGES = [
-      { lbl: "3M", m: 3 }, { lbl: "6M", m: 6 }, { lbl: "12M", m: 12 },
-      { lbl: "2A", m: 24 }, { lbl: "5A", m: 60 }, { lbl: "Tudo", m: 0 },
+      { lbl: "1W", key: "1w" }, { lbl: "2W", key: "2w" }, { lbl: "1M", key: "1m" },
+      { lbl: "3M", key: "3m" }, { lbl: "6M", key: "6m" }, { lbl: "12M", key: "12m" },
+      { lbl: "2Y", key: "2y" }, { lbl: "5Y", key: "5y" }, { lbl: "All", key: "all" },
     ];
 
-    function sliceMonths(series, months) {
-      if (!months || !series.length) return series;
+    function sliceBy(series, key) {
+      if (!key || key === "all" || !series.length) return series;
+      const m = String(key).match(/^(\d+)([wmy])$/);
+      if (!m) return series;
+      const n = +m[1];
       const cutoff = new Date(series[series.length - 1].tradingDay);
-      cutoff.setMonth(cutoff.getMonth() - months);
+      if (m[2] === "w") cutoff.setDate(cutoff.getDate() - n * 7);
+      else if (m[2] === "m") cutoff.setMonth(cutoff.getMonth() - n);
+      else cutoff.setFullYear(cutoff.getFullYear() - n);
       const iso = cutoff.toISOString().slice(0, 10);
       return series.filter((p) => p.tradingDay >= iso);
     }
 
-    function mountSeriesPanel(el, series, unit, country, defaultMonths = 12) {
+    function mountSeriesPanel(el, series, unit, country, defaultKey = "12m") {
       el.className = "";
       el.innerHTML = `
         <div class="toolbar sm-ranges">${RANGES.map((r) =>
-          `<button data-m="${r.m}" class="${r.m === defaultMonths ? "active" : ""}">${r.lbl}</button>`).join("")}</div>
+          `<button data-k="${r.key}" class="${r.key === defaultKey ? "active" : ""}">${r.lbl}</button>`).join("")}</div>
         <div class="muted sm-stats" data-stats>—</div>
         <canvas height="220"></canvas>`;
       const stats = el.querySelector("[data-stats]");
       const canvas = el.querySelector("canvas");
       let ch;
-      const render = (months) => {
-        const s = sliceMonths(series, months);
+      const render = (key) => {
+        const s = sliceBy(series, key);
         if (!s.length) { stats.textContent = "sem dados no período."; return; }
         const first = s[0], last = s[s.length - 1];
         const chg = ((last.value - first.value) / first.value) * 100;
@@ -381,9 +390,9 @@
         if (e.target.tagName !== "BUTTON") return;
         el.querySelectorAll(".sm-ranges button").forEach((b) => b.classList.remove("active"));
         e.target.classList.add("active");
-        render(Number(e.target.dataset.m));
+        render(e.target.dataset.k);
       });
-      render(defaultMonths);
+      render(defaultKey);
     }
 
     /* modal com o painel de série (índice ou ativo) */
@@ -404,10 +413,10 @@
 
     /* mini-card com sparkline: recorte por período e cor direcional
        (verde subiu, vermelho caiu; unidades pct invertem — queda é verde) */
-    async function mountSparkCard(el, meta, months) {
+    async function mountSparkCard(el, meta, key) {
       try {
         const series = await loadJSON(meta.file);
-        const slice = sliceMonths(series, months);
+        const slice = sliceBy(series, key);
         if (!slice.length) { el.querySelector(".wval").textContent = "sem dados"; return; }
         const last = slice[slice.length - 1], first = slice[0];
         let up, deltaHtml;
@@ -451,10 +460,10 @@
 
     /* grid de spark-cards: mapa file->meta, render por período e clique -> modal */
     const metaMapByFile = (metas) => Object.fromEntries(metas.map((m) => [m.file, m]));
-    function renderSparks(root, map, months) {
+    function renderSparks(root, map, key) {
       for (const el of root.querySelectorAll(".wcard")) {
         const m = map[el.dataset.file];
-        if (m) mountSparkCard(el, m, months);
+        if (m) mountSparkCard(el, m, key);
       }
     }
     function bindSparkClicks(root, map) {
@@ -520,13 +529,13 @@
       else chart = new Chart(document.getElementById("chart"), { type: "line", data, options: opts });
     }
 
-    function applyRange(months) {
-      draw(sliceMonths(full, months));
+    function applyRange(key) {
+      draw(sliceBy(full, key));
     }
 
     function activeRange() {
       const b = document.querySelector("#ranges button.active");
-      return b ? Number(b.dataset.months) : 0;
+      return b ? b.dataset.key : "all";
     }
 
     async function loadSerie(key) {
@@ -547,7 +556,7 @@
       if (e.target.tagName !== "BUTTON") return;
       document.querySelectorAll("#ranges button").forEach((b) => b.classList.remove("active"));
       e.target.classList.add("active");
-      applyRange(Number(e.target.dataset.months));
+      applyRange(e.target.dataset.key);
     });
 
     document.getElementById("serie").addEventListener("change", (e) => loadSerie(e.target.value));
@@ -637,7 +646,7 @@
     }
 
     const rangesHTML = (active) => `<div class="toolbar sm-ranges country-ranges">${RANGES.map((r) =>
-      `<button data-m="${r.m}" class="${r.m === active ? "active" : ""}">${r.lbl}</button>`).join("")}</div>`;
+      `<button data-k="${r.key}" class="${r.key === active ? "active" : ""}">${r.lbl}</button>`).join("")}</div>`;
 
     async function initPaises() {
       const [indices, assets, results] = await Promise.all([
@@ -649,7 +658,7 @@
       };
       const assetMeta = (a) => ({ label: flag(a.country) + " " + a.ticker, sub: [a.name, a.sectors.join(", ")].filter(Boolean).join(" · "),
         file: a.file, unit: "usd", country: a.country });
-      const DEFAULT_M = 3;
+      const DEFAULT_K = "3m";
 
       const body = document.getElementById("paises-body");
       body.className = "";
@@ -659,7 +668,7 @@
         const charted = mine.filter((a) => a.file);
         const rest = mine.filter((a) => !a.file);
         return `<section class="country-card">
-          <div class="country-top"><h2 class="country-h">${g.label}</h2>${rangesHTML(DEFAULT_M)}</div>
+          <div class="country-top"><h2 class="country-h">${g.label}</h2>${rangesHTML(DEFAULT_K)}</div>
           <div class="wgrid">${metas.map((m) => sparkCardHTML(m)).join("")}</div>
           ${charted.length ? `<div class="wgrid wgrid-sm">${charted.map((a) => sparkCardHTML(assetMeta(a), true)).join("")}</div>` : ""}
           ${rest.length ? `<div class="country-sectors">${sectorsBlockHTML(rest, resTickers)}</div>` : ""}
@@ -670,7 +679,7 @@
         ...COUNTRY_GROUPS.flatMap((g) => g.idx.map(idxMeta).filter(Boolean)),
         ...assets.filter((a) => a.file).map(assetMeta),
       ]);
-      body.querySelectorAll(".country-card").forEach((sec) => renderSparks(sec, map, DEFAULT_M));
+      body.querySelectorAll(".country-card").forEach((sec) => renderSparks(sec, map, DEFAULT_K));
       bindSparkClicks(body, map);
       bindAssetClicks(body, assets, results);
       // filtro de período por país: re-renderiza todos os gráficos daquele país
@@ -680,7 +689,7 @@
         const sec = b.closest(".country-card");
         sec.querySelectorAll(".country-ranges button").forEach((x) => x.classList.remove("active"));
         b.classList.add("active");
-        renderSparks(sec, map, Number(b.dataset.m));
+        renderSparks(sec, map, b.dataset.k);
       });
     }
 
@@ -696,12 +705,12 @@
       body.className = "";
       body.innerHTML = `
         <section class="country-card">
-          <div class="country-top"><h2 class="country-h">Commodities</h2>${rangesHTML(3)}</div>
+          <div class="country-top"><h2 class="country-h">Commodities</h2>${rangesHTML("3m")}</div>
           <div class="wgrid">${metas.map((m) => sparkCardHTML(m)).join("")}</div>
         </section>
         <div class="country-sectors">${sectorsBlockHTML(assets, resTickers)}</div>`;
       const map = metaMapByFile(metas);
-      renderSparks(body, map, 3);
+      renderSparks(body, map, "3m");
       bindSparkClicks(body, map);
       bindAssetClicks(body, assets, results);
       body.addEventListener("click", (ev) => {
@@ -710,7 +719,7 @@
         const sec = b.closest(".country-card");
         sec.querySelectorAll(".country-ranges button").forEach((x) => x.classList.remove("active"));
         b.classList.add("active");
-        renderSparks(sec, map, Number(b.dataset.m));
+        renderSparks(sec, map, b.dataset.k);
       });
     }
 
