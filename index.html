@@ -32,6 +32,31 @@
     .chart-wrap { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; }
     canvas { max-height: 420px; }
 
+    /* letreiro fixo no topo: próximos eventos passando (marquee) */
+    body.has-ticker { padding-top: 66px; }
+    .ticker {
+      position: fixed; top: 0; left: 0; right: 0; height: 38px; z-index: 50;
+      display: flex; align-items: center; overflow: hidden;
+      background: rgba(13,17,23,.94); border-bottom: 1px solid #21262d;
+    }
+    .ticker-inner { display: flex; width: max-content; animation: tickmove linear infinite; }
+    .tick-half { display: flex; align-items: center; gap: 10px; padding-right: 10px; }
+    @keyframes tickmove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker:hover .ticker-inner { animation-play-state: paused; }
+    .tick-ev {
+      flex: 0 0 auto; display: inline-flex; gap: 6px; align-items: center; white-space: nowrap;
+      background: #161b22; border: 1px solid #30363d; border-radius: 999px; padding: 3px 10px;
+      color: #e6edf3; font-size: 12px; cursor: pointer; font-family: inherit;
+    }
+    .tick-ev:hover { border-color: #1f6feb; }
+    .tick-ev em { font-style: normal; color: #8b949e; font-size: 11px; }
+    .tick-ev.soon { border-color: #9e6a03; }
+
+    /* módulo de painel de série: toolbar de período + stats + gráfico */
+    .sm-ranges { margin-bottom: 4px; }
+    .sm-ranges button { padding: 4px 10px; font-size: 12px; }
+    .sm-stats { font-size: 13px; margin: 4px 0 8px; }
+
     /* topo: dropdown mínimo de navegação entre as views */
     .topbar { display: flex; margin-bottom: 14px; }
     .topbar select {
@@ -176,6 +201,8 @@
   </style>
 </head>
 <body>
+  <div class="ticker" id="ticker" hidden><div class="ticker-inner" id="ticker-inner"></div></div>
+
   <div class="topbar">
     <select id="view">
       <option value="home">Home</option>
@@ -195,10 +222,12 @@
     <div class="cards" id="cards"></div>
     <div class="toolbar" id="ranges">
       <select id="serie"></select>
-      <button data-range="365">1A</button>
-      <button data-range="1825">5A</button>
-      <button data-range="3650">10A</button>
-      <button data-range="0" class="active">Tudo</button>
+      <button data-months="3">3M</button>
+      <button data-months="6">6M</button>
+      <button data-months="12">12M</button>
+      <button data-months="24">2A</button>
+      <button data-months="60">5A</button>
+      <button data-months="0" class="active">Tudo</button>
     </div>
     <div class="chart-wrap"><canvas id="chart"></canvas></div>
   </div>
@@ -287,34 +316,72 @@
       return back;
     }
 
-    /* modal com gráfico de uma série (índice ou ativo) */
+    /* ---- módulo de painel de série: usado por todo card que mostra histórico ----
+       filtros de período: 3M / 6M / 12M / 2A / 5A / Tudo (meses; 0 = tudo) */
+    const RANGES = [
+      { lbl: "3M", m: 3 }, { lbl: "6M", m: 6 }, { lbl: "12M", m: 12 },
+      { lbl: "2A", m: 24 }, { lbl: "5A", m: 60 }, { lbl: "Tudo", m: 0 },
+    ];
+
+    function sliceMonths(series, months) {
+      if (!months || !series.length) return series;
+      const cutoff = new Date(series[series.length - 1].tradingDay);
+      cutoff.setMonth(cutoff.getMonth() - months);
+      const iso = cutoff.toISOString().slice(0, 10);
+      return series.filter((p) => p.tradingDay >= iso);
+    }
+
+    function mountSeriesPanel(el, series, unit, country, defaultMonths = 12) {
+      el.className = "";
+      el.innerHTML = `
+        <div class="toolbar sm-ranges">${RANGES.map((r) =>
+          `<button data-m="${r.m}" class="${r.m === defaultMonths ? "active" : ""}">${r.lbl}</button>`).join("")}</div>
+        <div class="muted sm-stats" data-stats>—</div>
+        <canvas height="220"></canvas>`;
+      const stats = el.querySelector("[data-stats]");
+      const canvas = el.querySelector("canvas");
+      let ch;
+      const render = (months) => {
+        const s = sliceMonths(series, months);
+        if (!s.length) { stats.textContent = "sem dados no período."; return; }
+        const first = s[0], last = s[s.length - 1];
+        const chg = ((last.value - first.value) / first.value) * 100;
+        stats.innerHTML =
+          `Último (${last.tradingDay}): <b>${fmtVal(last.value, unit, country)}</b> · ` +
+          `desde ${first.tradingDay}: <b class="${chg >= 0 ? "up" : "down"}">${chg >= 0 ? "+" : ""}${chg.toFixed(1)}%</b> · ` +
+          `${s.length.toLocaleString("pt-BR")} registros`;
+        const data = { labels: s.map((p) => p.tradingDay), datasets: [{
+          data: s.map((p) => p.value), borderColor: "#1f6feb",
+          backgroundColor: "rgba(31,111,235,.12)", borderWidth: 1.5, pointRadius: 0, fill: true, tension: .05 }] };
+        if (ch) { ch.data = data; ch.update(); }
+        else ch = new Chart(canvas, { type: "line", data,
+          options: { responsive: true, animation: false, interaction: { mode: "index", intersect: false },
+            scales: { x: { ticks: { maxTicksLimit: 8, color: "#8b949e" }, grid: { color: "#21262d" } },
+                      y: { ticks: { color: "#8b949e" }, grid: { color: "#21262d" } } },
+            plugins: { legend: { display: false } } } });
+      };
+      el.querySelector(".sm-ranges").addEventListener("click", (e) => {
+        if (e.target.tagName !== "BUTTON") return;
+        el.querySelectorAll(".sm-ranges button").forEach((b) => b.classList.remove("active"));
+        e.target.classList.add("active");
+        render(Number(e.target.dataset.m));
+      });
+      render(defaultMonths);
+    }
+
+    /* modal com o painel de série (índice ou ativo) */
     async function openSeriesModal(label, sub, file, unit, country) {
       const back = showModal(`
         <header class="modal-h"><h3>${esc(label)} <span class="muted">· ${esc(sub || "")}</span></h3>
           <button class="modal-x">✕</button></header>
-        <div class="modal-body"><div class="muted" style="font-size:13px;margin-bottom:8px" id="sm-stats">carregando…</div>
-          <canvas id="sm-canvas" height="220"></canvas></div>`, true);
+        <div class="modal-body"><div class="muted" id="sm-panel">carregando…</div></div>`, true);
       try {
         const series = await loadJSON(file);
         if (!back.isConnected) return;
-        const last = series[series.length - 1], first = series[0];
-        const chg = ((last.value - first.value) / first.value) * 100;
-        back.querySelector("#sm-stats").innerHTML =
-          `Último (${last.tradingDay}): <b>${fmtVal(last.value, unit, country)}</b> · ` +
-          `desde ${first.tradingDay}: <b class="${chg >= 0 ? "up" : "down"}">${chg >= 0 ? "+" : ""}${chg.toFixed(1)}%</b> · ${series.length.toLocaleString("pt-BR")} registros`;
-        new Chart(back.querySelector("#sm-canvas"), {
-          type: "line",
-          data: { labels: series.map((p) => p.tradingDay), datasets: [{
-            data: series.map((p) => p.value), borderColor: "#1f6feb",
-            backgroundColor: "rgba(31,111,235,.12)", borderWidth: 1.5, pointRadius: 0, fill: true, tension: .05 }] },
-          options: { responsive: true, animation: false, interaction: { mode: "index", intersect: false },
-            scales: { x: { ticks: { maxTicksLimit: 8, color: "#8b949e" }, grid: { color: "#21262d" } },
-                      y: { ticks: { color: "#8b949e" }, grid: { color: "#21262d" } } },
-            plugins: { legend: { display: false } } },
-        });
+        mountSeriesPanel(back.querySelector("#sm-panel"), series, unit, country);
       } catch {
-        const st = back.querySelector("#sm-stats");
-        if (st) st.textContent = "erro ao carregar " + file;
+        const p = back.querySelector("#sm-panel");
+        if (p) p.textContent = "erro ao carregar " + file;
       }
     }
 
@@ -410,17 +477,13 @@
       else chart = new Chart(document.getElementById("chart"), { type: "line", data, options: opts });
     }
 
-    function applyRange(days) {
-      if (!days || !full.length) return draw(full);
-      const cutoff = new Date(full[full.length - 1].tradingDay);
-      cutoff.setDate(cutoff.getDate() - days);
-      const iso = cutoff.toISOString().slice(0, 10);
-      draw(full.filter((p) => p.tradingDay >= iso));
+    function applyRange(months) {
+      draw(sliceMonths(full, months));
     }
 
     function activeRange() {
       const b = document.querySelector("#ranges button.active");
-      return b ? Number(b.dataset.range) : 0;
+      return b ? Number(b.dataset.months) : 0;
     }
 
     async function loadSerie(key) {
@@ -441,7 +504,7 @@
       if (e.target.tagName !== "BUTTON") return;
       document.querySelectorAll("#ranges button").forEach((b) => b.classList.remove("active"));
       e.target.classList.add("active");
-      applyRange(Number(e.target.dataset.range));
+      applyRange(Number(e.target.dataset.months));
     });
 
     document.getElementById("serie").addEventListener("change", (e) => loadSerie(e.target.value));
@@ -769,6 +832,35 @@
         return resultsHTML(t, a ? a.name : null, byTicker[t]);
       }).join("") || "<div class='muted'>nenhum resultado.</div>";
     }
+
+    /* ============================ ticker fixo: próximos eventos ============================ */
+    async function initTicker() {
+      try {
+        const evs = await loadJSON("events.json");
+        const today = new Date().toISOString().slice(0, 10);
+        const fut = evs.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+        if (!fut.length) return;
+        const pill = (e) => {
+          const days = Math.round((new Date(e.date) - new Date(today)) / 86400000);
+          const when = days === 0 ? "hoje" : days === 1 ? "amanhã" : `em ${days}d`;
+          return `<button class="tick-ev ${days <= 7 ? "soon" : ""}" data-ev="${evs.indexOf(e)}">
+            ${flag(e.country)} <b>${esc(evLabel(e))}</b> ${esc(e.title)} · ${dmy(e.date).slice(0, 5)} <em>${when}</em>
+          </button>`;
+        };
+        const half = `<span class="tick-half">${fut.map(pill).join("")}</span>`;
+        const inner = document.getElementById("ticker-inner");
+        inner.innerHTML = half + half;
+        inner.style.animationDuration = Math.max(25, fut.length * 5) + "s";
+        const ticker = document.getElementById("ticker");
+        ticker.hidden = false;
+        document.body.classList.add("has-ticker");
+        ticker.addEventListener("click", (ev) => {
+          const b = ev.target.closest(".tick-ev");
+          if (b) openEventModal(evs[+b.dataset.ev]);
+        });
+      } catch {}
+    }
+    initTicker();
 
     /* ============================ troca de views ============================ */
     const viewInit = {
