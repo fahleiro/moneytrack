@@ -1,0 +1,527 @@
+[
+  {
+    "ticker": "ALUP11",
+    "name": "Alupar",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "AMER3",
+    "name": "Americanas",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "ASAI3",
+    "name": "Assaí (Sendas)",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "AXP",
+    "name": "American Express",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/AXP.json"
+  },
+  {
+    "ticker": "BA",
+    "name": "Boeing",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/BA.json"
+  },
+  {
+    "ticker": "BBDC4",
+    "name": "Bradesco",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/BBDC4.json"
+  },
+  {
+    "ticker": "BPAC11",
+    "name": "BTG Pactual",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "CAT",
+    "name": "Caterpillar",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "industrials"
+    ],
+    "file": "market_history/CAT.json"
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco Wholesale",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "DBRG",
+    "name": "DigitalBridge",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "EGIE3",
+    "name": "Engie Brasil",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "ELET3",
+    "name": "Eletrobras ON",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "ELET6",
+    "name": "Eletrobras PNB",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "FMG",
+    "name": "Fortescue",
+    "type": "stock",
+    "country": "AU",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "GE",
+    "name": "GE Aerospace",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/GE.json"
+  },
+  {
+    "ticker": "GOLD",
+    "name": "Ouro (Gold)",
+    "type": "commodity",
+    "country": null,
+    "sectors": [],
+    "file": "market_history/GOLD.json"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "HD",
+    "name": "Home Depot",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "ITA",
+    "name": "iShares U.S. Aerospace & Defense ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/ITA.json"
+  },
+  {
+    "ticker": "ITUB4",
+    "name": "Itaú Unibanco",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/ITUB4.json"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/JPM.json"
+  },
+  {
+    "ticker": "KTOS",
+    "name": "Kratos Defense & Security",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/KTOS.json"
+  },
+  {
+    "ticker": "LMT",
+    "name": "Lockheed Martin",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/LMT.json"
+  },
+  {
+    "ticker": "LOW",
+    "name": "Lowe's",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "LREN3",
+    "name": "Lojas Renner",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "MA",
+    "name": "Mastercard",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/MA.json"
+  },
+  {
+    "ticker": "MGLU3",
+    "name": "Magazine Luiza",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "retail"
+    ],
+    "file": "market_history/MGLU3.json"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "NOC",
+    "name": "Northrop Grumman",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/NOC.json"
+  },
+  {
+    "ticker": "NU",
+    "name": "Nu Holdings (Nubank)",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/NU.json"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "semiconductor"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "ORCL",
+    "name": "Oracle",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "PAVE",
+    "name": "Global X U.S. Infrastructure Development ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "construction"
+    ],
+    "file": "market_history/PAVE.json"
+  },
+  {
+    "ticker": "PAX",
+    "name": "Patria Investments",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "PCAR3",
+    "name": "Grupo Pão de Açúcar",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "PLTR",
+    "name": "Palantir Technologies",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/PLTR.json"
+  },
+  {
+    "ticker": "QQQ",
+    "name": "Invesco QQQ Trust (Nasdaq-100)",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "technology",
+      "broad"
+    ],
+    "file": "market_history/QQQ.json"
+  },
+  {
+    "ticker": "REMX",
+    "name": "VanEck Rare Earth & Strategic Metals ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "rare-earth"
+    ],
+    "file": "market_history/REMX.json"
+  },
+  {
+    "ticker": "RTX",
+    "name": "RTX Corporation",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/RTX.json"
+  },
+  {
+    "ticker": "SHLD",
+    "name": "Global X Defense Tech ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "defense"
+    ],
+    "file": "market_history/SHLD.json"
+  },
+  {
+    "ticker": "SILVER",
+    "name": "Prata (Silver)",
+    "type": "commodity",
+    "country": null,
+    "sectors": [],
+    "file": "market_history/SILVER.json"
+  },
+  {
+    "ticker": "SMH",
+    "name": "VanEck Semiconductor ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "semiconductor"
+    ],
+    "file": "market_history/SMH.json"
+  },
+  {
+    "ticker": "TAEE11",
+    "name": "Taesa",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "TGT",
+    "name": "Target",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail"
+    ],
+    "file": "market_history/TGT.json"
+  },
+  {
+    "ticker": "TRPL4",
+    "name": "ISA Energia (Cteep)",
+    "type": "stock",
+    "country": "BR",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "TTE",
+    "name": "TotalEnergies",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "V",
+    "name": "Visa",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/V.json"
+  },
+  {
+    "ticker": "VOO",
+    "name": "Vanguard S&P 500 ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "broad"
+    ],
+    "file": "market_history/VOO.json"
+  },
+  {
+    "ticker": "VWS",
+    "name": "Vestas Wind Systems",
+    "type": "stock",
+    "country": "DK",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": null
+  },
+  {
+    "ticker": "WMT",
+    "name": "Walmart",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail"
+    ],
+    "file": "market_history/WMT.json"
+  },
+  {
+    "ticker": "WTI",
+    "name": "Petróleo WTI (Crude Oil)",
+    "type": "commodity",
+    "country": null,
+    "sectors": [],
+    "file": "market_history/WTI.json"
+  },
+  {
+    "ticker": "XRT",
+    "name": "SPDR S&P Retail ETF",
+    "type": "etf",
+    "country": "US",
+    "sectors": [
+      "retail"
+    ],
+    "file": null
+  }
+]

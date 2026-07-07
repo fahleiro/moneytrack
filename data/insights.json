@@ -1,0 +1,76 @@
+[
+  {
+    "code": "CE_DATACENTERS",
+    "title": "Data Centers no Ceará (Pecém/Caucaia) — mapa de investimento",
+    "summary": "Ceará virou 3o maior polo de data centers do Brasil e epicentro da corrida de infra de IA. Âncora: megaprojeto ByteDance/TikTok–Omnia (Pátria)–Casa dos Ventos no Pecém/Caucaia (R$ 200 bi, ~300 MW, obras desde jan/2026, operação no 3T/2027), + 4 data centers Exportdata. CZPE aprovou 5 DCs na ZPE de Pecém (R$ 571 bi estimados).\r\n\r\nTrês vetores raros combinados: Fortaleza é o maior ponto de cabos submarinos das Américas (17 na Praia do Futuro), Ceará é o maior produtor eólico do país (renovável sobrando), e ZPE+Redata dão isenção fiscal — o \"supercycle de IA + energia\".\r\n\r\nAcesso do varejo é MAJORITARIAMENTE INDIRETO (operadores privados: Omnia, Casa dos Ventos, V.tal, Exportdata). Exposições listadas: Pátria (PAX), TotalEnergies (TTE, 34% da Casa dos Ventos), BTG (BPAC11, controla V.tal/Tecto), Vestas (VWS, turbinas), DigitalBridge (DBRG, Scala), Fortescue (FMG, H2 verde), transmissoras B3 (TAEE11, TRPL4, EGIE3, ALUP11, ELET3/ELET6) e hyperscalers-alvo (AMZN, MSFT, GOOGL, ORCL).\r\n\r\nGargalo real = transmissão (ONS negou conexões; linhas só ~2029) -> tese \"picks & shovels\" nas transmissoras. Riscos: regulatório (Redata PL 278/2026), socioambiental/hídrico (Anacé/Caucaia), geopolítico (ByteDance/chips). Tudo são valores anunciados, não desembolsados. Não é recomendação.",
+    "tags": "data-center, IA, energia, CE, transmissao, cabos-submarinos",
+    "source": "Dossiê (research)",
+    "date": "2026-06-24",
+    "assets": [
+      {
+        "ticker": "PAX",
+        "role": "operador/âncora (Omnia)"
+      },
+      {
+        "ticker": "TTE",
+        "role": "energia (34% Casa dos Ventos)"
+      },
+      {
+        "ticker": "BPAC11",
+        "role": "conectividade (controla V.tal/Tecto)"
+      },
+      {
+        "ticker": "VWS",
+        "role": "turbinas eólicas"
+      },
+      {
+        "ticker": "DBRG",
+        "role": "hiperescala (controla Scala)"
+      },
+      {
+        "ticker": "FMG",
+        "role": "hidrogênio verde (Pecém)"
+      },
+      {
+        "ticker": "TAEE11",
+        "role": "transmissão"
+      },
+      {
+        "ticker": "TRPL4",
+        "role": "transmissão"
+      },
+      {
+        "ticker": "EGIE3",
+        "role": "transmissão/energia"
+      },
+      {
+        "ticker": "ALUP11",
+        "role": "transmissão"
+      },
+      {
+        "ticker": "ELET3",
+        "role": "transmissão (Chesf)"
+      },
+      {
+        "ticker": "ELET6",
+        "role": "transmissão (Chesf)"
+      },
+      {
+        "ticker": "AMZN",
+        "role": "hyperscaler-alvo"
+      },
+      {
+        "ticker": "MSFT",
+        "role": "hyperscaler-alvo"
+      },
+      {
+        "ticker": "GOOGL",
+        "role": "hyperscaler-alvo"
+      },
+      {
+        "ticker": "ORCL",
+        "role": "hyperscaler-alvo"
+      }
+    ]
+  }
+]

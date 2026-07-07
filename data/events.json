@@ -1,0 +1,298 @@
+[
+  {
+    "date": "2025-12-22",
+    "type": "distribution",
+    "title": "Distribuição anual 2025 (US$ 1,3008/cota)",
+    "ticker": "REMX",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-01-28",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-03-18",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-04-29",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-06-17",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-07-14",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "JPM",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-17",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "AXP",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-21",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "LMT",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-21",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "GE",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-22",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "RTX",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-22",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "NOC",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-28",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "V",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-28",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "ASAI3",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-29",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "BA",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-29",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "PCAR3",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-29",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-07-30",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "MA",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-30",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "BBDC4",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "PLTR",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "CAT",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "KTOS",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "ITUB4",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-12",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "NU",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-13",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "MGLU3",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-13",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "LREN3",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-14",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "AMER3",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-18",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "HD",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-19",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "TGT",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-19",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "LOW",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-20",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "WMT",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-26",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "NVDA",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-09-16",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-10-28",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-12-16",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
+  },
+  {
+    "date": "2026-12-21",
+    "type": "distribution",
+    "title": "Distribuição anual 2026 (estimada)",
+    "ticker": "REMX",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2027-09-01",
+    "type": "project",
+    "title": "Pecém DC (ByteDance/Omnia) — operação comercial",
+    "ticker": "PAX",
+    "code": "PECEM_DC_OP",
+    "country": "BR"
+  },
+  {
+    "date": "2029-12-01",
+    "type": "project",
+    "title": "Transmissão CE/Pecém — energização das linhas",
+    "ticker": null,
+    "code": "CE_TRANSMISSAO",
+    "country": "BR"
+  }
+]

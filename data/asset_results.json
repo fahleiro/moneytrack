@@ -1,0 +1,212 @@
+[
+  {
+    "ticker": "LREN3",
+    "year": 2026,
+    "periodType": "Q",
+    "quarter": 1,
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "netProfit": 257251000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "NVDA",
+    "year": 2026,
+    "periodType": "Q",
+    "quarter": 1,
+    "periodStart": "2025-01-27",
+    "periodEnd": "2025-04-27",
+    "netProfit": 18775000000,
+    "currency": "USD"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2011,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2011-01-01",
+    "periodEnd": "2011-12-31",
+    "netProfit": 336907000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2012,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2012-01-01",
+    "periodEnd": "2012-12-31",
+    "netProfit": 355401000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2013,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2013-01-01",
+    "periodEnd": "2013-12-31",
+    "netProfit": 407404000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2014,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2014-01-01",
+    "periodEnd": "2014-12-31",
+    "netProfit": 471420000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2015,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2015-01-01",
+    "periodEnd": "2015-12-31",
+    "netProfit": 578838000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2016,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2016-01-01",
+    "periodEnd": "2016-12-31",
+    "netProfit": 625058000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2017,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2017-01-01",
+    "periodEnd": "2017-12-31",
+    "netProfit": 732679000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2018,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2018-01-01",
+    "periodEnd": "2018-12-31",
+    "netProfit": 1020136000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2019,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2019-01-01",
+    "periodEnd": "2019-12-31",
+    "netProfit": 1099093000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2020,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2020-01-01",
+    "periodEnd": "2020-12-31",
+    "netProfit": 1096269000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2021,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2021-01-01",
+    "periodEnd": "2021-12-31",
+    "netProfit": 633112000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2022,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2022-01-01",
+    "periodEnd": "2022-12-31",
+    "netProfit": 1291704000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2023,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2023-01-01",
+    "periodEnd": "2023-12-31",
+    "netProfit": 976259000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2024,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2024-01-01",
+    "periodEnd": "2024-12-31",
+    "netProfit": 1196668000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "LREN3",
+    "year": 2025,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2025-01-01",
+    "periodEnd": "2025-12-31",
+    "netProfit": 1457566000,
+    "currency": "BRL"
+  },
+  {
+    "ticker": "REMX",
+    "year": 2021,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2021-01-01",
+    "periodEnd": "2021-12-31",
+    "netProfit": 5.8917,
+    "currency": "USD"
+  },
+  {
+    "ticker": "REMX",
+    "year": 2022,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2022-01-01",
+    "periodEnd": "2022-12-31",
+    "netProfit": 1.1867,
+    "currency": "USD"
+  },
+  {
+    "ticker": "REMX",
+    "year": 2024,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2024-01-01",
+    "periodEnd": "2024-12-31",
+    "netProfit": 0.9971,
+    "currency": "USD"
+  },
+  {
+    "ticker": "REMX",
+    "year": 2025,
+    "periodType": "FY",
+    "quarter": null,
+    "periodStart": "2025-01-01",
+    "periodEnd": "2025-12-31",
+    "netProfit": 1.3008,
+    "currency": "USD"
+  }
+]

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>moneytrack — Ibovespa</title>
+  <title>moneytrack</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <style>
     :root { color-scheme: dark; }
@@ -13,7 +13,7 @@
       background: #0d1117; color: #e6edf3; padding: 24px;
     }
     h1 { font-size: 20px; margin: 0 0 4px; }
-    .sub { color: #8b949e; font-size: 13px; margin-bottom: 20px; }
+    .sub { color: #8b949e; font-size: 13px; margin-bottom: 20px; max-width: 900px; }
     .cards { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
     .card {
       background: #161b22; border: 1px solid #30363d; border-radius: 10px;
@@ -22,8 +22,8 @@
     .card .label { color: #8b949e; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
     .card .value { font-size: 22px; font-weight: 600; margin-top: 4px; }
     .up { color: #3fb950; } .down { color: #f85149; }
-    .toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
-    .toolbar button {
+    .toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+    .toolbar button, .toolbar select {
       background: #21262d; color: #e6edf3; border: 1px solid #30363d;
       border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 13px;
     }
@@ -33,12 +33,13 @@
   </style>
 </head>
 <body>
-  <h1>Ibovespa <span style="color:#8b949e;font-weight:400;">· INDEXBVMF: IBOV</span></h1>
-  <div class="sub">Histórico diário · dados em JSON versionado (data/market_history) · estático, sem backend</div>
+  <h1 id="title">moneytrack</h1>
+  <div class="sub" id="sub">Histórico diário · dados em JSON versionado (data/)</div>
 
   <div class="cards" id="cards"></div>
 
   <div class="toolbar" id="ranges">
+    <select id="serie"></select>
     <button data-range="365">1A</button>
     <button data-range="1825">5A</button>
     <button data-range="3650">10A</button>
@@ -50,8 +51,14 @@
   <script>
     let full = [];
     let chart;
+    let catalog = {};   // key -> {label, sub, file, unit}
+    let currentUnit = "index";
 
-    const fmt = (n) => n.toLocaleString("pt-BR", { maximumFractionDigits: 0 });
+    function fmt(n) {
+      const dec = currentUnit === "index" ? 0 : 2;
+      const s = n.toLocaleString("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: dec });
+      return currentUnit.startsWith("pct") ? s + "%" : s;
+    }
 
     function renderCards(series) {
       if (!series.length) return;
@@ -69,7 +76,7 @@
         <div class="card"><div class="label">Variação no período</div><div class="value ${cls}">${sign}${change.toFixed(1)}%</div></div>
         <div class="card"><div class="label">Máxima</div><div class="value">${fmt(max.value)} <span style="font-size:12px;color:#8b949e">${max.tradingDay}</span></div></div>
         <div class="card"><div class="label">Mínima</div><div class="value">${fmt(min.value)} <span style="font-size:12px;color:#8b949e">${min.tradingDay}</span></div></div>
-        <div class="card"><div class="label">Pregões</div><div class="value">${fmt(series.length)}</div></div>`;
+        <div class="card"><div class="label">Pregões</div><div class="value">${series.length.toLocaleString("pt-BR")}</div></div>`;
     }
 
     function draw(series) {
@@ -77,7 +84,7 @@
       const data = {
         labels: series.map((p) => p.tradingDay),
         datasets: [{
-          label: "IBOV", data: series.map((p) => p.value),
+          data: series.map((p) => p.value),
           borderColor: "#1f6feb", backgroundColor: "rgba(31,111,235,.12)",
           borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.05,
         }],
@@ -96,11 +103,30 @@
     }
 
     function applyRange(days) {
-      if (!days) return draw(full);
+      if (!days || !full.length) return draw(full);
       const cutoff = new Date(full[full.length - 1].tradingDay);
       cutoff.setDate(cutoff.getDate() - days);
       const iso = cutoff.toISOString().slice(0, 10);
       draw(full.filter((p) => p.tradingDay >= iso));
+    }
+
+    function activeRange() {
+      const b = document.querySelector("#ranges button.active");
+      return b ? Number(b.dataset.range) : 0;
+    }
+
+    async function loadSerie(key) {
+      const meta = catalog[key];
+      if (!meta) return;
+      currentUnit = meta.unit;
+      document.getElementById("title").textContent = meta.label;
+      document.getElementById("sub").textContent = meta.sub;
+      try {
+        full = await fetch("data/" + meta.file).then((r) => r.json());
+        applyRange(activeRange());
+      } catch {
+        document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar data/" + meta.file + "</div>";
+      }
     }
 
     document.getElementById("ranges").addEventListener("click", (e) => {
@@ -110,10 +136,54 @@
       applyRange(Number(e.target.dataset.range));
     });
 
-    fetch("data/market_history/IBOV.json")
-      .then((r) => r.json())
-      .then((d) => { full = d; draw(full); })
-      .catch(() => { document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar data/market_history/IBOV.json.</div>"; });
+    document.getElementById("serie").addEventListener("change", (e) => loadSerie(e.target.value));
+
+    async function init() {
+      const [indices, assets] = await Promise.all([
+        fetch("data/indices.json").then((r) => r.json()),
+        fetch("data/assets.json").then((r) => r.json()),
+      ]);
+      const sel = document.getElementById("serie");
+      const addGroup = (label, items) => {
+        if (!items.length) return;
+        const g = document.createElement("optgroup");
+        g.label = label;
+        for (const it of items) {
+          const o = document.createElement("option");
+          o.value = it.key; o.textContent = it.text;
+          g.appendChild(o);
+        }
+        sel.appendChild(g);
+      };
+
+      const idxItems = [];
+      for (const i of indices.filter((x) => x.file)) {
+        const key = "idx:" + i.code;
+        catalog[key] = { label: i.name, sub: i.description || (i.country + " · " + i.unit), file: i.file, unit: i.unit };
+        idxItems.push({ key, text: i.code.replace(/^(BR|US)_/, "") + " — " + i.name });
+      }
+      addGroup("Índices", idxItems);
+
+      const idxFiles = new Set(indices.filter((x) => x.file).map((x) => x.file));
+      const byType = { stock: [], etf: [], commodity: [] };
+      for (const a of assets.filter((x) => x.file && !idxFiles.has(x.file))) {
+        const key = "ast:" + a.ticker;
+        const bits = [a.type, a.country, a.sectors.join(", ")].filter(Boolean).join(" · ");
+        catalog[key] = { label: a.ticker + " — " + a.name, sub: bits, file: a.file, unit: "usd" };
+        (byType[a.type] || (byType[a.type] = [])).push({ key, text: a.ticker + " — " + a.name });
+      }
+      addGroup("Ações", byType.stock);
+      addGroup("ETFs", byType.etf);
+      addGroup("Commodities", byType.commodity);
+
+      const first = "idx:BR_IBOV";
+      sel.value = first;
+      loadSerie(first);
+    }
+
+    init().catch(() => {
+      document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar data/indices.json / data/assets.json.</div>";
+    });
   </script>
 </body>
 </html>
