@@ -184,6 +184,13 @@
     .read-body p:last-child { margin-bottom: 0; }
     .read-assets { margin-top: 14px; padding-top: 12px; border-top: 1px solid #21262d; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
     .achip { font-size: 11px; font-weight: 700; color: #cfe0ff; background: #1d2840; border: 1px solid #36507e; border-radius: 6px; padding: 2px 8px; }
+    .read-bets { margin-top: 14px; padding-top: 12px; border-top: 1px solid #21262d; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .bet { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; background: #12181f; border: 1px solid #30363d; border-radius: 8px; padding: 3px 8px; }
+    .bet-tk { color: #cfe0ff; }
+    .bet-exp { font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; border-radius: 5px; padding: 1px 6px; }
+    .bet-exp.bullish { color: #7ee2a8; background: #103125; border: 1px solid #1f6b47; }
+    .bet-exp.bearish { color: #ff9b9b; background: #331417; border: 1px solid #7a2b30; }
+    .bet-win { color: #9fb0d6; font-weight: 800; }
 
     /* Resultados: linhas de lucro por período */
     .res-group { max-width: 640px; margin-bottom: 18px; }
@@ -289,7 +296,7 @@
 
   <div id="view-insights" class="view" hidden>
     <h1>Insights</h1>
-    <div class="sub">Dossiês de research · data/insights.json</div>
+    <div class="sub">Dossiês de research · data/insights/</div>
     <div id="insights-body" class="reading muted">carregando…</div>
   </div>
 
@@ -857,8 +864,17 @@
     /* ============================ Insights / Análises / Resultados ============================ */
     const paras = (t) => String(t).split(/(?:\r?\n){2,}/).map((p) => `<p>${esc(p)}</p>`).join("");
 
+    const betWin = (p) => {
+      if (!p) return "";
+      const u = { day: "D", week: "W", month: "M" }[p.type] || (p.type || "").toUpperCase().slice(0, 1);
+      return `${p.qty}${u}`;
+    };
+
     async function initInsights() {
-      const items = await loadJSON("insights.json").catch(() => []);
+      const manifest = await loadJSON("insights/insights.json").catch(() => []);
+      const items = (await Promise.all(
+        manifest.map((m) => loadJSON("insights/" + m.file).catch(() => null))
+      )).filter(Boolean);
       const body = document.getElementById("insights-body");
       body.classList.remove("muted");
       body.innerHTML = items.map((it) => `
@@ -869,6 +885,9 @@
             <div class="read-meta">${esc(it.source || "")} · ${dmy(it.date)}</div>
           </header>
           <div class="read-body">${paras(it.summary)}</div>
+          ${it.bets && it.bets.length ? `<footer class="read-bets"><span class="muted">apostas:</span>
+            ${it.bets.map((b) => `<span class="bet"><span class="bet-tk">${esc(b.ticker)}</span><span class="bet-exp ${b.expect === "bullish" ? "bullish" : "bearish"}">${esc(b.expect || "")}</span><span class="bet-win">${esc(betWin(b.period))}</span></span>`).join("")}
+          </footer>` : ""}
           ${it.assets && it.assets.length ? `<footer class="read-assets"><span class="muted">ativos:</span>
             ${it.assets.map((a) => `<span class="achip" title="${esc(a.role || "")}">${esc(a.ticker)}</span>`).join("")}
           </footer>` : ""}
