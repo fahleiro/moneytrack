@@ -74,6 +74,23 @@
     .wcard .wdelta { font-size: 12px; margin-left: 6px; font-weight: 600; }
     .wcard .spark { margin-top: 8px; height: 38px; }
     .wcard canvas { max-height: 38px; }
+    .wcard { cursor: pointer; }
+    .wcard:hover { border-color: #1f6feb; }
+    /* variante compacta: card pequeno de ativo no board do país */
+    .wgrid-sm { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); margin-top: 12px; }
+    .wcard-sm { padding: 8px 10px; }
+    .wcard-sm .wlabel { font-size: 12px; }
+    .wcard-sm .wval { font-size: 14px; margin-top: 4px; }
+    .wcard-sm .wdelta { font-size: 11px; }
+    .wcard-sm .spark { height: 28px; margin-top: 6px; }
+    .wcard-sm canvas { max-height: 28px; }
+    /* cabeçalho do país com filtro de período próprio */
+    .country-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+      padding-bottom: 10px; border-bottom: 1px solid #21262d; margin-bottom: 12px;
+    }
+    .country-top .country-h { margin: 0; padding: 0; border: 0; }
+    .country-top .toolbar { margin: 0; }
 
     /* países / setores: seções + chips de ativos */
     .country-card { border: 1px solid #30363d; border-radius: 14px; background: #11151c; padding: 14px 16px; margin-bottom: 18px; }
@@ -385,27 +402,36 @@
       }
     }
 
-    /* mini-card com sparkline dos últimos ~90 pontos */
-    async function mountSparkCard(el, meta) {
+    /* mini-card com sparkline: recorte por período e cor direcional
+       (verde subiu, vermelho caiu; unidades pct invertem — queda é verde) */
+    async function mountSparkCard(el, meta, months) {
       try {
         const series = await loadJSON(meta.file);
-        const slice = series.slice(-90);
+        const slice = sliceMonths(series, months);
+        if (!slice.length) { el.querySelector(".wval").textContent = "sem dados"; return; }
         const last = slice[slice.length - 1], first = slice[0];
-        let deltaHtml = "";
+        let up, deltaHtml;
         if (meta.unit && meta.unit.startsWith("pct")) {
           const d = last.value - first.value;
-          deltaHtml = `<span class="wdelta ${d <= 0 ? "up" : "down"}">${d >= 0 ? "+" : ""}${d.toFixed(2)} p.p.</span>`;
+          up = d <= 0;
+          deltaHtml = `<span class="wdelta ${up ? "up" : "down"}">${d >= 0 ? "+" : ""}${d.toFixed(2)} p.p.</span>`;
         } else {
           const d = ((last.value - first.value) / first.value) * 100;
-          deltaHtml = `<span class="wdelta ${d >= 0 ? "up" : "down"}">${d >= 0 ? "+" : ""}${d.toFixed(1)}%</span>`;
+          up = d >= 0;
+          deltaHtml = `<span class="wdelta ${up ? "up" : "down"}">${d >= 0 ? "+" : ""}${d.toFixed(1)}%</span>`;
         }
         el.querySelector(".wval").innerHTML = fmtVal(last.value, meta.unit, meta.country) + deltaHtml;
         el.querySelector(".wsub").textContent = (meta.sub || "") + " · " + dmy(last.tradingDay);
-        new Chart(el.querySelector("canvas"), {
+        const canvas = el.querySelector("canvas");
+        const old = Chart.getChart(canvas);
+        if (old) old.destroy();
+        const color = up ? "#3fb950" : "#f85149";
+        const fill = up ? "rgba(63,185,80,.15)" : "rgba(248,81,73,.15)";
+        new Chart(canvas, {
           type: "line",
           data: { labels: slice.map((p) => p.tradingDay), datasets: [{
-            data: slice.map((p) => p.value), borderColor: "#1f6feb",
-            backgroundColor: "rgba(31,111,235,.15)", borderWidth: 1.2, pointRadius: 0, fill: true, tension: .2 }] },
+            data: slice.map((p) => p.value), borderColor: color,
+            backgroundColor: fill, borderWidth: 1.2, pointRadius: 0, fill: true, tension: .2 }] },
           options: { responsive: true, maintainAspectRatio: false, animation: false, events: [],
             scales: { x: { display: false }, y: { display: false } }, plugins: { legend: { display: false } } },
         });
@@ -414,13 +440,30 @@
       }
     }
 
-    function sparkCardHTML(meta) {
-      return `<div class="wcard" data-file="${esc(meta.file)}">
+    function sparkCardHTML(meta, small) {
+      return `<div class="wcard ${small ? "wcard-sm" : ""}" data-file="${esc(meta.file)}">
         <div class="wlabel">${esc(meta.label)}</div>
         <div class="wsub">${esc(meta.sub || "")}</div>
         <div class="wval muted">…</div>
         <div class="spark"><canvas></canvas></div>
       </div>`;
+    }
+
+    /* grid de spark-cards: mapa file->meta, render por período e clique -> modal */
+    const metaMapByFile = (metas) => Object.fromEntries(metas.map((m) => [m.file, m]));
+    function renderSparks(root, map, months) {
+      for (const el of root.querySelectorAll(".wcard")) {
+        const m = map[el.dataset.file];
+        if (m) mountSparkCard(el, m, months);
+      }
+    }
+    function bindSparkClicks(root, map) {
+      root.addEventListener("click", (ev) => {
+        const c = ev.target.closest(".wcard");
+        if (!c) return;
+        const m = map[c.dataset.file];
+        if (m) openSeriesModal(m.label, m.sub, m.file, m.unit, m.country);
+      });
     }
 
     /* ============================ Home ============================ */
@@ -593,15 +636,8 @@
       });
     }
 
-    function mountSparkCards(root, metas) {
-      for (const el of root.querySelectorAll(".wcard")) {
-        const meta = metas.find((m) => m.file === el.dataset.file);
-        if (meta) mountSparkCard(el, meta);
-        const m = meta;
-        el.style.cursor = "pointer";
-        el.addEventListener("click", () => openSeriesModal(m.label, m.sub, m.file, m.unit, m.country));
-      }
-    }
+    const rangesHTML = (active) => `<div class="toolbar sm-ranges country-ranges">${RANGES.map((r) =>
+      `<button data-m="${r.m}" class="${r.m === active ? "active" : ""}">${r.lbl}</button>`).join("")}</div>`;
 
     async function initPaises() {
       const [indices, assets, results] = await Promise.all([
@@ -611,20 +647,41 @@
         const i = indices.find((x) => x.code === code && x.file);
         return i && { label: i.name.replace(/\s*\(.*\)$/, ""), sub: i.description || i.name, file: i.file, unit: i.unit, country: i.country };
       };
+      const assetMeta = (a) => ({ label: flag(a.country) + " " + a.ticker, sub: [a.name, a.sectors.join(", ")].filter(Boolean).join(" · "),
+        file: a.file, unit: "usd", country: a.country });
+      const DEFAULT_M = 3;
+
       const body = document.getElementById("paises-body");
       body.className = "";
       body.innerHTML = COUNTRY_GROUPS.map((g) => {
         const metas = g.idx.map(idxMeta).filter(Boolean);
         const mine = assets.filter((a) => a.country === g.code);
+        const charted = mine.filter((a) => a.file);
+        const rest = mine.filter((a) => !a.file);
         return `<section class="country-card">
-          <h2 class="country-h">${g.label}</h2>
-          <div class="wgrid">${metas.map(sparkCardHTML).join("")}</div>
-          ${mine.length ? `<div class="country-sectors">${sectorsBlockHTML(mine, resTickers)}</div>` : ""}
+          <div class="country-top"><h2 class="country-h">${g.label}</h2>${rangesHTML(DEFAULT_M)}</div>
+          <div class="wgrid">${metas.map((m) => sparkCardHTML(m)).join("")}</div>
+          ${charted.length ? `<div class="wgrid wgrid-sm">${charted.map((a) => sparkCardHTML(assetMeta(a), true)).join("")}</div>` : ""}
+          ${rest.length ? `<div class="country-sectors">${sectorsBlockHTML(rest, resTickers)}</div>` : ""}
         </section>`;
       }).join("");
-      const allMetas = COUNTRY_GROUPS.flatMap((g) => g.idx.map(idxMeta).filter(Boolean));
-      mountSparkCards(body, allMetas);
+
+      const map = metaMapByFile([
+        ...COUNTRY_GROUPS.flatMap((g) => g.idx.map(idxMeta).filter(Boolean)),
+        ...assets.filter((a) => a.file).map(assetMeta),
+      ]);
+      body.querySelectorAll(".country-card").forEach((sec) => renderSparks(sec, map, DEFAULT_M));
+      bindSparkClicks(body, map);
       bindAssetClicks(body, assets, results);
+      // filtro de período por país: re-renderiza todos os gráficos daquele país
+      body.addEventListener("click", (ev) => {
+        const b = ev.target.closest(".country-ranges button");
+        if (!b) return;
+        const sec = b.closest(".country-card");
+        sec.querySelectorAll(".country-ranges button").forEach((x) => x.classList.remove("active"));
+        b.classList.add("active");
+        renderSparks(sec, map, Number(b.dataset.m));
+      });
     }
 
     async function initSetores() {
@@ -639,12 +696,22 @@
       body.className = "";
       body.innerHTML = `
         <section class="country-card">
-          <h2 class="country-h">Commodities</h2>
-          <div class="wgrid">${metas.map(sparkCardHTML).join("")}</div>
+          <div class="country-top"><h2 class="country-h">Commodities</h2>${rangesHTML(3)}</div>
+          <div class="wgrid">${metas.map((m) => sparkCardHTML(m)).join("")}</div>
         </section>
         <div class="country-sectors">${sectorsBlockHTML(assets, resTickers)}</div>`;
-      mountSparkCards(body, metas);
+      const map = metaMapByFile(metas);
+      renderSparks(body, map, 3);
+      bindSparkClicks(body, map);
       bindAssetClicks(body, assets, results);
+      body.addEventListener("click", (ev) => {
+        const b = ev.target.closest(".country-ranges button");
+        if (!b) return;
+        const sec = b.closest(".country-card");
+        sec.querySelectorAll(".country-ranges button").forEach((x) => x.classList.remove("active"));
+        b.classList.add("active");
+        renderSparks(sec, map, Number(b.dataset.m));
+      });
     }
 
     /* ============================ Eventos / Timeline ============================ */
