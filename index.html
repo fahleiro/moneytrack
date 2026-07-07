@@ -30,23 +30,125 @@
     .toolbar button.active { background: #1f6feb; border-color: #1f6feb; }
     .chart-wrap { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; }
     canvas { max-height: 420px; }
+
+    /* topo: dropdown mínimo de navegação (Home / Timeline) */
+    .topbar { display: flex; margin-bottom: 14px; }
+    .topbar select {
+      background: #21262d; color: #e6edf3; border: 1px solid #30363d;
+      border-radius: 6px; padding: 5px 10px; cursor: pointer; font-size: 13px;
+    }
+
+    /* Timeline: nav em pílula ◀ ano ▶ */
+    .chrono { padding: 8px 0 28px; }
+    .chrono-bar { display: flex; justify-content: center; margin-bottom: 6px; }
+    .chrono-nav {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #161b22; border: 1px solid #30363d; border-radius: 999px; padding: 4px 8px;
+    }
+    .cn-arrow {
+      width: 26px; height: 26px; border-radius: 50%; cursor: pointer; padding: 0;
+      border: 1px solid #30363d; background: #21262d; color: #8b949e; font-size: 11px; line-height: 1;
+    }
+    .cn-arrow:hover:not(:disabled) { background: #30363d; color: #e6edf3; }
+    .cn-arrow:disabled { opacity: .35; cursor: default; }
+    .cn-label { min-width: 76px; text-align: center; font-weight: 700; font-size: 13px; color: #e6edf3; }
+
+    /* Timeline: trilha com linha contínua + círculos (um por data) */
+    .chrono-track {
+      position: relative; display: flex; align-items: flex-start; gap: 10px;
+      overflow-x: auto; padding: 22px 10px 8px;
+    }
+    .chrono-track::before {
+      content: ''; position: absolute; left: 12px; right: 12px; top: 44px; height: 2px;
+      background: linear-gradient(90deg, #21262d, #30363d, #21262d); z-index: 0;
+    }
+    .chrono-node {
+      position: relative; z-index: 1; flex: 0 0 auto; min-width: 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+    }
+    .chrono-hit {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      background: none; border: 0; cursor: default; padding: 0; width: 100%;
+    }
+    .chrono-cnt {
+      font-size: 10px; font-weight: 700; color: #8b949e; background: #21262d;
+      border: 1px solid #30363d; border-radius: 999px; padding: 0 6px; line-height: 16px; min-width: 16px;
+    }
+    .chrono-dot {
+      width: 18px; height: 18px; border-radius: 50%;
+      border: 2px solid #6ea8fe; background: #1f6feb;
+    }
+    .chrono-lbl { font-size: 12px; color: #8b949e; font-weight: 600; }
+    /* um "E" clicável POR evento, empilhados abaixo da data; cada um abre o modal */
+    .chrono-es { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+    .chrono-e {
+      cursor: pointer; padding: 1px 5px; border-radius: 4px; line-height: 1.1;
+      border: 1px solid #2c3b5e; background: #16203a; color: #6ea8fe;
+      font-size: 11px; font-weight: 800; letter-spacing: .04em;
+    }
+    .chrono-e:hover { background: #1e2c4e; color: #9fc4ff; border-color: #3a4f7e; }
+    .chrono-empty { color: #8b949e; font-size: 13px; padding: 24px 10px; text-align: center; }
+
+    /* modal de detalhe de evento */
+    .modal-back {
+      position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 60;
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+    }
+    .modal {
+      background: #161b22; border: 1px solid #30363d; border-radius: 14px;
+      width: min(460px, 100%); max-height: 80vh; overflow: auto;
+    }
+    .modal-h {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding: 14px 16px; border-bottom: 1px solid #21262d;
+    }
+    .modal-h h3 { margin: 0; font-size: 15px; }
+    .modal-x { background: none; border: 0; color: #8b949e; font-size: 16px; cursor: pointer; }
+    .modal-x:hover { color: #fff; }
+    .modal-body { padding: 12px 16px 16px; }
+    .ev-det { display: flex; flex-direction: column; gap: 10px; }
+    .ev-det > div { display: flex; flex-direction: column; gap: 2px; }
+    .ev-k { color: #8b949e; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+    .muted { color: #8b949e; }
   </style>
 </head>
 <body>
-  <h1 id="title">moneytrack</h1>
-  <div class="sub" id="sub">Histórico diário · dados em JSON versionado (data/)</div>
-
-  <div class="cards" id="cards"></div>
-
-  <div class="toolbar" id="ranges">
-    <select id="serie"></select>
-    <button data-range="365">1A</button>
-    <button data-range="1825">5A</button>
-    <button data-range="3650">10A</button>
-    <button data-range="0" class="active">Tudo</button>
+  <div class="topbar">
+    <select id="view">
+      <option value="home">Home</option>
+      <option value="timeline">Timeline</option>
+    </select>
   </div>
 
-  <div class="chart-wrap"><canvas id="chart"></canvas></div>
+  <div id="home-view">
+    <h1 id="title">moneytrack</h1>
+    <div class="sub" id="sub">Histórico diário · dados em JSON versionado (data/)</div>
+
+    <div class="cards" id="cards"></div>
+
+    <div class="toolbar" id="ranges">
+      <select id="serie"></select>
+      <button data-range="365">1A</button>
+      <button data-range="1825">5A</button>
+      <button data-range="3650">10A</button>
+      <button data-range="0" class="active">Tudo</button>
+    </div>
+
+    <div class="chart-wrap"><canvas id="chart"></canvas></div>
+  </div>
+
+  <div id="timeline-view" class="chrono" hidden>
+    <h1>Timeline</h1>
+    <div class="sub">Eventos por data · data/events.json</div>
+    <div class="chrono-bar">
+      <div class="chrono-nav" role="group" aria-label="navegação da linha do tempo">
+        <button class="cn-arrow" id="tl-prev" title="voltar">◀</button>
+        <span class="cn-label" id="tl-year"></span>
+        <button class="cn-arrow" id="tl-next" title="avançar">▶</button>
+      </div>
+    </div>
+    <div class="chrono-track" id="tl-track"></div>
+  </div>
 
   <script>
     let full = [];
@@ -183,6 +285,107 @@
 
     init().catch(() => {
       document.getElementById("cards").innerHTML = "<div class='card'>Erro ao carregar data/indices.json / data/assets.json.</div>";
+    });
+
+    /* ============================ Timeline ============================ */
+    let events = null;      // eventos de data/events.json
+    let tlYear = null;      // ano em foco na trilha
+
+    const dmy = (s) => (s ? s.split("-").reverse().join("/") : "—");
+    const flag = (c) => (c === "BR" ? "🇧🇷" : (c === "US" || c === "USA") ? "🇺🇸" : "");
+    const evLabel = (e) => e.ticker || (e.code === "FED_SUPER_WED" ? "FED" : (e.type || "?").toUpperCase());
+    const esc = (s) => String(s).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+
+    function tlYears() {
+      return [...new Set(events.map((e) => +e.date.slice(0, 4)))].sort((a, b) => a - b);
+    }
+
+    function renderTimeline() {
+      const ys = tlYears();
+      document.getElementById("tl-year").textContent = tlYear;
+      document.getElementById("tl-prev").disabled = !ys.length || tlYear <= ys[0];
+      document.getElementById("tl-next").disabled = !ys.length || tlYear >= ys[ys.length - 1];
+
+      // agrupa por data dentro do ano em foco: um círculo por data
+      const byDate = {};
+      for (const e of events.filter((e) => e.date.startsWith(String(tlYear))))
+        (byDate[e.date] = byDate[e.date] || []).push(e);
+      const dates = Object.keys(byDate).sort();
+
+      const track = document.getElementById("tl-track");
+      if (!dates.length) {
+        track.innerHTML = "<div class='chrono-empty'>sem eventos em " + tlYear + ".</div>";
+        return;
+      }
+      track.innerHTML = dates.map((d) => {
+        const list = byDate[d];
+        const es = list.map((e) => {
+          const i = events.indexOf(e);
+          return `<button class="chrono-e" data-ev="${i}" title="${esc(dmy(e.date) + " · " + evLabel(e) + " " + e.title)}">E</button>`;
+        }).join("");
+        return `<div class="chrono-node">
+          <div class="chrono-hit" title="${dmy(d)} · ${list.length} evento(s)">
+            <span class="chrono-cnt">${list.length}</span>
+            <span class="chrono-dot"></span>
+            <span class="chrono-lbl">${dmy(d).slice(0, 5)}</span>
+          </div>
+          <div class="chrono-es">${es}</div>
+        </div>`;
+      }).join("");
+    }
+
+    function openModal(e) {
+      const today = new Date().toISOString().slice(0, 10);
+      const days = Math.round((new Date(e.date) - new Date(today)) / 86400000);
+      const when = days === 0 ? "hoje" : days === 1 ? "amanhã" : days < 0 ? `há ${-days} dias` : `em ${days} dias`;
+      const typeLbl = e.type === "earnings" ? "Resultado / Earnings" : e.type;
+      const back = document.createElement("div");
+      back.className = "modal-back";
+      back.innerHTML = `<div class="modal">
+        <header class="modal-h">
+          <h3>${flag(e.country)} ${esc(evLabel(e))} <span class="muted">· ${esc(e.title)}</span></h3>
+          <button class="modal-x">✕</button>
+        </header>
+        <div class="modal-body">
+          <div class="ev-det">
+            <div><span class="ev-k">Evento</span><b>${esc(e.title)}</b></div>
+            <div><span class="ev-k">Tipo</span><b>${esc(typeLbl)}</b></div>
+            <div><span class="ev-k">Data</span><b>${dmy(e.date)} <em class="muted">(${when})</em></b></div>
+            ${e.ticker ? `<div><span class="ev-k">Ticker</span><b>${esc(e.ticker)}</b></div>` : ""}
+          </div>
+        </div>
+      </div>`;
+      back.addEventListener("click", (ev) => {
+        if (ev.target === back || ev.target.classList.contains("modal-x")) back.remove();
+      });
+      document.body.appendChild(back);
+    }
+
+    async function initTimeline() {
+      if (events) return;
+      try {
+        events = await fetch("data/events.json").then((r) => r.json());
+      } catch {
+        events = [];
+      }
+      const ys = tlYears();
+      const now = new Date().getFullYear();
+      tlYear = ys.includes(now) ? now : (ys.length ? ys[ys.length - 1] : now);
+      renderTimeline();
+    }
+
+    document.getElementById("tl-prev").addEventListener("click", () => { tlYear--; renderTimeline(); });
+    document.getElementById("tl-next").addEventListener("click", () => { tlYear++; renderTimeline(); });
+    document.getElementById("tl-track").addEventListener("click", (ev) => {
+      const b = ev.target.closest(".chrono-e");
+      if (b) openModal(events[+b.dataset.ev]);
+    });
+
+    document.getElementById("view").addEventListener("change", (e) => {
+      const tl = e.target.value === "timeline";
+      document.getElementById("home-view").hidden = tl;
+      document.getElementById("timeline-view").hidden = !tl;
+      if (tl) initTimeline();
     });
   </script>
 </body>
