@@ -1,0 +1,25 @@
+{
+  "code": "QQQ_QUEDA_1W_2W_1M",
+  "title": "QQQ em queda janela 1W, 2W, 1M",
+  "summary": "Aposta pessoal para treinar predições: QQQ (Invesco QQQ Trust, Nasdaq-100) em tendência de queda nas janelas de 1 semana, 2 semanas e 1 mês.\r\n\r\nTrês apostas independentes com o mesmo ativo e viés bearish, variando só o horizonte de tempo — para medir em qual janela a leitura acerta melhor.",
+  "tags": "QQQ, bearish, predicao, treino",
+  "source": "Aposta pessoal",
+  "date": "2026-07-07",
+  "bets": [
+    {
+      "ticker": "QQQ",
+      "expect": "bearish",
+      "period": { "type": "week", "qty": 1 }
+    },
+    {
+      "ticker": "QQQ",
+      "expect": "bearish",
+      "period": { "type": "week", "qty": 2 }
+    },
+    {
+      "ticker": "QQQ",
+      "expect": "bearish",
+      "period": { "type": "month", "qty": 1 }
+    }
+  ]
+}
