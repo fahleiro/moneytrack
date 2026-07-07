@@ -91,6 +91,10 @@
     }
     .country-top .country-h { margin: 0; padding: 0; border: 0; }
     .country-top .toolbar { margin: 0; }
+    /* setores como faixas full-width: cabeçalho + grade de mini-gráficos/chips */
+    .charted-sectors { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+    .charted-sectors .block .wgrid-sm { margin-top: 0; margin-bottom: 8px; }
+    .charted-sectors .block .wgrid-sm:last-child { margin-bottom: 0; }
 
     /* países / setores: seções + chips de ativos */
     .country-card { border: 1px solid #30363d; border-radius: 14px; background: #11151c; padding: 14px 16px; margin-bottom: 18px; }
@@ -656,22 +660,38 @@
         const i = indices.find((x) => x.code === code && x.file);
         return i && { label: i.name.replace(/\s*\(.*\)$/, ""), sub: i.description || i.name, file: i.file, unit: i.unit, country: i.country };
       };
-      const assetMeta = (a) => ({ label: flag(a.country) + " " + a.ticker, sub: [a.name, a.sectors.join(", ")].filter(Boolean).join(" · "),
+      const assetMeta = (a) => ({ label: flag(a.country) + " " + a.ticker, sub: a.name,
         file: a.file, unit: "usd", country: a.country });
       const DEFAULT_K = "3m";
+
+      // agrupa os ativos do país por setor; dentro de cada setor, empresas com
+      // histórico viram mini-gráficos e as demais viram chips
+      const sectorBlocksHTML = (list) => {
+        const bySector = {};
+        for (const a of list)
+          for (const s of (a.sectors.length ? a.sectors : ["outros"]))
+            (bySector[s] = bySector[s] || []).push(a);
+        return Object.keys(bySector).sort().map((s) => {
+          const items = bySector[s];
+          const charted = items.filter((a) => a.file);
+          const chips = items.filter((a) => !a.file);
+          return `<div class="block">
+            <header class="block-h"><h3>${esc(s)}</h3><span class="count">${items.length}</span></header>
+            ${charted.length ? `<div class="wgrid wgrid-sm">${charted.map((a) => sparkCardHTML(assetMeta(a), true)).join("")}</div>` : ""}
+            ${chips.length ? `<div class="chips">${chips.map((a) => chipHTML(a, resTickers)).join("")}</div>` : ""}
+          </div>`;
+        }).join("");
+      };
 
       const body = document.getElementById("paises-body");
       body.className = "";
       body.innerHTML = COUNTRY_GROUPS.map((g) => {
         const metas = g.idx.map(idxMeta).filter(Boolean);
         const mine = assets.filter((a) => a.country === g.code);
-        const charted = mine.filter((a) => a.file);
-        const rest = mine.filter((a) => !a.file);
         return `<section class="country-card">
           <div class="country-top"><h2 class="country-h">${g.label}</h2>${rangesHTML(DEFAULT_K)}</div>
           <div class="wgrid">${metas.map((m) => sparkCardHTML(m)).join("")}</div>
-          ${charted.length ? `<div class="wgrid wgrid-sm">${charted.map((a) => sparkCardHTML(assetMeta(a), true)).join("")}</div>` : ""}
-          ${rest.length ? `<div class="country-sectors">${sectorsBlockHTML(rest, resTickers)}</div>` : ""}
+          ${mine.length ? `<div class="charted-sectors">${sectorBlocksHTML(mine)}</div>` : ""}
         </section>`;
       }).join("");
 
