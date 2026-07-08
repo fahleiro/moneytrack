@@ -37,7 +37,8 @@
   "country": "BR",
   "unit": "index",
   "description": "Principal índice da bolsa brasileira (B3), com as ações mais negociadas. É o termômetro médio do mercado acionário do Brasil.",
-  "file": "market_history/IBOV.json"
+  "file": "market_history/IBOV.json",
+  "yahoo": "^BVSP"
  },
  {
   "code": "BTC",
@@ -45,7 +46,8 @@
   "country": "US",
   "unit": "usd",
   "description": "Preço do Bitcoin em dólar (BTC-USD), a maior criptomoeda por capitalização de mercado.",
-  "file": "market_history/BTC.json"
+  "file": "market_history/BTC.json",
+  "yahoo": "BTC-USD"
  },
  {
   "code": "NASDAQ",
@@ -53,7 +55,8 @@
   "country": "US",
   "unit": "index",
   "description": "Nasdaq Composite: reúne praticamente todas as empresas listadas na Nasdaq, com forte peso de tecnologia.",
-  "file": "market_history/NASDAQ.json"
+  "file": "market_history/NASDAQ.json",
+  "yahoo": "^IXIC"
  },
  {
   "code": "US_SP500",
@@ -61,7 +64,8 @@
   "country": "US",
   "unit": "index",
   "description": "S&P 500: índice das 500 maiores empresas dos EUA por valor de mercado. Principal termômetro do mercado acionário americano.",
-  "file": "market_history/SP500.json"
+  "file": "market_history/SP500.json",
+  "yahoo": "^GSPC"
  },
  {
   "code": "WTI",
@@ -69,7 +73,8 @@
   "country": "US",
   "unit": "usd",
   "description": "Petróleo WTI (West Texas Intermediate) em dólar por barril; referência de preço do petróleo nos EUA.",
-  "file": "market_history/WTI.json"
+  "file": "market_history/WTI.json",
+  "yahoo": "CL=F"
  },
  {
   "code": "GOLD",
@@ -77,7 +82,8 @@
   "country": "US",
   "unit": "usd",
   "description": "Preço do ouro em dólar por onça-troy; reserva de valor e proteção clássica contra inflação.",
-  "file": "market_history/GOLD.json"
+  "file": "market_history/GOLD.json",
+  "yahoo": "GC=F"
  },
  {
   "code": "SILVER",
@@ -85,7 +91,8 @@
   "country": "US",
   "unit": "usd",
   "description": "Preço da prata em dólar por onça-troy; metal precioso com uso industrial e de investimento.",
-  "file": "market_history/SILVER.json"
+  "file": "market_history/SILVER.json",
+  "yahoo": "SI=F"
  },
  {
   "code": "BR_SELIC",

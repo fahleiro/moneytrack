@@ -47,7 +47,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/AXP.json"
+    "file": "market_history/AXP.json",
+    "yahoo": "AXP"
   },
   {
     "ticker": "BA",
@@ -57,7 +58,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/BA.json"
+    "file": "market_history/BA.json",
+    "yahoo": "BA"
   },
   {
     "ticker": "BBDC4",
@@ -67,7 +69,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/BBDC4.json"
+    "file": "market_history/BBDC4.json",
+    "yahoo": "BBDC4.SA"
   },
   {
     "ticker": "BPAC11",
@@ -87,7 +90,8 @@
     "sectors": [
       "industrials"
     ],
-    "file": "market_history/CAT.json"
+    "file": "market_history/CAT.json",
+    "yahoo": "CAT"
   },
   {
     "ticker": "COST",
@@ -157,7 +161,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/GE.json"
+    "file": "market_history/GE.json",
+    "yahoo": "GE"
   },
   {
     "ticker": "GOLD",
@@ -165,7 +170,8 @@
     "type": "commodity",
     "country": null,
     "sectors": [],
-    "file": "market_history/GOLD.json"
+    "file": "market_history/GOLD.json",
+    "yahoo": "GC=F"
   },
   {
     "ticker": "GOOGL",
@@ -195,7 +201,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/ITA.json"
+    "file": "market_history/ITA.json",
+    "yahoo": "ITA"
   },
   {
     "ticker": "ITUB4",
@@ -205,7 +212,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/ITUB4.json"
+    "file": "market_history/ITUB4.json",
+    "yahoo": "ITUB4.SA"
   },
   {
     "ticker": "JPM",
@@ -215,7 +223,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/JPM.json"
+    "file": "market_history/JPM.json",
+    "yahoo": "JPM"
   },
   {
     "ticker": "KTOS",
@@ -225,7 +234,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/KTOS.json"
+    "file": "market_history/KTOS.json",
+    "yahoo": "KTOS"
   },
   {
     "ticker": "LMT",
@@ -235,7 +245,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/LMT.json"
+    "file": "market_history/LMT.json",
+    "yahoo": "LMT"
   },
   {
     "ticker": "LOW",
@@ -265,7 +276,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/MA.json"
+    "file": "market_history/MA.json",
+    "yahoo": "MA"
   },
   {
     "ticker": "MGLU3",
@@ -275,7 +287,8 @@
     "sectors": [
       "retail"
     ],
-    "file": "market_history/MGLU3.json"
+    "file": "market_history/MGLU3.json",
+    "yahoo": "MGLU3.SA"
   },
   {
     "ticker": "MSFT",
@@ -295,7 +308,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/NOC.json"
+    "file": "market_history/NOC.json",
+    "yahoo": "NOC"
   },
   {
     "ticker": "NU",
@@ -305,7 +319,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/NU.json"
+    "file": "market_history/NU.json",
+    "yahoo": "NU"
   },
   {
     "ticker": "NVDA",
@@ -335,7 +350,8 @@
     "sectors": [
       "construction"
     ],
-    "file": "market_history/PAVE.json"
+    "file": "market_history/PAVE.json",
+    "yahoo": "PAVE"
   },
   {
     "ticker": "PAX",
@@ -365,7 +381,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/PLTR.json"
+    "file": "market_history/PLTR.json",
+    "yahoo": "PLTR"
   },
   {
     "ticker": "QQQ",
@@ -376,7 +393,8 @@
       "technology",
       "broad"
     ],
-    "file": "market_history/QQQ.json"
+    "file": "market_history/QQQ.json",
+    "yahoo": "QQQ"
   },
   {
     "ticker": "REMX",
@@ -386,7 +404,8 @@
     "sectors": [
       "rare-earth"
     ],
-    "file": "market_history/REMX.json"
+    "file": "market_history/REMX.json",
+    "yahoo": "REMX"
   },
   {
     "ticker": "RTX",
@@ -396,7 +415,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/RTX.json"
+    "file": "market_history/RTX.json",
+    "yahoo": "RTX"
   },
   {
     "ticker": "SHLD",
@@ -406,7 +426,8 @@
     "sectors": [
       "defense"
     ],
-    "file": "market_history/SHLD.json"
+    "file": "market_history/SHLD.json",
+    "yahoo": "SHLD"
   },
   {
     "ticker": "SILVER",
@@ -414,7 +435,8 @@
     "type": "commodity",
     "country": null,
     "sectors": [],
-    "file": "market_history/SILVER.json"
+    "file": "market_history/SILVER.json",
+    "yahoo": "SI=F"
   },
   {
     "ticker": "SMH",
@@ -424,7 +446,8 @@
     "sectors": [
       "semiconductor"
     ],
-    "file": "market_history/SMH.json"
+    "file": "market_history/SMH.json",
+    "yahoo": "SMH"
   },
   {
     "ticker": "TAEE11",
@@ -444,7 +467,8 @@
     "sectors": [
       "retail"
     ],
-    "file": "market_history/TGT.json"
+    "file": "market_history/TGT.json",
+    "yahoo": "TGT"
   },
   {
     "ticker": "TRPL4",
@@ -474,7 +498,8 @@
     "sectors": [
       "financials"
     ],
-    "file": "market_history/V.json"
+    "file": "market_history/V.json",
+    "yahoo": "V"
   },
   {
     "ticker": "VOO",
@@ -484,7 +509,8 @@
     "sectors": [
       "broad"
     ],
-    "file": "market_history/VOO.json"
+    "file": "market_history/VOO.json",
+    "yahoo": "VOO"
   },
   {
     "ticker": "VWS",
@@ -504,7 +530,8 @@
     "sectors": [
       "retail"
     ],
-    "file": "market_history/WMT.json"
+    "file": "market_history/WMT.json",
+    "yahoo": "WMT"
   },
   {
     "ticker": "WTI",
@@ -512,7 +539,8 @@
     "type": "commodity",
     "country": null,
     "sectors": [],
-    "file": "market_history/WTI.json"
+    "file": "market_history/WTI.json",
+    "yahoo": "CL=F"
   },
   {
     "ticker": "XRT",
