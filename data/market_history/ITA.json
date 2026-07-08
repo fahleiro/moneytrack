@@ -5065,5 +5065,12 @@
 {"tradingDay":"2026-06-23","value":235.93},
 {"tradingDay":"2026-06-24","value":236.19},
 {"tradingDay":"2026-06-25","value":237.38},
-{"tradingDay":"2026-06-26","value":236.78}
+{"tradingDay":"2026-06-26","value":236.78},
+{"tradingDay":"2026-06-29","value":239.13},
+{"tradingDay":"2026-06-30","value":242.42},
+{"tradingDay":"2026-07-01","value":243.86},
+{"tradingDay":"2026-07-02","value":248.19},
+{"tradingDay":"2026-07-06","value":250.78},
+{"tradingDay":"2026-07-07","value":245.11},
+{"tradingDay":"2026-07-08","value":239.33}
 ]

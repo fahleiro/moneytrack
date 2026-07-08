@@ -41,11 +41,13 @@ function toTradingDay(epochSeconds) {
   return new Date(epochSeconds * 1000).toISOString().slice(0, 10);
 }
 
-// Busca o último candle diário válido no Yahoo Finance.
-async function fetchLatestCandle(symbol) {
+// Busca os candles diários recentes (janela de 1 mês) válidos no Yahoo Finance,
+// em ordem cronológica. A janela ampla torna o job self-healing: se o cron
+// falhar por alguns dias, a próxima execução preenche os dias faltantes.
+async function fetchRecentCandles(symbol) {
   const url =
     `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}` +
-    `?range=5d&interval=1d`;
+    `?range=1mo&interval=1d`;
 
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
@@ -68,17 +70,19 @@ async function fetchLatestCandle(symbol) {
     throw new Error("resposta sem timestamp/close");
   }
 
-  // Pega o candle mais recente com close preenchido (o último costuma ser null
-  // durante o pregão ou em dias sem negociação).
-  for (let i = timestamps.length - 1; i >= 0; i--) {
+  // Mantém só os candles com close preenchido (o Yahoo devolve null em dias
+  // sem negociação ou no candle em formação durante o pregão).
+  const candles = [];
+  for (let i = 0; i < timestamps.length; i++) {
     if (closes[i] != null) {
-      return {
+      candles.push({
         tradingDay: toTradingDay(timestamps[i]),
         value: Math.round(closes[i] * 100) / 100,
-      };
+      });
     }
   }
-  throw new Error("nenhum close válido");
+  if (candles.length === 0) throw new Error("nenhum close válido");
+  return candles;
 }
 
 // Serializa a série no mesmo formato do repositório: um objeto por linha,
@@ -90,17 +94,27 @@ function serialize(series) {
 async function updateTarget(t) {
   const path = join(DATA_DIR, t.file);
   const series = JSON.parse(readFileSync(path, "utf8"));
-  const last = series[series.length - 1];
+  const lastDay = series.length ? series[series.length - 1].tradingDay : "";
 
-  const candle = await fetchLatestCandle(t.yahoo);
+  const candles = await fetchRecentCandles(t.yahoo);
+  // Só os dias mais recentes que o último já gravado (idempotente + preenche
+  // buracos se o job ficou dias sem rodar).
+  const novos = candles.filter((c) => c.tradingDay > lastDay);
 
-  if (last && candle.tradingDay <= last.tradingDay) {
-    return { status: "skip", label: t.label, day: candle.tradingDay };
+  if (novos.length === 0) {
+    return { status: "skip", label: t.label, day: lastDay };
   }
 
-  series.push(candle);
+  series.push(...novos);
   writeFileSync(path, serialize(series));
-  return { status: "updated", label: t.label, day: candle.tradingDay, value: candle.value };
+  const ultimo = novos[novos.length - 1];
+  return {
+    status: "updated",
+    label: t.label,
+    count: novos.length,
+    day: ultimo.tradingDay,
+    value: ultimo.value,
+  };
 }
 
 async function main() {
@@ -116,7 +130,8 @@ async function main() {
       const r = await updateTarget(t);
       if (r.status === "updated") {
         updated++;
-        console.log(`  ✓ ${r.label}: +${r.day} = ${r.value}`);
+        const dias = r.count > 1 ? ` (${r.count} dias)` : "";
+        console.log(`  ✓ ${r.label}: até ${r.day} = ${r.value}${dias}`);
       } else {
         skipped++;
         console.log(`  · ${r.label}: sem novidade (último ${r.day})`);
