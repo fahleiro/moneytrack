@@ -226,6 +226,24 @@
     .ev-det { display: flex; flex-direction: column; gap: 10px; }
     .ev-det > div { display: flex; flex-direction: column; gap: 2px; }
     .ev-k { color: #8b949e; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+
+    /* painel de série no modal: gráfico com pan (arraste no tempo) */
+    .sm-chart { position: relative; cursor: grab; touch-action: none; }
+    .sm-chart.grabbing { cursor: grabbing; }
+    .sm-hint { font-size: 11px; margin: 4px 0 2px; }
+
+    /* seção de sequências consecutivas (alta/queda) no modal do ativo */
+    .streak-sec { margin-top: 16px; border-top: 1px solid #21262d; padding-top: 12px; }
+    .streak-head { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: #8b949e; margin-bottom: 8px; }
+    .streak-grans { margin-bottom: 10px; }
+    .streak-grans button { padding: 4px 10px; font-size: 12px; }
+    .streak-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .streak-card { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; }
+    .streak-t { font-size: 11px; color: #8b949e; margin-bottom: 6px; }
+    .streak-pct { font-size: 22px; font-weight: 700; line-height: 1.1; }
+    .streak-amt { font-size: 13px; font-weight: 600; margin-top: 2px; }
+    .streak-sub { font-size: 11px; margin-top: 6px; }
+    @media (max-width: 520px) { .streak-cards { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -334,6 +352,64 @@
       return s;
     }
 
+    // moeda do ativo pela nacionalidade (só BR/US por enquanto)
+    const assetUnit = (country) => (country === "BR" ? "brl" : "usd");
+    // título curto do índice: só a parte antes de "—", "(" ou " - "
+    const shortName = (name) => String(name).split(/\s*[—(]|\s+-\s+/)[0].trim();
+    // montante (delta) com sinal, na moeda/unidade do ativo
+    const fmtDelta = (v, unit, country) => (v >= 0 ? "+" : "−") + fmtVal(Math.abs(v), unit, country);
+
+    /* ---- sequências consecutivas (maior alta / maior queda) ----
+       agrupa a série diária em períodos (dia/semana/mês/ano) pegando o último
+       valor de cada período; depois acha a maior sequência em que cada período
+       fechou acima (alta) / abaixo (queda) do anterior. */
+    function periodize(series, gran) {
+      if (gran === "day") return series.map((p) => ({ day: p.tradingDay, value: p.value }));
+      const isoWeek = (day) => {
+        const d = new Date(day + "T00:00:00Z");
+        const n = (d.getUTCDay() + 6) % 7;
+        d.setUTCDate(d.getUTCDate() - n + 3);
+        const thu = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+        const w = 1 + Math.round(((d - thu) / 864e5 - 3 + ((thu.getUTCDay() + 6) % 7)) / 7);
+        return d.getUTCFullYear() + "-W" + String(w).padStart(2, "0");
+      };
+      const keyOf = (day) => gran === "month" ? day.slice(0, 7) : gran === "year" ? day.slice(0, 4) : isoWeek(day);
+      const map = new Map();
+      for (const p of series) map.set(keyOf(p.tradingDay), { day: p.tradingDay, value: p.value });
+      return [...map.values()];
+    }
+
+    function bestStreak(periods, dir) {
+      let best = null, i = 0;
+      while (i < periods.length - 1) {
+        let j = i;
+        while (j + 1 < periods.length && Math.sign(periods[j + 1].value - periods[j].value) === dir) j++;
+        if (j > i) {
+          const sv = periods[i].value, ev = periods[j].value;
+          const cand = { count: j - i, pct: ((ev - sv) / sv) * 100, delta: ev - sv,
+            startDay: periods[i].day, endDay: periods[j].day };
+          if (!best || Math.abs(cand.pct) > Math.abs(best.pct)) best = cand;
+        }
+        i = Math.max(j, i + 1);
+      }
+      return best;
+    }
+
+    const GRAN_LBL = { day: "dias", week: "semanas", month: "meses", year: "anos" };
+    function renderStreaks(box, series, unit, country, gran) {
+      const periods = periodize(series, gran);
+      const u = GRAN_LBL[gran];
+      const card = (s, kind, cls) => s
+        ? `<div class="streak-card">
+             <div class="streak-t">Maior ${kind} consecutiva</div>
+             <div class="streak-pct ${cls}">${s.pct >= 0 ? "+" : ""}${s.pct.toFixed(1)}%</div>
+             <div class="streak-amt ${cls}">${fmtDelta(s.delta, unit, country)}</div>
+             <div class="streak-sub muted">${s.count} ${u} · ${dmy(s.startDay)} → ${dmy(s.endDay)}</div>
+           </div>`
+        : `<div class="streak-card"><div class="streak-t">Maior ${kind} consecutiva</div><div class="muted">sem sequência</div></div>`;
+      box.innerHTML = card(bestStreak(periods, 1), "alta", "up") + card(bestStreak(periods, -1), "queda", "down");
+    }
+
     function closeModal() { document.querySelectorAll(".modal-back").forEach((m) => m.remove()); }
     function showModal(innerHTML, lg) {
       closeModal();
@@ -370,40 +446,120 @@
 
     function mountSeriesPanel(el, series, unit, country, defaultKey = "12m") {
       el.className = "";
+      const isPct = !!(unit && unit.startsWith("pct"));
       el.innerHTML = `
         <div class="toolbar sm-ranges">${RANGES.map((r) =>
           `<button data-k="${r.key}" class="${r.key === defaultKey ? "active" : ""}">${r.lbl}</button>`).join("")}</div>
         <div class="muted sm-stats" data-stats>—</div>
-        <canvas height="220"></canvas>`;
+        <div class="sm-chart"><canvas height="220"></canvas></div>
+        <div class="muted sm-hint">arraste o gráfico para navegar no tempo · role para deslizar</div>
+        ${isPct ? "" : `
+        <div class="streak-sec">
+          <div class="streak-head">Sequências consecutivas</div>
+          <div class="toolbar sm-ranges streak-grans">
+            <button data-g="day" class="active">Dias</button>
+            <button data-g="week">Semanas</button>
+            <button data-g="month">Meses</button>
+            <button data-g="year">Anos</button>
+          </div>
+          <div class="streak-cards" data-streaks></div>
+        </div>`}`;
       const stats = el.querySelector("[data-stats]");
+      const chartBox = el.querySelector(".sm-chart");
       const canvas = el.querySelector("canvas");
-      let ch;
-      const render = (key) => {
-        const s = sliceBy(series, key);
-        if (!s.length) { stats.textContent = "sem dados no período."; return; }
+      let ch, win = { lo: 0, hi: series.length - 1 };
+
+      const clamp = (lo, hi) => {
+        const len = hi - lo + 1;
+        if (lo < 0) { lo = 0; hi = Math.min(series.length - 1, lo + len - 1); }
+        if (hi > series.length - 1) { hi = series.length - 1; lo = Math.max(0, hi - len + 1); }
+        return { lo, hi };
+      };
+
+      const renderWindow = () => {
+        const s = series.slice(win.lo, win.hi + 1);
+        if (s.length < 2) { stats.textContent = "sem dados no período."; return; }
         const first = s[0], last = s[s.length - 1];
-        const chg = ((last.value - first.value) / first.value) * 100;
+        let variHtml;
+        if (isPct) {
+          const d = last.value - first.value;
+          variHtml = `<b class="${d <= 0 ? "up" : "down"}">${d >= 0 ? "+" : ""}${d.toFixed(2)} p.p.</b>`;
+        } else {
+          const chg = ((last.value - first.value) / first.value) * 100;
+          const cls = chg >= 0 ? "up" : "down";
+          variHtml = `<b class="${cls}">${chg >= 0 ? "+" : ""}${chg.toFixed(1)}%</b> · ` +
+            `<b class="${cls}">${fmtDelta(last.value - first.value, unit, country)}</b>`;
+        }
         stats.innerHTML =
-          `Último (${last.tradingDay}): <b>${fmtVal(last.value, unit, country)}</b> · ` +
-          `desde ${first.tradingDay}: <b class="${chg >= 0 ? "up" : "down"}">${chg >= 0 ? "+" : ""}${chg.toFixed(1)}%</b> · ` +
-          `${s.length.toLocaleString("pt-BR")} registros`;
+          `${first.tradingDay} → ${last.tradingDay} · <b>${fmtVal(last.value, unit, country)}</b> · ` +
+          variHtml + ` · ${s.length.toLocaleString("pt-BR")} regs`;
         const data = { labels: s.map((p) => p.tradingDay), datasets: [{
           data: s.map((p) => p.value), borderColor: "#1f6feb",
           backgroundColor: "rgba(31,111,235,.12)", borderWidth: 1.5, pointRadius: 0, fill: true, tension: .05 }] };
-        if (ch) { ch.data = data; ch.update(); }
+        if (ch) { ch.data = data; ch.update("none"); }
         else ch = new Chart(canvas, { type: "line", data,
           options: { responsive: true, animation: false, interaction: { mode: "index", intersect: false },
             scales: { x: { ticks: { maxTicksLimit: 8, color: "#8b949e" }, grid: { color: "#21262d" } },
                       y: { ticks: { color: "#8b949e" }, grid: { color: "#21262d" } } },
             plugins: { legend: { display: false } } } });
       };
+
+      const setByKey = (key) => {
+        const len = (!key || key === "all") ? series.length : Math.max(2, sliceBy(series, key).length);
+        win = clamp(series.length - len, series.length - 1);
+        renderWindow();
+      };
+
+      // pan por índice, mantendo o tamanho da janela
+      const shift = (dPts) => {
+        if (!dPts) return;
+        win = clamp(win.lo - dPts, win.hi - dPts);
+        renderWindow();
+      };
+      let drag = null;
+      canvas.addEventListener("pointerdown", (e) => {
+        drag = { x: e.clientX, lo: win.lo, hi: win.hi };
+        chartBox.classList.add("grabbing");
+        canvas.setPointerCapture(e.pointerId);
+      });
+      canvas.addEventListener("pointermove", (e) => {
+        if (!drag || !ch || !ch.chartArea) return;
+        const len = drag.hi - drag.lo + 1;
+        const pxPerPt = ch.chartArea.width / len;
+        const dPts = Math.round((e.clientX - drag.x) / pxPerPt);
+        win = clamp(drag.lo - dPts, drag.hi - dPts);
+        renderWindow();
+      });
+      const endDrag = () => { drag = null; chartBox.classList.remove("grabbing"); };
+      canvas.addEventListener("pointerup", endDrag);
+      canvas.addEventListener("pointercancel", endDrag);
+      canvas.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        const len = win.hi - win.lo + 1;
+        const step = Math.max(1, Math.round(len * 0.12));
+        shift(-Math.sign(e.deltaX || e.deltaY) * step);
+      }, { passive: false });
+
       el.querySelector(".sm-ranges").addEventListener("click", (e) => {
         if (e.target.tagName !== "BUTTON") return;
-        el.querySelectorAll(".sm-ranges button").forEach((b) => b.classList.remove("active"));
+        el.querySelectorAll(".sm-ranges:not(.streak-grans) button").forEach((b) => b.classList.remove("active"));
         e.target.classList.add("active");
-        render(e.target.dataset.k);
+        setByKey(e.target.dataset.k);
       });
-      render(defaultKey);
+      setByKey(defaultKey);
+
+      // seção de sequências (independente da janela do gráfico)
+      const streakBox = el.querySelector("[data-streaks]");
+      if (streakBox) {
+        const grans = el.querySelector(".streak-grans");
+        grans.addEventListener("click", (e) => {
+          if (e.target.tagName !== "BUTTON") return;
+          grans.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+          e.target.classList.add("active");
+          renderStreaks(streakBox, series, unit, country, e.target.dataset.g);
+        });
+        renderStreaks(streakBox, series, unit, country, "day");
+      }
     }
 
     /* modal com o painel de série (índice ou ativo) */
@@ -441,7 +597,6 @@
           deltaHtml = `<span class="wdelta ${up ? "up" : "down"}">${d >= 0 ? "+" : ""}${d.toFixed(1)}%</span>`;
         }
         el.querySelector(".wval").innerHTML = fmtVal(last.value, meta.unit, meta.country) + deltaHtml;
-        el.querySelector(".wsub").textContent = (meta.sub || "") + " · " + dmy(last.tradingDay);
         const canvas = el.querySelector("canvas");
         const old = Chart.getChart(canvas);
         if (old) old.destroy();
@@ -463,7 +618,6 @@
     function sparkCardHTML(meta, small) {
       return `<div class="wcard ${small ? "wcard-sm" : ""}" data-file="${esc(meta.file)}">
         <div class="wlabel">${esc(meta.label)}</div>
-        <div class="wsub">${esc(meta.sub || "")}</div>
         <div class="wval muted">…</div>
         <div class="spark"><canvas></canvas></div>
       </div>`;
@@ -600,7 +754,7 @@
       for (const a of assets.filter((x) => x.file && !idxFiles.has(x.file))) {
         const key = "ast:" + a.ticker;
         const bits = [a.type, a.country, a.sectors.join(", ")].filter(Boolean).join(" · ");
-        catalog[key] = { label: a.ticker + " — " + a.name, sub: bits, file: a.file, unit: "usd" };
+        catalog[key] = { label: a.ticker + " — " + a.name, sub: bits, file: a.file, unit: assetUnit(a.country) };
         (byType[a.type] || (byType[a.type] = [])).push({ key, text: a.ticker + " — " + a.name });
       }
       addGroup("Ações", byType.stock);
@@ -651,7 +805,7 @@
         if (!chip) return;
         const a = assets.find((x) => x.ticker === chip.dataset.ticker);
         if (!a) return;
-        if (a.file) openSeriesModal(a.ticker + " — " + a.name, a.sectors.join(", "), a.file, "usd", a.country);
+        if (a.file) openSeriesModal(a.ticker + " — " + a.name, a.sectors.join(", "), a.file, assetUnit(a.country), a.country);
         else if (resTickers.has(a.ticker)) openResultsModal(a, results);
       });
     }
@@ -665,10 +819,10 @@
       const resTickers = new Set(results.map((r) => r.ticker));
       const idxMeta = (code) => {
         const i = indices.find((x) => x.code === code && x.file);
-        return i && { label: i.name.replace(/\s*\(.*\)$/, ""), sub: i.description || i.name, file: i.file, unit: i.unit, country: i.country };
+        return i && { label: shortName(i.name), sub: i.description || i.name, file: i.file, unit: i.unit, country: i.country };
       };
-      const assetMeta = (a) => ({ label: flag(a.country) + " " + a.ticker, sub: a.name,
-        file: a.file, unit: "usd", country: a.country });
+      const assetMeta = (a) => ({ label: a.ticker, sub: a.name,
+        file: a.file, unit: assetUnit(a.country), country: a.country });
       const DEFAULT_K = "3m";
 
       // agrupa os ativos do país por setor; dentro de cada setor, empresas com
@@ -777,7 +931,7 @@
             const btn = document.createElement("button");
             btn.textContent = "ver histórico do ativo →";
             btn.style.cssText = "margin-top:12px;background:none;border:0;color:#6ea8fe;cursor:pointer;font-size:12px;text-decoration:underline;padding:0";
-            btn.onclick = () => openSeriesModal(a.ticker + " — " + a.name, a.sectors.join(", "), a.file, "usd", a.country);
+            btn.onclick = () => openSeriesModal(a.ticker + " — " + a.name, a.sectors.join(", "), a.file, assetUnit(a.country), a.country);
             back.querySelector("#evm-extra").appendChild(btn);
           }
         }).catch(() => {});

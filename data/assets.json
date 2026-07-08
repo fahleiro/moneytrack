@@ -7,7 +7,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/ALUP11.json",
+    "yahoo": "ALUP11.SA"
   },
   {
     "ticker": "AMER3",
@@ -17,7 +18,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/AMER3.json",
+    "yahoo": "AMER3.SA"
   },
   {
     "ticker": "AMZN",
@@ -27,7 +29,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/AMZN.json",
+    "yahoo": "AMZN"
   },
   {
     "ticker": "ASAI3",
@@ -37,7 +40,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/ASAI3.json",
+    "yahoo": "ASAI3.SA"
   },
   {
     "ticker": "AXP",
@@ -80,7 +84,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/BPAC11.json",
+    "yahoo": "BPAC11.SA"
   },
   {
     "ticker": "CAT",
@@ -101,7 +106,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/COST.json",
+    "yahoo": "COST"
   },
   {
     "ticker": "DBRG",
@@ -111,7 +117,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/DBRG.json",
+    "yahoo": "DBRG"
   },
   {
     "ticker": "EGIE3",
@@ -121,7 +128,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/EGIE3.json",
+    "yahoo": "EGIE3.SA"
   },
   {
     "ticker": "ELET3",
@@ -181,7 +189,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/GOOGL.json",
+    "yahoo": "GOOGL"
   },
   {
     "ticker": "HD",
@@ -191,7 +200,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/HD.json",
+    "yahoo": "HD"
   },
   {
     "ticker": "ITA",
@@ -256,7 +266,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/LOW.json",
+    "yahoo": "LOW"
   },
   {
     "ticker": "LREN3",
@@ -266,7 +277,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/LREN3.json",
+    "yahoo": "LREN3.SA"
   },
   {
     "ticker": "MA",
@@ -298,7 +310,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/MSFT.json",
+    "yahoo": "MSFT"
   },
   {
     "ticker": "NOC",
@@ -330,7 +343,8 @@
     "sectors": [
       "semiconductor"
     ],
-    "file": null
+    "file": "market_history/NVDA.json",
+    "yahoo": "NVDA"
   },
   {
     "ticker": "ORCL",
@@ -340,7 +354,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/ORCL.json",
+    "yahoo": "ORCL"
   },
   {
     "ticker": "PAVE",
@@ -361,7 +376,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/PAX.json",
+    "yahoo": "PAX"
   },
   {
     "ticker": "PCAR3",
@@ -371,7 +387,8 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/PCAR3.json",
+    "yahoo": "PCAR3.SA"
   },
   {
     "ticker": "PLTR",
@@ -457,7 +474,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/TAEE11.json",
+    "yahoo": "TAEE11.SA"
   },
   {
     "ticker": "TGT",
@@ -488,7 +506,8 @@
     "sectors": [
       "datacenter"
     ],
-    "file": null
+    "file": "market_history/TTE.json",
+    "yahoo": "TTE"
   },
   {
     "ticker": "V",
@@ -550,6 +569,7 @@
     "sectors": [
       "retail"
     ],
-    "file": null
+    "file": "market_history/XRT.json",
+    "yahoo": "XRT"
   }
 ]
