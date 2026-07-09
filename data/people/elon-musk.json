@@ -2,10 +2,11 @@
   "code": "ELON_MUSK",
   "name": "Elon Musk",
   "role": "Tesla · xAI · SpaceX",
-  "summary": "Holdings diretos (TSLA) fora do universo rastreado aqui; exposição temática via corrida de IA (compute de xAI/Tesla) e semicondutores. Historicamente pró-cripto. Mapeamento do painel.",
+  "summary": "CEO e maior acionista da Tesla (TSLA); exposição adicional à corrida de IA (compute de xAI/Tesla) e semicondutores. Historicamente pró-cripto. Mapeamento do painel.",
   "date": "2026-07-09",
   "wallet": [
-    { "ticker": "NVDA", "file": null, "type": "bullish", "note": "compute de IA (xAI/Tesla)" },
+    { "ticker": "TSLA", "file": "market_history/TSLA.json", "type": "bullish", "note": "CEO / maior acionista" },
+    { "ticker": "NVDA", "file": "market_history/NVDA.json", "type": "bullish", "note": "compute de IA (xAI/Tesla)" },
     { "ticker": "SMH", "file": "market_history/SMH.json", "type": "bullish", "note": "semicondutores (tema)" }
   ],
   "links": [

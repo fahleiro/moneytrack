@@ -2,9 +2,10 @@
   "code": "WARREN_BUFFETT",
   "name": "Warren Buffett",
   "role": "Berkshire Hathaway",
-  "summary": "Carteira histórica concentrada em qualidade/consumo/financeiras; American Express (AXP) é posição de décadas, além de Visa (V) e Mastercard (MA). Notoriamente cético quanto ao ouro como reserva de valor. Mapeamento do painel — não é o 13F auditado.",
+  "summary": "Carteira histórica concentrada em qualidade/consumo/financeiras; Apple (AAPL) é a maior posição da Berkshire, e American Express (AXP) é posição de décadas, além de Visa (V) e Mastercard (MA). Notoriamente cético quanto ao ouro como reserva de valor. Mapeamento do painel — não é o 13F auditado.",
   "date": "2026-07-09",
   "wallet": [
+    { "ticker": "AAPL", "file": "market_history/AAPL.json", "type": "bullish", "note": "maior posição da Berkshire" },
     { "ticker": "AXP", "file": "market_history/AXP.json", "type": "bullish", "note": "posição histórica da Berkshire" },
     { "ticker": "V", "file": "market_history/V.json", "type": "bullish", "note": "meios de pagamento" },
     { "ticker": "MA", "file": "market_history/MA.json", "type": "bullish", "note": "meios de pagamento" },

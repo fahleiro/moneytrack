@@ -1,5 +1,16 @@
 [
   {
+    "ticker": "AAPL",
+    "name": "Apple",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology"
+    ],
+    "file": "market_history/AAPL.json",
+    "yahoo": "AAPL"
+  },
+  {
     "ticker": "ALUP11",
     "name": "Alupar",
     "type": "stock",
@@ -292,6 +303,17 @@
     "yahoo": "MA"
   },
   {
+    "ticker": "META",
+    "name": "Meta Platforms",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter"
+    ],
+    "file": "market_history/META.json",
+    "yahoo": "META"
+  },
+  {
     "ticker": "MGLU3",
     "name": "Magazine Luiza",
     "type": "stock",
@@ -497,6 +519,17 @@
       "datacenter"
     ],
     "file": null
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology"
+    ],
+    "file": "market_history/TSLA.json",
+    "yahoo": "TSLA"
   },
   {
     "ticker": "TTE",

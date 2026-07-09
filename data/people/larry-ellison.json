@@ -1,0 +1,14 @@
+{
+  "code": "LARRY_ELLISON",
+  "name": "Larry Ellison",
+  "role": "Co-fundador, CTO e chairman da Oracle",
+  "summary": "Co-fundador, CTO e chairman da Oracle (ORCL) e seu maior acionista individual. Central na expansão de nuvem/IA da companhia (OCI, projeto Stargate). Detém também participação pessoal relevante na Tesla (TSLA), onde já foi conselheiro. Mapeamento do painel.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "ORCL", "file": "market_history/ORCL.json", "type": "bullish", "note": "co-fundador / chairman / maior acionista" },
+    { "ticker": "TSLA", "file": "market_history/TSLA.json", "type": "bullish", "note": "participação pessoal relevante" }
+  ],
+  "links": [
+    { "title": "Data Centers no Ceará — mapa de IA/energia", "file": "insights/06-07-2026_21_13_27.json", "type": "insight" }
+  ]
+}
