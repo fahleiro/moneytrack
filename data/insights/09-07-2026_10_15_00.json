@@ -1,0 +1,32 @@
+{
+  "code": "IRAN_ATAQUES_RETOMADA",
+  "title": "Retomada dos ataques ao Irã — choque de oferta no petróleo e prêmio de defesa",
+  "summary": "A volta dos ataques ao Irã reacende dois vetores de mercado ao mesmo tempo: risco de choque de oferta no petróleo (Estreito de Ormuz / produção iraniana) e reprecificação do prêmio de defesa. Tese direcional de curto prazo (10 dias).\r\n\r\nPetróleo: o WTI saltou de US$ 68,55 (06/jul) para US$ 75,71 (08/jul), ~+10% em dois pregões, refletindo o prêmio de risco geopolítico. Energia (XLE) tende a acompanhar o barril.\r\n\r\nDefesa: a ITA (iShares U.S. Aerospace & Defense ETF) já vinha forte — subiu de ~US$ 236,8 (26/jun) até o pico de US$ 250,78 em 06/jul (+5,9%), antes de um recuo para US$ 239,33 (08/jul). A retomada do conflito costuma sustentar demanda por nomes de defesa; a aposta é de retomada da alta na janela de 10 dias.\r\n\r\nApostas pessoais para treinar predições — não é recomendação. Riscos: desescalada rápida derruba o prêmio de risco (petróleo e defesa devolvem ganhos); ITA já corrigiu do topo e pode consolidar.",
+  "tags": "Irã, geopolitica, petroleo, defesa, ITA, WTI, XLE",
+  "source": "Aposta pessoal",
+  "date": "2026-07-09",
+  "bets": [
+    {
+      "ticker": "ITA",
+      "expect": "bullish",
+      "target": "+10%",
+      "period": { "type": "day", "qty": 10 }
+    },
+    {
+      "ticker": "WTI",
+      "expect": "bullish",
+      "period": { "type": "day", "qty": 10 }
+    },
+    {
+      "ticker": "XLE",
+      "expect": "bullish",
+      "period": { "type": "day", "qty": 10 }
+    }
+  ],
+  "links": [
+    {
+      "file": "09-07-2026_10_16_00.json",
+      "title": "Escândalo da Argentina na Copa"
+    }
+  ]
+}

@@ -190,7 +190,22 @@
     .bet-exp { font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; border-radius: 5px; padding: 1px 6px; }
     .bet-exp.bullish { color: #7ee2a8; background: #103125; border: 1px solid #1f6b47; }
     .bet-exp.bearish { color: #ff9b9b; background: #331417; border: 1px solid #7a2b30; }
+    .bet-tgt { color: #ffd98a; font-weight: 800; font-size: 10.5px; background: #2a2413; border: 1px solid #6b581f; border-radius: 5px; padding: 1px 6px; }
     .bet-win { color: #9fb0d6; font-weight: 800; }
+
+    /* Grafo: documentos como nodos */
+    .graph-wrap { position: relative; width: 100%; max-width: 900px; border: 1px solid #30363d; border-radius: 14px;
+      background: radial-gradient(circle at 50% 40%, #161b22 0%, #0e1218 100%); overflow: hidden; }
+    .graph-wrap svg { display: block; width: 100%; height: auto; touch-action: none; }
+    .g-edge { stroke: #30507e; stroke-width: 1.5; opacity: .55; }
+    .g-node circle { fill: #1d2840; stroke: #4d7bc4; stroke-width: 2; cursor: pointer; transition: fill .12s, stroke .12s; }
+    .g-node:hover circle { fill: #26365a; stroke: #7fa9ec; }
+    .g-node.bet circle { stroke: #d8a93a; fill: #241f12; }
+    .g-node.bet:hover circle { stroke: #ffd98a; fill: #362d18; }
+    .g-node text { fill: #c9d1d9; font-size: 11px; font-weight: 700; pointer-events: none; }
+    .g-node .g-date { fill: #8b949e; font-size: 9px; font-weight: 600; }
+    .graph-legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 2px 0; color: #8b949e; font-size: 11.5px; }
+    .graph-legend .dot { display: inline-block; width: 9px; height: 9px; border-radius: 999px; margin-right: 5px; vertical-align: middle; }
 
     /* Resultados: linhas de lucro por período */
     .res-group { max-width: 640px; margin-bottom: 18px; }
@@ -257,6 +272,7 @@
       <option value="timeline">Timeline</option>
       <option value="eventos">Eventos</option>
       <option value="insights">Insights</option>
+      <option value="grafo">Grafo</option>
       <option value="analises">Análises</option>
       <option value="resultados">Resultados</option>
     </select>
@@ -316,6 +332,12 @@
     <h1>Insights</h1>
     <div class="sub">Dossiês de research · data/insights/</div>
     <div id="insights-body" class="reading muted">carregando…</div>
+  </div>
+
+  <div id="view-grafo" class="view" hidden>
+    <h1>Grafo</h1>
+    <div class="sub">Documentos como nodos · linhas = links entre insights · clique num nodo para abrir</div>
+    <div id="grafo-body" class="muted">carregando…</div>
   </div>
 
   <div id="view-analises" class="view" hidden>
@@ -1031,21 +1053,81 @@
       )).filter(Boolean);
       const body = document.getElementById("insights-body");
       body.classList.remove("muted");
-      body.innerHTML = items.map((it) => `
-        <article class="read-card">
-          <header class="read-h">
-            ${(it.tags || "").split(",").filter(Boolean).map((t) => `<span class="rtag">${esc(t.trim())}</span>`).join("")}
-            <h2>${esc(it.title)}</h2>
-            <div class="read-meta">${esc(it.source || "")} · ${dmy(it.date)}</div>
-          </header>
-          <div class="read-body">${paras(it.summary)}</div>
-          ${it.bets && it.bets.length ? `<footer class="read-bets"><span class="muted">apostas:</span>
-            ${it.bets.map((b) => `<span class="bet"><span class="bet-tk">${esc(b.ticker)}</span><span class="bet-exp ${b.expect === "bullish" ? "bullish" : "bearish"}">${esc(b.expect || "")}</span><span class="bet-win">${esc(betWin(b.period))}</span></span>`).join("")}
-          </footer>` : ""}
-          ${it.assets && it.assets.length ? `<footer class="read-assets"><span class="muted">ativos:</span>
-            ${it.assets.map((a) => `<span class="achip" title="${esc(a.role || "")}">${esc(a.ticker)}</span>`).join("")}
-          </footer>` : ""}
-        </article>`).join("") || "<div class='muted'>nenhum insight.</div>";
+      body.innerHTML = items.map(insightCardHTML).join("") || "<div class='muted'>nenhum insight.</div>";
+    }
+
+    function insightCardHTML(it) {
+      return `<article class="read-card">
+        <header class="read-h">
+          ${(it.tags || "").split(",").filter(Boolean).map((t) => `<span class="rtag">${esc(t.trim())}</span>`).join("")}
+          <h2>${esc(it.title)}</h2>
+          <div class="read-meta">${esc(it.source || "")} · ${dmy(it.date)}</div>
+        </header>
+        <div class="read-body">${paras(it.summary)}</div>
+        ${it.bets && it.bets.length ? `<footer class="read-bets"><span class="muted">apostas:</span>
+          ${it.bets.map((b) => `<span class="bet"><span class="bet-tk">${esc(b.ticker)}</span><span class="bet-exp ${b.expect === "bullish" ? "bullish" : "bearish"}">${esc(b.expect || "")}</span>${b.target ? `<span class="bet-tgt">${esc(b.target)}</span>` : ""}<span class="bet-win">${esc(betWin(b.period))}</span></span>`).join("")}
+        </footer>` : ""}
+        ${it.assets && it.assets.length ? `<footer class="read-assets"><span class="muted">ativos:</span>
+          ${it.assets.map((a) => `<span class="achip" title="${esc(a.role || "")}">${esc(a.ticker)}</span>`).join("")}
+        </footer>` : ""}
+      </article>`;
+    }
+
+    async function initGrafo() {
+      const manifest = await loadJSON("insights/insights.json").catch(() => []);
+      const docs = (await Promise.all(
+        manifest.map((m) => loadJSON("insights/" + m.file).then((d) => ({ ...d, file: m.file })).catch(() => null))
+      )).filter(Boolean);
+      const body = document.getElementById("grafo-body");
+      body.className = "";
+      if (!docs.length) { body.innerHTML = "<div class='muted'>nenhum documento.</div>"; return; }
+
+      const idx = {};
+      docs.forEach((d, i) => { idx[d.file] = i; });
+      // arestas não-direcionadas, deduplicadas
+      const seen = new Set(), edges = [];
+      docs.forEach((d, i) => (d.links || []).forEach((l) => {
+        const j = idx[l.file];
+        if (j == null || j === i) return;
+        const k = i < j ? `${i}-${j}` : `${j}-${i}`;
+        if (seen.has(k)) return;
+        seen.add(k); edges.push([Math.min(i, j), Math.max(i, j)]);
+      }));
+
+      const W = 900, H = 560, cx = W / 2, cy = H / 2;
+      const R = docs.length <= 1 ? 0 : Math.min(cx, cy) - 130;
+      const pos = docs.map((_, i) => {
+        const ang = -Math.PI / 2 + (2 * Math.PI * i) / docs.length;
+        return docs.length === 1 ? { x: cx, y: cy } : { x: cx + R * Math.cos(ang), y: cy + R * Math.sin(ang) };
+      });
+      const short = (t) => { t = String(t).split("—")[0].trim(); return t.length > 26 ? t.slice(0, 25) + "…" : t; };
+
+      const edgeSvg = edges.map(([a, b]) =>
+        `<line class="g-edge" x1="${pos[a].x}" y1="${pos[a].y}" x2="${pos[b].x}" y2="${pos[b].y}"/>`).join("");
+      const nodeSvg = docs.map((d, i) => {
+        const hasBets = d.bets && d.bets.length;
+        return `<g class="g-node ${hasBets ? "bet" : ""}" data-i="${i}" transform="translate(${pos[i].x},${pos[i].y})">
+          <circle r="26"/>
+          <text text-anchor="middle" y="46">${esc(short(d.title))}</text>
+          <text class="g-date" text-anchor="middle" y="60">${esc(dmy(d.date))}</text>
+        </g>`;
+      }).join("");
+
+      body.innerHTML = `<div class="graph-wrap"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="grafo de insights">
+          ${edgeSvg}${nodeSvg}
+        </svg></div>
+        <div class="graph-legend">
+          <span><span class="dot" style="background:#4d7bc4"></span>insight</span>
+          <span><span class="dot" style="background:#d8a93a"></span>com apostas</span>
+          <span><span class="dot" style="background:#30507e"></span>link entre documentos</span>
+        </div>`;
+      body.querySelector("svg").addEventListener("click", (ev) => {
+        const g = ev.target.closest(".g-node");
+        if (!g) return;
+        const d = docs[+g.dataset.i];
+        showModal(`<header class="modal-h"><h3>${esc(d.title)}</h3><button class="modal-x">✕</button></header>
+          <div class="modal-body reading">${insightCardHTML(d)}</div>`);
+      });
     }
 
     async function initAnalises() {
@@ -1134,7 +1216,7 @@
     /* ============================ troca de views ============================ */
     const viewInit = {
       home: initHome, paises: initPaises, setores: initSetores, timeline: initTimeline,
-      eventos: initEventos, insights: initInsights, analises: initAnalises, resultados: initResultados,
+      eventos: initEventos, insights: initInsights, grafo: initGrafo, analises: initAnalises, resultados: initResultados,
     };
     const viewDone = {};
 
