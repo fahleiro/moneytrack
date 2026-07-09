@@ -1,0 +1,26 @@
+{
+  "code": "ITA_MOVIMENTO_JUN_JUL_2026",
+  "title": "ITA (Aerospace & Defense) — o que está por trás do movimento recente (jun/jul 2026)",
+  "summary": "O \"movimento de alta\" recente do ITA (iShares U.S. Aerospace & Defense ETF) é uma recuperação de ~8,7% desde a mínima de 10/jun (US$ 224,87) até ~US$ 244 em 1–2/jul — e NÃO um novo topo histórico. O recorde segue em US$ 250,65 (02/mar/2026), ~2,5% acima do preço atual; junho fechou apenas ~+2,4% no preço. O rali forte foi o de 2025 (+48,6%); 2026 tem sido lateral e volátil.\r\n\r\nOs motores são estruturais/geopolíticos, não a temporada de resultados (os balanços do 1T26 já saíram em abril). Pesam: orçamento de defesa dos EUA passando de US$ 1 tri no FY2026 (com proposta de US$ 1,5 tri para o FY2027, ainda não aprovada); o programa Golden Dome (~US$ 150 bi já apropriados via OBBBA; veículo de contratação SHIELD com teto de US$ 151 bi); a meta de 5% do PIB da NATO (Declaração de Haia, jun/2025); e a crise no Estreito de Ormuz — por onde transita ~25% do petróleo marítimo global (~20 mi b/d, IEA/EIA).\r\n\r\nContracorrentes importantes: o ITA teve SAÍDAS líquidas de −US$ 459 mi no último mês (a alta veio de valorização, não de captação — investidores realizando lucro); a de-escalada Irã/Ucrânia é BAIXISTA para defesa (a queda de meados de junho coincidiu com o \"acordo de paz\" com o Irã e derrubou a Lockheed ~6%); o cancelamento da fragata alemã F126 (24/jun) derrubou a Rheinmetall ~18–19%; e paira a ameaça de proibição de recompras/dividendos para as prime contractors (LMT, NOC, BA) no NDAA FY2027.\r\n\r\nPor dentro do ETF: GE Aerospace (22,9%) é o principal motor — novo topo histórico em 01/jul, puxada por aviação COMERCIAL (motores/serviços), não só defesa; RTX (14,8%) é beneficiária direta do Golden Dome, com balanço em 28/jul; Boeing (9%) segue no prejuízo apesar da recuperação de entregas; Lockheed (4,1%) destoa negativamente. Cerca de 40% do ITA (GE, parte de RTX, Boeing, Howmet, TransDigm) depende de aviação comercial, não só de orçamentos militares.\r\n\r\nNíveis de referência: superar US$ 250,65 confirmaria novo topo histórico; perder a região de US$ 225 (mínima de junho) sinalizaria enfraquecimento. O que monitorar: resultados do 2T26 (RTX em 28/jul é o primeiro grande gatilho), a tramitação do NDAA FY2027 e da proibição de recompras, Ormuz/Irã/Ucrânia (de-escalada é baixista, escalada sustenta o setor) e a reversão — ou não — das saídas de recursos. Material puramente contextual/informativo; não é recomendação.",
+  "tags": "ITA, defesa, aeroespacial, geopolitica, Ormuz, NATO, orcamento, Golden-Dome",
+  "source": "Dossiê (research)",
+  "date": "2026-07-02",
+  "assets": [
+    { "ticker": "GE", "role": "22,9% — maior posição; motor comercial + defesa; topo 01/jul" },
+    { "ticker": "RTX", "role": "14,8% — Golden Dome (Patriot); balanço 28/jul" },
+    { "ticker": "BA", "role": "9,0% — recuperação de entregas, ainda no prejuízo" },
+    { "ticker": "TDG", "role": "4,6% — aftermarket aeroespacial" },
+    { "ticker": "HWM", "role": "4,6% — componentes estruturais (ramp Boeing/Airbus)" },
+    { "ticker": "GD", "role": "4,3% — submarinos / naval" },
+    { "ticker": "LMT", "role": "4,1% — prime Golden Dome; destoa negativamente" },
+    { "ticker": "NOC", "role": "3,9% — B-21; sensores espaciais Golden Dome" },
+    { "ticker": "LHX", "role": "3,8% — book-to-bill 1,4x; motores de foguete" },
+    { "ticker": "RKLB", "role": "3,6% — espaço / Space Force; valuation alto" }
+  ],
+  "links": [
+    {
+      "file": "09-07-2026_10_15_00.json",
+      "title": "Retomada dos ataques ao Irã"
+    }
+  ]
+}
