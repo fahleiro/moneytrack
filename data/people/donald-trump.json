@@ -1,0 +1,16 @@
+{
+  "code": "DONALD_TRUMP",
+  "name": "Donald Trump",
+  "role": "Presidente dos EUA · defesa, energia e cripto",
+  "summary": "Vetores de política com impacto setorial: expansão do orçamento de defesa (US$ 1 tri+, Golden Dome), 'drill baby drill' (energia/petróleo) e postura pró-cripto; contrário à eólica offshore. Aqui bullish/bearish reflete o vento de cauda (ou contra) da política, não posições pessoais.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "WTI", "file": "market_history/WTI.json", "type": "bullish", "note": "drill baby drill / energia" },
+    { "ticker": "LMT", "file": "market_history/LMT.json", "type": "bullish", "note": "buildup de defesa" },
+    { "ticker": "RTX", "file": "market_history/RTX.json", "type": "bullish", "note": "buildup de defesa / Golden Dome" },
+    { "ticker": "VWS", "file": null, "type": "bearish", "note": "postura anti-eólica offshore" }
+  ],
+  "links": [
+    { "title": "Retomada dos ataques ao Irã — choque no petróleo e defesa", "file": "insights/09-07-2026_10_15_00.json", "type": "insight" }
+  ]
+}

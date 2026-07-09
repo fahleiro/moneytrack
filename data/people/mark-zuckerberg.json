@@ -1,0 +1,14 @@
+{
+  "code": "MARK_ZUCKERBERG",
+  "name": "Mark Zuckerberg",
+  "role": "CEO da Meta",
+  "summary": "A Meta (fora do universo rastreado) é uma das maiores compradoras de GPUs para IA; exposição temática via semicondutores e infraestrutura de IA. Mapeamento do painel.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "NVDA", "file": null, "type": "bullish", "note": "capex de IA da Meta (tema)" },
+    { "ticker": "SMH", "file": "market_history/SMH.json", "type": "bullish", "note": "semicondutores (tema)" }
+  ],
+  "links": [
+    { "title": "Data Centers no Ceará — mapa de IA/energia", "file": "insights/06-07-2026_21_13_27.json", "type": "insight" }
+  ]
+}

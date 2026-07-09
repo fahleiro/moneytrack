@@ -1,0 +1,17 @@
+{
+  "code": "PETER_THIEL",
+  "name": "Peter Thiel",
+  "role": "Founders Fund · co-fundador da Palantir e do PayPal",
+  "summary": "Investidor de tecnologia e defesa via Founders Fund; co-fundador e chairman da Palantir (PLTR). Tese concentrada em software de defesa/IA e nomes contrários ao consenso. Mapeamento do painel — não é dado auditado de carteira.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "PLTR", "file": "market_history/PLTR.json", "type": "bullish", "note": "co-fundador e chairman" },
+    { "ticker": "SHLD", "file": "market_history/SHLD.json", "type": "bullish", "note": "defense-tech (tema)" },
+    { "ticker": "NVDA", "file": null, "type": "new", "note": "exposição à corrida de IA" },
+    { "ticker": "KTOS", "file": "market_history/KTOS.json", "type": "leak", "note": "defense-tech — posição rumorada / não confirmada" }
+  ],
+  "links": [
+    { "title": "Retomada dos ataques ao Irã — prêmio de defesa", "file": "insights/09-07-2026_10_15_00.json", "type": "insight" },
+    { "title": "ITA (Aerospace & Defense) — dossiê", "file": "insights/09-07-2026_10_30_00.json", "type": "insight" }
+  ]
+}

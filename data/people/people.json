@@ -1,0 +1,9 @@
+[
+  { "file": "peter-thiel.json", "name": "Peter Thiel", "date": "2026-07-09" },
+  { "file": "donald-trump.json", "name": "Donald Trump", "date": "2026-07-09" },
+  { "file": "jeff-bezos.json", "name": "Jeff Bezos", "date": "2026-07-09" },
+  { "file": "elon-musk.json", "name": "Elon Musk", "date": "2026-07-09" },
+  { "file": "mark-zuckerberg.json", "name": "Mark Zuckerberg", "date": "2026-07-09" },
+  { "file": "warren-buffett.json", "name": "Warren Buffett", "date": "2026-07-09" },
+  { "file": "michael-burry.json", "name": "Michael Burry", "date": "2026-07-09" }
+]

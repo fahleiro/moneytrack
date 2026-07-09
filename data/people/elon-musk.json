@@ -1,0 +1,14 @@
+{
+  "code": "ELON_MUSK",
+  "name": "Elon Musk",
+  "role": "Tesla · xAI · SpaceX",
+  "summary": "Holdings diretos (TSLA) fora do universo rastreado aqui; exposição temática via corrida de IA (compute de xAI/Tesla) e semicondutores. Historicamente pró-cripto. Mapeamento do painel.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "NVDA", "file": null, "type": "bullish", "note": "compute de IA (xAI/Tesla)" },
+    { "ticker": "SMH", "file": "market_history/SMH.json", "type": "bullish", "note": "semicondutores (tema)" }
+  ],
+  "links": [
+    { "title": "Data Centers no Ceará — mapa de IA/energia", "file": "insights/06-07-2026_21_13_27.json", "type": "insight" }
+  ]
+}

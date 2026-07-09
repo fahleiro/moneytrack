@@ -1,0 +1,16 @@
+{
+  "code": "MICHAEL_BURRY",
+  "name": "Michael Burry",
+  "role": "Scion Asset Management · 'The Big Short'",
+  "summary": "Conhecido por apostas contrárias (puts) e alertas de bolha; histórico de posições vendidas em tecnologia, semicondutores e índices. Exemplo do padrão bearish = apostar contra. Mapeamento do painel.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "NVDA", "file": null, "type": "bearish", "note": "alerta de bolha de IA" },
+    { "ticker": "QQQ", "file": "market_history/QQQ.json", "type": "bearish", "note": "put em índice (Nasdaq-100)" },
+    { "ticker": "SMH", "file": "market_history/SMH.json", "type": "bearish", "note": "semicondutores" }
+  ],
+  "links": [
+    { "title": "QQQ em queda — janela 1W/2W/1M", "file": "insights/07-07-2026_22_37_51.json", "type": "insight" },
+    { "title": "Scion Asset Management — filings 13F (SEC EDGAR)", "url": null, "type": "news" }
+  ]
+}

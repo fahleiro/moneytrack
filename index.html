@@ -207,6 +207,21 @@
     .graph-legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 2px 0; color: #8b949e; font-size: 11.5px; }
     .graph-legend .dot { display: inline-block; width: 9px; height: 9px; border-radius: 999px; margin-right: 5px; vertical-align: middle; }
 
+    /* People: wallet tipada + links */
+    .read-role { color: #9fb0d6; font-size: 12.5px; font-weight: 600; margin: 2px 0 0; }
+    .wallet-row, .plinks-row { margin-top: 14px; padding-top: 12px; border-top: 1px solid #21262d; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .wtype { font-size: 9.5px; letter-spacing: .04em; text-transform: uppercase; border-radius: 5px; padding: 1px 6px; font-weight: 800; }
+    .wtype.bullish { color: #7ee2a8; background: #103125; border: 1px solid #1f6b47; }
+    .wtype.bearish { color: #ff9b9b; background: #331417; border: 1px solid #7a2b30; }
+    .wtype.leak { color: #d6b3ff; background: #241633; border: 1px solid #5a3a8a; }
+    .wtype.new { color: #8ad6ff; background: #0e2735; border: 1px solid #1f5a7a; }
+    .plink { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #cfe0ff;
+      background: #12181f; border: 1px solid #30363d; border-radius: 8px; padding: 3px 8px; text-decoration: none; }
+    a.plink:hover { border-color: #4d7bc4; }
+    .ltag { font-size: 9px; letter-spacing: .04em; text-transform: uppercase; color: #9fb0d6; background: #1d2840;
+      border: 1px solid #36507e; border-radius: 5px; padding: 1px 5px; }
+    .ltag.news { color: #ffd98a; background: #2a2413; border-color: #6b581f; }
+
     /* Resultados: linhas de lucro por período */
     .res-group { max-width: 640px; margin-bottom: 18px; }
     .res-group h2 { font-size: 15px; margin: 0 0 8px; }
@@ -273,6 +288,7 @@
       <option value="eventos">Eventos</option>
       <option value="insights">Insights</option>
       <option value="grafo">Grafo</option>
+      <option value="people">People</option>
       <option value="analises">Análises</option>
       <option value="resultados">Resultados</option>
     </select>
@@ -338,6 +354,12 @@
     <h1>Grafo</h1>
     <div class="sub">Documentos como nodos · linhas = links entre insights · clique num nodo para abrir</div>
     <div id="grafo-body" class="muted">carregando…</div>
+  </div>
+
+  <div id="view-people" class="view" hidden>
+    <h1>People</h1>
+    <div class="sub">Carteiras e apostas por pessoa · wallet tipada (bullish/bearish/leak/new) · data/people/</div>
+    <div id="people-body" class="reading muted">carregando…</div>
   </div>
 
   <div id="view-analises" class="view" hidden>
@@ -1130,6 +1152,37 @@
       });
     }
 
+    async function initPeople() {
+      const manifest = await loadJSON("people/people.json").catch(() => []);
+      const items = (await Promise.all(
+        manifest.map((m) => loadJSON("people/" + m.file).catch(() => null))
+      )).filter(Boolean);
+      const body = document.getElementById("people-body");
+      body.classList.remove("muted");
+      const wtype = (t) => ["bullish", "bearish", "leak", "new"].includes(t) ? t : "new";
+      const linkEl = (l) => {
+        const tag = `<span class="ltag ${l.type === "news" ? "news" : ""}">${esc(l.type || "link")}</span>`;
+        const inner = `${esc(l.title || l.file || l.url || "")} ${tag}`;
+        return l.url ? `<a class="plink" href="${esc(l.url)}" target="_blank" rel="noopener">${inner}</a>`
+                     : `<span class="plink">${inner}</span>`;
+      };
+      body.innerHTML = items.map((p) => `
+        <article class="read-card">
+          <header class="read-h">
+            <h2>${esc(p.name)}</h2>
+            ${p.role ? `<div class="read-role">${esc(p.role)}</div>` : ""}
+            <div class="read-meta">${esc(p.source || "Mapeamento do painel")} · ${dmy(p.date)}</div>
+          </header>
+          ${p.summary ? `<div class="read-body">${paras(p.summary)}</div>` : ""}
+          ${p.wallet && p.wallet.length ? `<footer class="wallet-row"><span class="muted">wallet:</span>
+            ${p.wallet.map((w) => `<span class="bet" title="${esc(w.note || "")}"><span class="bet-tk">${esc(w.ticker || w.file || "")}</span><span class="wtype ${wtype(w.type)}">${esc(w.type || "")}</span></span>`).join("")}
+          </footer>` : ""}
+          ${p.links && p.links.length ? `<footer class="plinks-row"><span class="muted">links:</span>
+            ${p.links.map(linkEl).join("")}
+          </footer>` : ""}
+        </article>`).join("") || "<div class='muted'>nenhuma pessoa.</div>";
+    }
+
     async function initAnalises() {
       const items = await loadJSON("analyses.json").catch(() => []);
       const body = document.getElementById("analises-body");
@@ -1216,7 +1269,7 @@
     /* ============================ troca de views ============================ */
     const viewInit = {
       home: initHome, paises: initPaises, setores: initSetores, timeline: initTimeline,
-      eventos: initEventos, insights: initInsights, grafo: initGrafo, analises: initAnalises, resultados: initResultados,
+      eventos: initEventos, insights: initInsights, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
     };
     const viewDone = {};
 

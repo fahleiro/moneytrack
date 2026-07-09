@@ -1,0 +1,14 @@
+{
+  "code": "JEFF_BEZOS",
+  "name": "Jeff Bezos",
+  "role": "Fundador da Amazon · Blue Origin",
+  "summary": "Fundador e maior acionista individual da Amazon (AMZN); a AWS é um dos motores da capex de IA. Também por trás da Blue Origin (espaço/defesa). Mapeamento do painel.",
+  "date": "2026-07-09",
+  "wallet": [
+    { "ticker": "AMZN", "file": null, "type": "bullish", "note": "fundador / maior acionista individual" },
+    { "ticker": "NVDA", "file": null, "type": "bullish", "note": "AWS / infraestrutura de IA (tema)" }
+  ],
+  "links": [
+    { "title": "Data Centers no Ceará — mapa de IA/energia", "file": "insights/06-07-2026_21_13_27.json", "type": "insight" }
+  ]
+}
