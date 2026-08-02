@@ -193,6 +193,31 @@
     .bet-tgt { color: #ffd98a; font-weight: 800; font-size: 10.5px; background: #2a2413; border: 1px solid #6b581f; border-radius: 5px; padding: 1px 6px; }
     .bet-win { color: #9fb0d6; font-weight: 800; }
 
+    /* Bets view */
+    .bets-top { display: grid; grid-template-columns: 260px 1fr; gap: 16px; align-items: stretch; margin: 6px 0 20px; }
+    .bets-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .bstat { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+    .bstat-n { font-size: 28px; font-weight: 800; line-height: 1; }
+    .bstat-l { font-size: 11px; color: #8b949e; margin-top: 6px; text-transform: uppercase; letter-spacing: .04em; }
+    .bets-chart { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 10px; min-height: 200px; position: relative; }
+    .bets-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+    .bet-card { background: #0d1117; border: 1px solid #30363d; border-left: 3px solid #30363d; border-radius: 12px; padding: 12px; }
+    .bet-card.win { border-left-color: #2ea043; }
+    .bet-card.loss { border-left-color: #f85149; }
+    .bet-card.open { border-left-color: #8b949e; }
+    .bet-card.nodata { border-left-color: #484f58; opacity: .7; }
+    .bc-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .bc-badge { font-size: 10px; font-weight: 800; letter-spacing: .04em; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+    .bc-badge.win { color: #7ee2a8; background: #103125; border: 1px solid #1f6b47; }
+    .bc-badge.loss { color: #ff9b9b; background: #331417; border: 1px solid #7a2b30; }
+    .bc-badge.open { color: #c9d1d9; background: #161b22; border: 1px solid #30363d; }
+    .bc-badge.nodata { color: #8b949e; background: #161b22; border: 1px solid #30363d; }
+    .bc-meta { display: flex; align-items: center; gap: 10px; margin: 10px 0; font-size: 12px; flex-wrap: wrap; }
+    .bc-chg { font-size: 18px; font-weight: 800; }
+    .bc-link { display: block; width: 100%; text-align: left; background: #161b22; border: 1px solid #30363d; color: #cfe0ff; border-radius: 8px; padding: 8px 10px; font-size: 12px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .bc-link:hover { background: #1c2530; border-color: #4d7bc4; }
+    @media (max-width: 640px) { .bets-top { grid-template-columns: 1fr; } }
+
     /* Grafo: documentos como nodos */
     .graph-wrap { position: relative; width: 100%; max-width: 900px; border: 1px solid #30363d; border-radius: 14px;
       background: radial-gradient(circle at 50% 40%, #161b22 0%, #0e1218 100%); overflow: hidden; }
@@ -287,6 +312,7 @@
       <option value="timeline">Timeline</option>
       <option value="eventos">Eventos</option>
       <option value="insights">Insights</option>
+      <option value="bets">Bets</option>
       <option value="grafo">Grafo</option>
       <option value="people">People</option>
       <option value="analises">Análises</option>
@@ -348,6 +374,12 @@
     <h1>Insights</h1>
     <div class="sub">Dossiês de research · data/insights/</div>
     <div id="insights-body" class="reading muted">carregando…</div>
+  </div>
+
+  <div id="view-bets" class="view" hidden>
+    <h1>Bets</h1>
+    <div class="sub">Apostas dos insights · resolvidas contra o histórico de preços · ganho × perda</div>
+    <div id="bets-body" class="muted">carregando…</div>
   </div>
 
   <div id="view-grafo" class="view" hidden>
@@ -1095,6 +1127,135 @@
       </article>`;
     }
 
+    /* ---- Bets: apostas dos insights resolvidas contra o histórico ---- */
+    // último ponto da série com tradingDay <= iso (série é crescente)
+    function betValueOnOrBefore(series, iso) {
+      let v = null;
+      for (const p of series) { if (p.tradingDay <= iso) v = p; else break; }
+      return v;
+    }
+    // data-alvo = data da aposta + período (dia/semana/mês)
+    function addPeriod(iso, per) {
+      const d = new Date(iso + "T00:00:00Z"), q = (per && per.qty) || 0;
+      const t = per && per.type;
+      if (t === "day") d.setUTCDate(d.getUTCDate() + q);
+      else if (t === "week") d.setUTCDate(d.getUTCDate() + q * 7);
+      else if (t === "month") d.setUTCMonth(d.getUTCMonth() + q);
+      return d.toISOString().slice(0, 10);
+    }
+    // resolve uma aposta: win / loss / open (alvo no futuro) / nodata (sem série)
+    async function resolveBet(bet, placedDate, resolver) {
+      const file = resolver[bet.ticker] || ("market_history/" + bet.ticker + ".json");
+      let series;
+      try { series = await loadJSON(file); } catch { return { status: "nodata" }; }
+      if (!Array.isArray(series) || !series.length) return { status: "nodata" };
+      const base = betValueOnOrBefore(series, placedDate) || series[0];
+      const lastDay = series[series.length - 1].tradingDay;
+      const endDate = addPeriod(placedDate, bet.period);
+      const isOpen = endDate > lastDay;
+      const end = isOpen ? series[series.length - 1] : (betValueOnOrBefore(series, endDate) || series[series.length - 1]);
+      const change = base.value ? (end.value / base.value - 1) * 100 : 0;
+      let thr = null;
+      if (bet.target) { const m = String(bet.target).match(/-?\d+(?:[.,]\d+)?/); if (m) thr = parseFloat(m[0].replace(",", ".")); }
+      const bull = bet.expect === "bullish";
+      const win = thr != null ? (bull ? change >= thr : change <= thr) : (bull ? change > 0 : change < 0);
+      return { status: isOpen ? "open" : (win ? "win" : "loss"), change, endDate, isOpen };
+    }
+
+    const BET_BADGE = { win: ["GANHOU", "win"], loss: ["PERDEU", "loss"], open: ["EM ABERTO", "open"], nodata: ["SEM DADOS", "nodata"] };
+    function betCardHTML(x) {
+      const b = x.bet, ins = x.insight, [txt, cls] = BET_BADGE[x.status] || BET_BADGE.nodata;
+      const chg = x.status === "nodata" ? "—" : `${x.change >= 0 ? "+" : ""}${x.change.toFixed(1)}%`;
+      const chgcls = x.status === "nodata" ? "muted" : (x.change >= 0 ? "up" : "down");
+      return `<article class="bet-card ${cls}">
+        <div class="bc-head">
+          <span class="bet"><span class="bet-tk">${esc(b.ticker)}</span>
+            <span class="bet-exp ${b.expect === "bullish" ? "bullish" : "bearish"}">${esc(b.expect || "")}</span>
+            ${b.target ? `<span class="bet-tgt">${esc(b.target)}</span>` : ""}
+            <span class="bet-win">${esc(betWin(b.period))}</span></span>
+          <span class="bc-badge ${cls}">${txt}</span>
+        </div>
+        <div class="bc-meta">
+          <span class="bc-chg ${chgcls}">${chg}</span>
+          <span class="muted">aposta ${dmy(ins.date)}${x.endDate ? ` · alvo ${dmy(x.endDate)}` : ""}</span>
+        </div>
+        <button class="bc-link" data-ins="${esc(ins.file)}" title="abrir insight">📄 ${esc(ins.title)}</button>
+      </article>`;
+    }
+
+    function drawBetsChart(wins, losses, open) {
+      const el = document.getElementById("bets-chart");
+      if (!el || typeof Chart === "undefined") return;
+      const old = Chart.getChart(el); if (old) old.destroy();
+      new Chart(el, {
+        type: "bar",
+        data: { labels: ["Ganhos", "Perdas", "Em aberto"], datasets: [{
+          data: [wins, losses, open],
+          backgroundColor: ["#103125", "#331417", "#161b22"],
+          borderColor: ["#2ea043", "#f85149", "#8b949e"], borderWidth: 1.5,
+        }] },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          plugins: { legend: { display: false }, title: { display: true, text: "Ganhos × Perdas", color: "#8b949e" } },
+          scales: {
+            x: { ticks: { color: "#c9d1d9" }, grid: { display: false } },
+            y: { beginAtZero: true, ticks: { color: "#8b949e", precision: 0, stepSize: 1 }, grid: { color: "#21262d" } },
+          },
+        },
+      });
+    }
+
+    async function initBets() {
+      const body = document.getElementById("bets-body");
+      const [manifest, assets, indices] = await Promise.all([
+        loadJSON("insights/insights.json").catch(() => []),
+        loadJSON("assets.json").catch(() => []),
+        loadJSON("indices.json").catch(() => []),
+      ]);
+      // resolver ticker/código -> arquivo de série
+      const resolver = {};
+      for (const e of [...assets, ...indices])
+        for (const k of [e.ticker, e.code]) if (k && e.file && !(k in resolver)) resolver[k] = e.file;
+      // carrega insights que têm apostas
+      const insights = (await Promise.all(
+        manifest.map((m) => loadJSON("insights/" + m.file).then((d) => ({ ...d, file: m.file })).catch(() => null))
+      )).filter(Boolean);
+      // achata apostas mantendo o link com o insight de origem
+      const raw = [];
+      for (const ins of insights) for (const bet of (ins.bets || [])) raw.push({ bet, insight: ins });
+      const bets = await Promise.all(raw.map(async (r) => ({ ...r, ...(await resolveBet(r.bet, r.insight.date, resolver)) })));
+      bets.sort((a, b) => (b.insight.date || "").localeCompare(a.insight.date || ""));
+
+      const wins = bets.filter((x) => x.status === "win").length;
+      const losses = bets.filter((x) => x.status === "loss").length;
+      const open = bets.filter((x) => x.status === "open").length;
+      const resolved = wins + losses;
+      const rate = resolved ? Math.round((wins / resolved) * 100) : 0;
+
+      body.className = "";
+      body.innerHTML = `
+        <div class="bets-top">
+          <div class="bets-stats">
+            <div class="bstat"><div class="bstat-n up">${wins}</div><div class="bstat-l">ganhos</div></div>
+            <div class="bstat"><div class="bstat-n down">${losses}</div><div class="bstat-l">perdas</div></div>
+            <div class="bstat"><div class="bstat-n">${open}</div><div class="bstat-l">em aberto</div></div>
+            <div class="bstat"><div class="bstat-n">${resolved ? rate + "%" : "—"}</div><div class="bstat-l">acerto</div></div>
+          </div>
+          <div class="bets-chart"><canvas id="bets-chart" height="200"></canvas></div>
+        </div>
+        <div class="bets-list">${bets.map(betCardHTML).join("") || "<div class='muted'>nenhuma aposta.</div>"}</div>`;
+
+      drawBetsChart(wins, losses, open);
+
+      body.querySelector(".bets-list").addEventListener("click", (ev) => {
+        const c = ev.target.closest(".bc-link");
+        if (!c) return;
+        const ins = insights.find((i) => i.file === c.dataset.ins);
+        if (ins) showModal(`<header class="modal-h"><h3>${esc(ins.title)}</h3><button class="modal-x">✕</button></header>
+          <div class="modal-body reading">${insightCardHTML(ins)}</div>`, true);
+      });
+    }
+
     async function initGrafo() {
       const manifest = await loadJSON("insights/insights.json").catch(() => []);
       const docs = (await Promise.all(
@@ -1269,7 +1430,7 @@
     /* ============================ troca de views ============================ */
     const viewInit = {
       home: initHome, paises: initPaises, setores: initSetores, timeline: initTimeline,
-      eventos: initEventos, insights: initInsights, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
+      eventos: initEventos, insights: initInsights, bets: initBets, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
     };
     const viewDone = {};
 
