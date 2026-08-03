@@ -41,13 +41,14 @@ function toTradingDay(epochSeconds) {
   return new Date(epochSeconds * 1000).toISOString().slice(0, 10);
 }
 
-// Busca os candles diários recentes (janela de 1 mês) válidos no Yahoo Finance,
-// em ordem cronológica. A janela ampla torna o job self-healing: se o cron
-// falhar por alguns dias, a próxima execução preenche os dias faltantes.
-async function fetchRecentCandles(symbol) {
+// Busca os candles diários válidos no Yahoo Finance, em ordem cronológica.
+// `range` é "1mo" na atualização do dia a dia — janela ampla o bastante para o
+// job ser self-healing se o cron falhar por alguns dias — e "max" no bootstrap
+// de uma série nova (ver BOOTSTRAP_MIN_POINTS).
+async function fetchRecentCandles(symbol, range = "1mo") {
   const url =
     `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}` +
-    `?range=1mo&interval=1d`;
+    `?range=${range}&interval=1d`;
 
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
@@ -91,27 +92,36 @@ function serialize(series) {
   return "[\n" + series.map((p) => JSON.stringify(p)).join(",\n") + "\n]\n";
 }
 
+// Abaixo disso a série é considerada nova/curta demais para os gráficos (faixas
+// de 1Y/5Y/All) e para as sequências consecutivas — nesse caso vale buscar o
+// histórico completo em vez da janela de 1 mês. ~200 pregões ≈ 1 ano.
+const BOOTSTRAP_MIN_POINTS = 200;
+
 async function updateTarget(t) {
   const path = join(DATA_DIR, t.file);
   const series = JSON.parse(readFileSync(path, "utf8"));
-  const lastDay = series.length ? series[series.length - 1].tradingDay : "";
+  const bootstrap = series.length < BOOTSTRAP_MIN_POINTS;
 
-  const candles = await fetchRecentCandles(t.yahoo);
-  // Só os dias mais recentes que o último já gravado (idempotente + preenche
-  // buracos se o job ficou dias sem rodar).
-  const novos = candles.filter((c) => c.tradingDay > lastDay);
+  const candles = await fetchRecentCandles(t.yahoo, bootstrap ? "max" : "1mo");
 
-  if (novos.length === 0) {
-    return { status: "skip", label: t.label, day: lastDay };
+  // Merge por dia: o que já está gravado SEMPRE vence — a busca só acrescenta
+  // dias ausentes (mais recentes no modo incremental, mais antigos no
+  // bootstrap). Nada é sobrescrito, então rodar de novo é inofensivo.
+  const byDay = new Map(candles.map((c) => [c.tradingDay, c]));
+  for (const p of series) byDay.set(p.tradingDay, p);
+  const merged = [...byDay.values()].sort((a, b) => a.tradingDay.localeCompare(b.tradingDay));
+
+  const novos = merged.length - series.length;
+  if (novos === 0) {
+    return { status: "skip", label: t.label, day: series.length ? series[series.length - 1].tradingDay : "vazia" };
   }
 
-  series.push(...novos);
-  writeFileSync(path, serialize(series));
-  const ultimo = novos[novos.length - 1];
+  writeFileSync(path, serialize(merged));
+  const ultimo = merged[merged.length - 1];
   return {
-    status: "updated",
+    status: bootstrap ? "bootstrap" : "updated",
     label: t.label,
-    count: novos.length,
+    count: novos,
     day: ultimo.tradingDay,
     value: ultimo.value,
   };
@@ -122,13 +132,17 @@ async function main() {
   console.log(`Atualizando ${targets.length} ativos...`);
 
   let updated = 0;
+  let bootstrapped = 0;
   let skipped = 0;
   const errors = [];
 
   for (const t of targets) {
     try {
       const r = await updateTarget(t);
-      if (r.status === "updated") {
+      if (r.status === "bootstrap") {
+        bootstrapped++;
+        console.log(`  ★ ${r.label}: histórico completo carregado — ${r.count} pregões até ${r.day} = ${r.value}`);
+      } else if (r.status === "updated") {
         updated++;
         const dias = r.count > 1 ? ` (${r.count} dias)` : "";
         console.log(`  ✓ ${r.label}: até ${r.day} = ${r.value}${dias}`);
@@ -143,7 +157,7 @@ async function main() {
   }
 
   console.log(
-    `\nResumo: ${updated} atualizados, ${skipped} sem novidade, ${errors.length} com erro.`,
+    `\nResumo: ${updated} atualizados, ${bootstrapped} com histórico inicial, ${skipped} sem novidade, ${errors.length} com erro.`,
   );
 
   // Só falha o processo se TODOS deram erro (indício de problema sistêmico,
