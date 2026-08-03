@@ -1,0 +1,22 @@
+{
+  "code": "AMD_COMPUTE_AGO2026",
+  "title": "AMD (4/ago) — teste da tese de computação contra o sell-off de memória",
+  "summary": "A AMD reporta o 2T26 na TERÇA (4/ago), após o fechamento, e é o primeiro teste direto da separação que propus no insight de semicondutores: a dor de julho foi de MEMÓRIA (SK Hynix desacelerando HBM, Micron −13% num dia), não de COMPUTAÇÃO. A AMD está do lado da computação.\n\nOs números do guidance sustentam a tese: a companhia projetou receita de ~US$ 11,2 bi (±US$ 300 mi) para o trimestre, o que implica ~+46% a/a sobre os ~US$ 7,68 bi do 2T25, com crescimento sequencial de ~9%. O motor é o segmento de Data Center — EPYC e aceleradores Instinct — com a gestão sinalizando receita de CPU de servidor crescendo MAIS DE 70% a/a. No evento Advancing AI de julho a empresa apresentou os aceleradores da série MI400 e a plataforma rack-scale Helios (GPU + EPYC), com os primeiros deployments de OpenAI e Meta e ramp de produção no segundo semestre de 2026. No 1T, o Data Center já havia entregue US$ 5,8 bi e a ação subiu 14% com o resultado.\n\nTese (não é recomendação): AMD bullish em 1 mês — resultado como gatilho para reprecificar computação depois de o setor inteiro ter sido vendido em bloco. É a mesma lógica da aposta bullish em NVDA e o par natural da aposta bearish em SMH (o ETF carrega a memória que está quebrando). Riscos: o setor caiu por DESALAVANCAGEM, e vendedor forçado não olha fundamento no curto prazo; restrições de exportação de chips avançados para a China seguem limitando mercado; e uma barra de expectativa já muito alta transforma resultado bom em \"sell the news\". ATENÇÃO OPERACIONAL: série criada vazia — a aposta aparece como SEM DADOS até a primeira execução do job EOD.",
+  "tags": "eua, semicondutores, ia, tecnologia, datacenter, resultados, nasdaq",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "AMD", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "AMD", "role": "guidance 2T ~US$ 11,2 bi (+46% a/a); CPU de servidor +70% a/a; MI400/Helios no 2S" },
+    { "ticker": "NVDA", "role": "mesma tese de computação (aposta bullish paralela)" },
+    { "ticker": "SMH", "role": "ETF que carrega a memória — perna bearish do par" },
+    { "ticker": "ANET", "role": "rede que acompanha o ramp de rack-scale" }
+  ],
+  "links": [
+    { "file": "03-08-2026_10_00_00.json", "title": "Semicondutores — sell-off: memória vs. computação" },
+    { "file": "03-08-2026_12_00_00.json", "title": "Calendário da semana 3–7/ago" },
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — demanda que puxa os aceleradores" }
+  ]
+}

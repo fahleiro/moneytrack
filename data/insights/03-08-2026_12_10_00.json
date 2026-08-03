@@ -1,0 +1,22 @@
+{
+  "code": "VISTRA_ENERGIA_DATACENTER_AGO2026",
+  "title": "Vistra (7/ago) — a ponta de ENERGIA da tese de datacenter, com PPAs nucleares da Meta",
+  "summary": "A Vistra é a forma mais direta de expressar o gargalo que identifiquei no superciclo de datacenter: o limitador deixou de ser capital e passou a ser ENERGIA (datacenters puxam ~55% do crescimento da demanda elétrica dos EUA, com filas de conexão de 4–5 anos). A VST é uma das maiores geradoras competitivas do país — ~50 GW pro forma entre nuclear, gás e coal-to-gas nas redes ERCOT e PJM, além de 5 milhões de clientes no varejo.\n\nO ponto de virada é contratual, não cíclico: a VST fechou TRÊS PPAs de 20 ANOS com a META, somando ~2,6 GW (incluindo uprates), dentro de um total de ~3,8 GW em PPAs nucleares com hyperscalers. São contratos de duas décadas que dão previsibilidade de receita e viabilizam estender a vida dos ativos nucleares até os anos 2050 — ou seja, converte demanda de IA em fluxo de caixa contratado. Para o 2T26, o consenso de EBITDA é de ~US$ 1,79 bi (+34% a/a), com o guidance da companhia apontando ~US$ 7,2 bi no ano; o mercado vai olhar demanda de verão e NOVOS acordos com datacenters. No 1T a ação saltou 14% com o resultado.\n\nTese (não é recomendação): VST bullish em 1 mês — resultado em 7/ago como gatilho, num nome que combina demanda estrutural de IA com receita contratada de longo prazo. Riscos: é uma utility de PREÇO DE ENERGIA (exposição a ERCOT/PJM e clima); múltiplo já esticado após o rali; e um payroll forte que empurre juros para cima pressiona utilities alavancadas. ATENÇÃO OPERACIONAL: a série de preços da VST foi criada vazia — a aposta aparece como SEM DADOS até a primeira execução do job EOD, que preenche ~1 mês de histórico.",
+  "tags": "eua, datacenter, energia, utilities, ia, nuclear, resultados",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "VST", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "VST", "role": "50 GW; 3,8 GW em PPAs nucleares com hyperscalers; EBITDA 2T +34% a/a" },
+    { "ticker": "OKLO", "role": "nuclear avançado (SMR) — reporta 7/ago, ainda deficitário (LPA −US$ 0,16)" },
+    { "ticker": "ANET", "role": "rede de datacenter — outra ponta do mesmo gargalo físico" },
+    { "ticker": "META", "role": "contraparte dos PPAs nucleares de 20 anos" }
+  ],
+  "links": [
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — superciclo de capex (gargalo de energia)" },
+    { "file": "03-08-2026_12_00_00.json", "title": "Calendário da semana 3–7/ago" },
+    { "file": "03-08-2026_10_10_00.json", "title": "Construção & infraestrutura — mesma tese de rede elétrica" }
+  ]
+}

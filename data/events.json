@@ -59,7 +59,7 @@
     "date": "2026-07-21",
     "type": "earnings",
     "title": "Earnings Q2/26",
-    "ticker": "LMT",
+    "ticker": "GE",
     "code": null,
     "country": null
   },
@@ -67,15 +67,7 @@
     "date": "2026-07-21",
     "type": "earnings",
     "title": "Earnings Q2/26",
-    "ticker": "GE",
-    "code": null,
-    "country": null
-  },
-  {
-    "date": "2026-07-22",
-    "type": "earnings",
-    "title": "Earnings Q2/26",
-    "ticker": "RTX",
+    "ticker": "LMT",
     "code": null,
     "country": null
   },
@@ -88,10 +80,10 @@
     "country": null
   },
   {
-    "date": "2026-07-28",
+    "date": "2026-07-22",
     "type": "earnings",
     "title": "Earnings Q2/26",
-    "ticker": "V",
+    "ticker": "RTX",
     "code": null,
     "country": null
   },
@@ -102,6 +94,22 @@
     "ticker": "ASAI3",
     "code": null,
     "country": null
+  },
+  {
+    "date": "2026-07-28",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "V",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-07-29",
+    "type": "fed",
+    "title": "FED — Super Wednesday (decisão de juros)",
+    "ticker": null,
+    "code": "FED_SUPER_WED",
+    "country": "USA"
   },
   {
     "date": "2026-07-29",
@@ -120,12 +128,12 @@
     "country": null
   },
   {
-    "date": "2026-07-29",
-    "type": "fed",
-    "title": "FED — Super Wednesday (decisão de juros)",
-    "ticker": null,
-    "code": "FED_SUPER_WED",
-    "country": "USA"
+    "date": "2026-07-30",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "BBDC4",
+    "code": null,
+    "country": null
   },
   {
     "date": "2026-07-30",
@@ -136,12 +144,92 @@
     "country": null
   },
   {
-    "date": "2026-07-30",
+    "date": "2026-08-03",
+    "type": "macro",
+    "title": "OPEP+ — reunião sobre produção de setembro",
+    "ticker": null,
+    "code": "OPEC_MEETING",
+    "country": "US"
+  },
+  {
+    "date": "2026-08-03",
     "type": "earnings",
-    "title": "Resultado 2T26",
-    "ticker": "BBDC4",
+    "title": "Earnings Q2/26",
+    "ticker": "FANG",
     "code": null,
-    "country": null
+    "country": "US"
+  },
+  {
+    "date": "2026-08-03",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "MAR",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-03",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "TSN",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "AMD",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "AMGN",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "ANET",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "BP",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "MCD",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "MRK",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-04",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "PFE",
+    "code": null,
+    "country": "US"
   },
   {
     "date": "2026-08-04",
@@ -153,9 +241,49 @@
   },
   {
     "date": "2026-08-05",
+    "type": "copom",
+    "title": "COPOM — 280ª reunião (decisão de Selic, anúncio após o fechamento)",
+    "ticker": null,
+    "code": "COPOM_DECISAO",
+    "country": "BR"
+  },
+  {
+    "date": "2026-08-05",
     "type": "earnings",
     "title": "Earnings Q2/26",
     "ticker": "CAT",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "DASH",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "DIS",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "EBAY",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "ITUB4",
     "code": null,
     "country": null
   },
@@ -170,40 +298,136 @@
   {
     "date": "2026-08-05",
     "type": "earnings",
-    "title": "Resultado 2T26",
-    "ticker": "ITUB4",
+    "title": "Earnings Q2/26",
+    "ticker": "LLY",
     "code": null,
-    "country": null
+    "country": "US"
   },
   {
     "date": "2026-08-05",
-    "type": "copom",
-    "title": "COPOM — 280ª reunião (decisão de Selic, anúncio após o fechamento)",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "NVO",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "SHOP",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-05",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "UBER",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "ABNB",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "CART",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "COP",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "DDOG",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "KDP",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "MNST",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "NET",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-06",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "WBD",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-07",
+    "type": "macro",
+    "title": "EUA — Payroll de julho (consenso ~83 mil; desemprego 4,2%)",
     "ticker": null,
-    "code": "COPOM_DECISAO",
-    "country": "BR"
+    "code": "US_PAYROLL",
+    "country": "US"
+  },
+  {
+    "date": "2026-08-07",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "OKLO",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-07",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "TTWO",
+    "code": null,
+    "country": "US"
+  },
+  {
+    "date": "2026-08-07",
+    "type": "earnings",
+    "title": "Earnings Q2/26",
+    "ticker": "VST",
+    "code": null,
+    "country": "US"
   },
   {
     "date": "2026-08-12",
     "type": "earnings",
     "title": "Earnings Q2/26",
     "ticker": "NU",
-    "code": null,
-    "country": null
-  },
-  {
-    "date": "2026-08-13",
-    "type": "earnings",
-    "title": "Resultado 2T26",
-    "ticker": "MGLU3",
-    "code": null,
-    "country": null
-  },
-  {
-    "date": "2026-08-13",
-    "type": "earnings",
-    "title": "Resultado 2T26",
-    "ticker": "LREN3",
     "code": null,
     "country": null
   },
@@ -216,10 +440,18 @@
     "country": "US"
   },
   {
-    "date": "2026-08-14",
+    "date": "2026-08-13",
     "type": "earnings",
     "title": "Resultado 2T26",
-    "ticker": "AMER3",
+    "ticker": "LREN3",
+    "code": null,
+    "country": null
+  },
+  {
+    "date": "2026-08-13",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "MGLU3",
     "code": null,
     "country": null
   },
@@ -230,6 +462,14 @@
     "ticker": null,
     "code": "US_CPI_REL",
     "country": "US"
+  },
+  {
+    "date": "2026-08-14",
+    "type": "earnings",
+    "title": "Resultado 2T26",
+    "ticker": "AMER3",
+    "code": null,
+    "country": null
   },
   {
     "date": "2026-08-15",
@@ -251,7 +491,7 @@
     "date": "2026-08-19",
     "type": "earnings",
     "title": "Earnings Q2/26",
-    "ticker": "TGT",
+    "ticker": "LOW",
     "code": null,
     "country": null
   },
@@ -259,7 +499,7 @@
     "date": "2026-08-19",
     "type": "earnings",
     "title": "Earnings Q2/26",
-    "ticker": "LOW",
+    "ticker": "TGT",
     "code": null,
     "country": null
   },

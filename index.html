@@ -732,7 +732,14 @@
     }
 
     function renderCards(series) {
-      if (!series.length) return;
+      // série ainda sem pontos (ativo recém-cadastrado): estado vazio explícito,
+      // senão os cards do ativo anterior ficariam na tela como se fossem deste.
+      if (!series.length) {
+        document.getElementById("cards").innerHTML =
+          `<div class="card"><div class="label">Sem dados ainda</div><div class="value">—</div>
+             <div class="label">série vazia · preenchida na próxima execução do job EOD</div></div>`;
+        return;
+      }
       const first = series[0], last = series[series.length - 1];
       const change = ((last.value - first.value) / first.value) * 100;
       let max = series[0], min = series[0];

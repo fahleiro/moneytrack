@@ -1,0 +1,21 @@
+{
+  "code": "CALENDARIO_EUA_SEM1_AGO2026",
+  "title": "Semana 3–7/ago nos EUA — maratona de resultados, OPEP+ e payroll na sexta",
+  "summary": "Mapa da semana (fonte: calendário @daytrading), agora refletido em data/events.json e na lista de ativos EUA. SEGUNDA (3): Palantir, Marriott, Diamondback Energy e Tyson Foods reportam; mercados reagem à reunião da OPEP+ sobre a produção de SETEMBRO; o Fed publica a Senior Loan Officer Opinion Survey (condições de crédito); Citigroup, MetLife, Carnival e JB Hunt viram ex-dividendo. TERÇA (4): AMD, Caterpillar, Merck, McDonald's, Amgen, Arista Networks, BP e Pfizer; conferência Ai4 em Las Vegas (OpenAI, Waymo, Cisco). QUARTA (5): Shopify, Eli Lilly, Novo Nordisk, Disney, DoorDash, eBay e Uber; Costco divulga vendas mensais após o fechamento. QUINTA (6): ConocoPhillips, Cloudflare, Datadog, Monster, Airbnb, Warner Bros. Discovery, Instacart e Keurig Dr Pepper; começa a DEF CON; fala do presidente do Fed de St. Louis, Alberto Musalem. SEXTA (7): Vistra, Take-Two e Oklo; PAYROLL de julho (consenso ~83 mil vagas, desemprego em 4,2%); NY Fed publica a Consumer Expectations Survey.\n\nDois itens têm efeito direto nas apostas já abertas. (1) A reunião da OPEP+ sobre produção de setembro REFORÇA a aposta bearish em WTI: mais oferta somada à normalização de Ormuz empurra o barril para baixo. (2) O payroll de sexta e a fala de Musalem são o teste do Fed hawkish — payroll forte adia corte (ruim para ativos de duração longa: semis e residencial; bom para bancos via NII).\n\nDestaque de gatilho: a Take-Two reporta em 7/ago com consenso de LPA US$ 0,31 (−49% a/a), um dia depois do trailer 3 de GTA VI previsto para 6/ago — hype de produto contra lucro em queda, setup clássico de \"sell the news\". Nó de calendário, sem aposta própria.",
+  "tags": "eua, macro, indices, resultados, calendario, juros, petroleo",
+  "source": "Research (calendário)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "TTWO", "role": "resultado 7/ago; LPA −49% a/a vs. trailer de GTA VI em 6/ago" },
+    { "ticker": "C", "role": "ex-dividendo 3/ago" },
+    { "ticker": "COP", "role": "energia — reporta 6/ago, junto da OPEP+" },
+    { "ticker": "LLY", "role": "farma — reporta 5/ago" },
+    { "ticker": "DIS", "role": "mídia — reporta 5/ago" }
+  ],
+  "links": [
+    { "file": "03-08-2026_12_10_00.json", "title": "Vistra — energia para datacenter" },
+    { "file": "03-08-2026_12_20_00.json", "title": "AMD — computação vs. memória" },
+    { "file": "03-08-2026_10_30_00.json", "title": "Índices & Fed — juros e calendário macro" },
+    { "file": "03-08-2026_09_00_00.json", "title": "Desescalada — petróleo (OPEP+ reforça)" }
+  ]
+}

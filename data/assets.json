@@ -11,6 +11,18 @@
     "yahoo": "AAPL"
   },
   {
+    "ticker": "ABNB",
+    "name": "Airbnb",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "travel",
+      "technology"
+    ],
+    "file": "market_history/ABNB.json",
+    "yahoo": "ABNB"
+  },
+  {
     "ticker": "ALUP11",
     "name": "Alupar",
     "type": "stock",
@@ -20,6 +32,17 @@
     ],
     "file": "market_history/ALUP11.json",
     "yahoo": "ALUP11.SA"
+  },
+  {
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "semiconductor"
+    ],
+    "file": "market_history/AMD.json",
+    "yahoo": "AMD"
   },
   {
     "ticker": "AMER3",
@@ -33,6 +56,17 @@
     "yahoo": "AMER3.SA"
   },
   {
+    "ticker": "AMGN",
+    "name": "Amgen",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "healthcare"
+    ],
+    "file": "market_history/AMGN.json",
+    "yahoo": "AMGN"
+  },
+  {
     "ticker": "AMZN",
     "name": "Amazon",
     "type": "stock",
@@ -42,6 +76,18 @@
     ],
     "file": "market_history/AMZN.json",
     "yahoo": "AMZN"
+  },
+  {
+    "ticker": "ANET",
+    "name": "Arista Networks",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "datacenter",
+      "technology"
+    ],
+    "file": "market_history/ANET.json",
+    "yahoo": "ANET"
   },
   {
     "ticker": "ASAI3",
@@ -88,6 +134,17 @@
     "yahoo": "BBDC4.SA"
   },
   {
+    "ticker": "BP",
+    "name": "BP",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "energy"
+    ],
+    "file": "market_history/BP.json",
+    "yahoo": "BP"
+  },
+  {
     "ticker": "BPAC11",
     "name": "BTG Pactual",
     "type": "stock",
@@ -97,6 +154,29 @@
     ],
     "file": "market_history/BPAC11.json",
     "yahoo": "BPAC11.SA"
+  },
+  {
+    "ticker": "C",
+    "name": "Citigroup",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/C.json",
+    "yahoo": "C"
+  },
+  {
+    "ticker": "CART",
+    "name": "Instacart (Maplebear)",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail",
+      "technology"
+    ],
+    "file": "market_history/CART.json",
+    "yahoo": "CART"
   },
   {
     "ticker": "CAT",
@@ -110,6 +190,28 @@
     "yahoo": "CAT"
   },
   {
+    "ticker": "CCL",
+    "name": "Carnival",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "travel"
+    ],
+    "file": "market_history/CCL.json",
+    "yahoo": "CCL"
+  },
+  {
+    "ticker": "COP",
+    "name": "ConocoPhillips",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "energy"
+    ],
+    "file": "market_history/COP.json",
+    "yahoo": "COP"
+  },
+  {
     "ticker": "COST",
     "name": "Costco Wholesale",
     "type": "stock",
@@ -121,6 +223,18 @@
     "yahoo": "COST"
   },
   {
+    "ticker": "DASH",
+    "name": "DoorDash",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology",
+      "consumer"
+    ],
+    "file": "market_history/DASH.json",
+    "yahoo": "DASH"
+  },
+  {
     "ticker": "DBRG",
     "name": "DigitalBridge",
     "type": "stock",
@@ -130,6 +244,41 @@
     ],
     "file": "market_history/DBRG.json",
     "yahoo": "DBRG"
+  },
+  {
+    "ticker": "DDOG",
+    "name": "Datadog",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology",
+      "datacenter"
+    ],
+    "file": "market_history/DDOG.json",
+    "yahoo": "DDOG"
+  },
+  {
+    "ticker": "DIS",
+    "name": "Walt Disney",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "media"
+    ],
+    "file": "market_history/DIS.json",
+    "yahoo": "DIS"
+  },
+  {
+    "ticker": "EBAY",
+    "name": "eBay",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "retail",
+      "technology"
+    ],
+    "file": "market_history/EBAY.json",
+    "yahoo": "EBAY"
   },
   {
     "ticker": "EGIE3",
@@ -161,6 +310,17 @@
       "datacenter"
     ],
     "file": null
+  },
+  {
+    "ticker": "FANG",
+    "name": "Diamondback Energy",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "energy"
+    ],
+    "file": "market_history/FANG.json",
+    "yahoo": "FANG"
   },
   {
     "ticker": "FMG",
@@ -237,6 +397,17 @@
     "yahoo": "ITUB4.SA"
   },
   {
+    "ticker": "JBHT",
+    "name": "J.B. Hunt Transport",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "logistics"
+    ],
+    "file": "market_history/JBHT.json",
+    "yahoo": "JBHT"
+  },
+  {
     "ticker": "JPM",
     "name": "JPMorgan Chase",
     "type": "stock",
@@ -248,6 +419,17 @@
     "yahoo": "JPM"
   },
   {
+    "ticker": "KDP",
+    "name": "Keurig Dr Pepper",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "consumer"
+    ],
+    "file": "market_history/KDP.json",
+    "yahoo": "KDP"
+  },
+  {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
     "type": "stock",
@@ -257,6 +439,17 @@
     ],
     "file": "market_history/KTOS.json",
     "yahoo": "KTOS"
+  },
+  {
+    "ticker": "LLY",
+    "name": "Eli Lilly",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "healthcare"
+    ],
+    "file": "market_history/LLY.json",
+    "yahoo": "LLY"
   },
   {
     "ticker": "LMT",
@@ -303,6 +496,39 @@
     "yahoo": "MA"
   },
   {
+    "ticker": "MAR",
+    "name": "Marriott International",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "travel"
+    ],
+    "file": "market_history/MAR.json",
+    "yahoo": "MAR"
+  },
+  {
+    "ticker": "MCD",
+    "name": "McDonald's",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "consumer"
+    ],
+    "file": "market_history/MCD.json",
+    "yahoo": "MCD"
+  },
+  {
+    "ticker": "MET",
+    "name": "MetLife",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "financials"
+    ],
+    "file": "market_history/MET.json",
+    "yahoo": "MET"
+  },
+  {
     "ticker": "META",
     "name": "Meta Platforms",
     "type": "stock",
@@ -325,6 +551,28 @@
     "yahoo": "MGLU3.SA"
   },
   {
+    "ticker": "MNST",
+    "name": "Monster Beverage",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "consumer"
+    ],
+    "file": "market_history/MNST.json",
+    "yahoo": "MNST"
+  },
+  {
+    "ticker": "MRK",
+    "name": "Merck",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "healthcare"
+    ],
+    "file": "market_history/MRK.json",
+    "yahoo": "MRK"
+  },
+  {
     "ticker": "MSFT",
     "name": "Microsoft",
     "type": "stock",
@@ -334,6 +582,18 @@
     ],
     "file": "market_history/MSFT.json",
     "yahoo": "MSFT"
+  },
+  {
+    "ticker": "NET",
+    "name": "Cloudflare",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology",
+      "datacenter"
+    ],
+    "file": "market_history/NET.json",
+    "yahoo": "NET"
   },
   {
     "ticker": "NOC",
@@ -367,6 +627,29 @@
     ],
     "file": "market_history/NVDA.json",
     "yahoo": "NVDA"
+  },
+  {
+    "ticker": "NVO",
+    "name": "Novo Nordisk (ADR)",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "healthcare"
+    ],
+    "file": "market_history/NVO.json",
+    "yahoo": "NVO"
+  },
+  {
+    "ticker": "OKLO",
+    "name": "Oklo",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "utilities",
+      "datacenter"
+    ],
+    "file": "market_history/OKLO.json",
+    "yahoo": "OKLO"
   },
   {
     "ticker": "ORCL",
@@ -411,6 +694,17 @@
     ],
     "file": "market_history/PCAR3.json",
     "yahoo": "PCAR3.SA"
+  },
+  {
+    "ticker": "PFE",
+    "name": "Pfizer",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "healthcare"
+    ],
+    "file": "market_history/PFE.json",
+    "yahoo": "PFE"
   },
   {
     "ticker": "PLTR",
@@ -467,6 +761,18 @@
     ],
     "file": "market_history/SHLD.json",
     "yahoo": "SHLD"
+  },
+  {
+    "ticker": "SHOP",
+    "name": "Shopify",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology",
+      "retail"
+    ],
+    "file": "market_history/SHOP.json",
+    "yahoo": "SHOP"
   },
   {
     "ticker": "SILVER",
@@ -532,6 +838,17 @@
     "yahoo": "TSLA"
   },
   {
+    "ticker": "TSN",
+    "name": "Tyson Foods",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "consumer"
+    ],
+    "file": "market_history/TSN.json",
+    "yahoo": "TSN"
+  },
+  {
     "ticker": "TTE",
     "name": "TotalEnergies",
     "type": "stock",
@@ -541,6 +858,28 @@
     ],
     "file": "market_history/TTE.json",
     "yahoo": "TTE"
+  },
+  {
+    "ticker": "TTWO",
+    "name": "Take-Two Interactive",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "media"
+    ],
+    "file": "market_history/TTWO.json",
+    "yahoo": "TTWO"
+  },
+  {
+    "ticker": "UBER",
+    "name": "Uber Technologies",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "technology"
+    ],
+    "file": "market_history/UBER.json",
+    "yahoo": "UBER"
   },
   {
     "ticker": "V",
@@ -565,6 +904,19 @@
     "yahoo": "VOO"
   },
   {
+    "ticker": "VST",
+    "name": "Vistra",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "utilities",
+      "energy",
+      "datacenter"
+    ],
+    "file": "market_history/VST.json",
+    "yahoo": "VST"
+  },
+  {
     "ticker": "VWS",
     "name": "Vestas Wind Systems",
     "type": "stock",
@@ -573,6 +925,17 @@
       "datacenter"
     ],
     "file": null
+  },
+  {
+    "ticker": "WBD",
+    "name": "Warner Bros. Discovery",
+    "type": "stock",
+    "country": "US",
+    "sectors": [
+      "media"
+    ],
+    "file": "market_history/WBD.json",
+    "yahoo": "WBD"
   },
   {
     "ticker": "WMT",
