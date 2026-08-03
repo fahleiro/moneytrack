@@ -1,0 +1,25 @@
+{
+  "code": "DESESCALADA_ORIENTE_MEDIO_AGO2026",
+  "title": "Desescalada Irã/Gaza — reversão do prêmio de defesa e petróleo",
+  "summary": "Virada geopolítica no fim de semana: Trump CANCELOU o ataque planejado ao Irã (\"teria sido o maior desde a 2ª Guerra\") e anunciou negociações a partir de segunda-feira, condicionadas a fechar um acordo rapidamente — com foco em reabrir totalmente o Estreito de Ormuz e encerrar a ameaça nuclear iraniana. Em paralelo, o Hamas aceitou o desarmamento em etapas (cessar-fogo de 2 semanas). É o oposto do gatilho que sustentou defesa e petróleo em junho/julho.\n\nA tese direcional (janela de 10 dias) é de REVERSÃO do prêmio de risco geopolítico, e tem precedente forte no próprio 2026: quando EUA e Irã assinaram o framework em 18/jun, o petróleo desabou (Brent −4,3% a US$ 71,99; WTI −3,7% a US$ 69,23) e caiu abaixo de US$ 70 conforme os petroleiros voltaram a cruzar Ormuz, eliminando o \"war premium\". No mesmo movimento, as ações de defesa recuaram em bloco (Lockheed, Northrop, RTX e General Dynamics) — queda do prêmio de conflito, não das encomendas.\n\nHoje o WTI está em US$ 86,8 (31/jul), inflado pela reescalada recente, e o ITA em US$ 239,66 — patamares que devolvem ganhos se a desescalada se confirmar. Apostas pessoais para treinar predições; NÃO é recomendação. Risco principal: Trump já sinalizou escalada iminente antes e recuou várias vezes — uma quebra das negociações reativa o prêmio. Contracorrente altista no petróleo: ataques ucranianos a refinarias russas (ver insight relacionado).",
+  "tags": "geopolitica, oriente-medio, ira, gaza, defesa, petroleo, desescalada, risco-geopolitico",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "ITA", "expect": "bearish", "period": { "type": "day", "qty": 10 } },
+    { "ticker": "WTI", "expect": "bearish", "period": { "type": "day", "qty": 10 } }
+  ],
+  "assets": [
+    { "ticker": "LMT", "role": "prime — cai com queda do prêmio de conflito (precedente jun)" },
+    { "ticker": "RTX", "role": "Golden Dome — recuou em bloco no acordo de junho" },
+    { "ticker": "NOC", "role": "movimento setorial, não idiossincrático" },
+    { "ticker": "ITA", "role": "ETF de defesa — devolve prêmio na desescalada" },
+    { "ticker": "WTI", "role": "petróleo — perde war premium com Ormuz reaberto" }
+  ],
+  "links": [
+    { "file": "09-07-2026_10_15_00.json", "title": "Retomada dos ataques ao Irã (tese oposta — agora revertida)" },
+    { "file": "09-07-2026_10_30_00.json", "title": "ITA (Aerospace & Defense) — dossiê do movimento" },
+    { "file": "03-08-2026_09_10_00.json", "title": "Gaza — desarmamento do Hamas" },
+    { "file": "03-08-2026_09_20_00.json", "title": "Ucrânia ataca refinarias russas (contracorrente no petróleo)" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "code": "VAREJO_EUA_DIVERGENCIA_AGO2026",
+  "title": "Varejo EUA — vendas nominais fortes, mas guidance fraco e consumidor de baixa renda sob estresse",
+  "summary": "Dois retratos opostos do varejo americano. O headline é forte: vendas no varejo de junho em US$ 768,6 bi, +6,7% a/a (ex-combustível +0,7% no mês; postos −5,3%). Mas boa parte é EFEITO PREÇO — receita nominal inflada pela inflação, não necessariamente volume.\n\nPor baixo do número, o guidance das empresas azedou: o Walmart cortou a projeção de LPA para US$ 2,50–2,60 (abaixo dos US$ 2,76 esperados) e crescimento de vendas de só 3–4%, alertando para ESTRESSE FINANCEIRO do consumidor de baixa renda e pressão de tarifas/juros. Target, Home Depot e Lowe's também REDUZIRAM o guidance de lucro no ano. O padrão é uma divergência clara: alta renda gastando com confiança, baixa renda em modo defensivo.\n\nTese direcional (1 mês): pressão sobre o varejo discricionário mais exposto à baixa renda. Aposta bearish em TGT (Target), que combina corte de guidance com posicionamento discricionário/desconto — mais sensível ao aperto da baixa renda do que os grandes de alimento (WMT/COST). NÃO é recomendação. Risco: sazonalidade de back-to-school e resiliência da alta renda podem sustentar as vendas; um dado de inflação mais frio melhora o humor do setor.",
+  "tags": "eua, varejo, consumo, inflacao, indices",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "TGT", "expect": "bearish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "TGT", "role": "discricionário/desconto — cortou guidance; exposto à baixa renda" },
+    { "ticker": "WMT", "role": "guidance cortado; alerta sobre baixa renda" },
+    { "ticker": "HD", "role": "reduziu outlook de lucro no ano" },
+    { "ticker": "LOW", "role": "reduziu outlook de lucro no ano" },
+    { "ticker": "COST", "role": "alimento/atacado — mais resiliente (comparação)" }
+  ],
+  "links": [
+    { "file": "07-07-2026_22_37_51.json", "title": "QQQ em queda janela 1W, 2W, 1M (índices)" },
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — superciclo de capex (índices/tech)" }
+  ]
+}

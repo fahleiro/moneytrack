@@ -1,0 +1,18 @@
+{
+  "code": "DATACENTER_CAPEX_SUPERCICLO_AGO2026",
+  "title": "Datacenter/IA — superciclo de capex: hyperscalers US$ 660–725 bi e AWS +37%",
+  "summary": "O superciclo de infraestrutura de IA ficou explícito no 2T26. A Amazon reportou receita de US$ 200,6 bi (LPA US$ 5,75 vs. US$ 1,81 esperado) e — o ponto central — AWS acelerando +36,7% a/a, o ritmo mais rápido em 18 trimestres, com run rate anualizado de ~US$ 169 bi e margem operacional de 39,4%. A empresa ELEVOU o capex de caixa de 2026 para ~US$ 220 bi (de ~US$ 200 bi), citando custos de memória e investimento em IA/nuvem. A ação saltou ~15% na sequência.\n\nNo agregado, os 5 maiores hyperscalers (AMZN, MSFT, GOOGL, META, ORCL) devem investir US$ 660–725 bi em 2026, e os 14 maiores operadores globais ~US$ 750 bi (vs. ~US$ 450 bi em 2025). O gargalo saiu do capital e foi para o FÍSICO: energia (datacenters puxam ~55% do crescimento da demanda elétrica dos EUA), filas de conexão à rede de 4–5 anos, prazos de equipamentos e oposição local — 36 projetos (US$ 162 bi) travados ou atrasados. Texas e Arkansas viram novos polos.\n\nMaterial contextual/estrutural — conecta por tag (datacenter/energia) ao mapa de datacenters do Ceará e por tag (indices/tech) ao varejo/índices. Não gera aposta de curto prazo aqui (o salto de ~15% da AMZN já ocorreu no resultado); serve de pano de fundo macro para o tema e reforça o vetor de ENERGIA como o novo limitador.",
+  "tags": "datacenter, ia, hyperscaler, tecnologia, energia, indices",
+  "source": "Research (contexto)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "AMZN", "role": "AWS +36,7%; capex 2026 elevado a ~US$ 220 bi" },
+    { "ticker": "GOOGL", "role": "hyperscaler — bloco de capex de IA" },
+    { "ticker": "META", "role": "hyperscaler — bloco de capex de IA" },
+    { "ticker": "ALUP11", "role": "transmissão/energia BR — leitura do gargalo elétrico" }
+  ],
+  "links": [
+    { "file": "06-07-2026_21_13_27.json", "title": "Data Centers no Ceará (Pecém/Caucaia) — mapa de investimento" },
+    { "file": "03-08-2026_09_30_00.json", "title": "Varejo EUA — divergência (índices)" }
+  ]
+}
