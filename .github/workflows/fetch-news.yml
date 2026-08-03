@@ -1,0 +1,41 @@
+name: Coletar notícias
+
+# Coleta o material bruto de notícias por tópico (data/news_topics.json) e
+# versiona em data/news/. A cadência é própria, independente do fechamento de
+# mercado: 2x por dia em dias de semana (10:00 e 21:00 UTC), cobrindo o
+# pré-mercado e o pós-fechamento. Também pode ser disparado manualmente.
+#
+# O job só COLETA. A curadoria — ler, filtrar, enriquecer com metadados/tags,
+# escrever insights e derivar bets — é feita depois, em cima do JSON gravado.
+on:
+  schedule:
+    - cron: "0 10,21 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Coletar notícias
+        run: node scripts/fetch-news.mjs
+
+      - name: Commit e push (só se houver mudança)
+        run: |
+          if [ -n "$(git status --porcelain data/news)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/news
+            git commit -m "chore(news): coleta $(date -u +%Y-%m-%d_%H:%M)"
+            git push
+          else
+            echo "Sem matérias novas — nada a commitar."
+          fi
