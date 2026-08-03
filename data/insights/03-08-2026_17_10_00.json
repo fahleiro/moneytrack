@@ -1,0 +1,22 @@
+{
+  "code": "CAPEX_FATIGUE_BUY_TO_BUILD_AGO2026",
+  "title": "Capex fatigue e \"buy to build\" — o risco que ameaça minhas apostas em chips (e a rotação que já passou)",
+  "summary": "Registro de risco contra apostas que abri hoje, com dois fatos que a minha tese de semicondutores não considerou.\n\nPRIMEIRO, \"BUY TO BUILD\": Microsoft, Alphabet e Meta estão migrando de COMPRAR para CONSTRUIR em IA — silício próprio no lugar de chip de terceiros. Se isso avança, é um vento contrário ESTRUTURAL, não cíclico, para o silício mercante — exatamente onde estão minhas apostas bullish em NVDA e AMD. Minha tese era \"a dor é de memória, a computação está intacta\"; ela não responde ao caso em que o próprio cliente vira concorrente.\n\nSEGUNDO, FADIGA DE CAPEX: fundos multimercados começaram a questionar o boom de gastos dos hyperscalers e o MERCADO DE TÍTULOS demonstra ansiedade com os orçamentos de capex de IA — sinal mais sério que ruído de ações, porque é o credor duvidando de quem financia a expansão. O gasto agregado em infraestrutura de IA passou de US$ 1 tri, pressionando energia, capital e construção. Do outro lado, a Amazon ELEVOU o capex de 2026 para US$ 220 bi dizendo que a capacidade não atende a demanda até 2027, e o Goldman Sachs sustenta que o boom é MAIOR do que os investidores imaginam. Ou seja: a discordância é real e está em aberto — não é consenso de fim de ciclo.\n\nTERCEIRO, E POR ISSO NÃO ABRO APOSTA NOVA: há sinais de ROTAÇÃO de chips para software, e a tentação seria comprar software agora. Só que o movimento JÁ ACONTECEU e foi violento — na última semana MSFT subiu +26,0%, AMZN +23,2%, ORCL +15,7% e GOOGL +14,2%. Entrar depois disso é perseguir preço, não antecipar tese. Fica registrado o que NÃO apostei e por quê.\n\nSem aposta: o valor deste insight é datar o risco das apostas em NVDA, AMD e ANET enquanto elas estão vivas — se elas perderem, provavelmente será por aqui.",
+  "tags": "semicondutores, ia, datacenter, tecnologia, hyperscaler, nasdaq, risco",
+  "source": "Research (fatos coletados)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "NVDA", "role": "aposta bullish em aberto — ameaçada pelo buy-to-build" },
+    { "ticker": "AMD", "role": "aposta bullish em aberto — −8,2% no mês, +112,7% no ano" },
+    { "ticker": "ANET", "role": "aposta bullish em aberto — depende do mesmo capex" },
+    { "ticker": "MSFT", "role": "+26,0% na SEMANA — a rotação que não persegui" },
+    { "ticker": "AMZN", "role": "capex 2026 elevado a US$ 220 bi — o lado que sustenta o boom" },
+    { "ticker": "SMH", "role": "−10,6% no mês — aposta bearish, esta é a perna favorecida" }
+  ],
+  "links": [
+    { "file": "03-08-2026_10_00_00.json", "title": "Semicondutores — a tese que este risco ataca" },
+    { "file": "03-08-2026_12_20_00.json", "title": "AMD — computação (aposta ameaçada)" },
+    { "file": "03-08-2026_14_20_00.json", "title": "Arista — rede (aposta ameaçada)" },
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — superciclo de capex" }
+  ]
+}

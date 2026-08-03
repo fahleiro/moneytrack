@@ -1,0 +1,21 @@
+{
+  "code": "BBDC4_LAGGARD_2T26_AGO2026",
+  "title": "Bradesco (BBDC4) — o laggard apontado como favorito do 2T26",
+  "summary": "Dos fatos coletados sobre bancos brasileiros sai uma tese que meu insight de bancos BR não capturou: dentro do setor, o BRADESCO é apontado como FAVORITO para a temporada do 2T26, com analistas avaliando que ele pode surpreender enquanto o Itaú mantém a liderança. O Citi também separou vencedores de quem pode decepcionar no trimestre.\n\nO ângulo é de CONVERGÊNCIA, não de setor: o BBDC4 acumula apenas +1,2% no ano e caiu −0,3% na semana, contra +9,6% do ITUB4 — é o retardatário de um setor que acabou de ser reprecificado pela oferta do Santander com prêmio de 15%. Quando um controlador estrangeiro paga prêmio pelo minoritário e o setor sobe junto, o papel mais atrasado é o que tem mais espaço para fechar o desconto, desde que entregue no balanço. É exatamente o que os analistas estão dizendo que pode acontecer.\n\nTese (não é recomendação): BBDC4 bullish em 1 mês, na temporada do 2T26.\n\nRISCOS, e eles são sérios — os mesmos fatos trazem o outro lado: o 1T26 DECEPCIONOU no setor (BB, Itaú, Bradesco e Santander sob pressão), os bancos brasileiros vinham pressionados por INADIMPLÊNCIA e provisões, e o lucro dos grandes bancos privados RECUOU pela primeira vez em mais de dois anos. A leitura de que \"bancos privados seguem lucrativos, mas o juro alto impõe cautela\" resume o dilema: Selic a 14,25% ajuda a margem financeira e ao mesmo tempo quebra o tomador. Além disso, esta aposta CONCENTRA exposição — já tenho ITUB4 bullish, então são duas pontas compradas no mesmo setor e no mesmo país; se a temporada decepcionar, as duas apanham juntas.",
+  "tags": "brasil, bancos, financials, ibov, resultados, juros, selic",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "BBDC4", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "BBDC4", "role": "laggard (+1,2% YTD) apontado como favorito do 2T26" },
+    { "ticker": "ITUB4", "role": "líder (+9,6% YTD) — aposta bullish já aberta; concentra exposição" },
+    { "ticker": "BPAC11", "role": "o que mais subiu na semana (+3,9%)" },
+    { "ticker": "NU", "role": "fintech — reporta 12/ago" }
+  ],
+  "links": [
+    { "file": "03-08-2026_11_10_00.json", "title": "Bancos BR — oferta do Santander (insight que este estende)" },
+    { "file": "03-08-2026_11_00_00.json", "title": "Copom & IBOV — a Selic que corta dos dois lados" }
+  ]
+}
