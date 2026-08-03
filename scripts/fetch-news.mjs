@@ -27,6 +27,13 @@ const TOPICS_FILE = join(DATA_DIR, "news_topics.json");
 const CATALOGS = ["assets.json", "indices.json"];   // origem dos tickers detectáveis
 const FETCH_TIMEOUT_MS = 30_000;
 const MAX_PER_TOPIC = 12;
+// Extração do CORPO da matéria. O RSS do Google só traz o título (a
+// <description> é o próprio título repetido), o que é pouco para curar um fato.
+// Só este job tem rede, então é aqui que o texto é buscado no site do veículo.
+const CONTENT_MAX = 3000;         // chars guardados por matéria
+const CONTENT_CONCURRENCY = 6;    // requisições simultâneas — não martelar os sites
+const CONTENT_TIMEOUT_MS = 12_000;
+const UA = "Mozilla/5.0 (compatible; moneytrack/1.0; +https://github.com/fahleiro/moneytrack)";
 
 const LOCALE = {
   "pt-BR": { hl: "pt-BR", gl: "BR", ceid: "BR:pt-419" },
@@ -168,6 +175,96 @@ function detectTickers(text, idx) {
     else if (nome && nome.test(plano)) out.add(ticker);
   }
   return [...out];
+}
+
+// --- extração do corpo da matéria ----------------------------------------
+// Ordem de preferência: articleBody do JSON-LD (texto íntegro quando existe),
+// depois os parágrafos da página, e por último a meta description. Parágrafos
+// curtos são descartados porque quase sempre são legenda, crédito ou menu.
+function extractContent(html) {
+  const semRuido = html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<(nav|header|footer|aside|form)\b[\s\S]*?<\/\1>/gi, " ");
+
+  const ld = html.match(/"articleBody"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+  if (ld) {
+    // limiar menor que o dos parágrafos: se o veículo declara articleBody,
+    // aquilo É a matéria — não precisa do mesmo grau de desconfiança.
+    const t = clean(ld[1].replace(/\\[nrt]/g, " ").replace(/\\"/g, '"').replace(/\\\//g, "/"));
+    if (t.length > 120) return t.slice(0, CONTENT_MAX);
+  }
+
+  const paras = [...semRuido.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => clean(m[1]))
+    .filter((t) => t.length > 80);
+  if (paras.length) {
+    const t = paras.join(" ");
+    if (t.length > 200) return t.slice(0, CONTENT_MAX);
+  }
+
+  const meta = html.match(/<meta[^>]+(?:property=["']og:description["']|name=["']description["'])[^>]+content=["']([^"']*)["']/i);
+  const m = meta ? clean(meta[1]) : "";
+  return m.length > 80 ? m.slice(0, CONTENT_MAX) : null;
+}
+
+// O link do RSS aponta para o redirecionador do Google; é preciso chegar ao
+// site do veículo. Quando o Google devolve uma página intermediária (redirect
+// por JS em vez de 302), a URL real vem no HTML.
+async function fetchArticle(link) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), CONTENT_TIMEOUT_MS);
+  try {
+    const headers = { "User-Agent": UA, "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8" };
+    const res = await fetch(link, { redirect: "follow", headers, signal: ctrl.signal });
+    if (!res.ok) return null;
+    let html = await res.text();
+    let url = res.url;
+
+    if (/news\.google\./.test(url)) {
+      const m = html.match(/data-n-au=["']([^"']+)["']/) ||
+                html.match(/<a[^>]+href=["'](https?:\/\/(?!news\.google)[^"']+)["']/i);
+      if (!m) return null;
+      const res2 = await fetch(decodeEntities(m[1]), { redirect: "follow", headers, signal: ctrl.signal });
+      if (!res2.ok) return null;
+      html = await res2.text();
+      url = res2.url;
+    }
+    const text = extractContent(html);
+    return text ? { content: text, url } : null;
+  } catch {
+    return null;   // paywall, bloqueio, timeout: o fato fica só com o título
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+// Executa fn sobre os itens com no máximo `n` em voo ao mesmo tempo.
+async function pool(items, n, fn) {
+  let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => {
+    while (i < items.length) await fn(items[i++]);
+  }));
+}
+
+// Preenche `content`/`articleUrl` nos itens que ainda não têm. Idempotente:
+// quem já tem conteúdo é pulado, então rodar de novo só tenta os que faltaram.
+async function enrichContent(items, label) {
+  const alvos = items.filter((i) => !i.content && i.link);
+  if (!alvos.length) return 0;
+  let ok = 0;
+  await pool(alvos, CONTENT_CONCURRENCY, async (item) => {
+    const r = await fetchArticle(item.link);
+    if (r) {
+      item.content = r.content;
+      item.articleUrl = r.url;
+      ok++;
+    } else if (item.content === undefined) {
+      item.content = null;      // marca a tentativa, para o log distinguir
+    }
+  });
+  console.log(`  ${label}: corpo extraído de ${ok}/${alvos.length} matérias`);
+  return ok;
 }
 
 // --- coleta ---------------------------------------------------------------
@@ -341,16 +438,23 @@ async function main() {
   const novos = [...porId.values()];
   console.log(`\nFiltro: ${repetidas} já conhecidas descartadas, ${cruzadas} mescladas entre tópicos.`);
 
-  if (novos.length === 0) {
-    console.log("\nNenhuma matéria nova — nada a gravar.");
-    return;
-  }
-
   // o dia vem do próprio job (UTC), não de um argumento
   const day = toDMY(new Date().toISOString().slice(0, 10));
   const path = join(NEWS_DIR, `${day}.json`);
   const anteriores = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : [];
   const todos = [...anteriores, ...novos];
+
+  // Busca o corpo das matérias — tanto das novas quanto das já gravadas que
+  // ainda estão sem conteúdo (ex.: coletadas antes desta etapa existir).
+  console.log("\nExtraindo conteúdo das matérias...");
+  const enriquecidas = await enrichContent(todos, day);
+
+  // grava se houve matéria nova OU se o backfill preencheu algum corpo
+  if (novos.length === 0 && enriquecidas === 0) {
+    console.log("Nada novo — nem matéria, nem conteúdo. Nada a gravar.");
+    return;
+  }
+
   writeFileSync(path, JSON.stringify(todos, null, 2) + "\n");
   writeManifest();
 
