@@ -1,12 +1,10 @@
 [
   {
-    "id": "4a5373225c50",
-    "topic": "ucrania-russia",
+    "id": "15e7f77f086b",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Ucrânia volta a bombardear 'Amazon da Rússia' e áreas além do front, enquanto Moscou amplia ações no Mar Negro - O GLOBO",
     "source": "O GLOBO",
@@ -14,16 +12,20 @@
     "publishedAt": "2026-08-03T12:52:23.000Z",
     "snippet": "Ucrânia volta a bombardear 'Amazon da Rússia' e áreas além do front, enquanto Moscou amplia ações no Mar Negro O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acoes alem amazon amplia areas bombardear enquanto front moscou negro",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": [
+      "AMZN"
+    ]
   },
   {
-    "id": "8cb125622394",
-    "topic": "ucrania-russia",
+    "id": "10163a58a6ac",
     "tags": [
-      "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Rússia acusa Ucrânia de atacar cidade turística e deixar quatro mortos - CNN Brasil",
     "source": "CNN Brasil",
@@ -31,16 +33,19 @@
     "publishedAt": "2026-08-03T13:10:33.000Z",
     "snippet": "Rússia acusa Ucrânia de atacar cidade turística e deixar quatro mortos CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acusa atacar cidade deixar mortos quatro russia turistica ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "006096f31bb0",
-    "topic": "ucrania-russia",
+    "id": "ff5882a83dcd",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Ataque triplo da Ucrânia atinge armazéns da Wildberries em três regiões da Rússia; Moscou lança ofensiva contra Kiev - Brasil de Fato",
     "source": "Brasil de Fato",
@@ -48,16 +53,19 @@
     "publishedAt": "2026-07-30T13:55:00.000Z",
     "snippet": "Ataque triplo da Ucrânia atinge armazéns da Wildberries em três regiões da Rússia; Moscou lança ofensiva contra Kiev Brasil de Fato",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "armazens ataque atinge contra kiev lanca moscou ofensiva regioes russia",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "5cc3f3d14124",
-    "topic": "ucrania-russia",
+    "id": "a7fe426c2501",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Guerra dos drones muda o equilíbrio do conflito entre Rússia e Ucrânia - gazetadopovo.com.br",
     "source": "gazetadopovo.com.br",
@@ -65,16 +73,20 @@
     "publishedAt": "2026-07-20T07:00:00.000Z",
     "snippet": "Guerra dos drones muda o equilíbrio do conflito entre Rússia e Ucrânia gazetadopovo.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "conflito drones entre equilibrio guerra muda russia ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "5bc183127988",
-    "topic": "ucrania-russia",
+    "id": "c984c23f9321",
     "tags": [
+      "brasil",
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Ucrânia amplia recrutamento de brasileiros para guerra contra a Rússia - Revista Oeste",
     "source": "Revista Oeste",
@@ -82,16 +94,20 @@
     "publishedAt": "2026-07-31T01:43:55.000Z",
     "snippet": "Ucrânia amplia recrutamento de brasileiros para guerra contra a Rússia Revista Oeste",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "amplia brasileiros contra guerra para recrutamento russia ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "ec44e88ad65b",
-    "topic": "ucrania-russia",
+    "id": "ad37615cf518",
     "tags": [
+      "defesa",
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Ataque russo fura defesa de Kiev e mata 10; Ucrânia afunda navio - Folha de S.Paulo",
     "source": "Folha de S.Paulo",
@@ -99,16 +115,19 @@
     "publishedAt": "2026-08-01T13:09:00.000Z",
     "snippet": "Ataque russo fura defesa de Kiev e mata 10; Ucrânia afunda navio Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "afunda ataque defesa fura kiev mata navio russo ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "fd4ee32db6e2",
-    "topic": "ucrania-russia",
+    "id": "49aa905c0c56",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Masha e o Urso: Com 'guia de cancelamento', desenho animado vira personagem inusitado da guerra entre Rússia e Ucrânia - O GLOBO",
     "source": "O GLOBO",
@@ -116,16 +135,19 @@
     "publishedAt": "2026-08-03T03:00:15.000Z",
     "snippet": "Masha e o Urso: Com 'guia de cancelamento', desenho animado vira personagem inusitado da guerra entre Rússia e Ucrânia O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "animado cancelamento desenho entre guerra guia inusitado masha personagem russia",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "49820bf67c78",
-    "topic": "ucrania-russia",
+    "id": "b9daa5fbbdf3",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Análise: Guerra na Ucrânia não será decidida no campo de batalha - CNN Brasil",
     "source": "CNN Brasil",
@@ -133,16 +155,19 @@
     "publishedAt": "2026-07-29T09:00:09.000Z",
     "snippet": "Análise: Guerra na Ucrânia não será decidida no campo de batalha CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "analise batalha campo decidida guerra sera ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "f82ddcc9ca9e",
-    "topic": "ucrania-russia",
+    "id": "9e94137dc65c",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Ucrânia tem novo alvo na Rússia: entenda os ataques contra rede Wildberries - Brasil de Fato",
     "source": "Brasil de Fato",
@@ -150,16 +175,18 @@
     "publishedAt": "2026-07-26T15:20:00.000Z",
     "snippet": "Ucrânia tem novo alvo na Rússia: entenda os ataques contra rede Wildberries Brasil de Fato",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alvo ataques contra entenda novo rede russia ucrania wildberries",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "d287c2b28b42",
-    "topic": "ucrania-russia",
+    "id": "1fdb1c9911db",
     "tags": [
-      "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Troca de fogo entre Rússia e Ucrânia mata 22 civis - Folha de S.Paulo",
     "source": "Folha de S.Paulo",
@@ -167,16 +194,19 @@
     "publishedAt": "2026-07-20T07:00:00.000Z",
     "snippet": "Troca de fogo entre Rússia e Ucrânia mata 22 civis Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "civis entre fogo mata russia troca ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "af165b6fd3a1",
-    "topic": "ucrania-russia",
+    "id": "0049c2f76005",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Entre drones, apagões e banhos de mar, Crimeia vive um verão de aparente normalidade em meio à guerra - O GLOBO",
     "source": "O GLOBO",
@@ -184,16 +214,19 @@
     "publishedAt": "2026-08-03T03:00:35.000Z",
     "snippet": "Entre drones, apagões e banhos de mar, Crimeia vive um verão de aparente normalidade em meio à guerra O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "apagoes aparente banhos crimeia drones entre guerra meio normalidade verao",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "857d80b3f04c",
-    "topic": "ucrania-russia",
+    "id": "f80481ca8470",
     "tags": [
       "geopolitica",
-      "ucrania",
       "russia",
-      "petroleo"
+      "ucrania"
     ],
     "title": "Otan reforça apoio à Ucrânia e Rússia alerta para risco de escalada da guerra - Brasil de Fato",
     "source": "Brasil de Fato",
@@ -201,16 +234,21 @@
     "publishedAt": "2026-07-11T07:00:00.000Z",
     "snippet": "Otan reforça apoio à Ucrânia e Rússia alerta para risco de escalada da guerra Brasil de Fato",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alerta apoio escalada guerra otan para reforca risco russia ucrania",
+    "topics": [
+      "ucrania-russia"
+    ],
+    "tickers": []
   },
   {
-    "id": "a6720ff7e502",
-    "topic": "oriente-medio",
+    "id": "35f67c2e59e4",
     "tags": [
+      "eua",
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "MAPA: nova escalada da guerra faz conflito entre EUA e Irã se alastrar para além do Estreito de Ormuz - G1",
@@ -219,16 +257,21 @@
     "publishedAt": "2026-07-30T03:00:18.000Z",
     "snippet": "MAPA: nova escalada da guerra faz conflito entre EUA e Irã se alastrar para além do Estreito de Ormuz G1",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alastrar alem conflito entre escalada estreito guerra mapa nova ormuz",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "7bca1a6273e4",
-    "topic": "oriente-medio",
+    "id": "b61742db92a7",
     "tags": [
+      "eua",
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Irã-EUA, o papel da Arábia Saudita e o risco de ampliação do conflito - Vatican News",
@@ -237,16 +280,20 @@
     "publishedAt": "2026-07-31T12:06:56.000Z",
     "snippet": "Irã-EUA, o papel da Arábia Saudita e o risco de ampliação do conflito Vatican News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "ampliacao arabia conflito papel risco saudita",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "ae4dcb1fb937",
-    "topic": "oriente-medio",
+    "id": "cbf737e5db87",
     "tags": [
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Análise: alcance da guerra no Oriente Médio se amplia com a Arábia Saudita - CNN Brasil",
@@ -255,16 +302,21 @@
     "publishedAt": "2026-07-30T12:11:36.000Z",
     "snippet": "Análise: alcance da guerra no Oriente Médio se amplia com a Arábia Saudita CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alcance amplia analise arabia guerra medio oriente saudita",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "2e1a1ee07a8d",
-    "topic": "oriente-medio",
+    "id": "f9e04bc4c7ea",
     "tags": [
+      "eua",
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Trump afirma que EUA e Israel adiarão ataques contra o Irã - Correio Braziliense",
@@ -273,16 +325,20 @@
     "publishedAt": "2026-08-02T19:08:00.000Z",
     "snippet": "Trump afirma que EUA e Israel adiarão ataques contra o Irã Correio Braziliense",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "adiarao afirma ataques contra israel trump",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "deb09f2075df",
-    "topic": "oriente-medio",
+    "id": "da1b117d47ca",
     "tags": [
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Terceira Guerra Mundial? Por que a ideia de que o mundo já enfrenta um conflito global ganha força - BBC",
@@ -291,16 +347,20 @@
     "publishedAt": "2026-07-28T17:01:41.000Z",
     "snippet": "Terceira Guerra Mundial? Por que a ideia de que o mundo já enfrenta um conflito global ganha força BBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "conflito enfrenta forca ganha global guerra ideia mundial mundo terceira",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "69d1ae8ae68c",
-    "topic": "oriente-medio",
+    "id": "d6cd498dd216",
     "tags": [
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Irã x Ucrânia: guerras no Oriente Médio e Leste Europeu podem virar uma só? - UOL Notícias",
@@ -309,16 +369,21 @@
     "publishedAt": "2026-07-29T18:56:06.000Z",
     "snippet": "Irã x Ucrânia: guerras no Oriente Médio e Leste Europeu podem virar uma só? UOL Notícias",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "europeu guerras leste medio oriente podem ucrania virar",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "19b1b0717e4b",
-    "topic": "oriente-medio",
+    "id": "8bef26e4abfb",
     "tags": [
+      "eua",
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Israel está preocupado com contenção dos EUA no conflito com o Irã, escreve mídia - Tribuna do Sertão",
@@ -327,16 +392,20 @@
     "publishedAt": "2026-07-30T13:22:00.000Z",
     "snippet": "Israel está preocupado com contenção dos EUA no conflito com o Irã, escreve mídia Tribuna do Sertão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "conflito contencao escreve esta israel midia preocupado",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "8fde1d379da6",
-    "topic": "oriente-medio",
+    "id": "f3fe376bbfea",
     "tags": [
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Guerra no Oriente Médio: Ataque a porto egípcio expõe vulnerabilidade do Canal de Suez e eleva temor sobre o comércio global - O GLOBO",
@@ -345,16 +414,19 @@
     "publishedAt": "2026-07-30T17:45:42.000Z",
     "snippet": "Guerra no Oriente Médio: Ataque a porto egípcio expõe vulnerabilidade do Canal de Suez e eleva temor sobre o comércio global O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "ataque canal comercio egipcio eleva expoe global guerra medio oriente",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "e3330fed7cbc",
-    "topic": "oriente-medio",
+    "id": "cf7604176943",
     "tags": [
-      "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Itamaraty amplia lista de países desaconselhados para viagens ao Oriente Médio - Panrotas",
@@ -363,16 +435,20 @@
     "publishedAt": "2026-07-21T07:00:00.000Z",
     "snippet": "Itamaraty amplia lista de países desaconselhados para viagens ao Oriente Médio Panrotas",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "amplia desaconselhados itamaraty lista medio oriente paises para viagens",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "d3699052e24a",
-    "topic": "oriente-medio",
+    "id": "69bf2a9ffd51",
     "tags": [
-      "geopolitica",
-      "oriente-medio",
+      "eua",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Para analista, Trump voltou a atacar o Irã para tentar tirar a impressão de ‘perdedor’ dos EUA - Brasil de Fato",
@@ -381,16 +457,20 @@
     "publishedAt": "2026-07-13T07:00:00.000Z",
     "snippet": "Para analista, Trump voltou a atacar o Irã para tentar tirar a impressão de ‘perdedor’ dos EUA Brasil de Fato",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "analista atacar impressao para perdedor tentar tirar trump voltou",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "ca0a15504449",
-    "topic": "oriente-medio",
+    "id": "f326420ed5cc",
     "tags": [
-      "geopolitica",
-      "oriente-medio",
+      "eua",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Negociações entre EUA e Irã prosseguem, afirma Paquistão - Diario de Pernambuco",
@@ -399,16 +479,21 @@
     "publishedAt": "2026-07-30T12:04:00.000Z",
     "snippet": "Negociações entre EUA e Irã prosseguem, afirma Paquistão Diario de Pernambuco",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "afirma entre negociacoes paquistao prosseguem",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "f13e48e9fb9f",
-    "topic": "oriente-medio",
+    "id": "ac4705f2ef48",
     "tags": [
+      "eua",
       "geopolitica",
-      "oriente-medio",
       "ira",
       "israel",
+      "oriente-medio",
       "risco-geopolitico"
     ],
     "title": "Como a guerra no Irã afeta as relações entre Israel e EUA - nexojornal.com.br",
@@ -417,14 +502,19 @@
     "publishedAt": "2026-06-08T07:00:00.000Z",
     "snippet": "Como a guerra no Irã afeta as relações entre Israel e EUA nexojornal.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "afeta como entre guerra israel relacoes",
+    "topics": [
+      "oriente-medio"
+    ],
+    "tickers": []
   },
   {
-    "id": "d64580151f01",
-    "topic": "gaza",
+    "id": "ebb1d53d2dae",
     "tags": [
-      "geopolitica",
+      "defesa",
       "gaza",
+      "geopolitica",
       "israel",
       "oriente-medio"
     ],
@@ -434,13 +524,16 @@
     "publishedAt": "2026-07-31T13:40:00.000Z",
     "snippet": "Hamas condiciona desmilitarização à retirada de Israel de Gaza e cumprimento do cessar-fogo Brasil de Fato",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "cessar condiciona cumprimento desmilitarizacao fogo gaza hamas israel retirada",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "4f76979b0a75",
-    "topic": "gaza",
+    "id": "d9015207bbdd",
     "tags": [
-      "geopolitica",
       "gaza",
       "israel",
       "oriente-medio"
@@ -451,14 +544,18 @@
     "publishedAt": "2026-07-31T09:25:57.000Z",
     "snippet": "Hamas confirma acordo para seu desarmamento e retirada de Israel de Gaza G1",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo confirma desarmamento gaza hamas israel para retirada",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "723581b0472e",
-    "topic": "gaza",
+    "id": "45557a5a7d91",
     "tags": [
-      "geopolitica",
       "gaza",
+      "geopolitica",
       "israel",
       "oriente-medio"
     ],
@@ -468,13 +565,16 @@
     "publishedAt": "2026-08-02T11:29:00.000Z",
     "snippet": "Ataques de Israel matam 18 palestinos em Gaza, apesar de anúncio de avanço no cessar-fogo Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "anuncio apesar ataques avanco cessar fogo gaza israel matam palestinos",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "35cfc35ff6c1",
-    "topic": "gaza",
+    "id": "ef81408eda53",
     "tags": [
-      "geopolitica",
       "gaza",
       "israel",
       "oriente-medio"
@@ -485,14 +585,18 @@
     "publishedAt": "2026-07-31T03:23:31.000Z",
     "snippet": "O que se sabe sobre acordo para 'desarmamento total' do Hamas em Gaza anunciado por Trump e confirmado pelo grupo palestino BBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo anunciado confirmado desarmamento gaza grupo hamas palestino para pelo",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "3cd7efafec54",
-    "topic": "gaza",
+    "id": "bad55832c341",
     "tags": [
-      "geopolitica",
       "gaza",
+      "geopolitica",
       "israel",
       "oriente-medio"
     ],
@@ -502,13 +606,16 @@
     "publishedAt": "2026-08-01T13:01:04.000Z",
     "snippet": "Ataque israelense deixa cratera em hospital de Gaza, apesar de cessar-fogo CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "apesar ataque cessar cratera deixa fogo gaza hospital israelense",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "fedd0ad007ee",
-    "topic": "gaza",
+    "id": "f936da7d139d",
     "tags": [
-      "geopolitica",
       "gaza",
       "israel",
       "oriente-medio"
@@ -519,13 +626,16 @@
     "publishedAt": "2026-07-31T12:10:00.000Z",
     "snippet": "O que se sabe sobre o acordo para o desarmamento do Hamas e a retirada israelense de Gaza cartacapital.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo desarmamento gaza hamas israelense para retirada sabe sobre",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "f84c16233020",
-    "topic": "gaza",
+    "id": "54988dd86a0c",
     "tags": [
-      "geopolitica",
       "gaza",
       "israel",
       "oriente-medio"
@@ -536,14 +646,18 @@
     "publishedAt": "2026-07-31T12:29:19.000Z",
     "snippet": "O que se sabe sobre novo acordo para paz em Gaza e as obrigações do Hamas e Israel VEJA",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo gaza hamas israel novo obrigacoes para sabe sobre",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "84d868ba35a2",
-    "topic": "gaza",
+    "id": "cf56efbf45f7",
     "tags": [
-      "geopolitica",
       "gaza",
+      "geopolitica",
       "israel",
       "oriente-medio"
     ],
@@ -553,14 +667,18 @@
     "publishedAt": "2026-07-31T18:14:00.000Z",
     "snippet": "Hamas aceita acordo que prevê desarmamento e retirada de tropas de Israel vermelho.org.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aceita acordo desarmamento hamas israel preve retirada tropas",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "83ad073ecf78",
-    "topic": "gaza",
+    "id": "3f0cf96f0443",
     "tags": [
-      "geopolitica",
       "gaza",
+      "geopolitica",
       "israel",
       "oriente-medio"
     ],
@@ -570,14 +688,19 @@
     "publishedAt": "2026-08-01T19:56:00.000Z",
     "snippet": "Israel bombardeia Gaza após Trump anunciar acordo para avançar cessar-fogo Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo anunciar apos avancar bombardeia cessar fogo gaza israel para",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "cd0c951311d8",
-    "topic": "gaza",
+    "id": "ad7ec97e1d20",
     "tags": [
-      "geopolitica",
+      "defesa",
       "gaza",
+      "imobiliario",
       "israel",
       "oriente-medio"
     ],
@@ -587,14 +710,18 @@
     "publishedAt": "2026-07-31T01:00:00.000Z",
     "snippet": "Hamas confirma acordo para desmilitarização e reconstrução de Gaza Brasil de Fato",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo confirma desmilitarizacao gaza hamas para reconstrucao",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "857e9fa4b7ab",
-    "topic": "gaza",
+    "id": "7c57ab4dbc5e",
     "tags": [
-      "geopolitica",
       "gaza",
+      "geopolitica",
       "israel",
       "oriente-medio"
     ],
@@ -604,13 +731,16 @@
     "publishedAt": "2026-08-01T09:30:03.000Z",
     "snippet": "Impasse para cessar-fogo definitivo em Gaza segue, mesmo após desarmamento do Hamas anunciado por Trump CBN",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "anunciado apos cessar definitivo desarmamento fogo gaza hamas impasse mesmo",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "c3cee7600e8e",
-    "topic": "gaza",
+    "id": "9bff4617e374",
     "tags": [
-      "geopolitica",
       "gaza",
       "israel",
       "oriente-medio"
@@ -621,15 +751,20 @@
     "publishedAt": "2026-07-31T09:05:44.000Z",
     "snippet": "Trump diz que acordo para desarmamento do Hamas foi alcançado; entenda CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo alcancado desarmamento entenda hamas para trump",
+    "topics": [
+      "gaza"
+    ],
+    "tickers": []
   },
   {
-    "id": "4c198b34b178",
-    "topic": "netanyahu",
+    "id": "759acb2858fd",
     "tags": [
-      "israel",
+      "eua",
+      "eua-politica",
       "geopolitica",
-      "eua-politica"
+      "israel"
     ],
     "title": "Israel transmite aos EUA ressalvas sobre plano de Trump para Gaza enquanto novos ataques israelenses matam 19 no enclave - O GLOBO",
     "source": "O GLOBO",
@@ -637,15 +772,19 @@
     "publishedAt": "2026-08-03T14:30:20.000Z",
     "snippet": "Israel transmite aos EUA ressalvas sobre plano de Trump para Gaza enquanto novos ataques israelenses matam 19 no enclave O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "ataques enclave enquanto gaza israel israelenses matam novos para plano",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "e057e27058b7",
-    "topic": "netanyahu",
+    "id": "649b73411902",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua",
+      "eua-politica",
+      "israel"
     ],
     "title": "Israel manifesta ‘preocupações’ aos EUA sobre planos para Gaza - cartacapital.com.br",
     "source": "cartacapital.com.br",
@@ -653,15 +792,18 @@
     "publishedAt": "2026-08-03T10:35:00.000Z",
     "snippet": "Israel manifesta ‘preocupações’ aos EUA sobre planos para Gaza cartacapital.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "gaza israel manifesta para planos preocupacoes sobre",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "420f4e2817c6",
-    "topic": "netanyahu",
+    "id": "2415accd27af",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua-politica",
+      "israel"
     ],
     "title": "Netanyahu fará de tudo para minar desarmamento do Hamas, diz especialista - CNN Brasil",
     "source": "CNN Brasil",
@@ -669,15 +811,19 @@
     "publishedAt": "2026-08-01T13:17:29.000Z",
     "snippet": "Netanyahu fará de tudo para minar desarmamento do Hamas, diz especialista CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "desarmamento especialista fara hamas minar netanyahu para tudo",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "9f45bfffc706",
-    "topic": "netanyahu",
+    "id": "f8a9a47704e2",
     "tags": [
-      "israel",
+      "eua-politica",
       "geopolitica",
-      "eua-politica"
+      "israel"
     ],
     "title": "Análise: Suspensão de ataques no Irã de Trump apresenta desafio a Netanyahu - CNN Brasil",
     "source": "CNN Brasil",
@@ -685,15 +831,18 @@
     "publishedAt": "2026-08-02T13:40:41.000Z",
     "snippet": "Análise: Suspensão de ataques no Irã de Trump apresenta desafio a Netanyahu CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "analise apresenta ataques desafio netanyahu suspensao trump",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "0e9591b8f668",
-    "topic": "netanyahu",
+    "id": "c6760b780b23",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua-politica",
+      "israel"
     ],
     "title": "Turquia diz que ‘único objetivo’ de Netanyahu é deslocar palestinos e impedir paz regional - operamundi.uol.com.br",
     "source": "operamundi.uol.com.br",
@@ -701,15 +850,18 @@
     "publishedAt": "2026-08-03T06:43:00.000Z",
     "snippet": "Turquia diz que ‘único objetivo’ de Netanyahu é deslocar palestinos e impedir paz regional operamundi.uol.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "deslocar impedir netanyahu objetivo palestinos regional turquia unico",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "978065cffae5",
-    "topic": "netanyahu",
+    "id": "21fa0b42267a",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua-politica",
+      "israel"
     ],
     "title": "Petro acusa Netanyahu de financiar crise migratória em Ceuta - Brasil 247",
     "source": "Brasil 247",
@@ -717,15 +869,18 @@
     "publishedAt": "2026-08-02T21:00:00.000Z",
     "snippet": "Petro acusa Netanyahu de financiar crise migratória em Ceuta Brasil 247",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acusa ceuta crise financiar migratoria netanyahu petro",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "e7e5a27ffd35",
-    "topic": "netanyahu",
+    "id": "b37c0dc702d8",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua-politica",
+      "israel"
     ],
     "title": "Depois de sair de mãos abanando da Casa Branca, Netanyahu segue em várias frentes de batalha - VEJA",
     "source": "VEJA",
@@ -733,15 +888,19 @@
     "publishedAt": "2026-07-31T09:00:02.000Z",
     "snippet": "Depois de sair de mãos abanando da Casa Branca, Netanyahu segue em várias frentes de batalha VEJA",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "abanando batalha branca casa depois frentes maos netanyahu sair segue",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "c138123c7268",
-    "topic": "netanyahu",
+    "id": "5ff8b9fbc6f8",
     "tags": [
-      "israel",
+      "eua-politica",
       "geopolitica",
-      "eua-politica"
+      "israel"
     ],
     "title": "Rei do Marrocos e Netanyahu estão por trás da invasão migratória na Espanha, diz historiador - Diário do Centro do Mundo",
     "source": "Diário do Centro do Mundo",
@@ -749,15 +908,19 @@
     "publishedAt": "2026-07-31T21:47:00.000Z",
     "snippet": "Rei do Marrocos e Netanyahu estão por trás da invasão migratória na Espanha, diz historiador Diário do Centro do Mundo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "espanha estao historiador invasao marrocos migratoria netanyahu tras",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "875d466e5dff",
-    "topic": "netanyahu",
+    "id": "0b35cf548727",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eleicoes",
+      "eua-politica",
+      "israel"
     ],
     "title": "Veja como funcionam as eleições de Israel e quem pode substituir Netanyahu - CNN Brasil",
     "source": "CNN Brasil",
@@ -765,15 +928,18 @@
     "publishedAt": "2026-08-02T07:00:48.000Z",
     "snippet": "Veja como funcionam as eleições de Israel e quem pode substituir Netanyahu CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "como eleicoes funcionam israel netanyahu pode quem substituir veja",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "c87ce6f45a61",
-    "topic": "netanyahu",
+    "id": "a29e93721eba",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua-politica",
+      "israel"
     ],
     "title": "Trump terá hoje reuniões com Zelensky e Netanyahu - G1",
     "source": "G1",
@@ -781,15 +947,19 @@
     "publishedAt": "2026-07-28T03:00:35.000Z",
     "snippet": "Trump terá hoje reuniões com Zelensky e Netanyahu G1",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "hoje netanyahu reunioes tera trump zelensky",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "46dbd0f7e09a",
-    "topic": "netanyahu",
+    "id": "2cc4bdeca8a0",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "eua",
+      "eua-politica",
+      "israel"
     ],
     "title": "Prefeito de Nova York x primeiro-ministro de Israel: afinal, Netanyahu pode ser preso nos EUA? - G1",
     "source": "G1",
@@ -797,15 +967,19 @@
     "publishedAt": "2026-07-25T08:00:48.000Z",
     "snippet": "Prefeito de Nova York x primeiro-ministro de Israel: afinal, Netanyahu pode ser preso nos EUA? G1",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "afinal israel ministro netanyahu nova pode prefeito preso primeiro york",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "1e3ea7857ac7",
-    "topic": "netanyahu",
+    "id": "298f205b87e3",
     "tags": [
-      "israel",
-      "geopolitica",
-      "eua-politica"
+      "defesa",
+      "eua-politica",
+      "israel"
     ],
     "title": "Hamas irá depor as armas? Uma faca de dois gumes para Netanyahu - GZH",
     "source": "GZH",
@@ -813,15 +987,19 @@
     "publishedAt": "2026-07-31T14:45:48.000Z",
     "snippet": "Hamas irá depor as armas? Uma faca de dois gumes para Netanyahu GZH",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "armas depor dois faca gumes hamas netanyahu para",
+    "topics": [
+      "netanyahu"
+    ],
+    "tickers": []
   },
   {
-    "id": "959f809e63cf",
-    "topic": "trump",
+    "id": "64a1ab8123b8",
     "tags": [
+      "brasil",
       "eua-politica",
-      "macro",
-      "geopolitica"
+      "macro"
     ],
     "title": "Nobel de Economia elogia Pix: 'Trump não quer Brasil com independência digital' - BBC",
     "source": "BBC",
@@ -829,15 +1007,21 @@
     "publishedAt": "2026-07-29T08:42:21.000Z",
     "snippet": "Nobel de Economia elogia Pix: 'Trump não quer Brasil com independência digital' BBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "brasil digital economia elogia independencia nobel quer trump",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "924782a80450",
-    "topic": "trump",
+    "id": "d0200bc650d8",
     "tags": [
+      "brasil",
+      "eua",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Tarifa dos EUA contra Brasil reflete visão pessoal de Trump e não política econômica, diz Yellen - Estadão",
     "source": "Estadão",
@@ -845,15 +1029,21 @@
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "Tarifa dos EUA contra Brasil reflete visão pessoal de Trump e não política econômica, diz Yellen Estadão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "brasil contra economica pessoal politica reflete tarifa trump visao yellen",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "ecd73beb1d81",
-    "topic": "trump",
+    "id": "4b4e06a477f1",
     "tags": [
+      "brasil",
+      "eua",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "EUA confirmam novo tarifaço de 25% a produtos do Brasil - CNN Brasil",
     "source": "CNN Brasil",
@@ -861,15 +1051,20 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "EUA confirmam novo tarifaço de 25% a produtos do Brasil CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "brasil confirmam novo produtos tarifaco",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "3ac0718f3518",
-    "topic": "trump",
+    "id": "081a86b6d8b6",
     "tags": [
+      "brasil",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Qual o impacto do tarifaço de Trump no Brasil? 'Deve ser restrito' e mostra 'limites do protecionismo americano', diz economista - BBC",
     "source": "BBC",
@@ -877,31 +1072,20 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Qual o impacto do tarifaço de Trump no Brasil? 'Deve ser restrito' e mostra 'limites do protecionismo americano', diz economista BBC",
     "reviewed": false,
-    "insight": null
-  },
-  {
-    "id": "971b81d0cafc",
-    "topic": "trump",
-    "tags": [
-      "eua-politica",
-      "macro",
-      "geopolitica"
+    "insight": null,
+    "fingerprint": "americano brasil deve economista impacto limites mostra protecionismo qual restrito",
+    "topics": [
+      "trump"
     ],
-    "title": "Tarifa dos EUA contra Brasil reflete visão pessoal de Trump e não política econômica, diz Yellen - Estadão",
-    "source": "Estadão",
-    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQUWFlNDFYUUdnTENjWjdPN2NhdkJxR0NsQzhQWHhFQzVGenBsWC1JcUlPMk53X0pUR1Y4ekhpV24xRlFzUVVHLUZvTDUtR1JPbElpZ1ZYVjRNUm94UTBaRGdmZEFiNzRBX19PNzZiRjZzQmo3RF9MaENpbzdGeFJPUEdVMTZYbjBZN25kV1BjeTNnUjh4MXNMZUllVmVOWmZxQ3o4?oc=5",
-    "publishedAt": "2026-07-23T19:17:13.000Z",
-    "snippet": "Tarifa dos EUA contra Brasil reflete visão pessoal de Trump e não política econômica, diz Yellen Estadão",
-    "reviewed": false,
-    "insight": null
+    "tickers": []
   },
   {
-    "id": "0c38bb1e0b11",
-    "topic": "trump",
+    "id": "fcddc9301da6",
     "tags": [
+      "eua",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Sistema de reembolso de tarifas ilegais de Trump entra em operação nos EUA - Folha de S.Paulo",
     "source": "Folha de S.Paulo",
@@ -909,15 +1093,20 @@
     "publishedAt": "2026-04-20T07:00:00.000Z",
     "snippet": "Sistema de reembolso de tarifas ilegais de Trump entra em operação nos EUA Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "entra ilegais operacao reembolso sistema tarifas trump",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "2bf238fd3eec",
-    "topic": "trump",
+    "id": "c6f785c6ddc5",
     "tags": [
+      "eua",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Justiça dos EUA mantém tarifa global de 10% de Trump em vigor - G1",
     "source": "G1",
@@ -925,15 +1114,19 @@
     "publishedAt": "2026-06-11T07:00:00.000Z",
     "snippet": "Justiça dos EUA mantém tarifa global de 10% de Trump em vigor G1",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "global justica mantem tarifa trump vigor",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "8fc351b8a0d7",
-    "topic": "trump",
+    "id": "98321d7b3cf1",
     "tags": [
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Flávio Bolsonaro dá tiro no pé ao tentar reverter ‘tarifaço’ de Trump - Intercept Brasil",
     "source": "Intercept Brasil",
@@ -941,15 +1134,19 @@
     "publishedAt": "2026-06-30T07:00:00.000Z",
     "snippet": "Flávio Bolsonaro dá tiro no pé ao tentar reverter ‘tarifaço’ de Trump Intercept Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bolsonaro flavio reverter tarifaco tentar tiro trump",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "c9194382eb7e",
-    "topic": "trump",
+    "id": "7be77e9a53d7",
     "tags": [
+      "brasil",
       "eua-politica",
-      "macro",
-      "geopolitica"
+      "macro"
     ],
     "title": "Efeitos da gestão Trump na economia do Brasil em 2026 - gazetadopovo.com.br",
     "source": "gazetadopovo.com.br",
@@ -957,15 +1154,21 @@
     "publishedAt": "2026-05-04T07:00:00.000Z",
     "snippet": "Efeitos da gestão Trump na economia do Brasil em 2026 gazetadopovo.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 brasil economia efeitos gestao trump",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "cfd3cd82a91e",
-    "topic": "trump",
+    "id": "3ea6cce017a3",
     "tags": [
+      "defesa",
+      "eua",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Tribunal dos EUA permite aplicação de tarifa global de 10% de Trump - cartacapital.com.br",
     "source": "cartacapital.com.br",
@@ -973,15 +1176,20 @@
     "publishedAt": "2026-06-11T07:00:00.000Z",
     "snippet": "Tribunal dos EUA permite aplicação de tarifa global de 10% de Trump cartacapital.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aplicacao global permite tarifa tribunal trump",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "a345cdc572ff",
-    "topic": "trump",
+    "id": "91f6d8f34b1a",
     "tags": [
+      "bancos",
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "Bundesbank diz que tarifas de Trump têm impacto moderado no crescimento da zona euro até 2027 - Dinheiro Vivo",
     "source": "Dinheiro Vivo",
@@ -989,15 +1197,19 @@
     "publishedAt": "2026-07-28T10:28:01.000Z",
     "snippet": "Bundesbank diz que tarifas de Trump têm impacto moderado no crescimento da zona euro até 2027 Dinheiro Vivo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2027 bundesbank crescimento euro impacto moderado tarifas trump zona",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "d671261836f0",
-    "topic": "trump",
+    "id": "cf64415ccc76",
     "tags": [
       "eua-politica",
       "macro",
-      "geopolitica"
+      "tarifas"
     ],
     "title": "A reação do governo Lula ao novo tarifaço de Trump: 'Seguiremos sem viralatice' - BBC",
     "source": "BBC",
@@ -1005,12 +1217,17 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "A reação do governo Lula ao novo tarifaço de Trump: 'Seguiremos sem viralatice' BBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "governo lula novo reacao seguiremos tarifaco trump viralatice",
+    "topics": [
+      "trump"
+    ],
+    "tickers": []
   },
   {
-    "id": "245b2d01a9d7",
-    "topic": "ice-imigracao",
+    "id": "8d0047c1918d",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1021,12 +1238,18 @@
     "publishedAt": "2026-07-19T07:00:00.000Z",
     "snippet": "Imigrantes nos EUA criam plano para filhos caso o ICE bata em suas portas CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bata caso criam filhos imigrantes para plano portas suas",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "462c17cdb921",
-    "topic": "ice-imigracao",
+    "id": "0f08e2053dbb",
     "tags": [
+      "china",
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1037,11 +1260,15 @@
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "Advogado chinês que pediu asilo nos EUA após fugir de perseguição política é preso pelo ICE e corre risco de deportação O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "advogado apos asilo chines corre deportacao fugir pediu pelo perseguicao",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "e30e02467382",
-    "topic": "ice-imigracao",
+    "id": "9b8477451365",
     "tags": [
       "eua-politica",
       "imigracao",
@@ -1053,12 +1280,17 @@
     "publishedAt": "2026-07-28T15:57:02.000Z",
     "snippet": "ICE prepara operações para prender e deportar haitianos após fim do TPS, dizem fontes Gazeta Brazilian News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "apos deportar dizem fontes haitianos operacoes para prender prepara",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "f9fec5231d85",
-    "topic": "ice-imigracao",
+    "id": "d4c8d5d3c6f9",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1069,12 +1301,17 @@
     "publishedAt": "2026-06-05T07:00:00.000Z",
     "snippet": "Após meses de disputa, Senado dos EUA aprova US$ 70 bi para campanha de deportação de Trump Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "apos aprova campanha deportacao disputa meses para senado trump",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "79886c04cc6a",
-    "topic": "ice-imigracao",
+    "id": "8f2f84d8d544",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1085,12 +1322,18 @@
     "publishedAt": "2026-07-27T15:32:57.000Z",
     "snippet": "Fim da proteção temporária nos EUA expõe 330 mil haitianos a risco de deportação Revista Fórum",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "deportacao expoe haitianos protecao risco temporaria",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "62667f913061",
-    "topic": "ice-imigracao",
+    "id": "90226156e3e5",
     "tags": [
+      "brasil",
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1101,12 +1344,17 @@
     "publishedAt": "2026-06-08T07:00:00.000Z",
     "snippet": "Crimigração nos EUA: O ICE e a deportação de brasileiros OPEB",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "brasileiros crimigracao deportacao",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "09d30806cd80",
-    "topic": "ice-imigracao",
+    "id": "c335325e7f7a",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1117,11 +1365,15 @@
     "publishedAt": "2026-07-02T07:00:00.000Z",
     "snippet": "Prisões de imigrantes nos EUA chegam a 10 mil em 5 dias com endurecimento das medidas do ICE Estadão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chegam dias endurecimento imigrantes medidas prisoes",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "47a582370b7d",
-    "topic": "ice-imigracao",
+    "id": "b15fbd546a24",
     "tags": [
       "eua-politica",
       "imigracao",
@@ -1133,12 +1385,17 @@
     "publishedAt": "2026-04-20T07:00:00.000Z",
     "snippet": "Por dentro do ICE, a polícia migratória de Donald Trump BBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "dentro donald migratoria policia trump",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "e6efdcb2a4bd",
-    "topic": "ice-imigracao",
+    "id": "fb15a2f702a3",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1149,12 +1406,17 @@
     "publishedAt": "2026-04-22T07:00:00.000Z",
     "snippet": "EUA intensificam deportações de latinos para África dw.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "africa deportacoes intensificam latinos para",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "ffc344b26848",
-    "topic": "ice-imigracao",
+    "id": "64c51063ff76",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1165,12 +1427,17 @@
     "publishedAt": "2026-05-24T07:00:00.000Z",
     "snippet": "EUA deportaram 175 imigrantes de outros países para a África Poder360",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "africa deportaram imigrantes outros paises para",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "3c1b9118dc51",
-    "topic": "ice-imigracao",
+    "id": "3dab9a006669",
     "tags": [
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1181,12 +1448,18 @@
     "publishedAt": "2026-07-15T07:00:00.000Z",
     "snippet": "Seleção francesa usou mesmo avião de deportação do ICE nos EUA, diz site CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aviao deportacao francesa mesmo selecao site usou",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "23f69ff9d094",
-    "topic": "ice-imigracao",
+    "id": "c1f112ba51d3",
     "tags": [
+      "brasil",
+      "eua",
       "eua-politica",
       "imigracao",
       "social"
@@ -1197,16 +1470,19 @@
     "publishedAt": "2026-05-26T07:00:00.000Z",
     "snippet": "Detidos nos EUA, 17 mil brasileiros aguardam deportação O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aguardam brasileiros deportacao detidos",
+    "topics": [
+      "ice-imigracao"
+    ],
+    "tickers": []
   },
   {
-    "id": "794dca8b70c9",
-    "topic": "varejo-eua",
+    "id": "d0c4a53c8701",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "Monthly Retail Trade - Sales Report - Census.gov",
     "source": "Census.gov",
@@ -1214,16 +1490,19 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Monthly Retail Trade - Sales Report Census.gov",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "monthly report retail sales trade",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "054ddfb3a9e8",
-    "topic": "varejo-eua",
+    "id": "94543435f664",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "Retail spending continues to defy gravity - National Retail Federation | NRF",
     "source": "National Retail Federation | NRF",
@@ -1231,16 +1510,19 @@
     "publishedAt": "2026-07-28T07:00:00.000Z",
     "snippet": "Retail spending continues to defy gravity National Retail Federation | NRF",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "continues defy federation gravity national retail spending",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "f153b8572763",
-    "topic": "varejo-eua",
+    "id": "0ffd1a124f75",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "America's Consumer Divide: What It Implies for the Future of Retail - Substack",
     "source": "Substack",
@@ -1248,16 +1530,20 @@
     "publishedAt": "2026-07-31T14:21:59.000Z",
     "snippet": "America's Consumer Divide: What It Implies for the Future of Retail Substack",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "america consumer divide future implies retail what",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "88b782933c9f",
-    "topic": "varejo-eua",
+    "id": "b292b5bff045",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "eua",
+      "indices",
+      "varejo"
     ],
     "title": "U.S. Retail Sales Rose at Slower Pace Last Month - WSJ",
     "source": "WSJ",
@@ -1265,14 +1551,16 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "U.S. Retail Sales Rose at Slower Pace Last Month WSJ",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "last month pace retail rose sales slower",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "0611d2594386",
-    "topic": "varejo-eua",
+    "id": "07aeca889326",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
       "indices"
     ],
@@ -1282,16 +1570,20 @@
     "publishedAt": "2026-07-21T07:00:00.000Z",
     "snippet": "Americans Are Spending, and Not Just on Necessities nytimes.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "americans just necessities spending",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "d40dc3df6642",
-    "topic": "varejo-eua",
+    "id": "240f342a0caa",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "energia",
+      "indices",
+      "varejo"
     ],
     "title": "US Retail Sales Rise Modestly as Consumers Spend Less on Gas - Bloomberg",
     "source": "Bloomberg",
@@ -1299,14 +1591,16 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "US Retail Sales Rise Modestly as Consumers Spend Less on Gas Bloomberg",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "consumers less modestly retail rise sales spend",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "6fa6b3034541",
-    "topic": "varejo-eua",
+    "id": "a30d6047c55d",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
       "indices"
     ],
@@ -1316,16 +1610,19 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Americans keep spending while \"grumbling\" about the economy Axios",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "about americans economy grumbling keep spending while",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "eb3c8dd4ce5e",
-    "topic": "varejo-eua",
+    "id": "077181fd26b0",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "Consumer confidence falls on worse business, labor views - The Detroit News",
     "source": "The Detroit News",
@@ -1333,16 +1630,19 @@
     "publishedAt": "2026-07-29T14:57:00.000Z",
     "snippet": "Consumer confidence falls on worse business, labor views The Detroit News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "business confidence consumer falls labor views worse",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "ff6058d8a34d",
-    "topic": "varejo-eua",
+    "id": "13bb61c7d81a",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "US retail sales extend growth streak as June spending rises - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -1350,16 +1650,19 @@
     "publishedAt": "2026-07-15T07:00:00.000Z",
     "snippet": "US retail sales extend growth streak as June spending rises Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "extend growth june retail rises sales spending streak",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "3fc7c70675eb",
-    "topic": "varejo-eua",
+    "id": "95f54303cb2e",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "How do consumers manage to keep spending? - marketplace.org",
     "source": "marketplace.org",
@@ -1367,16 +1670,20 @@
     "publishedAt": "2026-06-17T07:00:00.000Z",
     "snippet": "How do consumers manage to keep spending? marketplace.org",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "consumers keep manage spending",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "f4ff91e484aa",
-    "topic": "varejo-eua",
+    "id": "0f8a59428f95",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "energia",
+      "indices",
+      "varejo"
     ],
     "title": "Lower gasoline prices restrain US retail sales, underlying momentum remains - FashionNetwork USA",
     "source": "FashionNetwork USA",
@@ -1384,16 +1691,19 @@
     "publishedAt": "2026-07-20T07:00:00.000Z",
     "snippet": "Lower gasoline prices restrain US retail sales, underlying momentum remains FashionNetwork USA",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "gasoline lower momentum prices remains restrain retail sales underlying",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "a47b69dbddb4",
-    "topic": "varejo-eua",
+    "id": "e209d2d1b85a",
     "tags": [
-      "eua",
-      "varejo",
       "consumo",
-      "indices"
+      "indices",
+      "varejo"
     ],
     "title": "US retail sales suggest resilience in the face of cost pressures - ING THINK economic and financial analysis | ING THINK",
     "source": "ING THINK economic and financial analysis | ING THINK",
@@ -1401,17 +1711,23 @@
     "publishedAt": "2026-05-14T07:00:00.000Z",
     "snippet": "US retail sales suggest resilience in the face of cost pressures ING THINK economic and financial analysis | ING THINK",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "analysis cost economic face financial pressures resilience retail sales suggest",
+    "topics": [
+      "varejo-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "960fe19ced72",
-    "topic": "indices-eua",
+    "id": "388d52006e76",
     "tags": [
+      "geopolitica",
       "indices",
-      "eua",
-      "sp500",
+      "juros",
+      "macro",
       "nasdaq",
-      "macro"
+      "petroleo",
+      "sp500"
     ],
     "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise as Trump calls off Iran attack, oil and bond yields ease - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -1419,17 +1735,24 @@
     "publishedAt": "2026-08-03T10:00:29.000Z",
     "snippet": "Stock market today: Dow, S&P 500, Nasdaq futures rise as Trump calls off Iran attack, oil and bond yields ease Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "attack bond calls ease futures iran market nasdaq rise stock",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "f97b58530000",
-    "topic": "indices-eua",
+    "id": "1b2afc0653b1",
     "tags": [
-      "indices",
       "eua",
-      "sp500",
+      "indices",
+      "macro",
       "nasdaq",
-      "macro"
+      "petroleo",
+      "sp500"
     ],
     "title": "Stock Market Today: Dow Jumps 500 Points; Oil Prices Slide; U.S.-Japan Prop Up Yen — Live Updates - WSJ",
     "source": "WSJ",
@@ -1437,17 +1760,20 @@
     "publishedAt": "2026-08-03T14:09:00.000Z",
     "snippet": "Stock Market Today: Dow Jumps 500 Points; Oil Prices Slide; U.S.-Japan Prop Up Yen — Live Updates WSJ",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "japan jumps live market points prices prop slide stock today",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "bf0220c9c5e6",
-    "topic": "indices-eua",
+    "id": "76343aa6abd4",
     "tags": [
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "sp500"
     ],
     "title": "Stock Market Today: Dow, S&P 500, Nasdaq Set to Open Up; Trump, Iran Hope; Micron, SpaceX, Palantir, More Movers - Barron's",
     "source": "Barron's",
@@ -1455,17 +1781,27 @@
     "publishedAt": "2026-08-03T13:22:00.000Z",
     "snippet": "Stock Market Today: Dow, S&P 500, Nasdaq Set to Open Up; Trump, Iran Hope; Micron, SpaceX, Palantir, More Movers Barron's",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "hope iran market micron more movers nasdaq open palantir spacex",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "bf305be959c4",
-    "topic": "indices-eua",
+    "id": "bf6e1f8514ce",
     "tags": [
-      "indices",
       "eua",
-      "sp500",
+      "geopolitica",
+      "indices",
+      "juros",
+      "macro",
       "nasdaq",
-      "macro"
+      "petroleo",
+      "resultados",
+      "sp500"
     ],
     "title": "Stock Market Today: Dow surges 600 points toward a record high, S&P 500 and Nasdaq also rise; oil prices, Treasury yields fall on signs of U.S.-Iran war de-escalation; Palantir earnings on tap - MarketWatch",
     "source": "MarketWatch",
@@ -1473,17 +1809,23 @@
     "publishedAt": "2026-08-03T14:25:00.000Z",
     "snippet": "Stock Market Today: Dow surges 600 points toward a record high, S&P 500 and Nasdaq also rise; oil prices, Treasury yields fall on signs of U.S.-Iran war de-escalation; Palantir earnings on tap MarketWatch",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "also earnings escalation fall high iran market nasdaq palantir points",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "fcb7fd8d2733",
-    "topic": "indices-eua",
+    "id": "548ca8ad49ff",
     "tags": [
+      "geopolitica",
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "sp500"
     ],
     "title": "Stock Market Today: S&P 500, Dow, Nasdaq 100 Futures Gain as Trump Halts 'Massive Attack' on Iran—Atkore - Benzinga",
     "source": "Benzinga",
@@ -1491,17 +1833,22 @@
     "publishedAt": "2026-08-03T12:28:00.000Z",
     "snippet": "Stock Market Today: S&P 500, Dow, Nasdaq 100 Futures Gain as Trump Halts 'Massive Attack' on Iran—Atkore Benzinga",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "atkore attack futures gain halts iran market massive nasdaq stock",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "b33072e98e39",
-    "topic": "indices-eua",
+    "id": "b80de4564c55",
     "tags": [
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "sp500"
     ],
     "title": "Markets News, July 31: Dow Logs Slim July Gains as Nasdaq, S&P 500 Slip; Amazon Stock Soars, Apple Sinks Friday - Investopedia",
     "source": "Investopedia",
@@ -1509,17 +1856,24 @@
     "publishedAt": "2026-07-31T19:57:49.000Z",
     "snippet": "Markets News, July 31: Dow Logs Slim July Gains as Nasdaq, S&P 500 Slip; Amazon Stock Soars, Apple Sinks Friday Investopedia",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "amazon apple friday gains july logs markets nasdaq news sinks",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "AAPL",
+      "AMZN",
+      "US_SP500"
+    ]
   },
   {
-    "id": "5d71b1a658d2",
-    "topic": "indices-eua",
+    "id": "54b8211bfcee",
     "tags": [
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "sp500"
     ],
     "title": "Stock Market Today: S&P 500, Nasdaq Score Weekly Wins As Dow Logs Record High (Live Coverage) - Investor's Business Daily",
     "source": "Investor's Business Daily",
@@ -1527,17 +1881,23 @@
     "publishedAt": "2026-05-22T07:00:00.000Z",
     "snippet": "Stock Market Today: S&P 500, Nasdaq Score Weekly Wins As Dow Logs Record High (Live Coverage) Investor's Business Daily",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "coverage high live logs market nasdaq record score stock today",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "a449a91e0cba",
-    "topic": "indices-eua",
+    "id": "a8f6d469141e",
     "tags": [
+      "ia",
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "sp500"
     ],
     "title": "Stock market today: Dow, S&P 500, Nasdaq rise to cap volatile July as Big Tech AI spending ramps up - AOL.com",
     "source": "AOL.com",
@@ -1545,17 +1905,23 @@
     "publishedAt": "2026-07-31T08:12:27.000Z",
     "snippet": "Stock market today: Dow, S&P 500, Nasdaq rise to cap volatile July as Big Tech AI spending ramps up AOL.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "july market nasdaq ramps rise spending stock tech today volatile",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "0fdd75e3b405",
-    "topic": "indices-eua",
+    "id": "4ac953c5ec3b",
     "tags": [
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "resultados",
+      "sp500"
     ],
     "title": "Dow, S&P 500, Nasdaq Futures Climb As Markets Gear Up For Another Key Earnings Week: USO, PLTR, CRML, IONQ Stocks In Focus - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -1563,17 +1929,24 @@
     "publishedAt": "2026-08-03T06:50:46.000Z",
     "snippet": "Dow, S&P 500, Nasdaq Futures Climb As Markets Gear Up For Another Key Earnings Week: USO, PLTR, CRML, IONQ Stocks In Focus Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "another climb crml earnings focus futures gear ionq markets nasdaq",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "PLTR",
+      "US_SP500"
+    ]
   },
   {
-    "id": "a103573b065a",
-    "topic": "indices-eua",
+    "id": "42e333e700cf",
     "tags": [
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "petroleo",
+      "sp500"
     ],
     "title": "Nasdaq, S&P 500 Futures Rise, Oil Tumbles On Iran Relief Hopes: Why PLTR, BABA, TSLA, SPCX, USO Are In Focus - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -1581,17 +1954,26 @@
     "publishedAt": "2026-08-03T08:34:05.000Z",
     "snippet": "Nasdaq, S&P 500 Futures Rise, Oil Tumbles On Iran Relief Hopes: Why PLTR, BABA, TSLA, SPCX, USO Are In Focus Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "baba focus futures hopes iran nasdaq pltr relief rise spcx",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "PLTR",
+      "TSLA",
+      "US_SP500"
+    ]
   },
   {
-    "id": "0cfe4563205d",
-    "topic": "indices-eua",
+    "id": "cd54424925e3",
     "tags": [
+      "ia",
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "resultados",
+      "sp500"
     ],
     "title": "Nasdaq Stabilizes as Earnings Validate AI - TradeStation",
     "source": "TradeStation",
@@ -1599,17 +1981,21 @@
     "publishedAt": "2026-08-03T13:25:17.000Z",
     "snippet": "Nasdaq Stabilizes as Earnings Validate AI TradeStation",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "earnings nasdaq stabilizes validate",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "82af43d9c7a7",
-    "topic": "indices-eua",
+    "id": "1d0307a062f4",
     "tags": [
       "indices",
-      "eua",
-      "sp500",
+      "macro",
       "nasdaq",
-      "macro"
+      "resultados",
+      "sp500"
     ],
     "title": "Dow Jones, Nasdaq, S&P 500 preview: Jobs data, earnings deluge to set market tone - Investing.com",
     "source": "Investing.com",
@@ -1617,16 +2003,22 @@
     "publishedAt": "2026-08-03T13:08:57.000Z",
     "snippet": "Dow Jones, Nasdaq, S&P 500 preview: Jobs data, earnings deluge to set market tone Investing.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "data deluge earnings jobs jones market nasdaq preview tone",
+    "topics": [
+      "indices-eua"
+    ],
+    "tickers": [
+      "US_SP500"
+    ]
   },
   {
-    "id": "fb4220122a6f",
-    "topic": "fed-juros",
+    "id": "93fec87446db",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "juros",
+      "macro"
     ],
     "title": "Here's why the 3 dissenters on the Fed wanted to raise interest rates - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -1634,16 +2026,20 @@
     "publishedAt": "2026-07-31T14:11:56.000Z",
     "snippet": "Here's why the 3 dissenters on the Fed wanted to raise interest rates Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "dissenters here interest raise rates wanted",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "3dcc84c3fc19",
-    "topic": "fed-juros",
+    "id": "be251b727a40",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "juros",
+      "macro"
     ],
     "title": "US borrowing costs hit 19-year high as Fed holds interest rates - The Guardian",
     "source": "The Guardian",
@@ -1651,16 +2047,20 @@
     "publishedAt": "2026-07-31T01:30:00.000Z",
     "snippet": "US borrowing costs hit 19-year high as Fed holds interest rates The Guardian",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "borrowing costs high holds interest rates year",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "2b54d2af35f5",
-    "topic": "fed-juros",
+    "id": "baf2a8c016d1",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "juros",
+      "macro"
     ],
     "title": "Fed holds interest rates steady after cliffhanger meeting, but three officials dissent - cnn.com",
     "source": "cnn.com",
@@ -1668,16 +2068,20 @@
     "publishedAt": "2026-07-29T22:06:00.000Z",
     "snippet": "Fed holds interest rates steady after cliffhanger meeting, but three officials dissent cnn.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "after cliffhanger dissent holds interest meeting officials rates steady three",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "d1276ffadd9c",
-    "topic": "fed-juros",
+    "id": "64521de3eb73",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "juros",
+      "macro"
     ],
     "title": "Fed Leaves Interest Rates Unchanged, Despite Three Votes for an Increase - nytimes.com",
     "source": "nytimes.com",
@@ -1685,16 +2089,19 @@
     "publishedAt": "2026-07-30T14:52:06.000Z",
     "snippet": "Fed Leaves Interest Rates Unchanged, Despite Three Votes for an Increase nytimes.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "despite increase interest leaves rates three unchanged votes",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "5aba48f2141e",
-    "topic": "fed-juros",
+    "id": "deb78b158e42",
     "tags": [
-      "macro",
+      "indices",
       "juros",
-      "eua",
-      "indices"
+      "macro"
     ],
     "title": "Will the Federal Reserve raise interest rates? Here is what experts predict for July's meeting. - CBS News",
     "source": "CBS News",
@@ -1702,16 +2109,21 @@
     "publishedAt": "2026-07-29T13:38:00.000Z",
     "snippet": "Will the Federal Reserve raise interest rates? Here is what experts predict for July's meeting. CBS News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "experts federal here interest july meeting predict raise rates reserve",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "327c7abf310c",
-    "topic": "fed-juros",
+    "id": "04dd17e1f2fc",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "inflacao",
+      "juros",
+      "macro"
     ],
     "title": "The Fed holds interest rates for a fifth consecutive meeting, underscoring inflation fears - NBC News",
     "source": "NBC News",
@@ -1719,16 +2131,20 @@
     "publishedAt": "2026-07-29T18:11:56.000Z",
     "snippet": "The Fed holds interest rates for a fifth consecutive meeting, underscoring inflation fears NBC News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "consecutive fears fifth holds inflation interest meeting rates underscoring",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "d462ec551746",
-    "topic": "fed-juros",
+    "id": "c536b0c97b50",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "juros",
+      "macro"
     ],
     "title": "'No magic wand' to tackle high prices, Fed boss says as US interest rates held - bbc.com",
     "source": "bbc.com",
@@ -1736,16 +2152,20 @@
     "publishedAt": "2026-07-29T20:32:50.000Z",
     "snippet": "'No magic wand' to tackle high prices, Fed boss says as US interest rates held bbc.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "boss held high interest magic prices rates says tackle wand",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "529e5b24a9ad",
-    "topic": "fed-juros",
+    "id": "2d4c08b8865e",
     "tags": [
-      "macro",
+      "indices",
       "juros",
-      "eua",
-      "indices"
+      "macro",
+      "petroleo"
     ],
     "title": "Odds of Federal Reserve rate hike surge as oil prices rip higher - CNBC",
     "source": "CNBC",
@@ -1753,16 +2173,18 @@
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "Odds of Federal Reserve rate hike surge as oil prices rip higher CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "federal higher hike odds prices rate reserve surge",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "1c926473d18c",
-    "topic": "fed-juros",
+    "id": "c6b8a76d54d4",
     "tags": [
-      "macro",
-      "juros",
-      "eua",
-      "indices"
+      "indices",
+      "macro"
     ],
     "title": "Federal Funds Rate History 1990 to 2026 - Forbes",
     "source": "Forbes",
@@ -1770,16 +2192,20 @@
     "publishedAt": "2026-07-29T20:42:00.000Z",
     "snippet": "Federal Funds Rate History 1990 to 2026 Forbes",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1990 2026 federal funds history rate",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "1851ec8fd852",
-    "topic": "fed-juros",
+    "id": "b6ee315fe3e3",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "geopolitica",
+      "indices",
+      "macro"
     ],
     "title": "Warsh-led Fed leaves rates on hold and a bond market scratching its head - Reuters",
     "source": "Reuters",
@@ -1787,16 +2213,21 @@
     "publishedAt": "2026-07-29T10:04:00.000Z",
     "snippet": "Warsh-led Fed leaves rates on hold and a bond market scratching its head Reuters",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bond head hold leaves market rates scratching warsh",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "e7b2d0d52baa",
-    "topic": "fed-juros",
+    "id": "3762fe027620",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "indices",
+      "inflacao",
+      "juros",
+      "macro"
     ],
     "title": "Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos",
     "source": "ABC News - Breaking News, Latest News and Videos",
@@ -1804,16 +2235,21 @@
     "publishedAt": "2026-08-03T09:39:04.000Z",
     "snippet": "Fed holds interest rates steady as inflation hits 3-year high ABC News - Breaking News, Latest News and Videos",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "high hits holds inflation interest news rates steady year",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "8e3b0b6138cd",
-    "topic": "fed-juros",
+    "id": "a60dbb81adf8",
     "tags": [
-      "macro",
-      "juros",
       "eua",
-      "indices"
+      "geopolitica",
+      "indices",
+      "juros",
+      "macro"
     ],
     "title": "WATCH: Fed chair Warsh holds news conference after leaving interest rate unchanged - PBS",
     "source": "PBS",
@@ -1821,16 +2257,19 @@
     "publishedAt": "2026-07-29T14:42:44.000Z",
     "snippet": "WATCH: Fed chair Warsh holds news conference after leaving interest rate unchanged PBS",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "after chair conference holds interest leaving news rate unchanged warsh",
+    "topics": [
+      "fed-juros"
+    ],
+    "tickers": []
   },
   {
-    "id": "bcb5fc8ec56b",
-    "topic": "semicondutores",
+    "id": "87c0c0570ada",
     "tags": [
+      "nasdaq",
       "semicondutores",
-      "ia",
-      "tecnologia",
-      "nasdaq"
+      "tecnologia"
     ],
     "title": "Asian Stocks Are Down 10% From June Highs. That Could Be Bad News for This Semiconductor Index. - The Motley Fool",
     "source": "The Motley Fool",
@@ -1838,16 +2277,20 @@
     "publishedAt": "2026-08-03T13:56:44.000Z",
     "snippet": "Asian Stocks Are Down 10% From June Highs. That Could Be Bad News for This Semiconductor Index. The Motley Fool",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "asian could down from highs index june news semiconductor stocks",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "51993d4ff300",
-    "topic": "semicondutores",
+    "id": "36d82b8b2cf6",
     "tags": [
+      "geopolitica",
+      "nasdaq",
       "semicondutores",
-      "ia",
-      "tecnologia",
-      "nasdaq"
+      "tecnologia"
     ],
     "title": "As Chip Stocks Sell Off, Hints of a Rotation Into Software - Morningstar",
     "source": "Morningstar",
@@ -1855,16 +2298,21 @@
     "publishedAt": "2026-07-30T05:05:58.000Z",
     "snippet": "As Chip Stocks Sell Off, Hints of a Rotation Into Software Morningstar",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chip hints into rotation sell software stocks",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "f406f372a78e",
-    "topic": "semicondutores",
+    "id": "d77a19034831",
     "tags": [
-      "semicondutores",
+      "energia",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom - CNBC",
     "source": "CNBC",
@@ -1872,16 +2320,19 @@
     "publishedAt": "2026-07-29T02:44:00.000Z",
     "snippet": "Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "boom chip companies hits more powering selloff shed stocks than",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "32b4abba7d28",
-    "topic": "semicondutores",
+    "id": "5a926ae48b81",
     "tags": [
+      "nasdaq",
       "semicondutores",
-      "ia",
-      "tecnologia",
-      "nasdaq"
+      "tecnologia"
     ],
     "title": "Semiconductor Stocks Are Down 22%. Here's the 1 Chip Stock I'd Buy Right Now. - The Globe and Mail",
     "source": "The Globe and Mail",
@@ -1889,16 +2340,21 @@
     "publishedAt": "2026-08-03T08:50:00.000Z",
     "snippet": "Semiconductor Stocks Are Down 22%. Here's the 1 Chip Stock I'd Buy Right Now. The Globe and Mail",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chip down here right semiconductor stock stocks",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "8ea13beef760",
-    "topic": "semicondutores",
+    "id": "1bfcaee59b33",
     "tags": [
-      "semicondutores",
+      "geopolitica",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "‘A lot of panic around the AI investment’: How a chip slump is driving the Nasdaq toward correction - Fortune",
     "source": "Fortune",
@@ -1906,16 +2362,20 @@
     "publishedAt": "2026-07-28T19:45:00.000Z",
     "snippet": "‘A lot of panic around the AI investment’: How a chip slump is driving the Nasdaq toward correction Fortune",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "around chip correction driving investment nasdaq panic slump toward",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "7498ecbeed85",
-    "topic": "semicondutores",
+    "id": "d0f03a53efe0",
     "tags": [
-      "semicondutores",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "Chip stocks tumble as AI sell-off deepens - Financial Times",
     "source": "Financial Times",
@@ -1923,16 +2383,20 @@
     "publishedAt": "2026-07-28T20:15:12.000Z",
     "snippet": "Chip stocks tumble as AI sell-off deepens Financial Times",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chip deepens sell stocks tumble",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "63b004c1688d",
-    "topic": "semicondutores",
+    "id": "cf0bc5125846",
     "tags": [
-      "semicondutores",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "How to Evaluate AI Chip Stocks: A Practical Framework - Investing.com",
     "source": "Investing.com",
@@ -1940,16 +2404,19 @@
     "publishedAt": "2026-08-03T05:54:51.000Z",
     "snippet": "How to Evaluate AI Chip Stocks: A Practical Framework Investing.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chip evaluate framework practical stocks",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "94aa83ada2e6",
-    "topic": "semicondutores",
+    "id": "42877d3301b3",
     "tags": [
+      "nasdaq",
       "semicondutores",
-      "ia",
-      "tecnologia",
-      "nasdaq"
+      "tecnologia"
     ],
     "title": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain - National Institute of Standards and Technology (.gov)",
     "source": "National Institute of Standards and Technology (.gov)",
@@ -1957,16 +2424,20 @@
     "publishedAt": "2026-07-29T12:00:00.000Z",
     "snippet": "Department of Commerce Announces Letters of Intent With 7 Companies for $874 Million to Accelerate Semiconductor R&D for the Compute Supply Chain National Institute of Standards and Technology (.gov)",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "accelerate announces chain commerce companies compute department institute intent letters",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "ee74dd57117a",
-    "topic": "semicondutores",
+    "id": "09043699d229",
     "tags": [
-      "semicondutores",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "What to know about the AI chip stock selloff - ABC News - Breaking News, Latest News and Videos",
     "source": "ABC News - Breaking News, Latest News and Videos",
@@ -1974,16 +2445,20 @@
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "What to know about the AI chip stock selloff ABC News - Breaking News, Latest News and Videos",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "about chip know news selloff stock what",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "a31e283e925f",
-    "topic": "semicondutores",
+    "id": "7b5e0d458dca",
     "tags": [
-      "semicondutores",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "3 Semiconductor Stocks to Buy Before AI Demand Explodes in August - 24/7 Wall St.",
     "source": "24/7 Wall St.",
@@ -1991,16 +2466,19 @@
     "publishedAt": "2026-08-01T11:00:21.000Z",
     "snippet": "3 Semiconductor Stocks to Buy Before AI Demand Explodes in August 24/7 Wall St.",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "august before demand explodes semiconductor stocks",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "a84825346da8",
-    "topic": "semicondutores",
+    "id": "607bde9fac0b",
     "tags": [
+      "nasdaq",
       "semicondutores",
-      "ia",
-      "tecnologia",
-      "nasdaq"
+      "tecnologia"
     ],
     "title": "Intel and AMD Soar 13%, Taiwan Semiconductor Rallies 7% as AI-Chip Stocks Bounce Hard - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -2008,16 +2486,23 @@
     "publishedAt": "2026-07-30T15:51:09.000Z",
     "snippet": "Intel and AMD Soar 13%, Taiwan Semiconductor Rallies 7% as AI-Chip Stocks Bounce Hard Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bounce chip hard intel rallies semiconductor soar stocks taiwan",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": [
+      "AMD"
+    ]
   },
   {
-    "id": "4eecb9ead4b7",
-    "topic": "semicondutores",
+    "id": "2a973f810ec7",
     "tags": [
-      "semicondutores",
+      "datacenter",
       "ia",
-      "tecnologia",
-      "nasdaq"
+      "nasdaq",
+      "semicondutores",
+      "tecnologia"
     ],
     "title": "SK Hynix Stock And 2 AI Chip Stocks For Data Center Growth - simplywall.st",
     "source": "simplywall.st",
@@ -2025,16 +2510,18 @@
     "publishedAt": "2026-07-31T06:35:59.000Z",
     "snippet": "SK Hynix Stock And 2 AI Chip Stocks For Data Center Growth simplywall.st",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "center chip data growth hynix stock stocks",
+    "topics": [
+      "semicondutores"
+    ],
+    "tickers": []
   },
   {
-    "id": "2d5251e25dec",
-    "topic": "datacenter",
+    "id": "6b468cce8e46",
     "tags": [
-      "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "Microsoft, Alphabet, Meta Pivot from Buy to Build in AI - Data Center Knowledge",
     "source": "Data Center Knowledge",
@@ -2042,16 +2529,21 @@
     "publishedAt": "2026-07-30T16:05:18.000Z",
     "snippet": "Microsoft, Alphabet, Meta Pivot from Buy to Build in AI Data Center Knowledge",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alphabet build from meta microsoft pivot",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": [
+      "GOOGL",
+      "MSFT"
+    ]
   },
   {
-    "id": "17cda3eaa1ac",
-    "topic": "datacenter",
+    "id": "9a7f2c67a04b",
     "tags": [
-      "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "Bond market anxiety is growing over AI capex budgets - CNBC",
     "source": "CNBC",
@@ -2059,16 +2551,20 @@
     "publishedAt": "2026-07-24T07:00:00.000Z",
     "snippet": "Bond market anxiety is growing over AI capex budgets CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "anxiety bond budgets capex growing market over",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "9976cbc9ad51",
-    "topic": "datacenter",
+    "id": "6ba704233629",
     "tags": [
-      "datacenter",
-      "ia",
       "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia",
+      "imobiliario"
     ],
     "title": "AI Infrastructure Spending Hits $1 Trillion, Straining Power, Capital, Construction - Indiatimes",
     "source": "Indiatimes",
@@ -2076,16 +2572,18 @@
     "publishedAt": "2026-07-31T23:45:57.000Z",
     "snippet": "AI Infrastructure Spending Hits $1 Trillion, Straining Power, Capital, Construction Indiatimes",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "capital construction hits infrastructure power spending straining trillion",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "8e260c74a0d9",
-    "topic": "datacenter",
+    "id": "07f4b291a7d3",
     "tags": [
-      "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "Amazon Raises 2026 AI Capex to $220B, Says Capacity Won't Meet Demand Through 2027 - MLQ.ai",
     "source": "MLQ.ai",
@@ -2093,16 +2591,20 @@
     "publishedAt": "2026-08-02T11:36:57.000Z",
     "snippet": "Amazon Raises 2026 AI Capex to $220B, Says Capacity Won't Meet Demand Through 2027 MLQ.ai",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 2027 220b amazon capacity capex demand meet raises says",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": [
+      "AMZN"
+    ]
   },
   {
-    "id": "e268ded6d743",
-    "topic": "datacenter",
+    "id": "db54cfdc5385",
     "tags": [
-      "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "Tracking Trillions: The Assumptions Shaping the Scale of the AI Build-Out - Goldman Sachs",
     "source": "Goldman Sachs",
@@ -2110,16 +2612,19 @@
     "publishedAt": "2026-05-01T07:00:00.000Z",
     "snippet": "Tracking Trillions: The Assumptions Shaping the Scale of the AI Build-Out Goldman Sachs",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "assumptions build scale shaping tracking trillions",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "ae06ebaff602",
-    "topic": "datacenter",
+    "id": "c700050ac713",
     "tags": [
       "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "AI Data Center Build Advances at Full Speed: Five Things to Know - BloombergNEF",
     "source": "BloombergNEF",
@@ -2127,16 +2632,18 @@
     "publishedAt": "2026-03-24T07:00:00.000Z",
     "snippet": "AI Data Center Build Advances at Full Speed: Five Things to Know BloombergNEF",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "advances build center data five full know speed things",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "0458e7a2d641",
-    "topic": "datacenter",
+    "id": "8f72e4b0a10e",
     "tags": [
-      "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "Goldman Sachs says the AI boom is bigger than investors think - Business Insider",
     "source": "Business Insider",
@@ -2144,16 +2651,19 @@
     "publishedAt": "2026-06-10T07:00:00.000Z",
     "snippet": "Goldman Sachs says the AI boom is bigger than investors think Business Insider",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bigger boom goldman investors sachs says than think",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "1a8575ea6fd5",
-    "topic": "datacenter",
+    "id": "9241bd145a63",
     "tags": [
       "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "AI Capex Fatigue: Why Hedge Funds Are Questioning the Hyperscaler Spending Boom: - HedgeCo.Net",
     "source": "HedgeCo.Net",
@@ -2161,15 +2671,17 @@
     "publishedAt": "2026-05-28T07:00:00.000Z",
     "snippet": "AI Capex Fatigue: Why Hedge Funds Are Questioning the Hyperscaler Spending Boom: HedgeCo.Net",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "boom capex fatigue funds hedge hyperscaler questioning spending",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "26e355418b59",
-    "topic": "datacenter",
+    "id": "a3617c7bd03e",
     "tags": [
       "datacenter",
-      "ia",
-      "energia",
       "hyperscaler"
     ],
     "title": "The hyperscalers’ dilemma - Trellis Group (formerly GreenBiz)",
@@ -2178,16 +2690,20 @@
     "publishedAt": "2026-06-01T07:00:00.000Z",
     "snippet": "The hyperscalers’ dilemma Trellis Group (formerly GreenBiz)",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "dilemma hyperscalers",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "d1460621a8f9",
-    "topic": "datacenter",
+    "id": "78ee7733571c",
     "tags": [
       "datacenter",
-      "ia",
       "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "3 Utility ETFs to Buy Now as AI Data Centers Trigger a 1970s-Scale Power Buildout - 24/7 Wall St.",
     "source": "24/7 Wall St.",
@@ -2195,16 +2711,18 @@
     "publishedAt": "2026-07-06T07:00:00.000Z",
     "snippet": "3 Utility ETFs to Buy Now as AI Data Centers Trigger a 1970s-Scale Power Buildout 24/7 Wall St.",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1970s buildout centers data etfs power scale trigger utility",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "250b451b4abe",
-    "topic": "datacenter",
+    "id": "2feec2d315d5",
     "tags": [
-      "datacenter",
-      "ia",
-      "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "Investment in AI infrastructure hits $700B as Big Tech reshapes 2026 - eciks.org",
     "source": "eciks.org",
@@ -2212,16 +2730,19 @@
     "publishedAt": "2026-07-15T07:00:00.000Z",
     "snippet": "Investment in AI infrastructure hits $700B as Big Tech reshapes 2026 eciks.org",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 700b hits infrastructure investment reshapes tech",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "ca558e3c6b75",
-    "topic": "datacenter",
+    "id": "bf9aa9af99a7",
     "tags": [
-      "datacenter",
-      "ia",
       "energia",
-      "hyperscaler"
+      "hyperscaler",
+      "ia"
     ],
     "title": "AI power demand hits regulatory tipping point - Fierce Network",
     "source": "Fierce Network",
@@ -2229,15 +2750,17 @@
     "publishedAt": "2026-06-15T07:00:00.000Z",
     "snippet": "AI power demand hits regulatory tipping point Fierce Network",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "demand hits point power regulatory tipping",
+    "topics": [
+      "datacenter"
+    ],
+    "tickers": []
   },
   {
-    "id": "c619472ebc7b",
-    "topic": "defesa",
+    "id": "e8fceea25187",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "A shrinking weapons stockpile is testing the Pentagon’s sweeping new strategy - The Washington Post",
     "source": "The Washington Post",
@@ -2245,15 +2768,17 @@
     "publishedAt": "2026-07-30T16:00:00.000Z",
     "snippet": "A shrinking weapons stockpile is testing the Pentagon’s sweeping new strategy The Washington Post",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "pentagon shrinking stockpile strategy sweeping testing weapons",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "c2c7490b3f2b",
-    "topic": "defesa",
+    "id": "0a6de0b110fa",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "The Pentagon Is Finally Buying (Some) Weapons From Startups - WSJ",
     "source": "WSJ",
@@ -2261,15 +2786,18 @@
     "publishedAt": "2026-07-19T07:00:00.000Z",
     "snippet": "The Pentagon Is Finally Buying (Some) Weapons From Startups WSJ",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "buying finally from pentagon some startups weapons",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "b1377f12fbba",
-    "topic": "defesa",
+    "id": "87a9cd8fe3f9",
     "tags": [
       "defesa",
-      "geopolitica",
-      "eua"
+      "geopolitica"
     ],
     "title": "Defense tech investors thought the war in Iran could make them millionaires. Instead, they faced a Wall Street bloodbath - Fortune",
     "source": "Fortune",
@@ -2277,15 +2805,17 @@
     "publishedAt": "2026-07-25T07:00:00.000Z",
     "snippet": "Defense tech investors thought the war in Iran could make them millionaires. Instead, they faced a Wall Street bloodbath Fortune",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bloodbath could defense faced instead investors iran make millionaires street",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "85803938a374",
-    "topic": "defesa",
+    "id": "09ae700fdf3d",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "Defense Contractors Amass Record Backlogs as Military Spending Ramps Up - The Daily Upside",
     "source": "The Daily Upside",
@@ -2293,15 +2823,18 @@
     "publishedAt": "2026-07-24T04:01:00.000Z",
     "snippet": "Defense Contractors Amass Record Backlogs as Military Spending Ramps Up The Daily Upside",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "amass backlogs contractors defense military ramps record spending",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "9a4fca827c75",
-    "topic": "defesa",
+    "id": "48efa9f906e2",
     "tags": [
       "defesa",
-      "geopolitica",
-      "eua"
+      "geopolitica"
     ],
     "title": "Business declares war on Pentagon stock buyback, dividend restrictions moving in Senate - CNBC",
     "source": "CNBC",
@@ -2309,15 +2842,17 @@
     "publishedAt": "2026-07-14T07:00:00.000Z",
     "snippet": "Business declares war on Pentagon stock buyback, dividend restrictions moving in Senate CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "business buyback declares dividend moving pentagon restrictions senate stock",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "4f4685eae3b8",
-    "topic": "defesa",
+    "id": "ac9e623f7037",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "Trump budget targets 'valley of death' with new military contractor accountability model - The Center Square",
     "source": "The Center Square",
@@ -2325,15 +2860,17 @@
     "publishedAt": "2026-05-09T07:00:00.000Z",
     "snippet": "Trump budget targets 'valley of death' with new military contractor accountability model The Center Square",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "accountability budget contractor death military model targets trump valley with",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "7b6fac5cec2c",
-    "topic": "defesa",
+    "id": "099351bb408f",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "geopolitica"
     ],
     "title": "Trump's $88B Iran War Supplemental Would Reward the Contractors Funding His Fourth of July Bash - readsludge.com",
     "source": "readsludge.com",
@@ -2341,15 +2878,17 @@
     "publishedAt": "2026-06-26T07:00:00.000Z",
     "snippet": "Trump's $88B Iran War Supplemental Would Reward the Contractors Funding His Fourth of July Bash readsludge.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bash contractors fourth funding iran july reward supplemental trump would",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "32e7d3744ac6",
-    "topic": "defesa",
+    "id": "d0cfea447f95",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "Trump meeting major defense contractors amid munitions stockpiles concerns - The Hill",
     "source": "The Hill",
@@ -2357,15 +2896,18 @@
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "Trump meeting major defense contractors amid munitions stockpiles concerns The Hill",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "amid concerns contractors defense major meeting munitions stockpiles trump",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "2db77ced4b4b",
-    "topic": "defesa",
+    "id": "4666986aee31",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "datacenter",
+      "defesa"
     ],
     "title": "Defense: A cloudy crystal ball for defense contractors - Punchbowl News",
     "source": "Punchbowl News",
@@ -2373,15 +2915,17 @@
     "publishedAt": "2026-03-19T07:00:00.000Z",
     "snippet": "Defense: A cloudy crystal ball for defense contractors Punchbowl News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "ball cloudy contractors crystal defense",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "fad394cacd6b",
-    "topic": "defesa",
+    "id": "bc2a0b44c46a",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "$1.5 Trillion Pentagon Budget Benefits Top Contractors - Project On Government Oversight",
     "source": "Project On Government Oversight",
@@ -2389,15 +2933,17 @@
     "publishedAt": "2026-07-02T07:00:00.000Z",
     "snippet": "$1.5 Trillion Pentagon Budget Benefits Top Contractors Project On Government Oversight",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "benefits budget contractors pentagon trillion",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "9d9b9f8ddd9a",
-    "topic": "defesa",
+    "id": "36eece607435",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "Ramped up Pentagon spending boosts fortunes of Minnesota companies - MinnPost",
     "source": "MinnPost",
@@ -2405,15 +2951,17 @@
     "publishedAt": "2026-04-13T07:00:00.000Z",
     "snippet": "Ramped up Pentagon spending boosts fortunes of Minnesota companies MinnPost",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "boosts companies fortunes minnesota pentagon ramped spending",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "efdd336f3c89",
-    "topic": "defesa",
+    "id": "13f504b56bb0",
     "tags": [
-      "defesa",
-      "geopolitica",
-      "eua"
+      "defesa"
     ],
     "title": "Labor of the US Military-Industrial Complex - Climate and Community Institute",
     "source": "Climate and Community Institute",
@@ -2421,15 +2969,18 @@
     "publishedAt": "2026-04-23T07:00:00.000Z",
     "snippet": "Labor of the US Military-Industrial Complex Climate and Community Institute",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "complex industrial labor military",
+    "topics": [
+      "defesa"
+    ],
+    "tickers": []
   },
   {
-    "id": "9ac43af580f5",
-    "topic": "petroleo",
+    "id": "3fbb178559a3",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "Oil Prices Dive: Brent and WTI Crude each $80 on Iran Talks and OPEC Adding Supply - FXLeaders",
     "source": "FXLeaders",
@@ -2437,15 +2988,21 @@
     "publishedAt": "2026-08-03T02:04:54.000Z",
     "snippet": "Oil Prices Dive: Brent and WTI Crude each $80 on Iran Talks and OPEC Adding Supply FXLeaders",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "adding brent crude dive each iran opec prices supply talks",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": [
+      "WTI"
+    ]
   },
   {
-    "id": "e0ce25251079",
-    "topic": "petroleo",
+    "id": "9209a9930d65",
     "tags": [
-      "petroleo",
       "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "America barely uses OPEC oil. Why are oil and gas prices so high? - USA Today",
     "source": "USA Today",
@@ -2453,15 +3010,18 @@
     "publishedAt": "2026-07-13T07:00:00.000Z",
     "snippet": "America barely uses OPEC oil. Why are oil and gas prices so high? USA Today",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "america barely high opec prices uses",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "8e941456d0ad",
-    "topic": "petroleo",
+    "id": "9f50f963fa87",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "Oil Prices Are Falling, but OPEC Plus Pledges to Pump More - nytimes.com",
     "source": "nytimes.com",
@@ -2469,15 +3029,18 @@
     "publishedAt": "2026-07-05T07:00:00.000Z",
     "snippet": "Oil Prices Are Falling, but OPEC Plus Pledges to Pump More nytimes.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "falling more opec pledges plus prices pump",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "958df7fc84c3",
-    "topic": "petroleo",
+    "id": "2252619f66ab",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "UAE’s exit from OPEC+ reduced the group’s share of crude oil production and capacity - U.S. Energy Information Administration (EIA) (.gov)",
     "source": "U.S. Energy Information Administration (EIA) (.gov)",
@@ -2485,15 +3048,18 @@
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "UAE’s exit from OPEC+ reduced the group’s share of crude oil production and capacity U.S. Energy Information Administration (EIA) (.gov)",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "administration capacity crude energy exit from group information opec production",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "c70980a93ce6",
-    "topic": "petroleo",
+    "id": "0850e291a4f2",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "Oil little changed as Saudi cuts prices, OPEC+ boosts target - CNBC",
     "source": "CNBC",
@@ -2501,15 +3067,18 @@
     "publishedAt": "2026-07-05T07:00:00.000Z",
     "snippet": "Oil little changed as Saudi cuts prices, OPEC+ boosts target CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "boosts changed cuts little opec prices saudi target",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "817d02cfe7a9",
-    "topic": "petroleo",
+    "id": "63337ec0037a",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "Nigeria's oil production rose 25,000 bpd to 1.56mbpd in June- OPEC - CNBC Africa",
     "source": "CNBC Africa",
@@ -2517,15 +3086,18 @@
     "publishedAt": "2026-07-14T14:13:48.000Z",
     "snippet": "Nigeria's oil production rose 25,000 bpd to 1.56mbpd in June- OPEC CNBC Africa",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "56mbpd june nigeria opec production rose",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "3a2603b53cd3",
-    "topic": "petroleo",
+    "id": "26a188f63eee",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "The UAE is leaving the OPEC oil cartel. Here's what that could mean for oil prices. - marketplace.org",
     "source": "marketplace.org",
@@ -2533,15 +3105,18 @@
     "publishedAt": "2026-04-29T07:00:00.000Z",
     "snippet": "The UAE is leaving the OPEC oil cartel. Here's what that could mean for oil prices. marketplace.org",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "cartel could here leaving mean opec prices that what",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "c6bacdd561df",
-    "topic": "petroleo",
+    "id": "7e03c9cdf114",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "Oil prices opened lower as OPEC boosted production and traffic through the Strait of Hormuz resumed. - Moomoo",
     "source": "Moomoo",
@@ -2549,15 +3124,19 @@
     "publishedAt": "2026-07-05T07:00:00.000Z",
     "snippet": "Oil prices opened lower as OPEC boosted production and traffic through the Strait of Hormuz resumed. Moomoo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "boosted hormuz lower opec opened prices production resumed strait through",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "46e4cec1b331",
-    "topic": "petroleo",
+    "id": "e99954707d75",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "eua",
+      "macro",
+      "petroleo"
     ],
     "title": "The United States and OPEC in a polarized oil order - Atlantic Council",
     "source": "Atlantic Council",
@@ -2565,15 +3144,18 @@
     "publishedAt": "2026-03-12T07:00:00.000Z",
     "snippet": "The United States and OPEC in a polarized oil order Atlantic Council",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "opec order polarized states united",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "a2c2ec09c091",
-    "topic": "petroleo",
+    "id": "138af5dd074d",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "Iraq Could Quit OPEC in Bid to Pump More Oil - Crude Oil Prices Today | OilPrice.com",
     "source": "Crude Oil Prices Today | OilPrice.com",
@@ -2581,15 +3163,18 @@
     "publishedAt": "2026-06-25T07:00:00.000Z",
     "snippet": "Iraq Could Quit OPEC in Bid to Pump More Oil Crude Oil Prices Today | OilPrice.com",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "could crude iraq more opec prices pump quit today",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "5d2c4ae727ae",
-    "topic": "petroleo",
+    "id": "1d14420cc668",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "macro",
+      "petroleo"
     ],
     "title": "What’s Keeping Oil Prices Relatively Low? - The Dispatch",
     "source": "The Dispatch",
@@ -2597,15 +3182,19 @@
     "publishedAt": "2026-04-28T07:00:00.000Z",
     "snippet": "What’s Keeping Oil Prices Relatively Low? The Dispatch",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "keeping prices relatively what",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "d11546ad1f5b",
-    "topic": "petroleo",
+    "id": "43c78f2bb26e",
     "tags": [
-      "petroleo",
-      "energia",
-      "macro"
+      "geopolitica",
+      "macro",
+      "petroleo"
     ],
     "title": "OPEC Crude Output Drops as Iran War Chokes Exports - WSJ",
     "source": "WSJ",
@@ -2613,16 +3202,19 @@
     "publishedAt": "2026-04-13T07:00:00.000Z",
     "snippet": "OPEC Crude Output Drops as Iran War Chokes Exports WSJ",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chokes crude drops exports iran opec output",
+    "topics": [
+      "petroleo"
+    ],
+    "tickers": []
   },
   {
-    "id": "135253fb55ad",
-    "topic": "bancos-eua",
+    "id": "15f30999f7de",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "resultados"
     ],
     "title": "SoFi (SOFI) Brings SpaceX IPO Access As Big Bank Earnings Support Lending - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -2630,16 +3222,20 @@
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "SoFi (SOFI) Brings SpaceX IPO Access As Big Bank Earnings Support Lending Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "access bank brings earnings lending sofi spacex support",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "daaeaf814717",
-    "topic": "bancos-eua",
+    "id": "47030bd0ad5e",
     "tags": [
       "bancos",
-      "financials",
       "eua",
-      "juros"
+      "financials",
+      "resultados"
     ],
     "title": "U.S. Banks: 1Q26 Earnings Themes to Watch - CreditSights",
     "source": "CreditSights",
@@ -2647,16 +3243,19 @@
     "publishedAt": "2026-04-13T13:59:10.000Z",
     "snippet": "U.S. Banks: 1Q26 Earnings Themes to Watch CreditSights",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1q26 banks earnings themes watch",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "65dea6fb1354",
-    "topic": "bancos-eua",
+    "id": "fa9684da743a",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "resultados"
     ],
     "title": "Big Banks, Bigger Profits: Earnings Season Kicks Off Next Week - Forbes",
     "source": "Forbes",
@@ -2664,16 +3263,20 @@
     "publishedAt": "2026-04-07T07:00:00.000Z",
     "snippet": "Big Banks, Bigger Profits: Earnings Season Kicks Off Next Week Forbes",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "banks bigger earnings kicks next profits season week",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "4f2a34959f7a",
-    "topic": "bancos-eua",
+    "id": "a48d503c9c20",
     "tags": [
       "bancos",
-      "financials",
       "eua",
-      "juros"
+      "financials",
+      "resultados"
     ],
     "title": "These 5 Bank Earnings May Have Just Crushed the Bear Case for the U.S. Economy - 24/7 Wall St.",
     "source": "24/7 Wall St.",
@@ -2681,16 +3284,20 @@
     "publishedAt": "2026-07-14T07:00:00.000Z",
     "snippet": "These 5 Bank Earnings May Have Just Crushed the Bear Case for the U.S. Economy 24/7 Wall St.",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bank bear case crushed earnings economy have just these",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "96c96a897056",
-    "topic": "bancos-eua",
+    "id": "a65a722e5188",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "geopolitica",
+      "resultados"
     ],
     "title": "How the war in the Middle East could affect big banks' earnings - marketplace.org",
     "source": "marketplace.org",
@@ -2698,16 +3305,19 @@
     "publishedAt": "2026-04-13T07:00:00.000Z",
     "snippet": "How the war in the Middle East could affect big banks' earnings marketplace.org",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "affect banks could earnings east middle",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "ab98bd2b6dc5",
-    "topic": "bancos-eua",
+    "id": "eab3e59474c9",
     "tags": [
       "bancos",
-      "financials",
       "eua",
-      "juros"
+      "financials"
     ],
     "title": "U.S. Bank’s indirect loan and lease originations jump 47.3% - Auto Finance News",
     "source": "Auto Finance News",
@@ -2715,16 +3325,18 @@
     "publishedAt": "2026-04-16T22:15:44.000Z",
     "snippet": "U.S. Bank’s indirect loan and lease originations jump 47.3% Auto Finance News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bank indirect jump lease loan originations",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "5c59541e6451",
-    "topic": "bancos-eua",
+    "id": "7e212b679c33",
     "tags": [
       "bancos",
-      "financials",
-      "eua",
-      "juros"
+      "financials"
     ],
     "title": "US regional lenders lift veil on 'shadow bank' exposure after strong quarter - Reuters",
     "source": "Reuters",
@@ -2732,16 +3344,19 @@
     "publishedAt": "2026-04-17T07:00:00.000Z",
     "snippet": "US regional lenders lift veil on 'shadow bank' exposure after strong quarter Reuters",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "after bank exposure lenders lift quarter regional shadow strong veil",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "d543f3aeb3a2",
-    "topic": "bancos-eua",
+    "id": "19fa9dba93cd",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "resultados"
     ],
     "title": "5 areas to watch as bank earnings season begins - American Banker",
     "source": "American Banker",
@@ -2749,16 +3364,19 @@
     "publishedAt": "2026-01-12T08:00:00.000Z",
     "snippet": "5 areas to watch as bank earnings season begins American Banker",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "areas bank begins earnings season watch",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "fa96842f5d55",
-    "topic": "bancos-eua",
+    "id": "91391578dfa2",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "resultados"
     ],
     "title": "Private credit fears loom large over Europe’s banks this earnings season - CNBC",
     "source": "CNBC",
@@ -2766,16 +3384,18 @@
     "publishedAt": "2026-04-30T07:00:00.000Z",
     "snippet": "Private credit fears loom large over Europe’s banks this earnings season CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "banks credit earnings europe fears large loom over private season",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "5962244d6663",
-    "topic": "bancos-eua",
+    "id": "38c2781530bf",
     "tags": [
       "bancos",
-      "financials",
-      "eua",
-      "juros"
+      "financials"
     ],
     "title": "2026 banking and capital markets outlook - Deloitte",
     "source": "Deloitte",
@@ -2783,16 +3403,19 @@
     "publishedAt": "2025-10-30T07:00:00.000Z",
     "snippet": "2026 banking and capital markets outlook Deloitte",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 banking capital markets outlook",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "a5af7a4f1b72",
-    "topic": "bancos-eua",
+    "id": "bf312ab8d72d",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "resultados"
     ],
     "title": "Here's What We've Learned From Big Bank Earnings Reports This Week - Investopedia",
     "source": "Investopedia",
@@ -2800,16 +3423,19 @@
     "publishedAt": "2025-10-16T07:00:00.000Z",
     "snippet": "Here's What We've Learned From Big Bank Earnings Reports This Week Investopedia",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bank earnings from here learned reports this week what",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "076cc7059853",
-    "topic": "bancos-eua",
+    "id": "253af2c7e0c1",
     "tags": [
       "bancos",
       "financials",
-      "eua",
-      "juros"
+      "resultados"
     ],
     "title": "Regional Banks: 1Q26 Earnings Round-up - CreditSights",
     "source": "CreditSights",
@@ -2817,16 +3443,19 @@
     "publishedAt": "2026-04-20T15:07:35.000Z",
     "snippet": "Regional Banks: 1Q26 Earnings Round-up CreditSights",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1q26 banks earnings regional round",
+    "topics": [
+      "bancos-eua"
+    ],
+    "tickers": []
   },
   {
-    "id": "5b4bc0ea46ec",
-    "topic": "construcao-mortgage",
+    "id": "d67472822815",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "The best deal in housing might be a brand-new home—how builders are winning over first-time buyers - CNBC",
     "source": "CNBC",
@@ -2834,16 +3463,18 @@
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "The best deal in housing might be a brand-new home—how builders are winning over first-time buyers CNBC",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "best brand builders buyers deal first home housing might over",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "001ec034ddaa",
-    "topic": "construcao-mortgage",
+    "id": "ffb02d095d26",
     "tags": [
       "construcao",
-      "mortgage",
-      "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Multifamily Gains Lift Overall Starts Despite Single-Family Decline - National Association of Home Builders | NAHB",
     "source": "National Association of Home Builders | NAHB",
@@ -2851,16 +3482,19 @@
     "publishedAt": "2026-07-17T14:19:43.000Z",
     "snippet": "Multifamily Gains Lift Overall Starts Despite Single-Family Decline National Association of Home Builders | NAHB",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "association builders decline despite family gains home lift multifamily national",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "b7ae74462244",
-    "topic": "construcao-mortgage",
+    "id": "4c2ef30c3957",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "US single-family housing starts fall; building permits lowest in 10 months - Reuters",
     "source": "Reuters",
@@ -2868,16 +3502,18 @@
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "US single-family housing starts fall; building permits lowest in 10 months Reuters",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "building fall family housing lowest months permits single starts",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "3642e5db598b",
-    "topic": "construcao-mortgage",
+    "id": "b1f01266008e",
     "tags": [
       "construcao",
-      "mortgage",
-      "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Multifamily starts climbed in June - Multifamily Dive",
     "source": "Multifamily Dive",
@@ -2885,16 +3521,19 @@
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "Multifamily starts climbed in June Multifamily Dive",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "climbed june multifamily starts",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "453e3eba299b",
-    "topic": "construcao-mortgage",
+    "id": "732955881780",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Is it a good time to buy a new construction home? - Yahoo Finance",
     "source": "Yahoo Finance",
@@ -2902,16 +3541,19 @@
     "publishedAt": "2026-07-14T07:00:00.000Z",
     "snippet": "Is it a good time to buy a new construction home? Yahoo Finance",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "construction good home time",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "fef0a2cdc490",
-    "topic": "construcao-mortgage",
+    "id": "bc79b1dda308",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Ten Takeaways from the 2026 State of the Nation’s Housing - jchs.harvard.edu",
     "source": "jchs.harvard.edu",
@@ -2919,16 +3561,19 @@
     "publishedAt": "2026-06-17T07:00:00.000Z",
     "snippet": "Ten Takeaways from the 2026 State of the Nation’s Housing jchs.harvard.edu",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 from housing nation state takeaways",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "89cebd02060b",
-    "topic": "construcao-mortgage",
+    "id": "872144c18e61",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Housing Supply May Matter More Than Rates: JPMorgan - National Mortgage Professional",
     "source": "National Mortgage Professional",
@@ -2936,16 +3581,19 @@
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "Housing Supply May Matter More Than Rates: JPMorgan National Mortgage Professional",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "housing jpmorgan matter more rates supply than",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "f3845ccb322d",
-    "topic": "construcao-mortgage",
+    "id": "b3dd9d9253f5",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Missouri homebuilders report housing construction slump — but not in Kansas City - KCUR",
     "source": "KCUR",
@@ -2953,16 +3601,19 @@
     "publishedAt": "2026-07-12T07:00:00.000Z",
     "snippet": "Missouri homebuilders report housing construction slump — but not in Kansas City KCUR",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "city construction homebuilders housing kansas missouri report slump",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "ac3b3b3b4064",
-    "topic": "construcao-mortgage",
+    "id": "e323f74575b1",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Housing Starts Rebound Sharply in June, But Only in Multifamily - RISMedia",
     "source": "RISMedia",
@@ -2970,16 +3621,19 @@
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "Housing Starts Rebound Sharply in June, But Only in Multifamily RISMedia",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "housing june multifamily only rebound sharply starts",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "19fba4328401",
-    "topic": "construcao-mortgage",
+    "id": "d6432e4bffaa",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Single-family housing construction is down. What's hampering supply? - marketplace.org",
     "source": "marketplace.org",
@@ -2987,16 +3641,19 @@
     "publishedAt": "2026-03-12T07:00:00.000Z",
     "snippet": "Single-family housing construction is down. What's hampering supply? marketplace.org",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "construction down family hampering housing single supply what",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "e1a792d2da2c",
-    "topic": "construcao-mortgage",
+    "id": "360afd497e6c",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "New-Home Construction Down, but Buyers Aren’t Looking Away - National Association of REALTORS®",
     "source": "National Association of REALTORS®",
@@ -3004,16 +3661,19 @@
     "publishedAt": "2026-06-16T07:00:00.000Z",
     "snippet": "New-Home Construction Down, but Buyers Aren’t Looking Away National Association of REALTORS®",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aren away buyers construction down home looking",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "9916ef764400",
-    "topic": "construcao-mortgage",
+    "id": "f0bb702427ae",
     "tags": [
       "construcao",
-      "mortgage",
       "imobiliario",
-      "juros"
+      "mortgage"
     ],
     "title": "Stats 2026: Housing market sub-segments showing signs of life - Floor Covering News",
     "source": "Floor Covering News",
@@ -3021,11 +3681,15 @@
     "publishedAt": "2026-07-09T07:00:00.000Z",
     "snippet": "Stats 2026: Housing market sub-segments showing signs of life Floor Covering News",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 housing life market segments showing signs stats",
+    "topics": [
+      "construcao-mortgage"
+    ],
+    "tickers": []
   },
   {
-    "id": "0d2fe80cdc79",
-    "topic": "ibovespa",
+    "id": "af06afb22403",
     "tags": [
       "brasil",
       "ibov",
@@ -3037,11 +3701,17 @@
     "publishedAt": "2026-08-03T13:40:52.000Z",
     "snippet": "Ibovespa Hoje Ao Vivo: Bolsa cai com pressão de VALE3 e PETR4 InfoMoney",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bolsa hoje ibovespa petr4 pressao vale3 vivo",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "f2970c9d94c8",
-    "topic": "ibovespa",
+    "id": "138cf9ece13e",
     "tags": [
       "brasil",
       "ibov",
@@ -3053,15 +3723,22 @@
     "publishedAt": "2026-07-31T20:33:00.000Z",
     "snippet": "Fechamento | Ibovespa dribla falha técnica e fecha em alta de 0,47%, puxado por Santander (SANB11) InvesTalk",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alta dribla falha fecha fechamento ibovespa puxado sanb11 santander tecnica",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "54c5c58b9fde",
-    "topic": "ibovespa",
+    "id": "6348a5a882c7",
     "tags": [
       "brasil",
       "ibov",
-      "indices"
+      "indices",
+      "inflacao"
     ],
     "title": "Bolsa brasileira vs. Tesouro IPCA+: vale a pena investir em ações com juro real acima de 8%? XP dá o veredito - Seu Dinheiro",
     "source": "Seu Dinheiro",
@@ -3069,15 +3746,22 @@
     "publishedAt": "2026-08-02T20:07:21.000Z",
     "snippet": "Bolsa brasileira vs. Tesouro IPCA+: vale a pena investir em ações com juro real acima de 8%? XP dá o veredito Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acima acoes bolsa brasileira investir ipca juro pena real tesouro",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IPCA"
+    ]
   },
   {
-    "id": "555adb8f0775",
-    "topic": "ibovespa",
+    "id": "8ac66fdd803e",
     "tags": [
       "brasil",
       "ibov",
-      "indices"
+      "indices",
+      "juros"
     ],
     "title": "Ibovespa e juros futuros seguem exterior e sobem após atraso na abertura - Valor Econômico",
     "source": "Valor Econômico",
@@ -3085,11 +3769,17 @@
     "publishedAt": "2026-07-31T17:30:55.000Z",
     "snippet": "Ibovespa e juros futuros seguem exterior e sobem após atraso na abertura Valor Econômico",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "abertura apos atraso exterior futuros ibovespa juros seguem sobem",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "bf55ad8df2d4",
-    "topic": "ibovespa",
+    "id": "d50c6fad0475",
     "tags": [
       "brasil",
       "ibov",
@@ -3101,11 +3791,17 @@
     "publishedAt": "2026-07-31T22:09:26.000Z",
     "snippet": "Ibovespa na semana: Marfrig (MBRF3) salta 18,2% e Usiminas (USIM5) despenca 13,2% Estadão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "despenca ibovespa marfrig mbrf3 salta semana usim5 usiminas",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "880cd5edbb69",
-    "topic": "ibovespa",
+    "id": "2dcc624d6ce2",
     "tags": [
       "brasil",
       "ibov",
@@ -3117,11 +3813,17 @@
     "publishedAt": "2026-07-31T14:28:00.000Z",
     "snippet": "Ibovespa pode iniciar sessão em baixa; falha técnica na B3 adia abertura do mercado UOL Economia",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "abertura adia baixa falha ibovespa iniciar mercado pode sessao tecnica",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "766cb701a070",
-    "topic": "ibovespa",
+    "id": "3cefdaf62b29",
     "tags": [
       "brasil",
       "ibov",
@@ -3133,11 +3835,15 @@
     "publishedAt": "2026-08-03T08:30:00.000Z",
     "snippet": "Vale comprar ações no Brasil com juro real acima de 8%? XP diz que sim e os motivos InfoMoney",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acima acoes brasil comprar juro motivos real vale",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": []
   },
   {
-    "id": "427b6b9056d2",
-    "topic": "ibovespa",
+    "id": "d674337f8a3f",
     "tags": [
       "brasil",
       "ibov",
@@ -3149,11 +3855,17 @@
     "publishedAt": "2026-07-31T21:48:22.000Z",
     "snippet": "Ibovespa fecha em alta de 0,47% e dólar comercial sobe a R$ 5,0704 Canal Rural",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "0704 alta comercial dolar fecha ibovespa sobe",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "3a68a9367834",
-    "topic": "ibovespa",
+    "id": "a89c5f0add90",
     "tags": [
       "brasil",
       "ibov",
@@ -3165,13 +3877,18 @@
     "publishedAt": "2026-07-31T14:01:30.000Z",
     "snippet": "Ibovespa fecha julho com alta de 3,57% no mês enquanto dólar cai quase 2% CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alta dolar enquanto fecha ibovespa julho quase",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "dcd0d0ab9a97",
-    "topic": "ibovespa",
+    "id": "3c11a9d4fae5",
     "tags": [
-      "brasil",
       "ibov",
       "indices"
     ],
@@ -3181,11 +3898,15 @@
     "publishedAt": "2026-07-31T16:35:58.000Z",
     "snippet": "O que aconteceu com a B3? Bolsa atrasa abertura do pregão desta sexta-feira (31); veja o motivo Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "abertura aconteceu atrasa bolsa desta feira motivo pregao sexta veja",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": []
   },
   {
-    "id": "295c557e0d4c",
-    "topic": "ibovespa",
+    "id": "e057efc8fb7e",
     "tags": [
       "brasil",
       "ibov",
@@ -3197,13 +3918,18 @@
     "publishedAt": "2026-07-31T21:48:00.000Z",
     "snippet": "Ibovespa sobe em julho e dólar cai a R$ 5,07; o que pode sustentar (ou travar) a Bolsa em agosto Estadão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "agosto bolsa dolar ibovespa julho pode sobe sustentar travar",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": [
+      "BR_IBOV"
+    ]
   },
   {
-    "id": "3fca5c286a18",
-    "topic": "ibovespa",
+    "id": "1dbd9f0af210",
     "tags": [
-      "brasil",
       "ibov",
       "indices"
     ],
@@ -3213,17 +3939,21 @@
     "publishedAt": "2026-07-31T21:39:00.000Z",
     "snippet": "Sem precedentes? O que causou \"pane\" na B3 por 3 horas e meia - e como mercado reagiu InfoMoney",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "causou como horas meia mercado pane precedentes reagiu",
+    "topics": [
+      "ibovespa"
+    ],
+    "tickers": []
   },
   {
-    "id": "1b40cdc2ad79",
-    "topic": "copom-selic",
+    "id": "1819c6b6ab4c",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "O Que Esperar da Próxima Decisão do Copom e dos Juros Até o Fim do Ano - Forbes Brasil",
     "source": "Forbes Brasil",
@@ -3231,17 +3961,21 @@
     "publishedAt": "2026-08-03T08:00:00.000Z",
     "snippet": "O Que Esperar da Próxima Decisão do Copom e dos Juros Até o Fim do Ano Forbes Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "copom decisao esperar juros proxima",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "9fcbf1d9e628",
-    "topic": "copom-selic",
+    "id": "09d2dfefb178",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Mercado reduz previsão para juros em 2026 às vésperas do Copom, diz Focus - CNN Brasil",
     "source": "CNN Brasil",
@@ -3249,17 +3983,20 @@
     "publishedAt": "2026-08-03T12:04:13.000Z",
     "snippet": "Mercado reduz previsão para juros em 2026 às vésperas do Copom, diz Focus CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 copom focus juros mercado para previsao reduz vesperas",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "7450e101fb39",
-    "topic": "copom-selic",
+    "id": "fb0bcf087fd6",
     "tags": [
-      "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Na curva a termo, mercado precifica 90% de chance de corte na Selic na próxima semana - Money Times",
     "source": "Money Times",
@@ -3267,17 +4004,23 @@
     "publishedAt": "2026-07-28T14:29:18.000Z",
     "snippet": "Na curva a termo, mercado precifica 90% de chance de corte na Selic na próxima semana Money Times",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "chance corte curva mercado precifica proxima selic semana termo",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "576102292d3d",
-    "topic": "copom-selic",
+    "id": "454c6783338a",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "geopolitica",
+      "inflacao",
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Copom deve cortar Selic para 14%, apesar de riscos para inflação, avalia Warren - bpmoney.com.br",
     "source": "bpmoney.com.br",
@@ -3285,17 +4028,21 @@
     "publishedAt": "2026-08-01T13:00:00.000Z",
     "snippet": "Copom deve cortar Selic para 14%, apesar de riscos para inflação, avalia Warren bpmoney.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "apesar avalia copom cortar deve inflacao para riscos selic warren",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "2aff2c696d87",
-    "topic": "copom-selic",
+    "id": "ec88f3b8238b",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Muito além da Selic — por que uma única palavra do Copom pode movimentar milhões no mercado - Seu Dinheiro",
     "source": "Seu Dinheiro",
@@ -3303,17 +4050,22 @@
     "publishedAt": "2026-07-24T10:05:22.000Z",
     "snippet": "Muito além da Selic — por que uma única palavra do Copom pode movimentar milhões no mercado Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alem copom mercado milhoes movimentar muito palavra pode selic unica",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "6dd1e3199b97",
-    "topic": "copom-selic",
+    "id": "e57096b3435e",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "geopolitica",
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "BC decide juros hoje: com acordo para o fim da guerra no Irã, o que o mercado espera do Copom? - O GLOBO",
     "source": "O GLOBO",
@@ -3321,17 +4073,22 @@
     "publishedAt": "2026-06-17T07:00:00.000Z",
     "snippet": "BC decide juros hoje: com acordo para o fim da guerra no Irã, o que o mercado espera do Copom? O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acordo copom decide espera guerra hoje juros mercado para",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "f98cd5cbd609",
-    "topic": "copom-selic",
+    "id": "e85478746408",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "inflacao",
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Decisão do Copom evitou 'variações abruptas' nos juros contra piora da inflação, mostra ata - Folha de S.Paulo",
     "source": "Folha de S.Paulo",
@@ -3339,17 +4096,20 @@
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "Decisão do Copom evitou 'variações abruptas' nos juros contra piora da inflação, mostra ata Folha de S.Paulo",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "abruptas contra copom decisao evitou inflacao juros mostra piora variacoes",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "463b29ee59e2",
-    "topic": "copom-selic",
+    "id": "3a967d2851e0",
     "tags": [
-      "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Com queda insuficiente na Selic, juros reais seguirão sufocando as famílias - Sindicato dos Bancários",
     "source": "Sindicato dos Bancários",
@@ -3357,17 +4117,20 @@
     "publishedAt": "2026-06-18T07:00:00.000Z",
     "snippet": "Com queda insuficiente na Selic, juros reais seguirão sufocando as famílias Sindicato dos Bancários",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "familias insuficiente juros queda reais seguirao selic sufocando",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "7b56d744f9f4",
-    "topic": "copom-selic",
+    "id": "dfa6878c488f",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "macro",
+      "selic"
     ],
     "title": "Copom e payroll rouba atenção dos mercados; confira a agenda semana - Money Times",
     "source": "Money Times",
@@ -3375,17 +4138,21 @@
     "publishedAt": "2026-08-02T15:00:00.000Z",
     "snippet": "Copom e payroll rouba atenção dos mercados; confira a agenda semana Money Times",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "agenda atencao confira copom mercados payroll rouba semana",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "7026148779d9",
-    "topic": "copom-selic",
+    "id": "928ddfff54ee",
     "tags": [
       "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "Selic: Opções de Copom da B3 indicam corte de 0,25% no juro em agosto - CNN Brasil",
     "source": "CNN Brasil",
@@ -3393,17 +4160,21 @@
     "publishedAt": "2026-07-10T07:00:00.000Z",
     "snippet": "Selic: Opções de Copom da B3 indicam corte de 0,25% no juro em agosto CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "agosto copom corte indicam juro opcoes selic",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "ff58a6774742",
-    "topic": "copom-selic",
+    "id": "a68d50040b51",
     "tags": [
-      "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "inflacao",
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "BC avalia cenários de pausa e retomada de cortes da Selic para levar inflação à meta - O GLOBO",
     "source": "O GLOBO",
@@ -3411,17 +4182,20 @@
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "BC avalia cenários de pausa e retomada de cortes da Selic para levar inflação à meta O GLOBO",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "avalia cenarios cortes inflacao levar meta para pausa retomada selic",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "4a508f4b18a8",
-    "topic": "copom-selic",
+    "id": "e36c62d006db",
     "tags": [
-      "brasil",
-      "juros",
-      "selic",
       "copom",
-      "macro"
+      "juros",
+      "macro",
+      "selic"
     ],
     "title": "BC reduz taxa básica de juros a 14,25% ao ano sem sinalizar novos cortes - UOL Economia",
     "source": "UOL Economia",
@@ -3429,14 +4203,18 @@
     "publishedAt": "2026-06-17T07:00:00.000Z",
     "snippet": "BC reduz taxa básica de juros a 14,25% ao ano sem sinalizar novos cortes UOL Economia",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "basica cortes juros novos reduz sinalizar taxa",
+    "topics": [
+      "copom-selic"
+    ],
+    "tickers": []
   },
   {
-    "id": "d422030c73b2",
-    "topic": "bancos-br",
+    "id": "4cbc830debca",
     "tags": [
-      "brasil",
       "bancos",
+      "brasil",
       "financials",
       "ibov"
     ],
@@ -3446,16 +4224,23 @@
     "publishedAt": "2026-07-29T07:00:00.000Z",
     "snippet": "Santander, Banco do Brasil, Itaú e Bradesco: quem ganha e quem perde no 2T de 2026? InfoMoney",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 banco bradesco brasil ganha itau perde quem santander",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "b4490f267191",
-    "topic": "bancos-br",
+    "id": "98e58f03257d",
     "tags": [
-      "brasil",
       "bancos",
+      "brasil",
       "financials",
-      "ibov"
+      "ibov",
+      "resultados"
     ],
     "title": "O que esperar dos balanços dos bancos no 2T26? Bradesco (BBDC4) chega como favorito, enquanto Santander e Banco do Brasil ainda têm contas a acertar - Seu Dinheiro",
     "source": "Seu Dinheiro",
@@ -3463,16 +4248,22 @@
     "publishedAt": "2026-07-31T07:00:00.000Z",
     "snippet": "O que esperar dos balanços dos bancos no 2T26? Bradesco (BBDC4) chega como favorito, enquanto Santander e Banco do Brasil ainda têm contas a acertar Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2t26 acertar ainda balancos banco bancos bbdc4 bradesco brasil chega",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "c7e328693c62",
-    "topic": "bancos-br",
+    "id": "236156a57a4f",
     "tags": [
-      "brasil",
       "bancos",
       "financials",
-      "ibov"
+      "ibov",
+      "resultados"
     ],
     "title": "Temporada de balanços: Itaú deve manter liderança entre bancos, enquanto Bradesco pode surpreender, diz analista - bpmoney.com.br",
     "source": "bpmoney.com.br",
@@ -3480,14 +4271,20 @@
     "publishedAt": "2026-07-29T19:20:11.000Z",
     "snippet": "Temporada de balanços: Itaú deve manter liderança entre bancos, enquanto Bradesco pode surpreender, diz analista bpmoney.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "analista balancos bancos bradesco deve enquanto entre itau lideranca manter",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "0914ef631268",
-    "topic": "bancos-br",
+    "id": "757be7cc6a5d",
     "tags": [
-      "brasil",
       "bancos",
+      "brasil",
       "financials",
       "ibov"
     ],
@@ -3497,16 +4294,22 @@
     "publishedAt": "2026-05-19T07:00:00.000Z",
     "snippet": "Itaú, Bradesco, Santander ou Banco do Brasil: qual ação de banco é a preferida dos analistas Valor Investe",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acao analistas banco bradesco brasil itau preferida qual santander",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "866fccba8d48",
-    "topic": "bancos-br",
+    "id": "378e89da4a9e",
     "tags": [
-      "brasil",
       "bancos",
       "financials",
-      "ibov"
+      "ibov",
+      "resultados"
     ],
     "title": "Temporada de balanços dos bancos: Citi aponta vencedores e quem pode decepcionar no 2T26 - Estadão",
     "source": "Estadão",
@@ -3514,13 +4317,16 @@
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Temporada de balanços dos bancos: Citi aponta vencedores e quem pode decepcionar no 2T26 Estadão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2t26 aponta balancos bancos citi decepcionar pode quem temporada vencedores",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "cc9e5db174d4",
-    "topic": "bancos-br",
+    "id": "716cee8c4a0e",
     "tags": [
-      "brasil",
       "bancos",
       "financials",
       "ibov"
@@ -3531,14 +4337,18 @@
     "publishedAt": "2026-05-08T07:00:00.000Z",
     "snippet": "Análise: Bancos privados seguem lucrativos, mas juro alto impõe cautela CNN Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "alto analise bancos cautela impoe juro lucrativos privados seguem",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "b672059783c5",
-    "topic": "bancos-br",
+    "id": "e898fe234293",
     "tags": [
-      "brasil",
       "bancos",
+      "brasil",
       "financials",
       "ibov"
     ],
@@ -3548,16 +4358,23 @@
     "publishedAt": "2026-01-09T08:00:00.000Z",
     "snippet": "O ano do Itaú, Bradesco, Banco do Brasil e Santander: como cada banco terminou 2025 feebpr.org.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2025 banco bradesco brasil cada como itau santander terminou",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "249f3cc6cb02",
-    "topic": "bancos-br",
+    "id": "03a0d3a33f28",
     "tags": [
-      "brasil",
       "bancos",
+      "brasil",
       "financials",
-      "ibov"
+      "ibov",
+      "resultados"
     ],
     "title": "Bancões da B3 decepcionam no 1T26: BB, Itaú, Bradesco e Santander Brasil sofrem pressão após balanços - ADVFN",
     "source": "ADVFN",
@@ -3565,14 +4382,20 @@
     "publishedAt": "2026-05-19T07:00:00.000Z",
     "snippet": "Bancões da B3 decepcionam no 1T26: BB, Itaú, Bradesco e Santander Brasil sofrem pressão após balanços ADVFN",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1t26 apos balancos bancoes bradesco brasil decepcionam itau pressao santander",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "1c9a6b7fe4ff",
-    "topic": "bancos-br",
+    "id": "5bc3ce113e32",
     "tags": [
-      "brasil",
       "bancos",
+      "brasil",
       "financials",
       "ibov"
     ],
@@ -3582,16 +4405,20 @@
     "publishedAt": "2026-04-17T07:00:00.000Z",
     "snippet": "Bancos brasileiros sob pressão da inadimplência e provisões no 1T26 Safra",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1t26 bancos brasileiros inadimplencia pressao provisoes",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "b34ae91d6a05",
-    "topic": "bancos-br",
+    "id": "bfac3a778150",
     "tags": [
-      "brasil",
       "bancos",
       "financials",
-      "ibov"
+      "ibov",
+      "resultados"
     ],
     "title": "Lucro dos grandes bancos privados recua pela primeira vez em mais de dois anos - borainvestir.b3.com.br",
     "source": "borainvestir.b3.com.br",
@@ -3599,13 +4426,16 @@
     "publishedAt": "2026-05-15T07:00:00.000Z",
     "snippet": "Lucro dos grandes bancos privados recua pela primeira vez em mais de dois anos borainvestir.b3.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "anos bancos dois grandes lucro mais pela primeira privados recua",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "6d2b2ff837e4",
-    "topic": "bancos-br",
+    "id": "74f317c2486d",
     "tags": [
-      "brasil",
       "bancos",
       "financials",
       "ibov"
@@ -3616,16 +4446,22 @@
     "publishedAt": "2026-04-15T07:00:00.000Z",
     "snippet": "Itaú, Bradesco, BB e Santander: quais bancões serão destaque na temporada do 1º tri? InfoMoney",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bancoes bradesco destaque itau quais santander serao temporada",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4"
+    ]
   },
   {
-    "id": "654e1581d972",
-    "topic": "bancos-br",
+    "id": "0a7983009b69",
     "tags": [
-      "brasil",
       "bancos",
       "financials",
-      "ibov"
+      "ibov",
+      "resultados"
     ],
     "title": "Itaú (ITUB4) vai ser o grande destaque da safra do 1T26 ou o Bradesco (BBDC4) encosta? O que esperar dos balanços dos bancos - Seu Dinheiro",
     "source": "Seu Dinheiro",
@@ -3633,14 +4469,19 @@
     "publishedAt": "2026-04-27T07:00:00.000Z",
     "snippet": "Itaú (ITUB4) vai ser o grande destaque da safra do 1T26 ou o Bradesco (BBDC4) encosta? O que esperar dos balanços dos bancos Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "1t26 balancos bancos bbdc4 bradesco destaque encosta esperar grande itau",
+    "topics": [
+      "bancos-br"
+    ],
+    "tickers": [
+      "BBDC4",
+      "ITUB4"
+    ]
   },
   {
-    "id": "ece7417bf1eb",
-    "topic": "varejo-br",
+    "id": "bfa7e36a72d6",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
       "ibov"
     ],
@@ -3650,14 +4491,19 @@
     "publishedAt": "2026-01-19T08:00:00.000Z",
     "snippet": "Magazine Luiza (MGLU3), Lojas Renner (LRNE3), Smart Fit (SMFT3) e mais: no que os CEOs das grandes varejistas estão apostando para 2026? Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2026 apostando ceos estao grandes lojas lrne3 luiza magazine mais",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": [
+      "LREN3",
+      "MGLU3"
+    ]
   },
   {
-    "id": "ce1d78c20546",
-    "topic": "varejo-br",
+    "id": "af9dd004c29e",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
       "ibov"
     ],
@@ -3667,16 +4513,19 @@
     "publishedAt": "2026-07-26T10:47:36.000Z",
     "snippet": "Fim da \"taxa das blusinhas\" faz importações explodirem Revista Fórum",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "blusinhas explodirem importacoes taxa",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "eebc16fc677f",
-    "topic": "varejo-br",
+    "id": "f4629f14b296",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
-      "ibov"
+      "ibov",
+      "varejo"
     ],
     "title": "Varejo deve fechar 2025 com recuperação desigual e iniciar 2026 com crescimento moderado e atenção à rentabilidade - Estadão",
     "source": "Estadão",
@@ -3684,16 +4533,19 @@
     "publishedAt": "2026-02-24T08:00:00.000Z",
     "snippet": "Varejo deve fechar 2025 com recuperação desigual e iniciar 2026 com crescimento moderado e atenção à rentabilidade Estadão",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "2025 2026 atencao crescimento desigual deve fechar iniciar moderado recuperacao",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "fee15f386ae7",
-    "topic": "varejo-br",
+    "id": "371e00be2172",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
-      "ibov"
+      "ibov",
+      "varejo"
     ],
     "title": "Quais setores do varejo ganham e aqueles que perdem com a Copa do Mundo? - NeoFeed",
     "source": "NeoFeed",
@@ -3701,16 +4553,19 @@
     "publishedAt": "2026-01-09T08:00:00.000Z",
     "snippet": "Quais setores do varejo ganham e aqueles que perdem com a Copa do Mundo? NeoFeed",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aqueles copa ganham mundo perdem quais setores varejo",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "f64e999af2bb",
-    "topic": "varejo-br",
+    "id": "56ffeac563ab",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
-      "ibov"
+      "ibov",
+      "varejo"
     ],
     "title": "Antes ‘dadas como mortas’, lojas físicas voltam a ser trunfo valioso no varejo — e não é só o Magazine Luiza (MGLU3) que aposta nisso - Seu Dinheiro",
     "source": "Seu Dinheiro",
@@ -3718,14 +4573,18 @@
     "publishedAt": "2025-12-16T08:00:00.000Z",
     "snippet": "Antes ‘dadas como mortas’, lojas físicas voltam a ser trunfo valioso no varejo — e não é só o Magazine Luiza (MGLU3) que aposta nisso Seu Dinheiro",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "antes aposta como dadas fisicas lojas luiza magazine mglu3 mortas",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": [
+      "MGLU3"
+    ]
   },
   {
-    "id": "40bd64ebf05e",
-    "topic": "varejo-br",
+    "id": "aab0e230293f",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
       "ibov"
     ],
@@ -3735,16 +4594,19 @@
     "publishedAt": "2026-06-22T07:00:00.000Z",
     "snippet": "Magalu, Casas Bahias, Renner e Riachuelo querem a volta da taxa das blusinhas Oficina da Net",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "bahias blusinhas casas magalu querem renner riachuelo taxa volta",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "d16db4b7730b",
-    "topic": "varejo-br",
+    "id": "018218bf48dc",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
-      "ibov"
+      "ibov",
+      "varejo"
     ],
     "title": "Ações do setor de varejo: veja as melhores empresas varejistas da B3 - Toro Blog",
     "source": "Toro Blog",
@@ -3752,16 +4614,19 @@
     "publishedAt": "2026-01-28T08:00:00.000Z",
     "snippet": "Ações do setor de varejo: veja as melhores empresas varejistas da B3 Toro Blog",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acoes empresas melhores setor varejistas varejo veja",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "0772218b25e7",
-    "topic": "varejo-br",
+    "id": "62917990d006",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
-      "ibov"
+      "ibov",
+      "varejo"
     ],
     "title": "GPA, Renner, Magalu: ações de varejo e consumo caem com dados frustrantes do setor - InfoMoney",
     "source": "InfoMoney",
@@ -3769,16 +4634,22 @@
     "publishedAt": "2025-08-13T07:00:00.000Z",
     "snippet": "GPA, Renner, Magalu: ações de varejo e consumo caem com dados frustrantes do setor InfoMoney",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acoes caem consumo dados frustrantes magalu renner setor varejo",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "ceaec04bce40",
-    "topic": "varejo-br",
+    "id": "bbe69d970034",
     "tags": [
       "brasil",
-      "varejo",
       "consumo",
-      "ibov"
+      "eua",
+      "ibov",
+      "juros",
+      "varejo"
     ],
     "title": "Magazine Luiza (MGLU3) e Casas Bahia (BHIA3)? Veja que empresas do varejo serão mais afetadas pelos juros altos nos EUA e Brasil - suno.com.br",
     "source": "suno.com.br",
@@ -3786,14 +4657,19 @@
     "publishedAt": "2024-05-20T07:00:00.000Z",
     "snippet": "Magazine Luiza (MGLU3) e Casas Bahia (BHIA3)? Veja que empresas do varejo serão mais afetadas pelos juros altos nos EUA e Brasil suno.com.br",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "afetadas altos bahia bhia3 brasil casas empresas juros luiza magazine",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": [
+      "MGLU3"
+    ]
   },
   {
-    "id": "4c5b9c2197ad",
-    "topic": "varejo-br",
+    "id": "2345539aa674",
     "tags": [
       "brasil",
-      "varejo",
       "consumo",
       "ibov"
     ],
@@ -3803,14 +4679,16 @@
     "publishedAt": "2021-08-04T07:00:00.000Z",
     "snippet": "Varejistas brasileiros aceleram aquisições por dominância no e-commerce Forbes Brasil",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "aceleram aquisicoes brasileiros commerce dominancia varejistas",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": []
   },
   {
-    "id": "ff6f971a8197",
-    "topic": "varejo-br",
+    "id": "232e1028e57e",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
       "ibov"
     ],
@@ -3820,14 +4698,19 @@
     "publishedAt": "2024-09-04T07:00:00.000Z",
     "snippet": "Assaí, Americanas e Magalu são as varejistas mais lembradas no país DComercio",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "americanas assai lembradas magalu mais pais varejistas",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": [
+      "AMER3",
+      "ASAI3"
+    ]
   },
   {
-    "id": "b67e2bdc8c9a",
-    "topic": "varejo-br",
+    "id": "a59234ea9279",
     "tags": [
-      "brasil",
-      "varejo",
       "consumo",
       "ibov"
     ],
@@ -3837,6 +4720,13 @@
     "publishedAt": "2021-12-11T08:00:00.000Z",
     "snippet": "Ação do Magazine Luiza cai 75% no ano, mas valor da marca decola 66% Money Times",
     "reviewed": false,
-    "insight": null
+    "insight": null,
+    "fingerprint": "acao decola luiza magazine marca valor",
+    "topics": [
+      "varejo-br"
+    ],
+    "tickers": [
+      "MGLU3"
+    ]
   }
 ]

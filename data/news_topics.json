@@ -1,21 +1,193 @@
 [
-  { "topic": "ucrania-russia", "query": "guerra Ucrânia Rússia", "lang": "pt-BR", "tags": ["geopolitica", "ucrania", "russia", "petroleo"] },
-  { "topic": "oriente-medio", "query": "Irã Israel Oriente Médio conflito", "lang": "pt-BR", "tags": ["geopolitica", "oriente-medio", "ira", "israel", "risco-geopolitico"] },
-  { "topic": "gaza", "query": "Gaza Hamas cessar-fogo", "lang": "pt-BR", "tags": ["geopolitica", "gaza", "israel", "oriente-medio"] },
-  { "topic": "netanyahu", "query": "Netanyahu", "lang": "pt-BR", "tags": ["israel", "geopolitica", "eua-politica"] },
-  { "topic": "trump", "query": "Trump política econômica tarifas", "lang": "pt-BR", "tags": ["eua-politica", "macro", "geopolitica"] },
-  { "topic": "ice-imigracao", "query": "ICE imigração deportação Estados Unidos", "lang": "pt-BR", "tags": ["eua-politica", "imigracao", "social"] },
-  { "topic": "varejo-eua", "query": "US retail sales consumer spending", "lang": "en-US", "tags": ["eua", "varejo", "consumo", "indices"] },
-  { "topic": "indices-eua", "query": "S&P 500 Nasdaq stock market", "lang": "en-US", "tags": ["indices", "eua", "sp500", "nasdaq", "macro"] },
-  { "topic": "fed-juros", "query": "Federal Reserve interest rates FOMC", "lang": "en-US", "tags": ["macro", "juros", "eua", "indices"] },
-  { "topic": "semicondutores", "query": "semiconductor chip stocks AI", "lang": "en-US", "tags": ["semicondutores", "ia", "tecnologia", "nasdaq"] },
-  { "topic": "datacenter", "query": "data center AI capex hyperscaler power", "lang": "en-US", "tags": ["datacenter", "ia", "energia", "hyperscaler"] },
-  { "topic": "defesa", "query": "defense budget Pentagon contractors", "lang": "en-US", "tags": ["defesa", "geopolitica", "eua"] },
-  { "topic": "petroleo", "query": "oil prices OPEC crude", "lang": "en-US", "tags": ["petroleo", "energia", "macro"] },
-  { "topic": "bancos-eua", "query": "US banks earnings credit lending", "lang": "en-US", "tags": ["bancos", "financials", "eua", "juros"] },
-  { "topic": "construcao-mortgage", "query": "mortgage rates housing construction", "lang": "en-US", "tags": ["construcao", "mortgage", "imobiliario", "juros"] },
-  { "topic": "ibovespa", "query": "Ibovespa bolsa brasileira", "lang": "pt-BR", "tags": ["brasil", "ibov", "indices"] },
-  { "topic": "copom-selic", "query": "Copom Selic Banco Central juros", "lang": "pt-BR", "tags": ["brasil", "juros", "selic", "copom", "macro"] },
-  { "topic": "bancos-br", "query": "bancos brasileiros resultado Itaú Bradesco", "lang": "pt-BR", "tags": ["brasil", "bancos", "financials", "ibov"] },
-  { "topic": "varejo-br", "query": "varejo brasileiro Magazine Luiza Lojas Renner", "lang": "pt-BR", "tags": ["brasil", "varejo", "consumo", "ibov"] }
+  {
+    "topic": "ucrania-russia",
+    "query": "guerra Ucrânia Rússia",
+    "lang": "pt-BR",
+    "tags": [
+      "geopolitica",
+      "ucrania",
+      "russia"
+    ]
+  },
+  {
+    "topic": "oriente-medio",
+    "query": "Irã Israel Oriente Médio conflito",
+    "lang": "pt-BR",
+    "tags": [
+      "geopolitica",
+      "oriente-medio",
+      "ira",
+      "israel"
+    ]
+  },
+  {
+    "topic": "gaza",
+    "query": "Gaza Hamas cessar-fogo",
+    "lang": "pt-BR",
+    "tags": [
+      "geopolitica",
+      "gaza",
+      "israel",
+      "oriente-medio"
+    ]
+  },
+  {
+    "topic": "netanyahu",
+    "query": "Netanyahu",
+    "lang": "pt-BR",
+    "tags": [
+      "israel",
+      "geopolitica"
+    ]
+  },
+  {
+    "topic": "trump",
+    "query": "Trump política econômica tarifas",
+    "lang": "pt-BR",
+    "tags": [
+      "eua-politica",
+      "macro"
+    ]
+  },
+  {
+    "topic": "ice-imigracao",
+    "query": "ICE imigração deportação Estados Unidos",
+    "lang": "pt-BR",
+    "tags": [
+      "eua-politica",
+      "imigracao",
+      "social"
+    ]
+  },
+  {
+    "topic": "varejo-eua",
+    "query": "US retail sales consumer spending",
+    "lang": "en-US",
+    "tags": [
+      "eua",
+      "varejo",
+      "consumo"
+    ]
+  },
+  {
+    "topic": "indices-eua",
+    "query": "S&P 500 Nasdaq stock market",
+    "lang": "en-US",
+    "tags": [
+      "indices",
+      "eua",
+      "sp500",
+      "nasdaq"
+    ]
+  },
+  {
+    "topic": "fed-juros",
+    "query": "Federal Reserve interest rates FOMC",
+    "lang": "en-US",
+    "tags": [
+      "macro",
+      "juros",
+      "eua"
+    ]
+  },
+  {
+    "topic": "semicondutores",
+    "query": "semiconductor chip stocks AI",
+    "lang": "en-US",
+    "tags": [
+      "semicondutores",
+      "ia",
+      "tecnologia"
+    ]
+  },
+  {
+    "topic": "datacenter",
+    "query": "data center AI capex hyperscaler power",
+    "lang": "en-US",
+    "tags": [
+      "datacenter",
+      "ia",
+      "hyperscaler"
+    ]
+  },
+  {
+    "topic": "defesa",
+    "query": "defense budget Pentagon contractors",
+    "lang": "en-US",
+    "tags": [
+      "defesa",
+      "geopolitica"
+    ]
+  },
+  {
+    "topic": "petroleo",
+    "query": "oil prices OPEC crude",
+    "lang": "en-US",
+    "tags": [
+      "petroleo",
+      "energia"
+    ]
+  },
+  {
+    "topic": "bancos-eua",
+    "query": "US banks earnings credit lending",
+    "lang": "en-US",
+    "tags": [
+      "bancos",
+      "financials",
+      "eua"
+    ]
+  },
+  {
+    "topic": "construcao-mortgage",
+    "query": "mortgage rates housing construction",
+    "lang": "en-US",
+    "tags": [
+      "construcao",
+      "mortgage",
+      "imobiliario"
+    ]
+  },
+  {
+    "topic": "ibovespa",
+    "query": "Ibovespa bolsa brasileira",
+    "lang": "pt-BR",
+    "tags": [
+      "brasil",
+      "ibov",
+      "indices"
+    ]
+  },
+  {
+    "topic": "copom-selic",
+    "query": "Copom Selic Banco Central juros",
+    "lang": "pt-BR",
+    "tags": [
+      "brasil",
+      "juros",
+      "selic",
+      "copom",
+      "macro"
+    ]
+  },
+  {
+    "topic": "bancos-br",
+    "query": "bancos brasileiros resultado Itaú Bradesco",
+    "lang": "pt-BR",
+    "tags": [
+      "brasil",
+      "bancos",
+      "financials"
+    ]
+  },
+  {
+    "topic": "varejo-br",
+    "query": "varejo brasileiro Magazine Luiza Lojas Renner",
+    "lang": "pt-BR",
+    "tags": [
+      "brasil",
+      "varejo",
+      "consumo"
+    ]
+  }
 ]
