@@ -223,6 +223,9 @@
       background: radial-gradient(circle at 50% 40%, #161b22 0%, #0e1218 100%); overflow: hidden; }
     .graph-wrap svg { display: block; width: 100%; height: auto; touch-action: none; }
     .g-edge { stroke: #30507e; stroke-width: 1.5; opacity: .55; }
+    .g-edge.g-tag { stroke: #3f9d5a; }
+    .g-edge.g-norel { stroke: #b8892e; stroke-dasharray: 5 4; }
+    .g-edge:hover { opacity: 1 !important; stroke-width: 4; }
     .g-node circle { fill: #1d2840; stroke: #4d7bc4; stroke-width: 2; cursor: pointer; transition: fill .12s, stroke .12s; }
     .g-node:hover circle { fill: #26365a; stroke: #7fa9ec; }
     .g-node.bet circle { stroke: #d8a93a; fill: #241f12; }
@@ -1267,15 +1270,26 @@
 
       const idx = {};
       docs.forEach((d, i) => { idx[d.file] = i; });
-      // arestas não-direcionadas, deduplicadas
-      const seen = new Set(), edges = [];
+      // relações por TAG: uma palavra-chave só conecta se existir nos DOIS
+      // documentos; o peso da aresta é o nº de tags em comum. Links explícitos
+      // entram como reforço — e, quando não há tag em comum, viram aresta
+      // "a refinar" (sinal de que as tags precisam evoluir para embasar a relação).
+      const tagsOf = docs.map((d) => new Set(
+        (d.tags || "").split(",").map((t) => t.trim().toLowerCase()).filter(Boolean)));
+      const explicit = new Set();
       docs.forEach((d, i) => (d.links || []).forEach((l) => {
         const j = idx[l.file];
         if (j == null || j === i) return;
-        const k = i < j ? `${i}-${j}` : `${j}-${i}`;
-        if (seen.has(k)) return;
-        seen.add(k); edges.push([Math.min(i, j), Math.max(i, j)]);
+        explicit.add(i < j ? `${i}-${j}` : `${j}-${i}`);
       }));
+      const edges = [];
+      for (let i = 0; i < docs.length; i++)
+        for (let j = i + 1; j < docs.length; j++) {
+          const shared = [...tagsOf[i]].filter((t) => tagsOf[j].has(t));
+          const isLink = explicit.has(`${i}-${j}`);
+          if (shared.length || isLink) edges.push({ a: i, b: j, shared, isLink });
+        }
+      const maxShared = Math.max(1, ...edges.map((e) => e.shared.length));
 
       const W = 900, H = 560, cx = W / 2, cy = H / 2;
       const R = docs.length <= 1 ? 0 : Math.min(cx, cy) - 130;
@@ -1285,8 +1299,15 @@
       });
       const short = (t) => { t = String(t).split("—")[0].trim(); return t.length > 26 ? t.slice(0, 25) + "…" : t; };
 
-      const edgeSvg = edges.map(([a, b]) =>
-        `<line class="g-edge" x1="${pos[a].x}" y1="${pos[a].y}" x2="${pos[b].x}" y2="${pos[b].y}"/>`).join("");
+      const edgeSvg = edges.map((e) => {
+        const norel = e.shared.length === 0;            // link explícito sem tag em comum
+        const cls = norel ? "g-norel" : "g-tag";
+        const sw = norel ? 1.4 : 1.4 + (e.shared.length / maxShared) * 3;
+        const op = norel ? 0.5 : 0.35 + (e.shared.length / maxShared) * 0.55;
+        const tip = norel ? "link sem tag em comum — refinar tags"
+          : `tags em comum (${e.shared.length}): ${e.shared.join(", ")}${e.isLink ? " · +link" : ""}`;
+        return `<line class="g-edge ${cls}" x1="${pos[e.a].x}" y1="${pos[e.a].y}" x2="${pos[e.b].x}" y2="${pos[e.b].y}" stroke-width="${sw.toFixed(2)}" style="opacity:${op.toFixed(2)}"><title>${esc(tip)}</title></line>`;
+      }).join("");
       const nodeSvg = docs.map((d, i) => {
         const hasBets = d.bets && d.bets.length;
         return `<g class="g-node ${hasBets ? "bet" : ""}" data-i="${i}" transform="translate(${pos[i].x},${pos[i].y})">
@@ -1302,8 +1323,10 @@
         <div class="graph-legend">
           <span><span class="dot" style="background:#4d7bc4"></span>insight</span>
           <span><span class="dot" style="background:#d8a93a"></span>com apostas</span>
-          <span><span class="dot" style="background:#30507e"></span>link entre documentos</span>
-        </div>`;
+          <span><span class="dot" style="background:#3f9d5a"></span>relação por tag (espessura = nº de tags em comum)</span>
+          <span><span class="dot" style="background:#b8892e"></span>link sem tag em comum (refinar)</span>
+        </div>
+        <div class="muted" style="margin:6px 2px 0;font-size:11px">passe o mouse numa linha para ver as tags que conectam os documentos</div>`;
       body.querySelector("svg").addEventListener("click", (ev) => {
         const g = ev.target.closest(".g-node");
         if (!g) return;
