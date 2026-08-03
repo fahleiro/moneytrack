@@ -1,0 +1,26 @@
+{
+  "code": "EXPECTATIVAS_RESULTADOS_EUA_AGO2026",
+  "title": "Resultados EUA 3–7/ago — o que o mercado espera (e o que já saiu)",
+  "summary": "Levantamento das expectativas para cada empresa do calendário enviado, agora que os ativos estão cadastrados e com histórico.\n\nJÁ SAIU — Tyson Foods (3/ago): receita de US$ 13,7 bi (+4% a/a), mas vendas ABAIXO das estimativas e volumes −2,8% a/a. Frango carregou (margem 12,2%), compensando a perda no ciclo de carne bovina. Confirma a tese de consumo fraco.\n\nHOJE (3/ago): PALANTIR reporta às 17h EDT — consenso de US$ 1,81 bi (+81% a/a) e LPA US$ 0,34, com 8 superações seguidas e o papel 40% abaixo da máxima; as opções precificam oscilação de ~12%. Diamondback: LPA ~US$ 6 (+131% a/a), com preço realizado de US$ 96,82/barril no 2T.\n\nTERÇA (4): ARISTA — US$ 2,83 bi e LPA US$ 0,89; BP — US$ 1,98/ADS (+120% a/a). QUARTA (5): DISNEY — LPA US$ 1,88 (+16,8%), com UBS acima do consenso em US$ 1,91, foco em margem de streaming e parques; UBER — US$ 14,21 bi, LPA US$ 0,83, bookings de US$ 57,2 bi, com estratégia de veículos autônomos no centro; DOORDASH — LPA em QUEDA de 23,1% a/a. QUINTA (6): CONOCOPHILLIPS — LPA US$ 2,96 (+108,5% a/a); AIRBNB — LPA US$ 1,19 (+15,5%); DATADOG vem de +32% de receita e guidance elevado; CLOUDFLARE carrega o histórico de corte de 20% do quadro e queda de 15% pós-balanço, com foco em desaceleração e margem. SEXTA (7): Vistra, Take-Two e Oklo (ver insights dedicados) + payroll.\n\nMcDonald's: consenso de LPA US$ 3,34 e receita US$ 7,16 bi (+4,6%), mas com desaceleração relevante das vendas comparáveis (base difícil do Minecraft) e aperto explícito na baixa renda — mesmo vetor de TGT/WMT.\n\nCORREÇÃO IMPORTANTE PARA UMA APOSTA EM ABERTO: o resultado da OPEP+ saiu e vai CONTRA minha aposta bearish em WTI. O grupo aprovou aumento de apenas 188 mil b/d para setembro — o ÚLTIMO aumento de 2026 — e sinalizou cotas ESTÁVEIS até o fim do ano. Ou seja, a oferta incremental acabou, o que é suportivo para o barril e enfraquece a perna bearish baseada em Ormuz. A aposta segue aberta e será avaliada pelos fatos, mas o risco aumentou.",
+  "tags": "eua, resultados, indices, consumo, energia, petroleo, tecnologia, calendario",
+  "source": "Research (expectativas)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "PLTR", "role": "hoje 17h — consenso +81% a/a; 8 beats seguidos; opções precificam ±12%" },
+    { "ticker": "TSN", "role": "JÁ REPORTOU — vendas abaixo do esperado, volumes −2,8%" },
+    { "ticker": "MCD", "role": "comparáveis desacelerando; baixa renda apertada" },
+    { "ticker": "DIS", "role": "LPA US$ 1,88 (+16,8%); margem de streaming em foco" },
+    { "ticker": "UBER", "role": "bookings US$ 57,2 bi; estratégia de AV é o foco" },
+    { "ticker": "DASH", "role": "LPA em queda de 23,1% a/a" },
+    { "ticker": "COP", "role": "LPA US$ 2,96 (+108,5% a/a)" },
+    { "ticker": "FANG", "role": "LPA ~US$ 6 (+131% a/a); realizado US$ 96,82/bbl" },
+    { "ticker": "NET", "role": "desaceleração e margem em foco após corte de 20% do quadro" }
+  ],
+  "links": [
+    { "file": "03-08-2026_12_00_00.json", "title": "Calendário da semana 3–7/ago" },
+    { "file": "03-08-2026_14_10_00.json", "title": "GLP-1: Lilly x Novo Nordisk" },
+    { "file": "03-08-2026_14_20_00.json", "title": "Arista — a rede da tese de datacenter" },
+    { "file": "03-08-2026_09_00_00.json", "title": "Desescalada — petróleo (OPEP+ contraria a aposta)" },
+    { "file": "03-08-2026_09_30_00.json", "title": "Varejo EUA — consumo fraco (TSN/MCD confirmam)" }
+  ]
+}

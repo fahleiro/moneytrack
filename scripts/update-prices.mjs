@@ -9,12 +9,13 @@
 // Sem dependências: usa fetch nativo (Node 18+) e fs. Fonte: Yahoo Finance chart API.
 // Séries macro (IPCA, SELIC, CPI, consumo) não têm `yahoo` e são ignoradas de propósito.
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const DATA_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "data");
 const CATALOGS = ["assets.json", "indices.json"];
+const INSIGHTS_DIR = "insights";
 const FETCH_TIMEOUT_MS = 30_000;
 
 // Lê os catálogos e devolve a lista de alvos {label, yahoo, file}, sem duplicar
@@ -33,7 +34,37 @@ function collectTargets() {
       });
     }
   }
+  for (const t of collectBetTargets(byFile)) byFile.set(t.file, t);
   return [...byFile.values()];
+}
+
+// Uma aposta (data/insights/*.json) pode citar um ticker que ainda não está nos
+// catálogos — e sem série ela fica "SEM DADOS" para sempre, sem nunca ser
+// avaliada. Como só este job tem acesso de rede, ele também busca esses
+// tickers, gravando em market_history/<TICKER>.json — exatamente o caminho que
+// a view Bets usa como fallback. Não altera assets.json: o catálogo continua
+// sendo curado à mão; aqui só garantimos o dado que a aposta precisa.
+function collectBetTargets(known) {
+  const dir = join(DATA_DIR, INSIGHTS_DIR);
+  if (!existsSync(dir)) return [];
+  const extra = new Map();
+  for (const name of readdirSync(dir)) {
+    if (!name.endsWith(".json") || name === "insights.json") continue;
+    let doc;
+    try {
+      doc = JSON.parse(readFileSync(join(dir, name), "utf8"));
+    } catch {
+      continue; // insight ilegível não derruba o job
+    }
+    for (const bet of doc.bets || []) {
+      const tk = bet.ticker;
+      if (!tk) continue;
+      const file = `market_history/${tk}.json`;
+      if (known.has(file) || extra.has(file)) continue;
+      extra.set(file, { label: `${tk} (aposta)`, yahoo: tk, file });
+    }
+  }
+  return [...extra.values()];
 }
 
 // Converte epoch (segundos, UTC) para "YYYY-MM-DD".
@@ -116,7 +147,8 @@ function isDaily(candles) {
 
 async function updateTarget(t) {
   const path = join(DATA_DIR, t.file);
-  const series = JSON.parse(readFileSync(path, "utf8"));
+  // Alvo vindo de uma aposta pode ainda não ter arquivo — trata como série vazia.
+  const series = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : [];
   const bootstrap = series.length < BOOTSTRAP_MIN_POINTS;
 
   const candles = await fetchRecentCandles(t.yahoo, bootstrap ? BOOTSTRAP_RANGE : "1mo");

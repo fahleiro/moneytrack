@@ -1,0 +1,23 @@
+{
+  "code": "ARISTA_REDE_DATACENTER_AGO2026",
+  "title": "Arista (4/ago) — a terceira perna da tese de datacenter: a REDE",
+  "summary": "Com Vistra (energia) e AMD (computação) já apostados, a Arista fecha o tripé físico do superciclo de IA: a REDE que conecta os racks. Ela reporta na terça (4/ago), após o fechamento.\n\nOs números sustentam: consenso de US$ 2,83 bi de receita e LPA de US$ 0,89 no trimestre, com a companhia tendo ELEVADO a projeção de crescimento de receita de 2026 para 27,7%. O histórico de execução é forte — quatro trimestres seguidos superando estimativas, com surpresa média de 8,3%. No 2T a empresa lançou a série 7060XE7, plataformas de 1,6 terabit desenhadas para infraestrutura de IA rack-scale, ampliando o portfólio Etherlink para arquiteturas scale-out e scale-up. O consenso de analistas é \"Strong Buy\" (21 de 26).\n\nO detalhe que cria a oportunidade: a ação CAIU apesar da história de crescimento, porque o mercado teme que gargalos de fornecimento adiem o upside de IA e pressionem a margem bruta. Comentários recentes da gestão e atualizações da cadeia sugerem que a margem de 2026 deve fazer FUNDO em 62–64%, com espaço para revisão de guidance para cima. Ou seja, o papel foi punido por um risco que pode estar perto de se resolver — e o mesmo gargalo físico (equipamento, prazo) é o que sustenta a tese de energia da Vistra.\n\nTese (não é recomendação): ANET bullish em 1 mês, com o balanço de 4/ago como gatilho. Riscos: os gargalos de fornecimento podem simplesmente PIORAR, empurrando a receita para frente; concentração de clientes hyperscaler torna a receita lumpy; e o setor de semis/IA acabou de passar por desalavancagem — vendedor forçado não olha fundamento no curto prazo.",
+  "tags": "eua, datacenter, ia, tecnologia, semicondutores, resultados, nasdaq",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "ANET", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "ANET", "role": "consenso US$ 2,83 bi/LPA US$ 0,89; guidance 2026 +27,7%; 7060XE7 de 1,6T" },
+    { "ticker": "VST", "role": "perna de ENERGIA do mesmo tripé" },
+    { "ticker": "AMD", "role": "perna de COMPUTAÇÃO do mesmo tripé" },
+    { "ticker": "DDOG", "role": "observabilidade — +32% de receita, guidance elevado; reporta 6/ago" }
+  ],
+  "links": [
+    { "file": "03-08-2026_12_10_00.json", "title": "Vistra — a perna de energia" },
+    { "file": "03-08-2026_12_20_00.json", "title": "AMD — a perna de computação" },
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — superciclo de capex" },
+    { "file": "03-08-2026_14_00_00.json", "title": "Expectativas dos resultados da semana" }
+  ]
+}

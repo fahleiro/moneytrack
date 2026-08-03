@@ -1,0 +1,23 @@
+{
+  "code": "GLP1_LILLY_NOVO_AGO2026",
+  "title": "GLP-1 (5/ago) — Lilly acelerando enquanto a Novo se prepara para QUEDA: par bullish/bearish",
+  "summary": "Eli Lilly e Novo Nordisk reportam no MESMO dia (5/ago), e a divergência entre elas é a tese mais limpa da semana — não é uma disputa equilibrada, é uma troca de liderança em andamento.\n\nLADO LILLY: a companhia elevou o guidance de receita de 2026 já no 1T, com Mounjaro e Zepbound somando US$ 12,82 bi no trimestre — cerca de 65% da receita total. Aprovou e lançou o orforglipron (Foundayo), a pílula oral de GLP-1 para obesidade, nos EUA, e ULTRAPASSOU a Novo em participação de mercado de GLP-1 FORA dos EUA. A vantagem competitiva é dupla: injetáveis mais eficazes e entrada antecipada em venda direta ao consumidor. O Foundayo ainda leva vantagem prática sobre o Wegovy oral — não exige estômago vazio.\n\nLADO NOVO: a leitura do mercado é de que a Novo se prepara para uma QUEDA de vendas em 2026, enquanto a Lilly volta a crescer. O lançamento oral do Wegovy nos EUA foi forte, mas defende posição em vez de expandi-la.\n\nTese (não é recomendação): par LLY bullish / NVO bearish em 1 mês, ambos com o balanço de 5/ago como gatilho. A estrutura de par importa: se o setor inteiro de obesidade se reprecificar para cima ou para baixo, as duas pontas se compensam parcialmente — o que fica exposto é a DIVERGÊNCIA entre as duas, que é justamente a tese. Riscos: a Novo está barata justamente porque a queda já é esperada — uma surpresa positiva bate mais forte num papel deprimido; e a Lilly carrega expectativa alta, com espaço para \"sell the news\" mesmo num bom resultado.",
+  "tags": "eua, saude, farma, glp1, resultados, consumo",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "LLY", "expect": "bullish", "period": { "type": "month", "qty": 1 } },
+    { "ticker": "NVO", "expect": "bearish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "LLY", "role": "Mounjaro+Zepbound US$ 12,82 bi (65% da receita); orforglipron lançado; guidance elevado" },
+    { "ticker": "NVO", "role": "mercado projeta QUEDA de vendas em 2026; perdeu liderança de GLP-1 fora dos EUA" },
+    { "ticker": "MRK", "role": "farma — reporta 4/ago (comparação setorial)" },
+    { "ticker": "PFE", "role": "farma — reporta 4/ago (comparação setorial)" },
+    { "ticker": "AMGN", "role": "farma com programa de obesidade — reporta 4/ago" }
+  ],
+  "links": [
+    { "file": "03-08-2026_14_00_00.json", "title": "Expectativas dos resultados da semana" },
+    { "file": "03-08-2026_12_00_00.json", "title": "Calendário da semana 3–7/ago" }
+  ]
+}
