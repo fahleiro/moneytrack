@@ -9,9 +9,12 @@
 // Fonte: RSS do Google News (sem chave de API). Sem dependências: fetch nativo
 // (Node 18+), fs e um parser mínimo de RSS — o formato é estável e previsível.
 //
-// Saída:
-//   data/news/YYYY-MM-DD.json  — itens coletados na execução
-//   data/news/news.json        — manifesto (arquivo, data, contagem)
+// Saída (um arquivo por DIA, no padrão dd-mm-aaaa do repositório):
+//   data/news/dd-mm-aaaa.json  — os fatos daquele dia, cada um com suas tags
+//   data/news/news.json        — manifesto (arquivo, data ISO p/ ordenar, contagem)
+//
+// Nomenclatura: "news" aqui são FATOS — o registro datado do que aconteceu, que
+// alimenta os insights e, por eles, as bets.
 
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -236,15 +239,20 @@ function knownIds() {
   return ids;
 }
 
+// Os arquivos seguem o padrão dd-mm-aaaa do repositório (mesmo dos insights e
+// das branches). Como esse formato não ordena cronologicamente como string, o
+// manifesto guarda também a data ISO — é por ela que se ordena.
+const toDMY = (iso) => iso.split("-").reverse().join("-");
+const toISO = (dmy) => dmy.split("-").reverse().join("-");
+
 function writeManifest() {
-  const files = readdirSync(NEWS_DIR)
+  const manifest = readdirSync(NEWS_DIR)
     .filter((f) => f.endsWith(".json") && f !== "news.json")
-    .sort()
-    .reverse();
-  const manifest = files.map((file) => {
-    const items = JSON.parse(readFileSync(join(NEWS_DIR, file), "utf8"));
-    return { file, date: file.replace(/\.json$/, ""), count: items.length };
-  });
+    .map((file) => {
+      const items = JSON.parse(readFileSync(join(NEWS_DIR, file), "utf8"));
+      return { file, date: toISO(file.replace(/\.json$/, "")), count: items.length };
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
   writeFileSync(join(NEWS_DIR, "news.json"), JSON.stringify(manifest, null, 2) + "\n");
 }
 
@@ -339,7 +347,7 @@ async function main() {
   }
 
   // o dia vem do próprio job (UTC), não de um argumento
-  const day = new Date().toISOString().slice(0, 10);
+  const day = toDMY(new Date().toISOString().slice(0, 10));
   const path = join(NEWS_DIR, `${day}.json`);
   const anteriores = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : [];
   const todos = [...anteriores, ...novos];

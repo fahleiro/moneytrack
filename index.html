@@ -218,6 +218,29 @@
     .bc-link:hover { background: #1c2530; border-color: #4d7bc4; }
     @media (max-width: 640px) { .bets-top { grid-template-columns: 1fr; } }
 
+    /* News: fatos registrados por dia */
+    .news-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+    .news-bar select { background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; border-radius: 8px; padding: 6px 10px; font-size: 13px; }
+    .news-count { font-size: 12px; color: #8b949e; }
+    .news-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .ntag { font-size: 11px; font-weight: 700; background: #12181f; border: 1px solid #30363d; color: #9fb0d6; border-radius: 999px; padding: 3px 9px; cursor: pointer; }
+    .ntag:hover { border-color: #4d7bc4; color: #cfe0ff; }
+    .ntag.on { background: #1d2840; border-color: #4d7bc4; color: #cfe0ff; }
+    .ntag .n { color: #6e7d99; font-weight: 600; margin-left: 4px; }
+    .fact { background: #0d1117; border: 1px solid #30363d; border-left: 3px solid #30363d; border-radius: 10px; padding: 11px 13px; margin-bottom: 9px; }
+    .fact.used { border-left-color: #3f9d5a; }
+    .fact-h { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .fact-t { font-size: 13.5px; font-weight: 700; color: #d7e0ea; line-height: 1.35; }
+    .fact-t a { color: inherit; text-decoration: none; }
+    .fact-t a:hover { color: #7fa9ec; text-decoration: underline; }
+    .fact-when { font-size: 11px; color: #8b949e; white-space: nowrap; }
+    .fact-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 8px; }
+    .fact-src { font-size: 11px; color: #8b949e; font-weight: 600; }
+    .fact-tag { font-size: 10px; background: #161b22; border: 1px solid #30363d; color: #9fb0d6; border-radius: 5px; padding: 1px 6px; }
+    .fact-tk { font-size: 10px; font-weight: 800; background: #12181f; border: 1px solid #3d4c66; color: #cfe0ff; border-radius: 5px; padding: 1px 6px; }
+    .fact-ins { font-size: 10px; font-weight: 700; background: #103125; border: 1px solid #1f6b47; color: #7ee2a8; border-radius: 5px; padding: 1px 6px; cursor: pointer; }
+    .fact-ins:hover { background: #16452f; }
+
     /* Grafo: documentos como nodos */
     .graph-wrap { position: relative; width: 100%; max-width: 900px; border: 1px solid #30363d; border-radius: 14px;
       background: radial-gradient(circle at 50% 40%, #161b22 0%, #0e1218 100%); overflow: hidden; }
@@ -314,6 +337,7 @@
       <option value="setores">Setores</option>
       <option value="timeline">Timeline</option>
       <option value="eventos">Eventos</option>
+      <option value="news">News</option>
       <option value="insights">Insights</option>
       <option value="bets">Bets</option>
       <option value="grafo">Grafo</option>
@@ -371,6 +395,12 @@
     <h1>Eventos</h1>
     <div class="sub">Próximos e passados · clique para detalhe</div>
     <div id="eventos-body" class="muted">carregando…</div>
+  </div>
+
+  <div id="view-news" class="view" hidden>
+    <h1>News</h1>
+    <div class="sub">Fatos registrados por dia · data/news/dd-mm-aaaa.json · cada fato com suas tags</div>
+    <div id="news-body" class="muted">carregando…</div>
   </div>
 
   <div id="view-insights" class="view" hidden>
@@ -1137,6 +1167,96 @@
       </article>`;
     }
 
+    /* ---- News: fatos registrados por dia ----
+       "news" aqui são FATOS: o registro datado do que aconteceu, que alimenta
+       os insights e, por eles, as bets. Um arquivo por dia (dd-mm-aaaa). */
+    let newsState = { dias: [], itens: [], tagAtiva: null, insights: [] };
+
+    function factHTML(f) {
+      const hora = f.publishedAt ? new Date(f.publishedAt).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) : "";
+      const titulo = f.link
+        ? `<a href="${esc(f.link)}" target="_blank" rel="noopener">${esc(f.title)}</a>`
+        : esc(f.title);
+      return `<article class="fact ${f.insight ? "used" : ""}">
+        <div class="fact-h">
+          <div class="fact-t">${titulo}</div>
+          <div class="fact-when">${esc(hora)}</div>
+        </div>
+        <div class="fact-meta">
+          ${f.source ? `<span class="fact-src">${esc(f.source)}</span>` : ""}
+          ${(f.tags || []).map((t) => `<span class="fact-tag">${esc(t)}</span>`).join("")}
+          ${(f.tickers || []).map((t) => `<span class="fact-tk">${esc(t)}</span>`).join("")}
+          ${f.insight ? `<button class="fact-ins" data-code="${esc(f.insight)}">→ ${esc(f.insight)}</button>` : ""}
+        </div>
+      </article>`;
+    }
+
+    function renderNews() {
+      const { itens, tagAtiva } = newsState;
+      const visiveis = tagAtiva ? itens.filter((f) => (f.tags || []).includes(tagAtiva)) : itens;
+      // contagem por tag calculada sobre o dia inteiro, para o filtro não se auto-esvaziar
+      const contagem = {};
+      for (const f of itens) for (const t of f.tags || []) contagem[t] = (contagem[t] || 0) + 1;
+      const tags = Object.entries(contagem).sort((a, b) => b[1] - a[1]);
+      const usados = itens.filter((f) => f.insight).length;
+
+      document.getElementById("news-count").innerHTML =
+        `${visiveis.length} de ${itens.length} fatos · <span class="up">${usados}</span> viraram insight`;
+      document.getElementById("news-tags").innerHTML = tags.map(([t, n]) =>
+        `<button class="ntag ${t === tagAtiva ? "on" : ""}" data-tag="${esc(t)}">${esc(t)}<span class="n">${n}</span></button>`).join("");
+      document.getElementById("news-list").innerHTML =
+        visiveis.map(factHTML).join("") || "<div class='muted'>nenhum fato com essa tag.</div>";
+    }
+
+    async function carregarDia(file) {
+      newsState.itens = await loadJSON("news/" + file).catch(() => []);
+      // mais recentes primeiro
+      newsState.itens.sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
+      newsState.tagAtiva = null;
+      renderNews();
+    }
+
+    async function initNews() {
+      const body = document.getElementById("news-body");
+      const [manifest, insMan] = await Promise.all([
+        loadJSON("news/news.json").catch(() => []),
+        loadJSON("insights/insights.json").catch(() => []),
+      ]);
+      if (!manifest.length) { body.innerHTML = "<div class='muted'>nenhum fato coletado ainda.</div>"; return; }
+      // insights carregados para abrir o dossiê a partir do fato que o gerou
+      newsState.insights = (await Promise.all(
+        insMan.map((m) => loadJSON("insights/" + m.file).catch(() => null))
+      )).filter(Boolean);
+      newsState.dias = manifest;
+
+      body.className = "";
+      body.innerHTML = `
+        <div class="news-bar">
+          <select id="news-dia">${manifest.map((m) =>
+            `<option value="${esc(m.file)}">${esc(dmy(m.date))} · ${m.count} fatos</option>`).join("")}</select>
+          <span class="news-count" id="news-count"></span>
+        </div>
+        <div class="news-tags" id="news-tags"></div>
+        <div id="news-list"></div>`;
+
+      document.getElementById("news-dia").addEventListener("change", (e) => carregarDia(e.target.value));
+      document.getElementById("news-tags").addEventListener("click", (e) => {
+        const b = e.target.closest(".ntag");
+        if (!b) return;
+        newsState.tagAtiva = newsState.tagAtiva === b.dataset.tag ? null : b.dataset.tag;
+        renderNews();
+      });
+      document.getElementById("news-list").addEventListener("click", (e) => {
+        const b = e.target.closest(".fact-ins");
+        if (!b) return;
+        const ins = newsState.insights.find((i) => i.code === b.dataset.code);
+        if (ins) showModal(`<header class="modal-h"><h3>${esc(ins.title)}</h3><button class="modal-x">✕</button></header>
+          <div class="modal-body reading">${insightCardHTML(ins)}</div>`, true);
+      });
+
+      await carregarDia(manifest[0].file);
+    }
+
     /* ---- Bets: apostas dos insights resolvidas contra o histórico ---- */
     // último ponto da série com tradingDay <= iso (série é crescente)
     function betValueOnOrBefore(series, iso) {
@@ -1460,7 +1580,7 @@
     /* ============================ troca de views ============================ */
     const viewInit = {
       home: initHome, paises: initPaises, setores: initSetores, timeline: initTimeline,
-      eventos: initEventos, insights: initInsights, bets: initBets, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
+      eventos: initEventos, news: initNews, insights: initInsights, bets: initBets, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
     };
     const viewDone = {};
 
