@@ -1,0 +1,21 @@
+{
+  "code": "BANCOS_BR_SANTANDER_AGO2026",
+  "title": "Bancos BR — oferta do Santander com prêmio de 15% reprecifica o setor; ITUB4 publica 5/ago",
+  "summary": "O setor bancário brasileiro foi reprecificado no fim de julho. O Banco Santander (Espanha) lançou uma OPA de PERMUTA pelas ações dos minoritários do Santander Brasil, com PRÊMIO de ~15%, em operação de até €1,908 bi (~R$ 11,17 bi): 0,2028 BDR/ADS da controladora por ação ON/PN e 0,4056 por unit/ADS. O objetivo declarado NÃO é fechar o capital na B3, e sim ampliar a fatia do controlador — parte da simplificação societária e alocação de capital do grupo. Depende de aprovações (CVM, B3, SEC e acionistas). O anúncio puxou as ações de bancos no pregão de 1º/ago, quando o IBOV subiu 0,47%.\n\nA leitura de mercado é de VALIDAÇÃO DE VALUATION: um controlador estrangeiro pagando prêmio pelo minoritário sinaliza que o setor está barato — o que tende a respingar nos pares. No painel, o BPAC11 lidera (+3,9% na semana, +4,1% no mês), o ITUB4 vem firme (+9,6% YTD) e o BBDC4 é o laggard (+1,2% YTD, −0,3% na semana). O gatilho imediato é o resultado do 2T26 do ITAÚ em 5/ago — mesmo dia do Copom.\n\nTese (não é recomendação): ITUB4 bullish em 1 mês — combinação de resultado no 2T, reprecificação setorial pelo prêmio do Santander e eventual corte de Selic (que melhora inadimplência e demanda por crédito, ainda que comprima spread). Riscos: Selic caindo reduz a margem financeira; inadimplência do varejo com juro real alto; e a operação do Santander pode travar em aprovação regulatória, esvaziando o efeito-âncora.",
+  "tags": "brasil, bancos, financials, ibov, juros, selic, resultados",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "ITUB4", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "ITUB4", "role": "resultado 2T26 em 5/ago; +9,6% YTD" },
+    { "ticker": "BPAC11", "role": "líder do setor (+3,9% na semana)" },
+    { "ticker": "BBDC4", "role": "laggard (+1,2% YTD) — maior espaço de convergência" },
+    { "ticker": "NU", "role": "fintech — publica 12/ago; −15,8% YTD" }
+  ],
+  "links": [
+    { "file": "03-08-2026_11_00_00.json", "title": "Copom & IBOV — juros e índice" },
+    { "file": "03-08-2026_10_20_00.json", "title": "Bancos EUA — comparação setorial (NII/juros)" }
+  ]
+}

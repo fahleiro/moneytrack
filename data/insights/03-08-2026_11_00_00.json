@@ -1,0 +1,21 @@
+{
+  "code": "COPOM_IBOV_AGO2026",
+  "title": "Copom 5/ago & IBOV — corte de 0,25 pp precificado com bolsa 10% abaixo do topo",
+  "summary": "A 280ª reunião do Copom acontece em 4–5/ago, com anúncio na quarta após o fechamento. A Selic está em 14,25% (terceiro corte consecutivo de 0,25 pp, ciclo iniciado em março a partir de 15%) e as opções da B3 apontam ~75,5% de probabilidade de mais um corte de 0,25 pp agora. Atenção ao viés: o BC ENDURECEU a comunicação em junho, retirou a promessa de novos cortes e condicionou o próximo passo aos dados — e o Focus vê a Selic em 14% no fim de 2026, ou seja, o mercado enxerga espaço para apenas MAIS UM corte de 0,25 pp distribuído nas quatro reuniões restantes.\n\nO IBOV fechou julho em 177.999 pontos (+10,9% YTD, +3,0% no mês), mas ainda está −10,4% abaixo do recorde de 198.657 (14/abr/2026) — ou seja, há espaço de recuperação sem exigir topo histórico. O índice é comandado por poucos pesos: Vale e Petrobras seguem commodities globais, enquanto Itaú e Bradesco espelham o crédito doméstico — e o setor bancário acabou de ser reprecificado pela oferta do Santander (ver insight relacionado). Pano de fundo: IPCA de maio a 0,58% no mês e confiança do consumidor (BR_CONS) em 90,6, ainda morna.\n\nTese (não é recomendação): IBOV bullish em 1 mês — corte de juros + reprecificação de bancos + desconto de 10% frente ao topo. Riscos explícitos: o corte já está ~75% precificado (o gatilho é o COMUNICADO, não a decisão); um Copom hawkish sem sinalização de continuidade decepciona; e juro real alto segue competindo com a renda variável.",
+  "tags": "brasil, ibov, indices, juros, selic, copom, macro, bancos",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "IBOV", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "IBOV", "role": "177.999 pts — 10,4% abaixo do recorde de 198.657 (14/abr)" },
+    { "ticker": "SELIC", "role": "14,25% — ~75,5% de chance de corte de 0,25 pp em 5/ago" },
+    { "ticker": "IPCA", "role": "0,58% no mês (mai) — inflação ainda acima da meta" }
+  ],
+  "links": [
+    { "file": "03-08-2026_11_10_00.json", "title": "Bancos BR — oferta do Santander e resultados" },
+    { "file": "03-08-2026_11_20_00.json", "title": "Varejo BR — temporada de resultados da semana que vem" },
+    { "file": "03-08-2026_10_30_00.json", "title": "Índices & Fed — contraponto de juros nos EUA" }
+  ]
+}

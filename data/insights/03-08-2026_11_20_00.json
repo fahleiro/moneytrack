@@ -1,0 +1,22 @@
+{
+  "code": "VAREJO_BR_RESULTADOS_AGO2026",
+  "title": "Varejo BR — rali especulativo nas alavancadas antes dos resultados de 12–14/ago",
+  "summary": "A agenda de publicações da PRÓXIMA SEMANA concentra o varejo/fintech brasileiro: NU (12/ago), MGLU3 e LREN3 (13/ago) e AMER3 (14/ago). E os papéis chegam nela com um movimento difícil de justificar por fundamento: MGLU3 +17,8% no mês (+8,2% na semana) e AMER3 +32,6% no mês (+15,4% na semana) — justamente as duas mais alavancadas e castigadas do grupo (MGLU3 −43,0% e AMER3 −7,6% no ano). É um rali típico de nomes machucados na expectativa de corte de juros, com forte componente especulativo/short-covering.\n\nO contraste dentro do próprio setor reforça a leitura: LREN3 caiu −8,1% no mês e ASAI3 −2,2%, enquanto PCAR3 recuou −7,2% na semana. Ou seja, o dinheiro não entrou no varejo como tese setorial — entrou nas duas de maior beta. O pano de fundo não ajuda: Selic ainda em 14,25% (com apenas mais um corte de 0,25 pp esperado até dezembro) mantém a despesa financeira alta para balanços endividados, e a confiança do consumidor (BR_CONS) está em 90,6, morna.\n\nTese (não é recomendação): MGLU3 bearish em 1 mês — reversão à média após alta desproporcional, com o resultado de 13/ago como gatilho de realidade para um balanço pressionado por juros. Riscos claros: um Copom dovish ou um resultado melhor do que o esperado sustentam o rali; papéis de baixa capitalização e alto short interest podem estender o squeeze bem além do que o fundamento explica — aposta de alto risco, assumida como treino de predição.",
+  "tags": "brasil, varejo, consumo, ibov, juros, selic, resultados",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "MGLU3", "expect": "bearish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "MGLU3", "role": "+17,8% no mês mas −43,0% YTD; resultado 13/ago" },
+    { "ticker": "AMER3", "role": "+32,6% no mês — mesmo padrão especulativo; resultado 14/ago" },
+    { "ticker": "LREN3", "role": "−8,1% no mês — divergência dentro do setor; resultado 13/ago" },
+    { "ticker": "ASAI3", "role": "alimentar/atacado — mais defensivo (−2,2% no mês)" },
+    { "ticker": "BR_CONS", "role": "confiança do consumidor em 90,6 — demanda morna" }
+  ],
+  "links": [
+    { "file": "03-08-2026_11_00_00.json", "title": "Copom & IBOV — juros que pressionam o balanço" },
+    { "file": "03-08-2026_09_30_00.json", "title": "Varejo EUA — divergência de consumo (comparação)" }
+  ]
+}

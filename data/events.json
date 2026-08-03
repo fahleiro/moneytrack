@@ -176,6 +176,14 @@
     "country": null
   },
   {
+    "date": "2026-08-05",
+    "type": "copom",
+    "title": "COPOM — 280ª reunião (decisão de Selic, anúncio após o fechamento)",
+    "ticker": null,
+    "code": "COPOM_DECISAO",
+    "country": "BR"
+  },
+  {
     "date": "2026-08-12",
     "type": "earnings",
     "title": "Earnings Q2/26",
@@ -200,12 +208,36 @@
     "country": null
   },
   {
+    "date": "2026-08-13",
+    "type": "macro",
+    "title": "EUA — PPI (preços ao produtor)",
+    "ticker": null,
+    "code": "US_PPI_REL",
+    "country": "US"
+  },
+  {
     "date": "2026-08-14",
     "type": "earnings",
     "title": "Resultado 2T26",
     "ticker": "AMER3",
     "code": null,
     "country": null
+  },
+  {
+    "date": "2026-08-14",
+    "type": "macro",
+    "title": "EUA — CPI (inflação de julho)",
+    "ticker": null,
+    "code": "US_CPI_REL",
+    "country": "US"
+  },
+  {
+    "date": "2026-08-15",
+    "type": "macro",
+    "title": "EUA — Vendas no varejo (julho)",
+    "ticker": null,
+    "code": "US_RETAIL_REL",
+    "country": "US"
   },
   {
     "date": "2026-08-18",
@@ -254,6 +286,14 @@
     "ticker": null,
     "code": "FED_SUPER_WED",
     "country": "USA"
+  },
+  {
+    "date": "2026-09-16",
+    "type": "copom",
+    "title": "COPOM — decisão de Selic",
+    "ticker": null,
+    "code": "COPOM_DECISAO",
+    "country": "BR"
   },
   {
     "date": "2026-10-28",
