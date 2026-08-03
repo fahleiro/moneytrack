@@ -93,16 +93,34 @@ function serialize(series) {
 }
 
 // Abaixo disso a série é considerada nova/curta demais para os gráficos (faixas
-// de 1Y/5Y/All) e para as sequências consecutivas — nesse caso vale buscar o
-// histórico completo em vez da janela de 1 mês. ~200 pregões ≈ 1 ano.
+// de 1Y/5Y/All) e para as sequências consecutivas — nesse caso vale buscar uma
+// janela longa em vez da de 1 mês. ~200 pregões ≈ 1 ano.
 const BOOTSTRAP_MIN_POINTS = 200;
+// NÃO usar "max": o Yahoo DEGRADA a granularidade em janelas muito longas e
+// devolve candles semanais/mensais/trimestrais mesmo com interval=1d — o que
+// contamina uma série diária. "5y" (~1250 pregões) devolve candles diários.
+const BOOTSTRAP_RANGE = "5y";
+
+// As séries do repositório são DIÁRIAS. Se a resposta vier com granularidade
+// maior (ver acima), é melhor falhar esse ativo — o erro é isolado e logado —
+// do que gravar pontos que não são de pregão.
+function isDaily(candles) {
+  if (candles.length < 3) return true;
+  const gaps = [];
+  for (let i = 1; i < candles.length; i++) {
+    gaps.push((Date.parse(candles[i].tradingDay) - Date.parse(candles[i - 1].tradingDay)) / 864e5);
+  }
+  gaps.sort((a, b) => a - b);
+  return gaps[Math.floor(gaps.length / 2)] <= 4; // mediana ≤ 4 dias (fins de semana/feriados)
+}
 
 async function updateTarget(t) {
   const path = join(DATA_DIR, t.file);
   const series = JSON.parse(readFileSync(path, "utf8"));
   const bootstrap = series.length < BOOTSTRAP_MIN_POINTS;
 
-  const candles = await fetchRecentCandles(t.yahoo, bootstrap ? "max" : "1mo");
+  const candles = await fetchRecentCandles(t.yahoo, bootstrap ? BOOTSTRAP_RANGE : "1mo");
+  if (!isDaily(candles)) throw new Error("resposta não-diária do Yahoo — descartada");
 
   // Merge por dia: o que já está gravado SEMPRE vence — a busca só acrescenta
   // dias ausentes (mais recentes no modo incremental, mais antigos no
