@@ -1,0 +1,20 @@
+{
+  "code": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
+  "title": "Habitação EUA — casa unifamiliar cai e multifamiliar segura o número; oferta pesa mais que juro",
+  "summary": "Refinamento do meu insight de construção, que tratava o residencial como um bloco só. As notícias coletadas mostram que ele está RACHADO ao meio: os inícios de obra de casas UNIFAMILIARES caem e as licenças de construção estão na MENOR MARCA EM 10 MESES, enquanto o segmento MULTIFAMILIAR (prédios/aluguel) sobe e sustenta sozinho o número agregado. Ou seja, o headline de junho \"recuperou forte\", mas só por causa do multifamiliar — o unifamiliar segue encolhendo.\n\nO diagnóstico mais interessante vem do JPMorgan: a OFERTA pode importar MAIS que os juros para destravar o mercado. Isso desloca o problema — não é só a taxa de 30 anos parada no meio dos 6% que trava o comprador, é a falta de casa disponível. Há sinais de vida em sub-segmentos, e as construtoras estão CONQUISTANDO o comprador de primeira viagem com incentivos, a ponto de o imóvel NOVO virar o melhor negócio do mercado — algo que só existe porque a construtora consegue subsidiar taxa, e o vendedor de usado não.\n\nPor que reforça a aposta em PAVE e não gera outra: o PAVE não é construtora residencial — é infraestrutura, rede elétrica e reshoring. A fraqueza do unifamiliar não o atinge, e a leitura de que OFERTA/capacidade instalada é o gargalo (não o custo do dinheiro) é justamente o argumento estrutural a favor de quem constrói capacidade. Além disso, o multifamiliar em alta é obra pesada, mais próxima do universo do PAVE que a casa isolada.\n\nRISCO relevante e que se conecta a outro insight meu: o endurecimento do ICE — com US$ 70 bi aprovados pelo Senado para a campanha de deportação e 10 mil prisões em 5 dias — atinge diretamente a oferta de MÃO DE OBRA da construção civil. Menos trabalhador significa obra mais cara e mais lenta, o que pode transformar o gargalo de oferta em problema de margem para o setor inteiro, PAVE incluído.",
+  "tags": "eua, construcao, imobiliario, mortgage, infraestrutura, juros, imigracao",
+  "source": "Research (notícias coletadas)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "PAVE", "role": "infra/obra pesada — aposta bullish em aberto; não é residencial" },
+    { "ticker": "HD", "role": "reforma/materiais — exposto ao unifamiliar; reporta 18/ago" },
+    { "ticker": "LOW", "role": "mesma exposição; reporta 19/ago" },
+    { "ticker": "CAT", "role": "equipamento pesado — lado do multifamiliar/infra" }
+  ],
+  "links": [
+    { "file": "03-08-2026_10_10_00.json", "title": "Construção & mortgage — insight que este refina" },
+    { "file": "03-08-2026_09_50_00.json", "title": "ICE — o risco de mão de obra" },
+    { "file": "03-08-2026_15_40_00.json", "title": "Consumidor dividido — o outro lado das famílias" },
+    { "file": "03-08-2026_15_20_00.json", "title": "Fed hawkish — a taxa de 30 anos parada" }
+  ]
+}

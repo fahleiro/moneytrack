@@ -1,0 +1,23 @@
+{
+  "code": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
+  "title": "Consumidor EUA dividido — gasto resiste, confiança cai: par COST bullish / TGT bearish",
+  "summary": "As notícias coletadas desenham um consumidor americano contraditório, e a contradição É a tese. De um lado, o gasto \"continua desafiando a gravidade\": as vendas no varejo estenderam a sequência de crescimento em junho, os americanos gastam ALÉM do essencial e há resiliência diante da pressão de custos. Do outro, as vendas subiram em ritmo MAIS LENTO, com a queda do preço da gasolina segurando o número de topo, e a CONFIANÇA DO CONSUMIDOR CAIU com piora na percepção de negócios e de mercado de trabalho. Uma análise resume o quadro como \"a divisão do consumidor americano\" e pergunta o que ela implica para o futuro do varejo; outra observa que os americanos seguem gastando \"enquanto resmungam\" sobre a economia.\n\nA leitura: não é um consumidor médio enfraquecendo, é um consumidor PARTINDO EM DOIS. Alta renda sustenta o agregado; baixa renda está sob estresse — exatamente o que WMT, TGT, HD e LOW disseram ao cortar guidance, e o que a Tyson confirmou hoje com volumes −2,8%.\n\nTese (não é recomendação): par COST bullish / TGT bearish em 1 mês. A Costco é o veículo de ALTA RENDA — modelo de assinatura, receita de mensalidade recorrente, cesta de volume — e divulga VENDAS MENSAIS em 5/ago, gatilho de curto prazo. A Target é o oposto: discricionário e desconto, exposta justamente à faixa que está apertada, e já cortou guidance. A perna bearish em TGT reforça a aposta que abri mais cedo.\n\nRISCO EXPLÍCITO, e ele é grande: a TGT subiu +5,9% na semana e +14,1% no mês, acumulando +47,8% no ano — o momentum está claramente CONTRA a perna bearish. Estou dobrando numa tese que o preço vem contrariando há um mês; se o resultado de 19/ago vier bom, a perna curta apanha feio. A COST (+1,0% no mês, +12,5% no ano) é a perna mais defensiva do par.",
+  "tags": "eua, varejo, consumo, resultados, indices",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "COST", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "COST", "role": "alta renda/assinatura — vendas mensais em 5/ago" },
+    { "ticker": "TGT", "role": "discricionário/baixa renda — mas +14,1% no mês CONTRA a tese" },
+    { "ticker": "WMT", "role": "cortou guidance citando estresse da baixa renda; reporta 20/ago" },
+    { "ticker": "TSN", "role": "volumes −2,8% — confirmação do lado fraco" },
+    { "ticker": "XRT", "role": "ETF de varejo — leitura agregada do setor" }
+  ],
+  "links": [
+    { "file": "03-08-2026_09_30_00.json", "title": "Varejo EUA — divergência (origem da aposta em TGT)" },
+    { "file": "03-08-2026_14_00_00.json", "title": "Expectativas dos resultados da semana" },
+    { "file": "03-08-2026_15_50_00.json", "title": "Habitação — o outro lado do balanço das famílias" }
+  ]
+}

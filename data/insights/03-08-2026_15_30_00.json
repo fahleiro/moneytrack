@@ -1,0 +1,17 @@
+{
+  "code": "TARIFACO_BRASIL_AGO2026",
+  "title": "Tarifaço de Trump contra o Brasil — novo golpe de 25% e tarifa global validada na Justiça",
+  "summary": "Tema que não estava em nenhum insight meu e que é um RISCO DIRETO à aposta bullish em IBOV aberta hoje. Os EUA confirmaram um NOVO tarifaço de 25% sobre produtos brasileiros, e a Justiça americana MANTEVE em vigor a tarifa global de 10% de Trump — um tribunal permitiu sua aplicação, retirando a expectativa de que o Judiciário desmontasse a política. Já opera nos EUA um sistema de reembolso de tarifas consideradas ilegais, o que mostra que parte da estrutura vem sendo contestada com sucesso, mas sem derrubar o núcleo.\n\nA leitura de fundo, segundo Yellen, é que a tarifa contra o Brasil reflete uma VISÃO PESSOAL de Trump e não política econômica — o que é relevante porque desloca o problema do campo negociável (dados, superávit) para o político, mais difícil de reverter tecnicamente. Um Nobel de Economia associou o movimento a incomodar a independência digital brasileira, citando o Pix. O governo Lula respondeu que seguirá \"sem viralatice\". Avaliações independentes sugerem impacto \"restrito\" e leem o episódio como demonstração dos LIMITES do protecionismo; o Bundesbank estima impacto apenas moderado das tarifas de Trump no crescimento da zona do euro até 2027.\n\nPor que não abro aposta: o golpe recai sobre EXPORTADORES brasileiros, e o catálogo do painel é quase todo doméstico — bancos (ITUB4, BBDC4, BPAC11), varejo (MGLU3, LREN3, ASAI3, AMER3, PCAR3) e utilities (ALUP11, TAEE11, EGIE3). Não tenho instrumento limpo para expressar a tese, e usar o IBOV seria contradizer a aposta que acabei de abrir com base no Copom. O valor aqui é registrar o RISCO com data: se o tarifaço escalar, é por este canal que a aposta bullish em IBOV apanha. Para expressar a tese no futuro seria preciso cadastrar exportadores (Embraer, JBS, Suzano, Vale, Petrobras) — hoje ausentes do catálogo.",
+  "tags": "brasil, eua-politica, tarifas, ibov, macro, geopolitica, risco",
+  "source": "Research (notícias coletadas)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "IBOV", "role": "aposta bullish em aberto — este é o canal de risco" },
+    { "ticker": "ITUB4", "role": "doméstico — pouco exposto direto ao tarifaço" },
+    { "ticker": "MGLU3", "role": "doméstico — exposto a juro, não a tarifa" }
+  ],
+  "links": [
+    { "file": "03-08-2026_11_00_00.json", "title": "Copom & IBOV — a aposta que este risco ameaça" },
+    { "file": "03-08-2026_11_10_00.json", "title": "Bancos BR — o lado doméstico protegido" }
+  ]
+}

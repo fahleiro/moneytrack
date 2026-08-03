@@ -1,0 +1,23 @@
+{
+  "code": "DEFESA_BACKLOG_RECORDE_AGO2026",
+  "title": "Defesa — backlogs RECORDES e estoques esgotados: primes contra o ETF (par com ITA)",
+  "summary": "As notícias de defesa revelam uma tese que a minha aposta bearish em ITA não captura — e que explica o próprio price action. O material coletado aponta: contratantes de defesa acumulam BACKLOGS RECORDES com a escalada de gastos militares; o estoque de armamentos dos EUA está ENCOLHENDO e testando a estratégia do Pentágono; Trump se reuniu com os grandes contratantes justamente por causa dos estoques de munição; e há um suplementar de US$ 88 bi da guerra do Irã que remunera esses fornecedores — tudo dentro do orçamento de US$ 1,5 tri que beneficia os maiores contratantes.\n\nO ponto que reconcilia isso com a desescalada: reposição de estoque é um ciclo de ENCOMENDA, não de manchete. O cessar-fogo derruba o prêmio de risco (que é o que move o ETF no curto prazo), mas NÃO cancela contrato — e estoque gasto precisa ser reposto justamente depois do conflito. Por isso a leitura correta não é \"defesa sobe ou cai\", e sim PRIMES contra ETF.\n\nO preço já separa os dois: no último mês LMT subiu +7,1% e RTX +8,5%, enquanto o ITA caiu −1,8% — cerca de 9 pontos de diferença. Faz sentido: o ITA tem ~40% em aviação COMERCIAL (GE, Boeing, Howmet, TransDigm), que não recebe nada de reposição de munição, enquanto a LMT é prime pura, com +17,7% no ano.\n\nTese (não é recomendação): LMT bullish em 1 mês, formando PAR com a aposta bearish em ITA já aberta — é o spread prime-vs-ETF. Riscos concretos e específicos: tramita no Senado a restrição a RECOMPRAS E DIVIDENDOS para as prime contractors (LMT, NOC, BA), com o setor fazendo lobby contra — se passar, atinge exatamente a LMT; investidores de defense tech já se decepcionaram apostando que a guerra do Irã os enriqueceria; e o Pentágono começou a comprar de STARTUPS, o que a prazo corrói a posição dos incumbentes.",
+  "tags": "defesa, eua, geopolitica, orcamento, resultados, indices",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "LMT", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "LMT", "role": "prime pura — +7,1% no mês, +17,7% YTD; alvo da restrição a recompras" },
+    { "ticker": "ITA", "role": "ETF com ~40% de aviação comercial — −1,8% no mês (perna bearish do par)" },
+    { "ticker": "RTX", "role": "+8,5% no mês — confirma o movimento dos primes" },
+    { "ticker": "NOC", "role": "−5,6% YTD — prime que ainda não acompanhou" },
+    { "ticker": "KTOS", "role": "defense tech — decepção dos investidores no tema" }
+  ],
+  "links": [
+    { "file": "09-07-2026_10_30_00.json", "title": "ITA — dossiê (orçamento de US$ 1,5 tri, recompras no NDAA)" },
+    { "file": "03-08-2026_09_00_00.json", "title": "Desescalada — origem da aposta bearish em ITA" },
+    { "file": "03-08-2026_15_20_00.json", "title": "Fed hawkish — pano de fundo de juros" }
+  ]
+}

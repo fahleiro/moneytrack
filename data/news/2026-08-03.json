@@ -1006,8 +1006,8 @@
     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9rbnFfb0FsMkpzcTg2T3BZbzgwNkE1XzJtRXAwVVBoQXNCZWNXTEZsT2xVUW1VckZfbWt4U3dyWk5hRDh4N3E0d1dlMXctTHhBMHY3Mmp3dG9kTUlLUlVDTE1R0gFnQVVfeXFMT3hXb0tMTmJrZzVRRVBLU0xNU1RMLXJuUnNyWWtXMzA0VlpKLWZFcEU3SGpZLXpwck11WHB5OHVnVzlJSnVHa002ZW9wbVRtZS1jYkpMRzJmWTVVVk5BeXRvVk5DcWQzaw?oc=5",
     "publishedAt": "2026-07-29T08:42:21.000Z",
     "snippet": "Nobel de Economia elogia Pix: 'Trump não quer Brasil com independência digital' BBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "brasil digital economia elogia independencia nobel quer trump",
     "topics": [
       "trump"
@@ -1028,8 +1028,8 @@
     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONDduV1RNNkQ1LWkxeTZYaVpVaUFRelhoVWhfbHVkaG52YjFHcHdNbDNBME1CV1EtSXpZcllBaXFham9hVkp5VW92NC1yTEtQMVlkUlFMbHZRa252OHg4cVF5SGY4SThEZmJYdG9CSEZnQ2I4aHgxaDBKUWhJNWdxSXF3N1VPNnQ0X1Q0YTloMUFTR2JDeks4c9IBngFBVV95cUxOQUVBS01BOHdaSVdHNk93ZW9wV2tFbDVPRi1raWxsSXpLWi0tVHFST3plSVppMUxYWWFWUUVGWUFRRDN6dE9CUDVCd1ROc3JaTFhnZlFRYktycFkwbFEwMGJjamZqdmw2QlhhQ2h2NkN2T1JJV3UzRFBTZnNXdVJPREFwbUI2QW5oZGlDM1dmcGtWdEplLVZvMWdCWUpmZw?oc=5",
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "Tarifa dos EUA contra Brasil reflete visão pessoal de Trump e não política econômica, diz Yellen Estadão",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "brasil contra economica pessoal politica reflete tarifa trump visao yellen",
     "topics": [
       "trump"
@@ -1050,8 +1050,8 @@
     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZTBFUVlCUWFPTjQ2ZjJUYzFLZk9XRjRsR0p5SVF6REFxaC1IY2ozZURfVm5EMkYwaloydG1UX3MyZl9aVkJUMTk5a2dGNHBWekF5cjBTV3d2ejlXc3BQUkRTQ2JTSW4tOFB5dW1kaDFJOFdCbWtjSVRfbGNRc0VrODl2QmpNSXlOTmZrWm1MaFUtcGNvSFJBMzBUTndCOFlOcjB2UXhIaDQ3QVE?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "EUA confirmam novo tarifaço de 25% a produtos do Brasil CNN Brasil",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "brasil confirmam novo produtos tarifaco",
     "topics": [
       "trump"
@@ -1071,8 +1071,8 @@
     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9iaTBpeVYtYnV6Sjk4dzJia0VkZ1loNGtTZmtIXzBTa3hnb2dBWTNHYkF1Z19OZ0Y1b2N6YzhGdzhkRldaY3BVOWp0NGtrQ2pJLWl5VnhlTFZJTXY2a3hEdHJR0gFnQVVfeXFMUGlUNURtN29JUkVuV0REakoyV2RSQ3d4LUdfOEdZbTBhVEI3NXY1YzhBUFZJTXZJWkx2a2VUOGxHRWtnRGNnb0VoS3lFeXNseG5DZ3hvYVZWSjQ4SUxJRFlDUUlZMjcxUQ?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Qual o impacto do tarifaço de Trump no Brasil? 'Deve ser restrito' e mostra 'limites do protecionismo americano', diz economista BBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "americano brasil deve economista impacto limites mostra protecionismo qual restrito",
     "topics": [
       "trump"
@@ -1092,8 +1092,8 @@
     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZEZxY1MzVlFscndrLVhleXBLRXhERmJxc1pVVjlKVkQyWWo3Q0dXSnVqVGs0cThSZDBNSWlxcE9TOVpxVVE0TXVvMGs4QlhWYmlVbWRGTEdwYk45M2MzcHlwUUZPellLMzZVWERoeE95MUZ6LURheGh2eXM4NVNfLWZOQkVYVE9SZWpobEUyTTg2YnpuZE4wUGh1cU82WDRjelkyZkhSdHRVcFcteDRYM28wTUxvQUFaZWRJSk02NUF2Q0140gHKAUFVX3lxTFA3RXZySWFtMWlPUDhNZWd1RWZDMmJ1NlcyaDNqbFo3eVpWQXA1ODQxTDkxNkJWdkZHdTlXQm9aTkFUR3pwUDZBeVZEX0N2QVA3dFotNS0ySVgzT1lDeTlPNUJoZDcwQWc2LUNtYzJWWE82NU9IR19yMC1IQ2dPNHE3RlFSUWtrS2xNNk52QW1sRXBRMGlGZVN6NkNRVVRKNG5ta3k5T2p3MGxTaTY1UEdhY21KSWtEbXBsd25tU3RrNmcxcXpqV3pDMGc?oc=5",
     "publishedAt": "2026-04-20T07:00:00.000Z",
     "snippet": "Sistema de reembolso de tarifas ilegais de Trump entra em operação nos EUA Folha de S.Paulo",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "entra ilegais operacao reembolso sistema tarifas trump",
     "topics": [
       "trump"
@@ -1113,8 +1113,8 @@
     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbGtjc3RWdHF4eEZNc09VQVl2WFR1ZE5CaGlZcVBQZEgwQUJQSTZkM0Q3VVFFRFZ1cWVWclBtLWZnSG9mRHBUWmlxZXlPR19OdnhPMGVUSUNvb3BsclIyU2dweUh4SHp2Qkk5WFM3eXZycXVSck44RHRQT3JKNVpGMmxrZDJzeFBhOHNz0gGaAUFVX3lxTFA3cmtkYk9Ka1p5S2NSVW9oeHZuZFlnM0w4YnNfM1R5WnJFYTN4MThLd0M1SnBpNWdjWTZWUGpmNm5OREhabzR6NnlVTUU5MGgwSzM3LTVyNnVOZnM5NGFWQ3JPWW1ndGZKRHlrUHBTT096QUE5TkdFVnRMYThyNW1Va3NHRGRyZDRWelhoejZkdnBVUU1scnI0NFE?oc=5",
     "publishedAt": "2026-06-11T07:00:00.000Z",
     "snippet": "Justiça dos EUA mantém tarifa global de 10% de Trump em vigor G1",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "global justica mantem tarifa trump vigor",
     "topics": [
       "trump"
@@ -1133,8 +1133,8 @@
     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQY1Y3S2xKVnJxYXZ6QUJLVWxoWmFaa0tvOERvZzNKMDNZVWppNTViY2t0Qi1yMXE3S1N4SGo4V3YxR3d3emZRem11Ty1jQlpOcFgyb2tCdm5HdGg3XzV5WmlwcEo2bk9pNE1ZUHAxdVFDU011SkdoYXFjUDN4RzU5WE85d2N2QjNSbk9XX1JuMA?oc=5",
     "publishedAt": "2026-06-30T07:00:00.000Z",
     "snippet": "Flávio Bolsonaro dá tiro no pé ao tentar reverter ‘tarifaço’ de Trump Intercept Brasil",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "bolsonaro flavio reverter tarifaco tentar tiro trump",
     "topics": [
       "trump"
@@ -1153,8 +1153,8 @@
     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZXlYYzM3ODdDMUVVclE3TTk4SWgtVTZvQVRabWJyeFl0d2l2RjduMUNqNC0wb0xEcDE0TTBISWdhSkpJQzJ1V0JpUlY2RnJOS2NmSUg1SE1YZFV0dFpnN3FncV92QlFHWlhpZUh2WjhzbHJCb05KNkx5d2lyd0tuRGhjLWY1YTVNbVRqNUFsWGgxT0IxZ2ttVHI5U0dtb2RKTTl6Wk1WVHE?oc=5",
     "publishedAt": "2026-05-04T07:00:00.000Z",
     "snippet": "Efeitos da gestão Trump na economia do Brasil em 2026 gazetadopovo.com.br",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "2026 brasil economia efeitos gestao trump",
     "topics": [
       "trump"
@@ -1175,8 +1175,8 @@
     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOY3BQSXZESlVJRE52cUYwTDRfelhMQ3lyTzVxSmdPX0V5Um9OclRlYUNYZGNHMS14d01YWDhQZUFHT3VkOGlNUExuUGhsMEZ0N1RLOWo5OE02VzFPNXIxSDVDLXhVZnM4V01VMzVXdENCN1NveUFGSFFvbUxjdnF0ZDlicXdqLS1ORlluWTVWQ3d6WTJlYUYxcHY1cDdrcHRlTzA2M2NRdi0?oc=5",
     "publishedAt": "2026-06-11T07:00:00.000Z",
     "snippet": "Tribunal dos EUA permite aplicação de tarifa global de 10% de Trump cartacapital.com.br",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "aplicacao global permite tarifa tribunal trump",
     "topics": [
       "trump"
@@ -1196,8 +1196,8 @@
     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTU1JTlRMRFlJa2Y1UTVZNkV1MFAxanNxeXYtVjJMbXZoMnNIVmd0bEFnWjh6dFZjVHRhaDVGUFFOOXl0TE52ODA3QVhNZFBucG9vM2drNFYzeVlUVWdTREJxZFRuQlZrNFQyTktsQW5YSFNya1pxczJXMHFHX05ONllZT1BrSkIzMGphQkRHWFlDXzZ0R294THdMY2FlWm1HbERDVnFDR2RMZmMzNlZQSUt2SGkwaHlzQ2FkTlV3ZkU3TUVv?oc=5",
     "publishedAt": "2026-07-28T10:28:01.000Z",
     "snippet": "Bundesbank diz que tarifas de Trump têm impacto moderado no crescimento da zona euro até 2027 Dinheiro Vivo",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "2027 bundesbank crescimento euro impacto moderado tarifas trump zona",
     "topics": [
       "trump"
@@ -1216,8 +1216,8 @@
     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1sZVdKLW9rSVBNakwtRUlwLWptTTJZdTc0Ykd4aWxnQVQ1ZFFyNEdCVF83b3RhWllvTzVEMFZrNDd5WW5ua0RFN0tKUkZobnFpUy02RnVIM2hVcWM5U2haWlV30gFnQVVfeXFMUDQwaDJLSzNOTnBvOWpHR1ljUHZwQTVOMWQ0WFJRblI2TW15ZUFpcnk1TVJXOTczZHkyaWtDVldMVU5QS3o4cDNWREZWeWRKa2VmMllSVWdSWGRSRGI5MmxOcGdKdU5hOA?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "A reação do governo Lula ao novo tarifaço de Trump: 'Seguiremos sem viralatice' BBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "TARIFACO_BRASIL_AGO2026",
     "fingerprint": "governo lula novo reacao seguiremos tarifaco trump viralatice",
     "topics": [
       "trump"
@@ -1489,8 +1489,8 @@
     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTZ0xCM0k1TjhISk1PSHVjZmNkRkluTlhWVXFXTzRXWEY5ek02S0ZKT3NBbzgtNVVPdmN5ZDc1ZzQ5QzBjd0lOUW50RmxRVnlfUnc?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Monthly Retail Trade - Sales Report Census.gov",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "monthly report retail sales trade",
     "topics": [
       "varejo-eua"
@@ -1509,8 +1509,8 @@
     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1hSTlkVDlwWWg3SkwzdjN5YjZ5VGp1R2I2bFFRMUIwUkZYbE0weHBzLTFjQk5PMVBYZmZuU05YZ21mNGgtSy1SXzRWTDBVWFJnVjhKaDJibkhlTUdPcUJpU29sSkNKa2dDcnlqSzEyVQ?oc=5",
     "publishedAt": "2026-07-28T07:00:00.000Z",
     "snippet": "Retail spending continues to defy gravity National Retail Federation | NRF",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "continues defy federation gravity national retail spending",
     "topics": [
       "varejo-eua"
@@ -1529,8 +1529,8 @@
     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPX2JlTWdWZG5WOFpocGJ6OW83MkllQXlicTFrWTZpc0RFbkMzNXNFNFVoRkczYmdMemdlUTV6WHlJbHRpbm9aemF5NXBNOWUzcUwzaUh1d1ZsZ0lCcVhzbUxuZ3p2dUhkbmdVcVEzVFJmdFhMWFlZdFFGVWhhVGwwaw?oc=5",
     "publishedAt": "2026-07-31T14:21:59.000Z",
     "snippet": "America's Consumer Divide: What It Implies for the Future of Retail Substack",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "america consumer divide future implies retail what",
     "topics": [
       "varejo-eua"
@@ -1550,8 +1550,8 @@
     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX1NHSFEtdlRVY1VYMV8tel94LThVU21RUEpLM3pESXRySUszU3FkRElDUHRKTUJWMnhwVlgwT3FRM0lBX2l4MnFvWFVZajA2WFBOV2dZMHJiWjdIWGtjeUlCMkZXSkY4VldMVTZaSnViSktPYXdrQnVkeGZBUHF2MHNpUnN2bWhlZVpUMzlPaDYtX25GNVJuZl9B?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "U.S. Retail Sales Rose at Slower Pace Last Month WSJ",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "last month pace retail rose sales slower",
     "topics": [
       "varejo-eua"
@@ -1569,8 +1569,8 @@
     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONGhuSkFUei0tVER0ODdrbjhWV0xMT2Y3LUtkMEZhd3NVR2lfQWJtRWNJaFYwVTJhWVNXcWpYc3d6R183ZU9rcmhjbDMwSnYyY1F6T2dTd2ZtcjRiMkZXeVVQMnJ0WGRGU1RIYmw3eXUzMmowMlNfOXJfM2s3dkJyV2NxM3pCTVU?oc=5",
     "publishedAt": "2026-07-21T07:00:00.000Z",
     "snippet": "Americans Are Spending, and Not Just on Necessities nytimes.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "americans just necessities spending",
     "topics": [
       "varejo-eua"
@@ -1590,8 +1590,8 @@
     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZlRtMkpXY1A0eGxrTWU1WFFEWmE3eC0zeU1ybVZzU3JDaFJLZG5ybHU1RHJoSlJSMThSenFrbHBiTG1JQWwwVnpDYVg2LUJlOWFzZEhVWE03dG54T2drQ1NGeVBkMmZnbVpSQm4wQmlfZ01ZTThfRXBSSHlBR21lem9kdW9WSldoMFNyVFRIeVJTMzB6bzFfNEZNcC1peEhZeVd1aXlLeU1WQWhYY3hrZw?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "US Retail Sales Rise Modestly as Consumers Spend Less on Gas Bloomberg",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "consumers less modestly retail rise sales spend",
     "topics": [
       "varejo-eua"
@@ -1609,8 +1609,8 @@
     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5JamsyUGt0VnRNNHpaNmRud1VvWWtnRE5LMGdhVE83aVd4NUd1WElQUUZuc0Q2bmNqYkt2RzRXbjA4ZF9wX3kwUFJYYWtha0FPTHNIY1dCbTBzY3k4VDZxM0t5M0dUZUhmT1dfRkRBSkV3el91NllV?oc=5",
     "publishedAt": "2026-07-16T07:00:00.000Z",
     "snippet": "Americans keep spending while \"grumbling\" about the economy Axios",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "about americans economy grumbling keep spending while",
     "topics": [
       "varejo-eua"
@@ -1629,8 +1629,8 @@
     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQeWJnTUNDU2ZlTmxocGtlZ2JHdnRrRGlvYTJHaGVrWDlfOW5NWVJqdnJCaWtFM2lFUk5HVmZaVHRnajh1TU5oTFA5R0dZektnOUllSk9TRnk2WXljLUNSR2UwUEFndXNCRFJtRWpSNUNjTldxREk3VWNxWWJLcEpsVjl0VWpKQzJKRE1IWGxLYTd5elR1MGVySG94THF0akhac1Y0bHNDRjZCaDVoSHZrNUIxMU12b0ZsekVCWnBoN1BGZmQwa3l5YUpB?oc=5",
     "publishedAt": "2026-07-29T14:57:00.000Z",
     "snippet": "Consumer confidence falls on worse business, labor views The Detroit News",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "business confidence consumer falls labor views worse",
     "topics": [
       "varejo-eua"
@@ -1649,8 +1649,8 @@
     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZXdLdjFfV1h4dVV1RWFpS3BVVXhsTWY0amV0VFVHM3lOWUpYcVdpa0lTcWxBNV9GaWxaUDR1TXlyUnlCS3Ixc3J5Zk82SHR6UElFMnlNVUQ2bVpMTWlaY2VvcV9WNTRIMlVEWnVIbUhuTlJVVUNScTc4MGZsSTRWVkVOX0lRcnZ6dkFFNUExbWk?oc=5",
     "publishedAt": "2026-07-15T07:00:00.000Z",
     "snippet": "US retail sales extend growth streak as June spending rises Yahoo Finance",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "extend growth june retail rises sales spending streak",
     "topics": [
       "varejo-eua"
@@ -1669,8 +1669,8 @@
     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZVlUbE1QMEdpLXZUOXFqdnhLM3dUajY0MmNUSHV1VVBLbmU3NTJTb2VpUVEzRzJSR2llTDJoVlRPQlNTVzIxZ3loVnBlbElOMzd3LU5sZlNmT21MVzBMZFpYY1pTd2pUSW5BLXpyUk54MlRwbEd4S3hveWNaakhUWDA0c2t2dDdjemFjaDZwYVp4S2hLaGg4RVFnUFVKa2FNTEFqbER2VGIwdw?oc=5",
     "publishedAt": "2026-06-17T07:00:00.000Z",
     "snippet": "How do consumers manage to keep spending? marketplace.org",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "consumers keep manage spending",
     "topics": [
       "varejo-eua"
@@ -1690,8 +1690,8 @@
     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPT21KSVRFUUVrVW5sLUNnU3o3OWFkVXlNT014MzdlQVJQZVBVbllubURZblp6SFhmRXNyc0hya3pTZmtEQl9OVHJKZ3lUampUNnJ4R1ZFM2lGNnM4RjVUb1ExWHJPUmlRSU5sR0xwc3ZVTnhMOHN6ZmVpUHA2VnFBMFJwbGtMbWl2aVc2cFV1dHI2UWoyRUhFY25UMlZuTVBkbVU2dUVqYkFmdE1uREpnWlJzcUREX05wc1B2X19FSQ?oc=5",
     "publishedAt": "2026-07-20T07:00:00.000Z",
     "snippet": "Lower gasoline prices restrain US retail sales, underlying momentum remains FashionNetwork USA",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "gasoline lower momentum prices remains restrain retail sales underlying",
     "topics": [
       "varejo-eua"
@@ -1710,8 +1710,8 @@
     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPck9yM3RjeF9jYTlkZmY2TTZLZlBpRGpCWGJCcTUtdUVvQUxLb2dHVGt6cWhNTU9pdjF1WlpmZ0VUc0UzNHg3b0tQMnlxR18xbmJDY0k4anhhcHBVbTVJYUxKVjJXQW9HdlN2M1k2UnB1V3FxTzRybU00UWdZLVVUdnEzM1FFVTQ1cW9rM0w3VjR6ZHVKXzFVNA?oc=5",
     "publishedAt": "2026-05-14T07:00:00.000Z",
     "snippet": "US retail sales suggest resilience in the face of cost pressures ING THINK economic and financial analysis | ING THINK",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "CONSUMIDOR_DIVIDIDO_EUA_AGO2026",
     "fingerprint": "analysis cost economic face financial pressures resilience retail sales suggest",
     "topics": [
       "varejo-eua"
@@ -2025,8 +2025,8 @@
     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdGNLUV9valRlZ0VTMWRuUXZaRTFmMV9NZjNBUm0zY3ROSy13NVRDWVBDTnZXNXlPd1NkdEZwWk9JSldMMEczQ1ZweVBldjFsTkw4bUFzQnc3M0FJcTJMZXFjb1NRQy1ZckswU3JOVEZOXzN0Snp6YzJ4UkItTTBmeDdkQ1VtVDFSYlZtWGpKZHFKQk5uX2wwemk4Q3h0aUhFaVFrVV80eUZmSE81TWExczJaakFJTTBYU2RYbmZWU3dHMHBXUk9zRDFKTm0?oc=5",
     "publishedAt": "2026-07-31T14:11:56.000Z",
     "snippet": "Here's why the 3 dissenters on the Fed wanted to raise interest rates Yahoo Finance",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "dissenters here interest raise rates wanted",
     "topics": [
       "fed-juros"
@@ -2046,8 +2046,8 @@
     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTllPdnJlUkhYSWRnVEhmNV8zYTFHWHdSOGdMbVlCWmJuQTZRZTUzM1JoODg1VTJUYnhEbndKOGhVWE02cjFoRGRCRW1IOWY3Z1p3WEljN0lvVGlJNmJlVnJhSURJYnVvYVZOZ09qaXNUaDh1aUhwUWxrYk9hb3lNU2R1WDlxWmJMcFFJUmEwbjRQMDJ1YjRudVdhTmZWTTRybFQzTUdOem4?oc=5",
     "publishedAt": "2026-07-31T01:30:00.000Z",
     "snippet": "US borrowing costs hit 19-year high as Fed holds interest rates The Guardian",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "borrowing costs high holds interest rates year",
     "topics": [
       "fed-juros"
@@ -2067,8 +2067,8 @@
     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbXdVRlF3NkpiUTdGaXBSa0JlaEh6aUVCdE9CeVpRdXpiV2JrclFwNHcwZl84RDNuX2U3ZGNTLW90UjUyZWNxbW45bDlXSEJDdGFQMXpTOVEwS0VCVjRUdnJQYnJLNnB1V1NRYko0R2NpSU1IN0FrNnhiaUN0MWlkZml0TmRabDA0aG1pdVlwOGZCQQ?oc=5",
     "publishedAt": "2026-07-29T22:06:00.000Z",
     "snippet": "Fed holds interest rates steady after cliffhanger meeting, but three officials dissent cnn.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "after cliffhanger dissent holds interest meeting officials rates steady three",
     "topics": [
       "fed-juros"
@@ -2088,8 +2088,8 @@
     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSjRrRUxlNThOWnExWlRiZTI4V2lnM25iMnA3VWktU3dmclZvc1VTd2M0eEd5Vk1nRkpIYUNuNTJ5VC14YVVIVXotQ3dMbEdtb3NLb2F5Z28tMlpUUDlLYmhXZ1VZcWcxZHdja1dYQUExMlVmVHVuZENWNktvakRjazlLUXM?oc=5",
     "publishedAt": "2026-07-30T14:52:06.000Z",
     "snippet": "Fed Leaves Interest Rates Unchanged, Despite Three Votes for an Increase nytimes.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "despite increase interest leaves rates three unchanged votes",
     "topics": [
       "fed-juros"
@@ -2108,8 +2108,8 @@
     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8tcVhJU0V0QWZhMEN3R1FBVnJycVh3Q2Y1UlBpamRuZUNCdE5RbnE0R1ZfQkRuVHgyeElMTnBvTXdxWjBVazhYdVpKYU82MnFINUc0QzEzM0l4aTRKMXMtaVNrMEhMQVdmTkdGVFU1NWxrR0EyN1J5Qg?oc=5",
     "publishedAt": "2026-07-29T13:38:00.000Z",
     "snippet": "Will the Federal Reserve raise interest rates? Here is what experts predict for July's meeting. CBS News",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "experts federal here interest july meeting predict raise rates reserve",
     "topics": [
       "fed-juros"
@@ -2130,8 +2130,8 @@
     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbVA1MzJGNXllN1RjSG43b0xUam1seWRjUmI2bHdXdlZndHhEQ1pRZDI5WVE3MGg1NnBCMk9Gcm42MUZab29ZRFY3OTd3OTZERlZmLUtFbGhUOG5jQXlDREFuMGVkSmtyTlJvVzJhS1A0OG5zaGhWZkZ1VHlQRXNGcGcxczNOMW82ckdRdVJmRUZzRDI4OEV4SHRfSjh6Wms?oc=5",
     "publishedAt": "2026-07-29T18:11:56.000Z",
     "snippet": "The Fed holds interest rates for a fifth consecutive meeting, underscoring inflation fears NBC News",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "consecutive fears fifth holds inflation interest meeting rates underscoring",
     "topics": [
       "fed-juros"
@@ -2151,8 +2151,8 @@
     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE02WGR0SWxqV3dHcF9acFVJZHB2dWdjWXQ2ZGxaWUd3R0dRd0VzNGdRNHhVVldZaGg3aW9UR2VCUzYzWFlxVkI1R3hhSHhQV01nVzVwMGEzV3dfdw?oc=5",
     "publishedAt": "2026-07-29T20:32:50.000Z",
     "snippet": "'No magic wand' to tackle high prices, Fed boss says as US interest rates held bbc.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "boss held high interest magic prices rates says tackle wand",
     "topics": [
       "fed-juros"
@@ -2172,8 +2172,8 @@
     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUWx3V1U4LVllRFN2ZUNCN3N5SUN0VF9Iakl4UVlSamwtUGFTNE1ZRXFzWmJMSUNaRnRZejE3V3NRMUVfNzU4Y012MGtaa1plNlUybkxycWRvQ3NKdTdtVVIzVWlIMG55ZHp3S2lyc3JmOEU3bHMtNFFvRkJleWlpYm9FNXPSAYoBQVVfeXFMTmRFOUNteTdsTVNuNXRycmx6YkxLVmVwWGQ4ZURXOVpjUGsxbkU3M1pyZzgxUVJEX2NjV1Jmc2hsY3hCaGpOSkM1UmNsRjFuUlJmYi1jLW1zYmlyOGZ4bWZYRDlCSklGYjVTVWdrWXFiU0Etb0l3NFgwdlRHNDU1YVFaQTllVDN4bmRn?oc=5",
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "Odds of Federal Reserve rate hike surge as oil prices rip higher CNBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "federal higher hike odds prices rate reserve surge",
     "topics": [
       "fed-juros"
@@ -2191,8 +2191,8 @@
     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBsNEtLYjBNb05hZjBmRkV5NDctYTNrTTF1a0FwQzlpdG42Y3ROZmNVdmROTHRMbTBobHFhTnBzUVVDZEwxdGk5cm9HRWlWMTBCYk5EM0doODFNNnFPb0JfRDR1VVFwSzlsYnV0MUVfeldlTGpw?oc=5",
     "publishedAt": "2026-07-29T20:42:00.000Z",
     "snippet": "Federal Funds Rate History 1990 to 2026 Forbes",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "1990 2026 federal funds history rate",
     "topics": [
       "fed-juros"
@@ -2212,8 +2212,8 @@
     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMWE0UWlwemdYNE5CaEZPSVBqZVNuSmlVSmIxWHV6R1hXa3lua1RReGpYaTEtZGttNzZoTU1XT3VGbjZWUmxFSWxnN21mMGlHVW1fazREOXdRZVk1ek9ya1JVMVNWM0NoVEVzRHY2bWJSYy1JRUtrNElLb3BPSjJzNm9wWmpmYTU3OXRIQ0E1dG82TkU2emF4QVoxTEJJU01ydzF5cHZHRVlnbGp6T3JESUtzV0ZZYjZUc2c?oc=5",
     "publishedAt": "2026-07-29T10:04:00.000Z",
     "snippet": "Warsh-led Fed leaves rates on hold and a bond market scratching its head Reuters",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "bond head hold leaves market rates scratching warsh",
     "topics": [
       "fed-juros"
@@ -2234,8 +2234,8 @@
     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5",
     "publishedAt": "2026-08-03T09:39:04.000Z",
     "snippet": "Fed holds interest rates steady as inflation hits 3-year high ABC News - Breaking News, Latest News and Videos",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "high hits holds inflation interest news rates steady year",
     "topics": [
       "fed-juros"
@@ -2256,8 +2256,8 @@
     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR1BZa2dPa1lOcjNBSmF2MHFHcTNBTV9mQzZOZ3BzR1ZrekhVWUhzLWszajBVWExhYWxJUWJDejh4SjBTdFdobFk1Y1NlMEpad0I4cUtrY0o1VzhMYmNOX2tuWjF3dXhGbkFVOWJncnZDdEt2dUEydkhhX2pwQXZlaF96QTZ3Z2l3OURfN2lLaVRRcEFLejhVTGZVSEl4XzJLWmE0RmxKRy16Mkh2ZGJvbm0wMUExTU83dHVJUlRn0gHDAUFVX3lxTE9kWHZBeUc3cjFTeGNrQk5QeGl2cHpycW5zR19kQl9vbEY3MzdUX0ZCa2pmV0RNT1VSUElKTEhhNmRmaVVnc1k5R0V2RkhTYkJROUZ3YXZmVjlPSWZ5MWVTWkxYS1B3ai1BZnRVeTE5bmR6Mm01eHlDYlpJblAta3hYSnN5Tnhzc19ZRjJwUWVTZzNRQXd0MUJGU29NRko2aVVuTTByMndYeWU3bTRXNWpEeFBlVDF5RTBUU1VaQUdlT1RlRQ?oc=5",
     "publishedAt": "2026-07-29T14:42:44.000Z",
     "snippet": "WATCH: Fed chair Warsh holds news conference after leaving interest rate unchanged PBS",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "FED_HAWKISH_RISCO_AGO2026",
     "fingerprint": "after chair conference holds interest leaving news rate unchanged warsh",
     "topics": [
       "fed-juros"
@@ -2767,8 +2767,8 @@
     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQ3RWNHVqX1E1a2RGSzM5a0NOeTk3R0ZPcmN2VGgyZ2VvV1VmcDYxbDc1elc0TnZ3SkFHQlpuMFozVGYtRXJSOXhEYzA2LVQwUV8zQkpscjVrR1A4bGh5S3dxd2g3Z0dkdmx4T2ZJQ3Z0ZWFYRzhzSnhVWGVTeUQ4b3cwTEJBVVlUOHRCT2NvMGhGX0d6b0ZtRW9JTXhDZnhUbEp4N3U2TWpUanY0S1dwYTFqREJOdG1hSVNWdzdpTDdRQQ?oc=5",
     "publishedAt": "2026-07-30T16:00:00.000Z",
     "snippet": "A shrinking weapons stockpile is testing the Pentagon’s sweeping new strategy The Washington Post",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "pentagon shrinking stockpile strategy sweeping testing weapons",
     "topics": [
       "defesa"
@@ -2785,8 +2785,8 @@
     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSVU0cm9SRENHbU94cHRSSW4yTjZCVkZvWFlrTWFrTUt5S2RycGlPWml0R09GTno3ZDlBbmhsMGptSlVSSExoQ2EwNjB0RmtLZ1piSXBHNERqZlUtV3p6T0hwVW5pbHZjYUYwUFVkM2JkSXdnc2ZqWG13SXFDYjA3dnVCcl9VOF9neGNOczY2dGlLZEQ1?oc=5",
     "publishedAt": "2026-07-19T07:00:00.000Z",
     "snippet": "The Pentagon Is Finally Buying (Some) Weapons From Startups WSJ",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "buying finally from pentagon some startups weapons",
     "topics": [
       "defesa"
@@ -2804,8 +2804,8 @@
     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbHRuWmRWNnFXQmw1OG54VmNUbi10bGZsUm94SUJaNG5qRG9xdU4zX2UxUUNXWF9oSEtrVlp1TTRoZ1otMnZ6dVlzMHVsYXVSZFptX0FHd0lFckpoOVkxX25XQUc0eElfb290dHRqSGM4ajJueS1YZ1lSNndQdklHOWUzY1puMmlPM1JwUmJGaFdHQzhMS284cEpkTXpEbnUydW5EM3FjUWQ5emtTaUlPNmpQaTRocXlVcl9mbUJzMndCRi0yeGdMZDF5TUM5ZlVUakphaFA1WVpTelN3ejJ6Q25Rc0s?oc=5",
     "publishedAt": "2026-07-25T07:00:00.000Z",
     "snippet": "Defense tech investors thought the war in Iran could make them millionaires. Instead, they faced a Wall Street bloodbath Fortune",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "bloodbath could defense faced instead investors iran make millionaires street",
     "topics": [
       "defesa"
@@ -2822,8 +2822,8 @@
     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZDBzSk94ZF8yeHNsY1BxaXB6ODFnRXdJX1d3a1FFdTVqYmZRQ1NkbzJnakE3ektQLVR2eFdDdVR1WUIyWlNPdGxNaDF4T3hiZkpBaksxT0ZjdHZpNmxzRVpuVnJaWFh6d3BYVEo3ZnFvOXpIMmdnVmlLR3BXZ1UyR29hblgwbE1mYW1JQi1zU0FvVTJaZkdPTWtTZUpfVnoxcjBXYVNaeExuSTgzaUE?oc=5",
     "publishedAt": "2026-07-24T04:01:00.000Z",
     "snippet": "Defense Contractors Amass Record Backlogs as Military Spending Ramps Up The Daily Upside",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "amass backlogs contractors defense military ramps record spending",
     "topics": [
       "defesa"
@@ -2841,8 +2841,8 @@
     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUkNVeERLQTRaNUZILTFNVGVyV05NWVhKMDh2MU9iSDhFR2EwY1RuOVNNRXc1Q3dKdEJDcGVKRS1OMUkzWTZPRExiTnh2cEp2N0JYR2pEWlpCTFhnaWUxQ3RXd01mdm1GeEk0bmlkcFNETDZCbmZ6WThoZHRRc2l2dtIBhgFBVV95cUxORFRhd2ZvT1ZSaGU3alhuSUthX0ZvQ2F0YTRhMmhrY194LTIyVEhmaWNrTUxzTnBiQnQxaEtaOUdSZVZGME1nYjlQU3ZqWmFsRWJ3OE00b2pJdHBURzJBVGYtWmpUa29UVUNlT0hjRU9PYWFYOG9zcFRHYTJsQm4zT0dpX3BYQQ?oc=5",
     "publishedAt": "2026-07-14T07:00:00.000Z",
     "snippet": "Business declares war on Pentagon stock buyback, dividend restrictions moving in Senate CNBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "business buyback declares dividend moving pentagon restrictions senate stock",
     "topics": [
       "defesa"
@@ -2859,8 +2859,8 @@
     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdDdSejJjZVdDbnlVWGRhWWViYTNZWkRjX18zQXRKY1ZQV21Va1pCNUhyaGJjX3psckI2dnhEQkJma2FqVUM1UDR5Q0MxSlQwRTdqMFRXNV9kUlZXM0UzUUpUQVg1TU1YX0ZnNDUxU0VqN3NPMlc2My0tVUxvbDNmazJfSVF0Z2hWTEg0aWJxTWpWMGt60gGaAUFVX3lxTFAwM0RkLTk0LWZpU1FETDlzUzg2cTJFS3VqVG0zc0N5SXYwa09mM0tkdWRxNVFEeTRrRGo3emxWbC1QTDRsVVhZR0pKdDhibWlqNXZBdTBYU3VBRHZ4REcyNUg1a2hHSXEwUVVQd0I5LVdoNVlQbzdMSkVrcHJOcDNmMWtWOHdrR2R2VW9rV0wzZTFSM0QwYTVoWlE?oc=5",
     "publishedAt": "2026-05-09T07:00:00.000Z",
     "snippet": "Trump budget targets 'valley of death' with new military contractor accountability model The Center Square",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "accountability budget contractor death military model targets trump valley with",
     "topics": [
       "defesa"
@@ -2877,8 +2877,8 @@
     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYnRfd0MyeEk2eTlnb1BxdU5TVWVfUHQ3VDBGTlhxcE9WNHVUeU44cWhPUzRRVUZXWndaNmhNa3pLakp0eFhtZ1ZMWTd2VlpHRnBpb3hHSWd5S1g3OWhUSlZwWDBPRHpuWE5oOS1FNTI4TzBIYkllTEEtbFdVVkpXd1RBb3ctNFF2N2lDQm01MFdZdkNDM3oxTG9YeFVfMWZubjRwdDMyU250SVhuanF6Mlc0MWxRMTlHMVpEeTJJUGVUN2ZhTDJJ?oc=5",
     "publishedAt": "2026-06-26T07:00:00.000Z",
     "snippet": "Trump's $88B Iran War Supplemental Would Reward the Contractors Funding His Fourth of July Bash readsludge.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "bash contractors fourth funding iran july reward supplemental trump would",
     "topics": [
       "defesa"
@@ -2895,8 +2895,8 @@
     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4tbm1FbjRqX2xZT2w0MlVtOUdvOUFZc0Nnd3I1clJNNEVRcXhHb0JsbUQyWUlzQXc0ZU1zd0pOTjdrN0Y3T1BCMVpOYmkyVjdUbFJiMUdMZk44Vk9WeGFsTEo1U0pqSTNtQ09KNE0wNFdQS05CejY5Q3FDeXJ0d9IBgwFBVV95cUxQVTlmelpkY2ZmY2lGOFFvb0xKWXEwQVJOc2JYemFzcEpuRFp6eWRMU3p6SXkzNTR0QTVvOGwxVGp0ekI0c0ROQTRpdHpNSW9zaHNHV2pYNEpyVzZkdTJBbUlCdUs1MVhZcC1fZFMxbWNzMjFLQ1hvTnNhWEVmTVhpSzlfSQ?oc=5",
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "Trump meeting major defense contractors amid munitions stockpiles concerns The Hill",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "amid concerns contractors defense major meeting munitions stockpiles trump",
     "topics": [
       "defesa"
@@ -2914,8 +2914,8 @@
     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE51amtTRFZnVkh6OVpWbnFidlgxRWlUTnAwaVlLUGVXOVhfZU5naEROVEgzSW1YcWlRSWoxdi1MNVlsTDR1X0lvV3pUd0wxdGFnMURRX1lKLTZDS052azVCcmtFdk52a3R1NWVNWS01RnJSSkdB?oc=5",
     "publishedAt": "2026-03-19T07:00:00.000Z",
     "snippet": "Defense: A cloudy crystal ball for defense contractors Punchbowl News",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "ball cloudy contractors crystal defense",
     "topics": [
       "defesa"
@@ -2932,8 +2932,8 @@
     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRERzMlBxZzVVbV9FWVZWYm9VQmNzT3Yyczk5YUtBRHhwLV9fSG1iU195blR5S2d4VDVnSjdpN2pTMmo3OVdtTlFnNl9FQkVVc21kLVJrSjVORGlZWkxWRVRnbm9EVUFzLUV2dWtqVF9oSXc3QjhqVVlDZ20wMkRCQmNFZ2lvbVZfWVVzU25SazI3UWxPMlFHRld4RlpaeGdQWG1NZ3RzZEptM2FkbWc?oc=5",
     "publishedAt": "2026-07-02T07:00:00.000Z",
     "snippet": "$1.5 Trillion Pentagon Budget Benefits Top Contractors Project On Government Oversight",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "benefits budget contractors pentagon trillion",
     "topics": [
       "defesa"
@@ -2950,8 +2950,8 @@
     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcmxmQXk5a3pIZmpZT2s0SGdnM2FKNThZbXBMMjlmRWJmd0FOZkN3YVVwTGk2TXJIZnRKcTJtRmxHN2JnRHhFSmFGQktrSTNXdm5FQm9jZ05WeXYxS3RWMDc4blFiX1BRMWFNOHlXWllxMGhLNkJFcHl6a1ZsQW1fNHJrNzdjWWRmdmhBTjZvVXJOWVBGckk1ZjJPVHZXdlNxdHR0eTVHU0ZUUFE?oc=5",
     "publishedAt": "2026-04-13T07:00:00.000Z",
     "snippet": "Ramped up Pentagon spending boosts fortunes of Minnesota companies MinnPost",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "boosts companies fortunes minnesota pentagon ramped spending",
     "topics": [
       "defesa"
@@ -2968,8 +2968,8 @@
     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdi1VRTk1RnZrdThfY2drdDFZYnVUX3RvYUpmaXN3aXNLYnphcVFhRjZwdGhTcFdicmJJZ3lBY2ZBcEl2ZWFOT3NVWllWWE05N1pVT2x5LXctUVFMZ2RIMHlkWkF5RF8yVlZWTHJaa0JKUDBOeUVWSV9zUTRKQ1k5d0s4S0lMdGR5b2hRV3JB?oc=5",
     "publishedAt": "2026-04-23T07:00:00.000Z",
     "snippet": "Labor of the US Military-Industrial Complex Climate and Community Institute",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "DEFESA_BACKLOG_RECORDE_AGO2026",
     "fingerprint": "complex industrial labor military",
     "topics": [
       "defesa"
@@ -2987,8 +2987,8 @@
     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZHVqcTRSWENhNzRja293MWNES3JVbV9wYmhKUGNtaFF4T25FalBrUEozeVBIN0JSWTRmVGt5SEJha2YzekxiVEhyNHFwUW55XzBUNVF0YXFlcWxJaGJOWVFUOTRra19WLUE5WmhBbVlQaGk3RDNYdnBiYVcteGswazNxT1JTYkFPOGVsZVFtSzVnV2dUSS02TVYxS05SNWNyLXNxcVpEZFFEZVNjMGFiV004VmlGdmU0WUpYRGdCZ1B4Zw?oc=5",
     "publishedAt": "2026-08-03T02:04:54.000Z",
     "snippet": "Oil Prices Dive: Brent and WTI Crude each $80 on Iran Talks and OPEC Adding Supply FXLeaders",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "adding brent crude dive each iran opec prices supply talks",
     "topics": [
       "petroleo"
@@ -3009,8 +3009,8 @@
     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOM2NnRzVFN0RxZ1RRbWE3TEswZnZ6SDNmMWwxdWdJRi1qV0hJT2JsNFJ2LUN6UXo1WnRwZlRJNnlPcTJFSTQ1X0lERUxrSkxwN3o4cUNsZVd1S1VBU0VwWExDeUYzNnpLT0hWR2xtX2Z4aHRaVXM2N1BxTFlGYTAwSVZWZnJLeGJwdHhNM0ZYR0lQWV8zQTlmQlBxSEJWNjhVZXZPZ1lB?oc=5",
     "publishedAt": "2026-07-13T07:00:00.000Z",
     "snippet": "America barely uses OPEC oil. Why are oil and gas prices so high? USA Today",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "america barely high opec prices uses",
     "topics": [
       "petroleo"
@@ -3028,8 +3028,8 @@
     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4zSGh4ZUo4WnhrVTNaRlNxWDdOOHdkbzI5enZFMF9sVk5PVzc1SENHTDFBTEFQaWNhSm5VbTQxR3dacmdyUnlMZWRtUVM3enpydjl4VXdEOTJMVzBfMHNnMVdXOVVqaXY1STBlWEp1TXIySjFab0l6OEdJZkRkdw?oc=5",
     "publishedAt": "2026-07-05T07:00:00.000Z",
     "snippet": "Oil Prices Are Falling, but OPEC Plus Pledges to Pump More nytimes.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "falling more opec pledges plus prices pump",
     "topics": [
       "petroleo"
@@ -3047,8 +3047,8 @@
     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ZbFJINXVuS09xYzVHWlNIMTFINFlMM2tFTEFaejREVzh4TkRPNDVTcnc4bmpLNTRTZkJONEdCZ0wwS1ZmVWh2OHo4VXQyeTlqQ0NyM2IxdjVpUVNVNi1XZ005QQ?oc=5",
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "UAE’s exit from OPEC+ reduced the group’s share of crude oil production and capacity U.S. Energy Information Administration (EIA) (.gov)",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "administration capacity crude energy exit from group information opec production",
     "topics": [
       "petroleo"
@@ -3066,8 +3066,8 @@
     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSHFERHlVbjVLeEFsMnA5T2h2TlV0SkhZM3o4clU4eFk3Y0gzenZReHVyYzIwSUdmZkFVNHA5SXV1WjBNV1NFS3pNX2pIRTNQVl80MUFKc1RkemdQaVQydGdTQzVfcUFkbHA5WGVXM2xPR1hmTmV6YUxybDY1eVNyZXNSbzBldTNNNFdSUzBDRkRhUdIBlwFBVV95cUxPb1Rha1RTZHdXeUd2bVdTT2xHN3Y3YUtuUW9HUzZtOVhkR0VOU1FLZW5sNXYtQ1FwaXdXV2dhN1VNTzhENjBDQy1fT25SWTFrbkFQbjZiQlk2X3BEOW0wbFZyNjV3Szh4b2laM1FWcndDenBwZFI4dXJGckp1M0h2eUNWUTFhWXFuamNCWHduOGIwMGM3TG9Z?oc=5",
     "publishedAt": "2026-07-05T07:00:00.000Z",
     "snippet": "Oil little changed as Saudi cuts prices, OPEC+ boosts target CNBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "boosts changed cuts little opec prices saudi target",
     "topics": [
       "petroleo"
@@ -3085,8 +3085,8 @@
     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZVVMd0lITVNkY2k1OXFXSVhfYW5xcmZXdElHT0s4ZnE1XzFSNFVZdTc4em50aGZUMGVYcG0tQmQzemRfcHBvM0NQczRYMkFLUmVVRWZoMG5VZWdPRS1za1ktSEJ1TUktV1h4WmtyRk1ieTd4Y3g2U1JwNkIxc1lJaWRTNVFaYkZTYXJXT2JPNTZjd0NUeWNadjRvMklNdURqMThmTGFRRGxpTEJoelE?oc=5",
     "publishedAt": "2026-07-14T14:13:48.000Z",
     "snippet": "Nigeria's oil production rose 25,000 bpd to 1.56mbpd in June- OPEC CNBC Africa",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "56mbpd june nigeria opec production rose",
     "topics": [
       "petroleo"
@@ -3104,8 +3104,8 @@
     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaWR5bU96V1dOcnhqMENua2VxdHJsU1gzWFdYaEVzbG9rSkFKcTFVWGVBckJ1Q3JKWmxfazRRZ1h1Ri1IUlllVmt2aWoxWll1RnRESDJSVzgybVh1dXJZVXk1a0hLMHNucWFFb2ZmWkNfMmR5aGcydTg1OTV1bktjUG5KdmxlbUVIVlpvRlNxYm8tRjRXOVdJWFpDazlyN0lW?oc=5",
     "publishedAt": "2026-04-29T07:00:00.000Z",
     "snippet": "The UAE is leaving the OPEC oil cartel. Here's what that could mean for oil prices. marketplace.org",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "cartel could here leaving mean opec prices that what",
     "topics": [
       "petroleo"
@@ -3123,8 +3123,8 @@
     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZzNnWEZZTmRWd1dHX0dmeThYVVNKMHo3RmxvTFd1RlZYSThEMUR4MUw2ZDVIeUlpdUNERVItM0Ezdm0xRFZDS21NMmx3ci1nU21iVVlSY1p1RG9xSVdqV3R6YWdMWWp2MC1NY0JBMm5ocDZ3SzNLQlZHV3JVZFBJMTZObFJDRXVIbjRUb0NqSmJOOGllbEVYS1YwMVV0ek1ocGFkOFRPSQ?oc=5",
     "publishedAt": "2026-07-05T07:00:00.000Z",
     "snippet": "Oil prices opened lower as OPEC boosted production and traffic through the Strait of Hormuz resumed. Moomoo",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "boosted hormuz lower opec opened prices production resumed strait through",
     "topics": [
       "petroleo"
@@ -3143,8 +3143,8 @@
     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOR0Ezalk3a1l3MktvUDZZOURNMjR6LS1nZzYyY28wTGFJVEZKZ0wwdklaekVVZkF6SHJ1MGdxUzIzTjlRWVFGX3FkMThnMDF4MnNqMmx0T1NQbldZZW5zQ3JIMXJmT2JkVlBENDFqeWpwTU1XWE4zZHRMOFhnQ19HWWw3MjJkNXNzVnRMb052S1gydjdXV1RZRnYzMjE4YW5DNl82Q0tR?oc=5",
     "publishedAt": "2026-03-12T07:00:00.000Z",
     "snippet": "The United States and OPEC in a polarized oil order Atlantic Council",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "opec order polarized states united",
     "topics": [
       "petroleo"
@@ -3162,8 +3162,8 @@
     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVzE2MHlFZHpvbS1IUzFVZEY1ZXB6aVEteDRBdDVTU2hhZmd2QUJWcV9Jb0dCWmRsLUZ4VUJXVmYyRnNWYmtyOUxualVKamNfSU5LZ2xPaGI5UjREemR5QXFVYUlpVzZaTlVvdDRORHZRQk5BTlpYdEpjdk9wWHYwdkR1YVBrRGlxdjdibFk5d2ZRSjg1QU1JZWZGOXRCYlg0VkHSAacBQVVfeXFMTmdDLWpic25STUJFNUZPVHNXb0plUVMzSExMUC1Fa1g3bHdIMFVXaXU2OGNSUDh6LXRxUGxFb094dUFIZUZpNm5IdXRRQWJ3Nzhqb1BIWWcyRlBmYm0yZmFWZTlZazNaZ3R0M0xlbDUzRnNzYkVjMmFfN3VPbEZYUi1EbmowZGRTT3RMZm5lLWpqWjRCYlFwZU95bzNmcTgwYnBiV1hxNUk?oc=5",
     "publishedAt": "2026-06-25T07:00:00.000Z",
     "snippet": "Iraq Could Quit OPEC in Bid to Pump More Oil Crude Oil Prices Today | OilPrice.com",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "could crude iraq more opec prices pump quit today",
     "topics": [
       "petroleo"
@@ -3181,8 +3181,8 @@
     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQSUlxLVdzMkJSTzhmUC00bTVGXy1qWTNCV1RpSE1zU0ltaFlsVXd0T2pjdHpibzNnWWRDWm0yMWJ1LVNicXFyUFVUcExfWXhZWjFIMElTMHJwUVA0NVNDS3Zuay1xWmFyaFM0OUlFZnplWlRILWRKSVIxOFg2b1BYSWctbHNROW9ELWRn?oc=5",
     "publishedAt": "2026-04-28T07:00:00.000Z",
     "snippet": "What’s Keeping Oil Prices Relatively Low? The Dispatch",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "keeping prices relatively what",
     "topics": [
       "petroleo"
@@ -3201,8 +3201,8 @@
     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNkZ0RnpqUWhIQnd5N2tzRks2QVJ4U2RhcDhaTXhINFNhR3NqYVdfc3RWQThvcFY5VEc2ODE5eHA5ek5iYi1LRFJPME44STFoMXhSYUxTRXBGUnpoRncyQ0RaVDM3UlpxYlMyNUNpM3pFeWhiODZwYXVEUVNrQWdnb2F0TDluMDl3bzJiNXlVZVlQdWNGbTFwZkJ3aU5PUHhi?oc=5",
     "publishedAt": "2026-04-13T07:00:00.000Z",
     "snippet": "OPEC Crude Output Drops as Iran War Chokes Exports WSJ",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "OPEP_FRAGMENTACAO_AGO2026",
     "fingerprint": "chokes crude drops exports iran opec output",
     "topics": [
       "petroleo"
@@ -3462,8 +3462,8 @@
     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRDBLUWdSRlA5TmNRTGZhcnFrSGk0ZGhvOUZZeDZfX3NpT3BSUXdDNkFGMU56dVNjQU9fQnlXRVNYNkN6RGJMWW5QdVRlVWd4U2N2ejB5dlVZU3VUM0FLOUlQamNnYzRIZG8wY2paaXFXWkdlT3RZdzNXQjh2WEV2RjZKdUJZdnV1bVZqZENRUjXSAZYBQVVfeXFMT25tUzZWN2NFZ3M4YlpJRHE4TFhDYS1kbGppeE9Wa2JwUlVsZTdEM3cwWkx2RUFzYWNFM190U29ib1VlOG94MFM0QUl0VlJMaGNUV2p1b0tyVE9EUXBDVmlUVUxMUFA4S3JsN3lQcncwREc1NTdLWmdrbGE0Nk1RWDJETUhMMVdKbjRsNUlTbWs0ckxJbFBB?oc=5",
     "publishedAt": "2026-07-23T07:00:00.000Z",
     "snippet": "The best deal in housing might be a brand-new home—how builders are winning over first-time buyers CNBC",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "best brand builders buyers deal first home housing might over",
     "topics": [
       "construcao-mortgage"
@@ -3481,8 +3481,8 @@
     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMDlnalk5Y01MelYtdDJLb3Ztc2F6RllBM0o0VlZBdUhCN1NaQXNWOGpZSGFoZnlyakUzZHVxaVhCaEFySG95clBzQlpmNm41NngtRGNMclYwMHZxTE1admpXUDBrQkluUVlqbXNVOUl4WHo5enFfaHNpODlTRnV3V2dmLUdrSGhLMi03YmlZeUszTjVUT2dscFdHSlllcjI4ZmtQeFdmWlJLeEVDXzkyMmtHd1J2RXMwWmtmVzFlR3pGbUYxWGVKSURB?oc=5",
     "publishedAt": "2026-07-17T14:19:43.000Z",
     "snippet": "Multifamily Gains Lift Overall Starts Despite Single-Family Decline National Association of Home Builders | NAHB",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "association builders decline despite family gains home lift multifamily national",
     "topics": [
       "construcao-mortgage"
@@ -3501,8 +3501,8 @@
     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdVgtWkxGODVjT0xESUJkV3lFU21maHdwbFFpVlZnNEJGeG9HdkhINW5ZeHNmSzlQbzJkOWxVcUs4bExWSEo4SjJURGZyNm02Sjg4OFl5SzN5bVZMLWlWZzVzbHo3MnVmUHZTa1hkUGdjYjk3MnRvb2Y3OG5WYm5OOEcxX2w0M2NFcTAzLTRNWHFURGdldlVyYmYwV0xGZzNwS2c?oc=5",
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "US single-family housing starts fall; building permits lowest in 10 months Reuters",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "building fall family housing lowest months permits single starts",
     "topics": [
       "construcao-mortgage"
@@ -3520,8 +3520,8 @@
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdHhJbHotX3AwX0pXNHYtcWhHVFRJbnhMN3NsVmMxbGFiOU9FU0VhbFdBSVBXUW1XRFBEZnRvNlphRlM5RlJ1bTJfTS1NVHI0MTZvaE1xeGt3aVpSOC1EUnd5NHF3SnFqRlpnOXBVU0hPMlNxOGtVNHdYR09ELWxncHcwVFM3NjdNRk9WcUIxSXcyaUk?oc=5",
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "Multifamily starts climbed in June Multifamily Dive",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "climbed june multifamily starts",
     "topics": [
       "construcao-mortgage"
@@ -3540,8 +3540,8 @@
     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbmttY0dJVFpIMWRpQ3d4TWRCQXpZNlg3a0ZoNm1Xd1ZlbXBfWVdGcVB0SjBZUW05XzlacDdfZUE4LWpOQ3drbVFSWTdGU3BVU040eDY1cGctMFFRS1hwdUswSTBtbjQwb09wZll5M3VyakRPNWhrUjNEMG94WnE1bGZPVVdyTEVHUVFxajNhdGlJcE5UY1FkbGlUT0Vpc0EwZ1NobFNnUzJfSzhfUXFJWWNzR25mSXpFYTMxM2JBX2F5dw?oc=5",
     "publishedAt": "2026-07-14T07:00:00.000Z",
     "snippet": "Is it a good time to buy a new construction home? Yahoo Finance",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "construction good home time",
     "topics": [
       "construcao-mortgage"
@@ -3560,8 +3560,8 @@
     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14WW55VS1ibmxsd0dNLWVvZmtQWVBadFBRSDUxQVpUMlduRWJlQmRzcnUxV21tdkFyeWVRdmxFUTNqNjNYRkJkTGhWay1UN0NocnZpZTEtVEs3XzZKaFlGanNCZUJ5cERlRXk0bnhOZG9KQVFZS25XV2pjSzdDdFU?oc=5",
     "publishedAt": "2026-06-17T07:00:00.000Z",
     "snippet": "Ten Takeaways from the 2026 State of the Nation’s Housing jchs.harvard.edu",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "2026 from housing nation state takeaways",
     "topics": [
       "construcao-mortgage"
@@ -3580,8 +3580,8 @@
     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeldBcUNFYXI1dEZWbm1kbGkwVVpSQUZreUJjd0M4TThGSXZ6VnJBVi1EUUhYWnFvZTFzLUk5Ry1hUUNKeW9sVlpGRnRWRndwaWJtMVRmWUFLdVlBbnZVOGgtaFpvSjFuSFVQUUlER0I4anZ6LU1vNnh0SU5oZG9la2FpYVZWRkdqaWhyLUFTeXdrRHUxYVE?oc=5",
     "publishedAt": "2026-06-23T07:00:00.000Z",
     "snippet": "Housing Supply May Matter More Than Rates: JPMorgan National Mortgage Professional",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "housing jpmorgan matter more rates supply than",
     "topics": [
       "construcao-mortgage"
@@ -3600,8 +3600,8 @@
     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQeG9rTWl5THY4MGN0Tk04dzJZV3BveDJPTHMtTU5MLXcwWU5HNmR1QXlBOFNjMkdBZVlobEh3cXpNcUpjMHNkaTlmbURObXM1Zjl3NWFjTjBON013VHBWbjZzSzd6NkowdHluWnZ3NEwyWnR0dG1MZzhLdjdaNnFrdlI4ZFdaRk5zWTBRUDFfMEdTalR6TDdTRTVVYjlJWnhkNmFDQkhWLVYyR3RxdThjcDhUbkJJSk9XT1BNTzFn?oc=5",
     "publishedAt": "2026-07-12T07:00:00.000Z",
     "snippet": "Missouri homebuilders report housing construction slump — but not in Kansas City KCUR",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "city construction homebuilders housing kansas missouri report slump",
     "topics": [
       "construcao-mortgage"
@@ -3620,8 +3620,8 @@
     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZ2phUWdzSnpxY0QxakVRWmxLT2dZV0d4aUR3cWd2NnNxbFhMUVRwYXFyTVA1ajNINzBpWXRfS3oxS3B4ald6LWVNaWJackk1OUtUZkRabTYyQUxseENiSEwzdnJmeC05Rnl1bG1wXzg1XzJxMEJKV3l6NFpBZ3g2XzNBOFliMEc5bHZwbFc5cWVJc3d5elN5WkhB?oc=5",
     "publishedAt": "2026-07-17T07:00:00.000Z",
     "snippet": "Housing Starts Rebound Sharply in June, But Only in Multifamily RISMedia",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "housing june multifamily only rebound sharply starts",
     "topics": [
       "construcao-mortgage"
@@ -3640,8 +3640,8 @@
     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPY25ZRnpIUnY4WGxfOHpvV21aR2ExTEZXeGhOMVExWFI1TE9FY2J0U1dScnRmX2lCSE41WGY1NEpHWkNPTHBsV2pzaGNjOHNnUXlyRWhmUDZVRTMwNlEtWTdGM05aSGpCWDBWN1hQd0lNTDFEZzU5ZldZQjY4SHR5eTRzYjhTYVJaaWFhNkJJRWEzUHNzaXFzUDVfLVN1N3BhTkx6V3hlWFRpNkhYYWsw?oc=5",
     "publishedAt": "2026-03-12T07:00:00.000Z",
     "snippet": "Single-family housing construction is down. What's hampering supply? marketplace.org",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "construction down family hampering housing single supply what",
     "topics": [
       "construcao-mortgage"
@@ -3660,8 +3660,8 @@
     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcjJyNnRtOW90djJBbEdTc3JWVHJwS0VkSVc5aTJXMlRoYnhQbVdjcUZpY2xGanBrRk1ES256aXNsOWF1Wmw1Rl9JdUlfTjlqbjdzS2d3UVVPeEJmT2lVUGx5ZEdWY2Z6WTlXOHdzbjBYQlREQ1Fpc0ZJV3FOMU9VMXdDVGxjZC12VEVqUC04d2plWVl5eGhKYnVwLVd0WnFUSGdiaw?oc=5",
     "publishedAt": "2026-06-16T07:00:00.000Z",
     "snippet": "New-Home Construction Down, but Buyers Aren’t Looking Away National Association of REALTORS®",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "aren away buyers construction down home looking",
     "topics": [
       "construcao-mortgage"
@@ -3680,8 +3680,8 @@
     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUDNyb0Y0QUtZQUM3aHdyYTk3VHZKbVRQZXJJM0VTX29tTnhhU2RSTERDRk8tb3hQTDF4NlBCaDA0SG9KbGkyN19RMjVhajNwMVlsR0duLUY1Zi1yRndYU0RDR0VlMlpJNDZZRld6ZDFLX0NKckNkcld1aXluNlJqZS1wcUg0QmtqNG42OWRGbG1CVktQVGM4?oc=5",
     "publishedAt": "2026-07-09T07:00:00.000Z",
     "snippet": "Stats 2026: Housing market sub-segments showing signs of life Floor Covering News",
-    "reviewed": false,
-    "insight": null,
+    "reviewed": true,
+    "insight": "HABITACAO_SINGLE_VS_MULTI_AGO2026",
     "fingerprint": "2026 housing life market segments showing signs stats",
     "topics": [
       "construcao-mortgage"

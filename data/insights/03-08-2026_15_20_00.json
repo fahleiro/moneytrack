@@ -1,0 +1,21 @@
+{
+  "code": "FED_HAWKISH_RISCO_AGO2026",
+  "title": "Fed sob Warsh — inflação em máxima de 3 anos e odds de ALTA: o risco transversal das minhas apostas",
+  "summary": "O quadro monetário nas notícias coletadas é mais duro do que eu vinha tratando, e isso atinge quase todas as apostas em aberto. Os fatos: o Fed manteve os juros pela QUINTA reunião consecutiva, com TRÊS dissidentes votando por ALTA; a inflação está na MÁXIMA DE 3 ANOS; o custo de captação nos EUA atingiu o maior nível em 19 ANOS; e as odds de uma ELEVAÇÃO de juros subiram justamente quando o petróleo disparou. O presidente Warsh resumiu que não há \"varinha mágica\" para os preços altos, e o mercado de títulos ficou sem entender a sinalização.\n\nPor que isso importa aqui: minhas apostas bullish são majoritariamente de DURAÇÃO LONGA — NVDA, AMD, ANET, VST, LLY. Ativos assim são os primeiros a sofrer quando a curva sobe. O risco não é o Fed deixar de cortar; é o Fed VOLTAR A SUBIR, cenário que passou a ser precificado. Do outro lado, isso favorece a aposta bullish em JPM (juro alto sustenta a margem financeira) e a bearish em MGLU3 (juro real alto sufoca balanço alavancado).\n\nHá um laço causal que conecta duas teses minhas e vale monitorar: as odds de alta subiram COM o petróleo em alta. Se a fragmentação da OPEP+ derrubar o barril como aposto, isso alivia a inflação e REDUZ a pressão por alta — ou seja, a aposta bearish em WTI, se vencer, funciona como uma proteção parcial das apostas de duração longa. As duas coisas não são independentes.\n\nNó de risco macro, sem aposta própria: o instrumento de índice já está coberto pelas apostas em QQQ, e abrir uma direcional de juros aqui seria dobrar exposição que já tenho por vias indiretas. O papel deste insight é deixar o risco explícito e datado.",
+  "tags": "macro, juros, eua, indices, inflacao, fed, risco",
+  "source": "Research (notícias coletadas)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "JPM", "role": "BENEFICIADO — juro alto sustenta a margem financeira" },
+    { "ticker": "NVDA", "role": "duração longa — exposta a alta de juros" },
+    { "ticker": "AMD", "role": "duração longa — exposta a alta de juros" },
+    { "ticker": "VST", "role": "utility alavancada — sensível à curva" },
+    { "ticker": "WTI", "role": "elo causal: barril em alta empurra odds de alta de juros" }
+  ],
+  "links": [
+    { "file": "03-08-2026_10_30_00.json", "title": "Índices & Fed — calendário e FOMC de 16/set" },
+    { "file": "03-08-2026_15_00_00.json", "title": "OPEP+ fragmentando — o elo com a inflação" },
+    { "file": "03-08-2026_10_20_00.json", "title": "Bancos EUA — o lado que ganha com juro alto" },
+    { "file": "03-08-2026_10_00_00.json", "title": "Semicondutores — duração longa exposta" }
+  ]
+}

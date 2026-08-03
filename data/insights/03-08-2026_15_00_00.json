@@ -1,0 +1,19 @@
+{
+  "code": "OPEP_FRAGMENTACAO_AGO2026",
+  "title": "OPEP+ fragmentando — Emirados saem, Iraque cogita sair: fator estrutural baixista no petróleo",
+  "summary": "Correção da ressalva que registrei mais cedo hoje. Eu havia anotado que a decisão da OPEP+ (aumento de apenas 188 mil b/d em setembro, último de 2026, com cotas estáveis até dezembro) ia CONTRA minha aposta bearish em WTI. As notícias coletadas mostram um quadro bem mais amplo — e majoritariamente a favor da aposta.\n\nO ponto central é a FRAGMENTAÇÃO DO CARTEL, não o tamanho da cota: os Emirados Árabes SAÍRAM da OPEP+, reduzindo a fatia do grupo na produção e na capacidade global, e o Iraque estuda sair para poder bombear mais. Um cartel perde poder de precificação quando os membros saem para produzir livremente — é um vetor baixista estrutural, não conjuntural. Somam-se: a Arábia Saudita CORTANDO preços de venda, a OPEP+ elevando a meta de produção, e o tráfego pelo Estreito de Ormuz normalizando com as conversas com o Irã.\n\nO preço já respondeu: o WTI caiu de US$ 86,80 (31/jul) para US$ 78,56 — −4,3% em uma semana — com manchetes registrando Brent e WTI a US$ 80. A aposta bearish em WTI, aberta hoje, está no rumo certo pelos motivos certos.\n\nContracorrente que segue de pé: a produção da própria OPEP caiu com a guerra estrangulando as exportações iranianas, e os ataques ucranianos a refinarias russas continuam sendo um risco de oferta. Ou seja, a tese baixista se apoia em OFERTA ESTRUTURAL (cartel rachando) contra um risco altista GEOPOLÍTICO (interrupções pontuais). Sem aposta nova aqui: esta é a atualização da tese que sustenta a aposta em WTI já aberta.",
+  "tags": "petroleo, energia, macro, opep, geopolitica, oferta",
+  "source": "Research (notícias coletadas)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "WTI", "role": "US$ 78,56 — −4,3% na semana; aposta bearish em aberto" },
+    { "ticker": "COP", "role": "produtora — exposta ao preço; reporta 6/ago" },
+    { "ticker": "FANG", "role": "shale — realizado US$ 96,82/bbl no 2T" },
+    { "ticker": "BP", "role": "integrada — reporta 4/ago" }
+  ],
+  "links": [
+    { "file": "03-08-2026_09_00_00.json", "title": "Desescalada Irã/Gaza — origem da aposta bearish em WTI" },
+    { "file": "03-08-2026_14_00_00.json", "title": "Expectativas dos resultados (onde registrei a ressalva)" },
+    { "file": "03-08-2026_09_20_00.json", "title": "Ucrânia ataca refinarias — contracorrente altista" }
+  ]
+}
