@@ -1,0 +1,14 @@
+{
+  "code": "INDICES_FED_CALENDARIO_AGO2026",
+  "title": "Índices & Fed — hawkish hold, FOMC de 16/set e temporada de resultados cheia",
+  "summary": "Retrato dos índices no início de agosto: o S&P 500 acumula +9,2% YTD mas está de lado no mês (rondando/abaixo da média móvel de 50 dias); o NASDAQ também +9,2% YTD, porém −2,6% no mês, arrastado pelo sell-off de semicondutores; e o IBOV segue forte (+10,9% YTD). Ou seja, dispersão: megacaps/tech consolidando, Brasil resiliente.\n\nO Fed é o eixo. Na reunião de julho manteve os juros em 3,5–3,75%, com TRÊS dissidentes querendo ALTA — um viés claramente hawkish, à espera dos CPIs de julho e agosto. O próximo \"Super Wednesday\" é em 16/set (com projeções econômicas atualizadas), o primeiro teste real de se a melhora recente da inflação é durável. Higher-for-longer é bom para bancos (NII) e ruim para ativos de duração longa (tech/semis esticados) e para o residencial (mortgage no meio dos 6%).\n\nCalendário de curto prazo (gatilhos): PLTR (04/ago), CAT/KTOS/ITUB4 (05/ago), NU (12/ago) e o varejão HD (18), TGT/LOW (19) e WMT (20). Material contextual/macro: este é o nó que amarra semis, bancos, varejo e defesa por juros e índices. Sem aposta direta de índice aqui — a exposição a Nasdaq já está coberta pelas bets de QQQ; serve de calendário e pano de fundo para as apostas setoriais.",
+  "tags": "indices, macro, juros, eua, nasdaq, sp500, ibov",
+  "source": "Research (contexto)",
+  "date": "2026-08-03",
+  "links": [
+    { "file": "07-07-2026_22_37_51.json", "title": "QQQ em queda (Nasdaq/índices)" },
+    { "file": "03-08-2026_10_00_00.json", "title": "Semicondutores — sell-off (duração longa vs Fed)" },
+    { "file": "03-08-2026_10_20_00.json", "title": "Bancos EUA — higher-for-longer sustenta NII" },
+    { "file": "03-08-2026_09_30_00.json", "title": "Varejo EUA — divergência (índices/consumo)" }
+  ]
+}

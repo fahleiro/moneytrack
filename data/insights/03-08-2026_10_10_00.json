@@ -1,0 +1,18 @@
+{
+  "code": "CONSTRUCAO_MORTGAGE_AGO2026",
+  "title": "Construção & mortgage — juro colado no meio dos 6% pressiona residencial; infra segura o PAVE",
+  "summary": "O binômio construção + crédito imobiliário segue apertado nos EUA. O gasto com construção subiu apenas +0,2% m/m e caiu −1,6% a/a; o residencial avançou +0,8% m/m mas ainda está −1,8% a/a (single-family −0,4% m/m). A construção de manufatura despencou −8,2% a/a — o segmento mais fraco. Do lado do crédito, a taxa de mortgage de 30 anos está em ~6,66–6,78%, colada no meio dos 6% com viés de alta, e a projeção é de que fique nessa faixa \"por um bom tempo\". Com o Fed hawkish e sem corte à vista, o custo de financiamento é um TETO para o residencial.\n\nContraponto importante: o PAVE (Global X U.S. Infrastructure Development) NÃO é homebuilder — é puxado por obras públicas, rede elétrica, reshoring industrial e infraestrutura pesada. E aqui há um elo direto com o superciclo de datacenter/IA: o gargalo virou ENERGIA (datacenters puxam ~55% do crescimento da demanda elétrica dos EUA), o que sustenta transmissão, subestações e construção de infra de rede. O PAVE (+15,4% YTD) recuou ~2,3% na semana/mês, aliviando o valuation.\n\nTese (não é recomendação): PAVE bullish em 1 mês — o vetor de infraestrutura/energia supera o vento contrário do residencial. Riscos: mortgage sticky e Fed hawkish podem contaminar o humor de construção como um todo; sem homebuilder puro no painel, a leitura do residencial fica indireta.",
+  "tags": "construcao, mortgage, imobiliario, infraestrutura, energia, eua, juros",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "PAVE", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "PAVE", "role": "infra/rede elétrica/reshoring — tailwind de energia p/ datacenter" }
+  ],
+  "links": [
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — superciclo (gargalo de energia/infra)" },
+    { "file": "03-08-2026_10_30_00.json", "title": "Índices & Fed — juros higher-for-longer" }
+  ]
+}

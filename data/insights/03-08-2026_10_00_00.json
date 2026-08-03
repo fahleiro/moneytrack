@@ -1,0 +1,20 @@
+{
+  "code": "SEMICONDUTORES_SELLOFF_AGO2026",
+  "title": "Semicondutores — sell-off de julho: desalavancagem vs. demanda estrutural",
+  "summary": "O setor de chips passou por uma reversão violenta em julho. O SMH (VanEck Semiconductor) caiu ~13% em 10 sessões no início do mês e acumula −12,9% em 30 dias — logo após o melhor trimestre da história (+71% no 2T). No agregado global, as ações de chips perderam mais de US$ 1 tri de valor. Os gatilhos: relatos de que a SK Hynix desacelera a expansão de memória HBM, ceticismo sobre o RETORNO dos investimentos massivos em IA, um Fed mais hawkish e — segundo Jim Cramer — vendedores \"alavancados e margined\" forçando a queda (profit-taking após +80% no 1º semestre).\n\nPonto central: a dor está concentrada na MEMÓRIA (Micron chegou a −13% num dia; SK Hynix/HBM), não na COMPUTAÇÃO. A NVDA se manteve relativamente resiliente (+6,3% YTD, ante um SMH ainda +44,8% no ano e esticado), com order book de ~US$ 500 bi para Blackwell/Rubin e preço-alvo médio de US$ 276 (~+21% de upside, consenso Strong Buy). O mercado de semis deve alcançar ~US$ 1,3 tri em 2026.\n\nDuas apostas para medir a dispersão (não é recomendação): (1) SMH bearish em 2 semanas — continuação do desalavancamento do ETF esticado; (2) NVDA bullish em 1 mês — repique estrutural da computação, que não sofre o problema de oferta da memória. Riscos: um CPI mais frio destrava corte do Fed e reacende o setor inteiro; a NVDA só reporta no fim de agosto (evento-gatilho).",
+  "tags": "semicondutores, ia, tecnologia, indices, hyperscaler, eua, nasdaq",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "SMH", "expect": "bearish", "period": { "type": "week", "qty": 2 } },
+    { "ticker": "NVDA", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "SMH", "role": "ETF de semis — esticado (+44,8% YTD), alvo do desalavancamento" },
+    { "ticker": "NVDA", "role": "computação — order book US$ 500 bi; PT US$ 276 (+21%)" }
+  ],
+  "links": [
+    { "file": "03-08-2026_09_40_00.json", "title": "Datacenter/IA — superciclo de capex (demanda de chips)" },
+    { "file": "07-07-2026_22_37_51.json", "title": "QQQ em queda (índices/Nasdaq)" }
+  ]
+}

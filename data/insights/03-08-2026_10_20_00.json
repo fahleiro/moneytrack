@@ -1,0 +1,20 @@
+{
+  "code": "BANCOS_EUA_AGO2026",
+  "title": "Bancos EUA — JPMorgan recorde, NII em alta e Fed higher-for-longer sustentam o setor",
+  "summary": "Os grandes bancos americanos entram em agosto com fundamentos fortes. O JPMorgan reportou 2T26 RECORDE: receita de juros líquida (NII) de US$ 25,6 bi (+10%), com a projeção anual de NII ELEVADA para ~US$ 105,5 bi (de US$ 103 bi três meses antes); lucro líquido de US$ 16,9 bi, LPA US$ 6,14 e ROTCE de 23%, com receita +15% a/a puxada por trading, banco de investimento e gestão de ativos. O custo de crédito (US$ 2,5 bi; charge-offs US$ 2,4 bi) existe, mas MELHOROU em relação ao 1T — sinal de crédito ao consumidor mais saudável.\n\nO pano de fundo macro ajuda: o Fed higher-for-longer (juros em 3,5–3,75%, com TRÊS dissidentes querendo ALTA) sustenta o spread e o NII dos bancos. Nos pagamentos, V (+5,7% YTD) e MA (+9,7% no mês) estão fortes; o AXP é o laggard (−9,8% YTD). O JPM subiu +8,1% YTD e +5,3% no mês.\n\nTese (não é recomendação): JPM bullish em 1 mês — earnings recorde, guidance de NII elevado, recuperação de IB/trading e juros altos por mais tempo. Riscos: deterioração de crédito (desemprego), uma virada dovish do Fed que comprima o NII, e múltiplos que já não estão baratos após o rali do setor.",
+  "tags": "bancos, financials, eua, juros, indices",
+  "source": "Aposta pessoal",
+  "date": "2026-08-03",
+  "bets": [
+    { "ticker": "JPM", "expect": "bullish", "period": { "type": "month", "qty": 1 } }
+  ],
+  "assets": [
+    { "ticker": "JPM", "role": "NII US$ 25,6 bi (+10%); guidance elevado; ROTCE 23%" },
+    { "ticker": "V", "role": "pagamentos — forte (+5,7% YTD)" },
+    { "ticker": "MA", "role": "pagamentos — +9,7% no mês" },
+    { "ticker": "AXP", "role": "laggard do setor (−9,8% YTD)" }
+  ],
+  "links": [
+    { "file": "03-08-2026_10_30_00.json", "title": "Índices & Fed — higher-for-longer sustenta NII" }
+  ]
+}
