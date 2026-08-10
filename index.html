@@ -240,6 +240,11 @@
     .fact-tk { font-size: 10px; font-weight: 800; background: #12181f; border: 1px solid #3d4c66; color: #cfe0ff; border-radius: 5px; padding: 1px 6px; }
     .fact-ins { font-size: 10px; font-weight: 700; background: #103125; border: 1px solid #1f6b47; color: #7ee2a8; border-radius: 5px; padding: 1px 6px; cursor: pointer; }
     .fact-ins:hover { background: #16452f; }
+    .fact-body { margin-top: 9px; font-size: 12.5px; line-height: 1.55; color: #a8b3c2; border-top: 1px solid #21262d; padding-top: 8px; }
+    .fact-body.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .fact-more { margin-top: 5px; font-size: 11px; font-weight: 700; background: none; border: 0; color: #7fa9ec; cursor: pointer; padding: 0; }
+    .fact-more:hover { text-decoration: underline; }
+    .fact-nobody { margin-top: 7px; font-size: 11px; color: #6e7d99; font-style: italic; }
 
     /* Grafo: documentos como nodos */
     .graph-wrap { position: relative; width: 100%; max-width: 900px; border: 1px solid #30363d; border-radius: 14px;
@@ -1188,6 +1193,10 @@
           ${(f.tickers || []).map((t) => `<span class="fact-tk">${esc(t)}</span>`).join("")}
           ${f.insight ? `<button class="fact-ins" data-code="${esc(f.insight)}">→ ${esc(f.insight)}</button>` : ""}
         </div>
+        ${f.content
+          ? `<div class="fact-body clamp">${esc(f.content)}</div>
+             <button class="fact-more">mostrar tudo</button>`
+          : `<div class="fact-nobody">corpo não extraído — paywall, bloqueio ou falha na busca</div>`}
       </article>`;
     }
 
@@ -1199,9 +1208,10 @@
       for (const f of itens) for (const t of f.tags || []) contagem[t] = (contagem[t] || 0) + 1;
       const tags = Object.entries(contagem).sort((a, b) => b[1] - a[1]);
       const usados = itens.filter((f) => f.insight).length;
+      const comCorpo = itens.filter((f) => f.content).length;
 
       document.getElementById("news-count").innerHTML =
-        `${visiveis.length} de ${itens.length} fatos · <span class="up">${usados}</span> viraram insight`;
+        `${visiveis.length} de ${itens.length} fatos · <span class="up">${usados}</span> viraram insight · ${comCorpo} com corpo extraído`;
       document.getElementById("news-tags").innerHTML = tags.map(([t, n]) =>
         `<button class="ntag ${t === tagAtiva ? "on" : ""}" data-tag="${esc(t)}">${esc(t)}<span class="n">${n}</span></button>`).join("");
       document.getElementById("news-list").innerHTML =
@@ -1247,6 +1257,13 @@
         renderNews();
       });
       document.getElementById("news-list").addEventListener("click", (e) => {
+        const mais = e.target.closest(".fact-more");
+        if (mais) {
+          const corpo = mais.previousElementSibling;
+          const cortado = corpo.classList.toggle("clamp");
+          mais.textContent = cortado ? "mostrar tudo" : "recolher";
+          return;
+        }
         const b = e.target.closest(".fact-ins");
         if (!b) return;
         const ins = newsState.insights.find((i) => i.code === b.dataset.code);

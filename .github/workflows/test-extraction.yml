@@ -1,0 +1,39 @@
+name: Testar extração de conteúdo
+
+# Mede quanto do CORPO das matérias o pipeline realmente consegue capturar.
+#
+# Existe porque esse código só pode ser exercitado onde há rede aberta: numa
+# sessão local o proxy bloqueia praticamente todo domínio, então a extração só
+# pode ser testada contra mocks. Aqui ela roda contra os sites de verdade.
+#
+# Não altera dado nenhum — lê os fatos já coletados, tenta extrair e relata a
+# taxa por domínio. Falha o job se NADA extrair, o que indicaria que o Google
+# mudou o formato do redirect ou que o extrator quebrou.
+on:
+  workflow_dispatch:
+    inputs:
+      amostra:
+        description: "Quantas matérias testar"
+        required: false
+        default: "20"
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Testar extração
+        run: node scripts/test-extraction.mjs "${{ inputs.amostra || '20' }}" extraction-report.json
+
+      - name: Publicar relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extraction-report
+          path: extraction-report.json
+          if-no-files-found: warn

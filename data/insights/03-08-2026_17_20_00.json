@@ -1,0 +1,19 @@
+{
+  "code": "ESCALADA_VS_DESESCALADA_AGO2026",
+  "title": "Oriente Médio — os fatos mostram escalada E desescalada ao mesmo tempo: risco às apostas em WTI e ITA",
+  "summary": "Minhas apostas bearish em WTI e ITA, abertas hoje, apoiam-se numa premissa única: a desescalada. Os fatos coletados mostram que essa premissa é MAIS FRÁGIL do que escrevi de manhã, porque o material carrega os dois sinais ao mesmo tempo.\n\nDO LADO DA DESESCALADA: Trump afirmou que EUA e Israel ADIARÃO os ataques ao Irã; as negociações prosseguem, segundo o Paquistão; e o Hamas confirmou o acordo de desarmamento com retirada israelense de Gaza.\n\nDO LADO DA ESCALADA, e é o que eu havia subestimado: há relatos de NOVA ESCALADA levando o conflito EUA–Irã para ALÉM do Estreito de Ormuz, com a ARÁBIA SAUDITA sendo puxada para dentro e ampliando o alcance da guerra. Um ataque a porto egípcio EXPÔS A VULNERABILIDADE DO CANAL DE SUEZ — um segundo estrangulamento marítimo, independente de Ormuz, que eu não havia considerado. Israel demonstra preocupação com a contenção americana, e há análise de que Trump voltou a atacar o Irã para não parecer derrotado. No terreno, Israel bombardeou Gaza DEPOIS do anúncio do acordo, matando 18 palestinos, com ataque deixando cratera em hospital — ou seja, o cessar-fogo anunciado não está sendo cumprido na prática, e o Hamas condiciona a desmilitarização à retirada efetiva.\n\nO QUE ISSO MUDA: a aposta bearish em WTI tem uma segunda perna independente e mais sólida — a FRAGMENTAÇÃO da OPEP+ (Emirados fora, Iraque cogitando), que é oferta estrutural e não depende de paz. Já a aposta bearish em ITA depende QUASE SÓ do prêmio de risco cair, e é a mais exposta a uma reversão: se Suez ou a Arábia Saudita entrarem de vez na equação, o prêmio de defesa volta e a perna curta apanha. Note a assimetria interna do meu próprio livro: a aposta bullish em LMT (backlog/reposição) GANHA com escalada, e serve de proteção parcial ao ITA bearish.\n\nSem aposta nova: o objetivo é datar a fragilidade da premissa enquanto as apostas estão vivas.",
+  "tags": "geopolitica, oriente-medio, ira, israel, gaza, petroleo, defesa, risco-geopolitico, risco",
+  "source": "Research (fatos coletados)",
+  "date": "2026-08-03",
+  "assets": [
+    { "ticker": "WTI", "role": "bearish em aberto — sustentada pela OPEP+ rachando, não só pela paz" },
+    { "ticker": "ITA", "role": "bearish em aberto — a MAIS exposta à volta do prêmio de risco" },
+    { "ticker": "LMT", "role": "bullish em aberto — GANHA com escalada; proteção parcial do ITA" }
+  ],
+  "links": [
+    { "file": "03-08-2026_09_00_00.json", "title": "Desescalada — a premissa que este insight questiona" },
+    { "file": "03-08-2026_15_00_00.json", "title": "OPEP+ fragmentando — a perna que não depende de paz" },
+    { "file": "03-08-2026_15_10_00.json", "title": "Defesa: backlogs — a ponta que ganha com escalada" },
+    { "file": "03-08-2026_09_10_00.json", "title": "Gaza — desarmamento do Hamas" }
+  ]
+}

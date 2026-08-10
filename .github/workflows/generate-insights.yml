@@ -1,0 +1,84 @@
+name: Generate insights
+
+# Gera insights (e as bets que saem deles) a partir dos fatos já coletados.
+#
+# A ordem importa e é a razão de existir deste workflow:
+#   1. clona .claude/ de um repositório PRIVADO — é de lá que vem o VIÉS com que
+#      o modelo interpreta o material. Sem isso ele lê os fatos sem lente e
+#      produz resumo, não tese.
+#   2. roda o build-briefing (o "before hook"): cruza fatos, tags, insights,
+#      apostas e preços de forma determinística. Comparação é trabalho de
+#      código; o modelo deve gastar esforço só no julgamento.
+#   3. chama o modelo, que escreve os arquivos de insight.
+#   4. commita apenas fatos, insights e bets. .claude/ NUNCA é commitado aqui.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Máximo de insights novos a gerar nesta execução"
+        required: false
+        default: "5"
+  schedule:
+    - cron: "30 22 * * 1-5"   # após a coleta das 21:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # O viés vive fora deste repositório. Falha cedo e explícito se o segredo
+      # não estiver configurado — gerar insight sem lente é pior que não gerar.
+      - name: Clonar o repositório de contexto (.claude)
+        env:
+          BRAIN_TOKEN: ${{ secrets.BRAIN_REPO_TOKEN }}
+          BRAIN_REPO: ${{ vars.BRAIN_REPO }}
+        run: |
+          if [ -z "$BRAIN_TOKEN" ] || [ -z "$BRAIN_REPO" ]; then
+            echo "::error::Faltam BRAIN_REPO_TOKEN (secret) e/ou BRAIN_REPO (variable)."
+            echo "BRAIN_REPO no formato owner/repo; o token precisa de leitura nele."
+            exit 1
+          fi
+          rm -rf .claude
+          git clone --depth 1 "https://x-access-token:${BRAIN_TOKEN}@github.com/${BRAIN_REPO}.git" .claude
+          rm -rf .claude/.git
+          echo "Contexto carregado:"
+          find .claude -type f | head -40
+
+      - name: Montar o briefing (before hook)
+        run: node scripts/build-briefing.mjs .briefing/briefing.json
+
+      - name: Instalar Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Gerar insights
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          LIMITE: ${{ inputs.limit || '5' }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ] && [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "::error::Configure ANTHROPIC_API_KEY ou CLAUDE_CODE_OAUTH_TOKEN."
+            exit 1
+          fi
+          claude -p --dangerously-skip-permissions "$(sed "s/{{LIMITE}}/${LIMITE}/g" scripts/generate-insights-prompt.md)"
+
+      - name: Commit e push (só fatos, insights e bets)
+        run: |
+          # .claude/ e .briefing/ são ignorados; nada deles entra no commit.
+          if [ -n "$(git status --porcelain data/insights data/news)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/insights data/news
+            git commit -m "feat(insights): geração automática $(date -u +%Y-%m-%d_%H:%M)"
+            git push
+          else
+            echo "Nenhum insight novo — nada a commitar."
+          fi

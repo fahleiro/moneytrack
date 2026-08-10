@@ -2,3 +2,10 @@ node_modules/
 npm-debug.log
 .env
 .DS_Store
+
+# Contexto/viés do modelo: vem de um repositório PRIVADO, clonado pela Action.
+# Nunca versionado aqui — este repo guarda só fatos, insights, bets e o framework.
+.claude/
+
+# Briefing é artefato de build, remontado a cada execução
+.briefing/
