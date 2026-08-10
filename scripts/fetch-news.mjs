@@ -229,11 +229,16 @@ async function resolveGoogleUrl(html, articleId, headers, signal) {
   const ts = html.match(/data-n-a-ts=["']([^"']+)["']/);
   if (!sg || !ts) return { url: null, via: null, htmlSample: html.slice(0, 2500) };
 
+  // O id que o batchexecute espera é o data-n-a-id da PÁGINA, que não é
+  // necessariamente o token do path do RSS. Usa o da página quando existir.
+  const idPagina = html.match(/data-n-a-id=["']([^"']+)["']/);
+  const id = idPagina ? idPagina[1] : articleId;
+
   const inner = JSON.stringify([
     "garturlreq",
     [["X", "X", ["X", "X"], null, null, 1, 1, "US:en", null, 1, null, null, null, null, null, 0, 1],
       "X", "X", 1, [1, 1, 1], 1, 1, null, 0, 0, null, 0],
-    articleId, Number(ts[1]), sg[1],
+    id, Number(ts[1]), sg[1],
   ]);
   const body = "f.req=" + encodeURIComponent(JSON.stringify([[["Fbv4je", inner, null, "generic"]]]));
 
@@ -243,9 +248,17 @@ async function resolveGoogleUrl(html, articleId, headers, signal) {
   });
   if (!res.ok) return { url: null, via: null, erro: `batchexecute HTTP ${res.status}` };
   const txt = await res.text();
-  // resposta vem com prefixo anti-JSON-hijack; a URL está numa string aninhada
-  const m = txt.match(/"(https?:\/\/(?!news\.google)[^"\\]+)"/);
-  return m ? { url: m[1], via: "batchexecute" } : { url: null, via: null, erro: "batchexecute sem URL na resposta" };
+
+  // A resposta é um array JSON cuja carga útil é uma STRING JSON — então as aspas
+  // internas vêm escapadas (\"https://...\"). Exigir aspa literal antes da URL,
+  // como eu fazia, nunca casaria. Aqui a URL é procurada solta, parando em aspa,
+  // barra invertida ou espaço, e descartando os domínios do próprio Google.
+  const cands = [...txt.matchAll(/https?:\/\/[^"\\\s]{12,}/g)].map((m) => m[0]);
+  const url = cands.find((u) => !/(^https?:\/\/[^/]*\b(google|gstatic|googleapis|ggpht|youtube)\.)/i.test(u));
+  return url
+    ? { url: url.replace(/\\u003d/g, "=").replace(/\\u0026/g, "&"), via: "batchexecute" }
+    : { url: null, via: null, erro: "batchexecute sem URL na resposta",
+        respSample: txt.slice(0, 1200) };   // evidência para ajustar o parser
 }
 
 // `diagnose: true` faz devolver o MOTIVO da falha em vez de null. A coleta não
@@ -271,7 +284,8 @@ async function fetchArticle(link, { diagnose = false } = {}) {
         // Guarda uma amostra do HTML: sem ver a página real não dá para escrever
         // o padrão certo, e daqui os domínios do Google são inalcançáveis.
         return falha(r.erro || "redirect do Google não resolvido (formato mudou?)",
-          { url, htmlSample: r.htmlSample, dataAttrs: [...new Set((html.match(/data-n-[a-z-]+/g) || []))].slice(0, 15) });
+          { url, htmlSample: r.htmlSample, respSample: r.respSample,
+            dataAttrs: [...new Set((html.match(/data-n-[a-z-]+/g) || []))].slice(0, 15) });
       }
       const res2 = await fetch(r.url, { redirect: "follow", headers, signal: ctrl.signal });
       if (!res2.ok) return falha(`HTTP ${res2.status} no veículo`, { status: res2.status, url: r.url, via: r.via });

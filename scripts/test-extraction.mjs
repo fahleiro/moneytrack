@@ -93,6 +93,7 @@ async function main() {
       // só quando o resolvedor falha: evidência para escrever o padrão certo
       dataAttrs: r?.dataAttrs || null,
       htmlSample: r?.htmlSample || null,
+      respSample: r?.respSample || null,
     };
     resultados.push(linha);
     const marca = linha.ok ? "OK " : "-- ";
@@ -129,7 +130,9 @@ async function main() {
     // Os atributos presentes na página são a pista para corrigir o resolvedor.
     const attrs = [...new Set(falhas.flatMap((f) => f.dataAttrs || []))];
     if (attrs.length) console.log(`\natributos data-n-* vistos na página do Google: ${attrs.join(", ")}`);
-    if (falhas.some((f) => f.htmlSample)) console.log(`(amostras de HTML no relatório, para ajustar o resolvedor)`);
+    const amostra = falhas.find((f) => f.respSample);
+    if (amostra) console.log(`\nresposta do batchexecute (300 chars):\n  ${amostra.respSample.slice(0, 300)}`);
+    if (falhas.some((f) => f.htmlSample)) console.log(`(amostras de HTML no relatório)`);
   }
 
   const relatorio = {
