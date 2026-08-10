@@ -19,7 +19,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 
 const DATA_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "data");
 const NEWS_DIR = join(DATA_DIR, "news");
@@ -211,29 +211,36 @@ function extractContent(html) {
 // O link do RSS aponta para o redirecionador do Google; é preciso chegar ao
 // site do veículo. Quando o Google devolve uma página intermediária (redirect
 // por JS em vez de 302), a URL real vem no HTML.
-async function fetchArticle(link) {
+// `diagnose: true` faz devolver o MOTIVO da falha em vez de null. A coleta não
+// precisa disso (falhou, o fato fica só com o título), mas o teste de extração
+// precisa distinguir "bloqueado no fetch" de "baixou mas não achou corpo" —
+// sem essa distinção o relatório culpa paywall por tudo, inclusive por erro meu.
+async function fetchArticle(link, { diagnose = false } = {}) {
+  const falha = (reason, extra = {}) => (diagnose ? { ok: false, reason, ...extra } : null);
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), CONTENT_TIMEOUT_MS);
   try {
     const headers = { "User-Agent": UA, "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8" };
     const res = await fetch(link, { redirect: "follow", headers, signal: ctrl.signal });
-    if (!res.ok) return null;
+    if (!res.ok) return falha(`HTTP ${res.status} no link do Google`, { status: res.status });
     let html = await res.text();
     let url = res.url;
 
     if (/news\.google\./.test(url)) {
       const m = html.match(/data-n-au=["']([^"']+)["']/) ||
                 html.match(/<a[^>]+href=["'](https?:\/\/(?!news\.google)[^"']+)["']/i);
-      if (!m) return null;
+      if (!m) return falha("redirect do Google não resolvido (formato mudou?)", { url });
       const res2 = await fetch(decodeEntities(m[1]), { redirect: "follow", headers, signal: ctrl.signal });
-      if (!res2.ok) return null;
+      if (!res2.ok) return falha(`HTTP ${res2.status} no veículo`, { status: res2.status, url: decodeEntities(m[1]) });
       html = await res2.text();
       url = res2.url;
     }
     const text = extractContent(html);
-    return text ? { content: text, url } : null;
-  } catch {
-    return null;   // paywall, bloqueio, timeout: o fato fica só com o título
+    if (!text) return falha("baixou, mas sem corpo extraível (paywall ou HTML sem parágrafos)", { url, htmlChars: html.length });
+    return { ok: true, content: text, url, htmlChars: html.length };
+  } catch (e) {
+    const motivo = e.name === "AbortError" ? `timeout (${CONTENT_TIMEOUT_MS}ms)` : `falha de rede: ${e.message}`;
+    return falha(motivo);
   } finally {
     clearTimeout(timer);
   }
@@ -468,7 +475,13 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Só executa quando chamado direto. Assim o test-extraction.mjs pode importar as
+// funções de extração e exercitá-las contra sites reais sem disparar uma coleta.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+export { fetchArticle, extractContent, semVeiculo, fingerprint, inferTags, detectTickers, loadTickerIndex, clean };
