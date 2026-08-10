@@ -87,8 +87,12 @@ async function main() {
       googleLink: f.link, resolvedUrl: r?.url || null,
       domain: r?.url ? domainOf(r.url) : null,
       ok: !!r?.ok, chars: r?.content?.length || 0, htmlChars: r?.htmlChars || 0, ms,
+      via: r?.via || null,
       motivo: r?.ok ? null : (r?.reason || "motivo desconhecido"),
       amostra: r?.content ? r.content.slice(0, 160) : null,
+      // só quando o resolvedor falha: evidência para escrever o padrão certo
+      dataAttrs: r?.dataAttrs || null,
+      htmlSample: r?.htmlSample || null,
     };
     resultados.push(linha);
     const marca = linha.ok ? "OK " : "-- ";
@@ -114,10 +118,18 @@ async function main() {
   for (const d of Object.values(porDominio).sort((a, b) => b.tentativas - a.tentativas)) {
     console.log(`  ${String(d.ok + "/" + d.tentativas).padStart(6)}  ${d.dominio.padEnd(30)} ${d.charsMedia ? d.charsMedia + " chars méd." : ""}`);
   }
+  const vias = {};
+  for (const r of ok) vias[r.via || "direto"] = (vias[r.via || "direto"] || 0) + 1;
+  if (ok.length) console.log(`\ncomo o link foi resolvido: ${JSON.stringify(vias)}`);
+
   const falhas = resultados.filter((r) => !r.ok);
   if (falhas.length) {
     console.log(`\nfalhas (${falhas.length}):`);
     for (const f of falhas) console.log(`  ${(f.domain || "não resolvido").padEnd(30)} ${f.motivo}`);
+    // Os atributos presentes na página são a pista para corrigir o resolvedor.
+    const attrs = [...new Set(falhas.flatMap((f) => f.dataAttrs || []))];
+    if (attrs.length) console.log(`\natributos data-n-* vistos na página do Google: ${attrs.join(", ")}`);
+    if (falhas.some((f) => f.htmlSample)) console.log(`(amostras de HTML no relatório, para ajustar o resolvedor)`);
   }
 
   const relatorio = {

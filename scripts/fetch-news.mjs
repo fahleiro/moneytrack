@@ -211,6 +211,43 @@ function extractContent(html) {
 // O link do RSS aponta para o redirecionador do Google; é preciso chegar ao
 // site do veículo. Quando o Google devolve uma página intermediária (redirect
 // por JS em vez de 302), a URL real vem no HTML.
+// Resolve o link do Google News para a URL do veículo.
+//
+// O formato atual NÃO é redirect nem carrega a URL embutida: o path traz um
+// token opaco (decodificado, vira "AU_yqLM..." — verificado offline sobre os
+// links já coletados), e a URL real só sai chamando o endpoint interno
+// batchexecute com a assinatura e o timestamp que a página carrega. Tentamos,
+// em ordem: atributo direto na página (formato antigo), depois batchexecute.
+async function resolveGoogleUrl(html, articleId, headers, signal) {
+  // formato antigo: a URL aparecia num atributo da página
+  const direto = html.match(/data-n-au=["']([^"']+)["']/) ||
+                 html.match(/<a[^>]+href=["'](https?:\/\/(?!news\.google|www\.google|accounts\.google)[^"']+)["']/i);
+  if (direto) return { url: decodeEntities(direto[1]), via: "atributo" };
+
+  // formato atual: assinatura + timestamp vêm no <c-wiz> da página
+  const sg = html.match(/data-n-a-sg=["']([^"']+)["']/);
+  const ts = html.match(/data-n-a-ts=["']([^"']+)["']/);
+  if (!sg || !ts) return { url: null, via: null, htmlSample: html.slice(0, 2500) };
+
+  const inner = JSON.stringify([
+    "garturlreq",
+    [["X", "X", ["X", "X"], null, null, 1, 1, "US:en", null, 1, null, null, null, null, null, 0, 1],
+      "X", "X", 1, [1, 1, 1], 1, 1, null, 0, 0, null, 0],
+    articleId, Number(ts[1]), sg[1],
+  ]);
+  const body = "f.req=" + encodeURIComponent(JSON.stringify([[["Fbv4je", inner, null, "generic"]]]));
+
+  const res = await fetch("https://news.google.com/_/DotsSplashUi/data/batchexecute", {
+    method: "POST", headers: { ...headers, "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+    body, signal,
+  });
+  if (!res.ok) return { url: null, via: null, erro: `batchexecute HTTP ${res.status}` };
+  const txt = await res.text();
+  // resposta vem com prefixo anti-JSON-hijack; a URL está numa string aninhada
+  const m = txt.match(/"(https?:\/\/(?!news\.google)[^"\\]+)"/);
+  return m ? { url: m[1], via: "batchexecute" } : { url: null, via: null, erro: "batchexecute sem URL na resposta" };
+}
+
 // `diagnose: true` faz devolver o MOTIVO da falha em vez de null. A coleta não
 // precisa disso (falhou, o fato fica só com o título), mas o teste de extração
 // precisa distinguir "bloqueado no fetch" de "baixou mas não achou corpo" —
@@ -225,19 +262,26 @@ async function fetchArticle(link, { diagnose = false } = {}) {
     if (!res.ok) return falha(`HTTP ${res.status} no link do Google`, { status: res.status });
     let html = await res.text();
     let url = res.url;
+    let resolvidoVia = null;
 
     if (/news\.google\./.test(url)) {
-      const m = html.match(/data-n-au=["']([^"']+)["']/) ||
-                html.match(/<a[^>]+href=["'](https?:\/\/(?!news\.google)[^"']+)["']/i);
-      if (!m) return falha("redirect do Google não resolvido (formato mudou?)", { url });
-      const res2 = await fetch(decodeEntities(m[1]), { redirect: "follow", headers, signal: ctrl.signal });
-      if (!res2.ok) return falha(`HTTP ${res2.status} no veículo`, { status: res2.status, url: decodeEntities(m[1]) });
+      const articleId = (link.match(/\/articles\/([^?/]+)/) || [])[1] || "";
+      const r = await resolveGoogleUrl(html, articleId, headers, ctrl.signal);
+      if (!r.url) {
+        // Guarda uma amostra do HTML: sem ver a página real não dá para escrever
+        // o padrão certo, e daqui os domínios do Google são inalcançáveis.
+        return falha(r.erro || "redirect do Google não resolvido (formato mudou?)",
+          { url, htmlSample: r.htmlSample, dataAttrs: [...new Set((html.match(/data-n-[a-z-]+/g) || []))].slice(0, 15) });
+      }
+      const res2 = await fetch(r.url, { redirect: "follow", headers, signal: ctrl.signal });
+      if (!res2.ok) return falha(`HTTP ${res2.status} no veículo`, { status: res2.status, url: r.url, via: r.via });
       html = await res2.text();
       url = res2.url;
+      resolvidoVia = r.via;
     }
     const text = extractContent(html);
     if (!text) return falha("baixou, mas sem corpo extraível (paywall ou HTML sem parágrafos)", { url, htmlChars: html.length });
-    return { ok: true, content: text, url, htmlChars: html.length };
+    return { ok: true, content: text, url, htmlChars: html.length, via: resolvidoVia };
   } catch (e) {
     const motivo = e.name === "AbortError" ? `timeout (${CONTENT_TIMEOUT_MS}ms)` : `falha de rede: ${e.message}`;
     return falha(motivo);
