@@ -218,6 +218,24 @@
     .bc-link:hover { background: #1c2530; border-color: #4d7bc4; }
     @media (max-width: 640px) { .bets-top { grid-template-columns: 1fr; } }
 
+    /* Narrativa: preço com os fatos marcados em cima */
+    .nar-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+    .nar-bar select { background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; border-radius: 8px; padding: 6px 10px; font-size: 13px; }
+    .nar-chart { background: #0d1117; border: 1px solid #30363d; border-radius: 12px; padding: 10px; margin-bottom: 14px; }
+    .nar-info { font-size: 12px; color: #8b949e; }
+    .nar-item { display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; align-items: start;
+      background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; }
+    .nar-item:hover { border-color: #4d7bc4; }
+    .nar-item.ev { border-left: 3px solid #d8a93a; }
+    .nar-n { width: 22px; height: 22px; border-radius: 999px; background: #1d2840; border: 1px solid #4d7bc4;
+      color: #cfe0ff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .nar-item.ev .nar-n { background: #241f12; border-color: #d8a93a; color: #ffd98a; }
+    .nar-t { font-size: 13px; font-weight: 600; color: #d7e0ea; line-height: 1.35; }
+    .nar-meta { font-size: 11px; color: #8b949e; margin-top: 3px; }
+    .nar-react { text-align: right; white-space: nowrap; font-size: 11px; }
+    .nar-react b { display: block; font-size: 13px; font-weight: 800; }
+    .nar-legend { font-size: 11px; color: #6e7d99; margin: 2px 2px 12px; }
+
     /* News: fatos registrados por dia */
     .news-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
     .news-bar select { background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; border-radius: 8px; padding: 6px 10px; font-size: 13px; }
@@ -342,6 +360,7 @@
       <option value="setores">Setores</option>
       <option value="timeline">Timeline</option>
       <option value="eventos">Eventos</option>
+      <option value="narrativa">Narrativa</option>
       <option value="news">News</option>
       <option value="insights">Insights</option>
       <option value="bets">Bets</option>
@@ -400,6 +419,12 @@
     <h1>Eventos</h1>
     <div class="sub">Próximos e passados · clique para detalhe</div>
     <div id="eventos-body" class="muted">carregando…</div>
+  </div>
+
+  <div id="view-narrativa" class="view" hidden>
+    <h1>Narrativa</h1>
+    <div class="sub">O preço com os fatos marcados em cima · o que o mercado fez depois de cada um</div>
+    <div id="narrativa-body" class="muted">carregando…</div>
   </div>
 
   <div id="view-news" class="view" hidden>
@@ -1172,6 +1197,214 @@
       </article>`;
     }
 
+    /* ---- Narrativa: preço + fatos + a reação do mercado ----
+       A ideia: um fato só vira informação quando você vê o que o preço fez
+       DEPOIS dele. Cada marcador no gráfico tem o retorno em 1 e em 5 pregões
+       a partir do dia do fato — é isso que separa "notícia" de "sinal". */
+    let narState = { serie: [], itens: [], chart: null };
+
+    // retorno do ativo a partir do dia do fato (nº de pregões à frente)
+    function reacao(serie, dia, pregoes) {
+      let i = -1;
+      for (let k = 0; k < serie.length; k++) { if (serie[k].tradingDay <= dia) i = k; else break; }
+      if (i < 0 || i + pregoes >= serie.length) return null;
+      const a = serie[i].value, b = serie[i + pregoes].value;
+      return a ? ((b / a - 1) * 100) : null;
+    }
+
+    const fmtPct = (v) => (v == null ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`);
+    const clsPct = (v) => (v == null ? "muted" : v >= 0 ? "up" : "down");
+
+    // marcadores desenhados por cima do gráfico, numerados como a lista abaixo
+    const pluginMarcadores = {
+      id: "marcadores",
+      afterDatasetsDraw(chart, _a, opts) {
+        const itens = opts?.itens || [];
+        if (!itens.length) return;
+        const { ctx, chartArea: { top, bottom } } = chart;
+        const xs = chart.scales.x;
+        ctx.save();
+        itens.forEach((it, idx) => {
+          const xi = chart.data.labels.indexOf(it.dia);
+          if (xi < 0) return;
+          const px = xs.getPixelForValue(xi);
+          ctx.strokeStyle = it.tipo === "evento" ? "rgba(216,169,58,.55)" : "rgba(77,123,196,.5)";
+          ctx.setLineDash([4, 4]); ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(px, top); ctx.lineTo(px, bottom); ctx.stroke();
+          ctx.setLineDash([]);
+          const cy = top + 12 + (idx % 4) * 16;    // escalona para não sobrepor
+          ctx.beginPath(); ctx.arc(px, cy, 8, 0, Math.PI * 2);
+          ctx.fillStyle = it.tipo === "evento" ? "#241f12" : "#1d2840";
+          ctx.fill();
+          ctx.strokeStyle = it.tipo === "evento" ? "#d8a93a" : "#4d7bc4"; ctx.stroke();
+          ctx.fillStyle = it.tipo === "evento" ? "#ffd98a" : "#cfe0ff";
+          ctx.font = "700 9px system-ui"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+          ctx.fillText(String(idx + 1), px, cy);
+        });
+        ctx.restore();
+      },
+    };
+
+    function desenharNarrativa(serie, itens, label) {
+      const el = document.getElementById("nar-canvas");
+      if (narState.chart) { narState.chart.destroy(); narState.chart = null; }
+      narState.chart = new Chart(el, {
+        type: "line",
+        data: {
+          labels: serie.map((p) => p.tradingDay),
+          datasets: [{ data: serie.map((p) => p.value), borderColor: "#1f6feb",
+            backgroundColor: "rgba(31,111,235,.12)", borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.05 }],
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          interaction: { mode: "index", intersect: false },
+          plugins: {
+            legend: { display: false },
+            title: { display: true, text: label, color: "#8b949e" },
+            marcadores: { itens },
+          },
+          scales: {
+            x: { ticks: { maxTicksLimit: 10, color: "#8b949e" }, grid: { color: "#21262d" } },
+            y: { ticks: { color: "#8b949e" }, grid: { color: "#21262d" } },
+          },
+        },
+        plugins: [pluginMarcadores],
+      });
+    }
+
+    function renderNarrativaLista(itens) {
+      document.getElementById("nar-lista").innerHTML = itens.map((it, i) => `
+        <article class="nar-item ${it.tipo === "evento" ? "ev" : ""}" data-i="${i}">
+          <div class="nar-n">${i + 1}</div>
+          <div>
+            <div class="nar-t">${esc(it.titulo)}</div>
+            <div class="nar-meta">${dmy(it.dia)}${it.fonte ? ` · ${esc(it.fonte)}` : ""}${it.tipo === "evento" ? " · evento" : ""}</div>
+          </div>
+          <div class="nar-react">
+            <b class="${clsPct(it.d1)}">${fmtPct(it.d1)}</b>
+            <span class="muted">1 pregão</span><br>
+            <b class="${clsPct(it.d5)}">${fmtPct(it.d5)}</b>
+            <span class="muted">5 pregões</span>
+          </div>
+        </article>`).join("") || "<div class='muted'>nenhum fato ligado a este ativo ainda.</div>";
+    }
+
+    async function carregarNarrativa(ticker, catalogo, fatos, eventos, janela) {
+      const meta = catalogo[ticker];
+      const completa = await loadJSON(meta.file).catch(() => []);
+      if (!completa.length) {
+        document.getElementById("nar-info").textContent = "sem série de preço para este ativo.";
+        return;
+      }
+      // Sem recorte o gráfico mostra décadas e os fatos — todos recentes — viram
+      // um borrão no último pixel. "auto" abre a janela dos fatos com folga.
+      let serie = completa;
+      const doAtivo = fatos.filter((f) => (f.tickers || []).includes(ticker) && f.dia);
+      if (janela === "auto" && doAtivo.length) {
+        const primeiro = doAtivo.map((f) => f.dia).sort()[0];
+        const corte = new Date(primeiro + "T00:00:00Z");
+        corte.setUTCDate(corte.getUTCDate() - 25);
+        const iso = corte.toISOString().slice(0, 10);
+        const recorte = completa.filter((p) => p.tradingDay >= iso);
+        if (recorte.length >= 5) serie = recorte;
+      } else if (janela && janela !== "all") {
+        serie = sliceBy(completa, janela);
+      }
+      const inicio = serie[0].tradingDay, fim = serie[serie.length - 1].tradingDay;
+
+      // fatos que citam o ticker + eventos daquele ativo, dentro da janela da série
+      const doTicker = fatos
+        .filter((f) => (f.tickers || []).includes(ticker) && f.dia >= inicio && f.dia <= fim)
+        .map((f) => ({ ...f, tipo: "fato" }));
+      const evs = eventos
+        .filter((e) => e.ticker === ticker && e.date >= inicio && e.date <= fim)
+        .map((e) => ({ dia: e.date, titulo: e.title, fonte: null, tipo: "evento" }));
+
+      const itens = [...doTicker, ...evs]
+        // reação sempre sobre a série COMPLETA: no recorte, um fato perto da
+        // borda perderia os pregões seguintes e apareceria como "sem reação".
+        .map((it) => ({ ...it, d1: reacao(completa, it.dia, 1), d5: reacao(completa, it.dia, 5) }))
+        .sort((a, b) => a.dia.localeCompare(b.dia))
+        .slice(-30);   // teto para o gráfico não virar sopa de marcadores
+
+      narState.serie = serie; narState.itens = itens;
+      document.getElementById("nar-info").innerHTML =
+        `${serie.length} pregões (de ${completa.length}) · <b>${itens.length}</b> fatos marcados`;
+      desenharNarrativa(serie, itens, `${ticker} — ${meta.name || ""}`);
+      renderNarrativaLista(itens);
+    }
+
+    async function initNarrativa() {
+      const body = document.getElementById("narrativa-body");
+      const [assets, indices, newsMan] = await Promise.all([
+        loadJSON("assets.json").catch(() => []),
+        loadJSON("indices.json").catch(() => []),
+        loadJSON("news/news.json").catch(() => []),
+      ]);
+      // catálogo só com quem tem série
+      const catalogo = {};
+      for (const e of [...assets, ...indices]) {
+        const tk = e.ticker || e.code;
+        if (tk && e.file && !catalogo[tk]) catalogo[tk] = { file: e.file, name: e.name || e.label || "" };
+      }
+      // todos os fatos de todos os dias, achatados
+      const dias = await Promise.all(newsMan.map((m) => loadJSON("news/" + m.file).catch(() => [])));
+      const fatos = dias.flat().map((f) => ({
+        dia: (f.publishedAt || "").slice(0, 10), titulo: f.title, fonte: f.source,
+        link: f.articleUrl || f.link, tickers: f.tickers || [], content: f.content,
+      })).filter((f) => f.dia);
+      const eventos = await loadJSON("events.json").catch(() => []);
+
+      // ordena o seletor por quantos fatos cada ativo tem — os úteis primeiro
+      const contagem = {};
+      for (const f of fatos) for (const t of f.tickers) contagem[t] = (contagem[t] || 0) + 1;
+      const opcoes = Object.keys(catalogo)
+        .map((t) => ({ t, n: contagem[t] || 0 }))
+        .sort((a, b) => b.n - a.n || a.t.localeCompare(b.t));
+
+      body.className = "";
+      body.innerHTML = `
+        <div class="nar-bar">
+          <select id="nar-ativo">${opcoes.map((o) =>
+            `<option value="${esc(o.t)}">${esc(o.t)}${o.n ? ` · ${o.n} fatos` : ""}</option>`).join("")}</select>
+          <span class="toolbar sm-ranges" id="nar-janela">
+            <button data-j="auto" class="active">Fatos</button>
+            <button data-j="1m">1M</button><button data-j="3m">3M</button>
+            <button data-j="12m">12M</button><button data-j="all">Tudo</button>
+          </span>
+          <span class="nar-info" id="nar-info"></span>
+        </div>
+        <div class="nar-chart"><canvas id="nar-canvas" height="300"></canvas></div>
+        <div class="nar-legend">azul = fato coletado · amarelo = evento de agenda · o número no gráfico é o mesmo da lista</div>
+        <div id="nar-lista"></div>`;
+
+      let janelaAtual = "auto";
+      const recarregar = () => carregarNarrativa(
+        document.getElementById("nar-ativo").value, catalogo, fatos, eventos, janelaAtual);
+      document.getElementById("nar-ativo").addEventListener("change", recarregar);
+      document.getElementById("nar-janela").addEventListener("click", (e) => {
+        const b = e.target.closest("button"); if (!b) return;
+        document.querySelectorAll("#nar-janela button").forEach((x) => x.classList.remove("active"));
+        b.classList.add("active"); janelaAtual = b.dataset.j; recarregar();
+      });
+      document.getElementById("nar-lista").addEventListener("click", (ev) => {
+        const el = ev.target.closest(".nar-item");
+        if (!el) return;
+        const it = narState.itens[+el.dataset.i];
+        if (!it) return;
+        showModal(`<header class="modal-h"><h3>${esc(it.titulo)}</h3><button class="modal-x">✕</button></header>
+          <div class="modal-body reading">
+            <p class="muted">${dmy(it.dia)}${it.fonte ? ` · ${esc(it.fonte)}` : ""}</p>
+            <p><b class="${clsPct(it.d1)}">${fmtPct(it.d1)}</b> em 1 pregão ·
+               <b class="${clsPct(it.d5)}">${fmtPct(it.d5)}</b> em 5 pregões</p>
+            ${it.content ? `<p>${esc(it.content.slice(0, 1200))}</p>` : "<p class='muted'>corpo não extraído.</p>"}
+            ${it.link ? `<p><a class="plink" href="${esc(it.link)}" target="_blank" rel="noopener">abrir matéria</a></p>` : ""}
+          </div>`, true);
+      });
+
+      await carregarNarrativa(opcoes[0].t, catalogo, fatos, eventos, "auto");
+    }
+
     /* ---- News: fatos registrados por dia ----
        "news" aqui são FATOS: o registro datado do que aconteceu, que alimenta
        os insights e, por eles, as bets. Um arquivo por dia (dd-mm-aaaa). */
@@ -1597,7 +1830,7 @@
     /* ============================ troca de views ============================ */
     const viewInit = {
       home: initHome, paises: initPaises, setores: initSetores, timeline: initTimeline,
-      eventos: initEventos, news: initNews, insights: initInsights, bets: initBets, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
+      eventos: initEventos, narrativa: initNarrativa, news: initNews, insights: initInsights, bets: initBets, grafo: initGrafo, people: initPeople, analises: initAnalises, resultados: initResultados,
     };
     const viewDone = {};
 
