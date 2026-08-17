@@ -11,6 +11,8 @@ name: Generate insights
 #      código; o modelo deve gastar esforço só no julgamento.
 #   3. chama o modelo, que escreve os arquivos de insight.
 #   4. commita apenas fatos, insights e bets. .claude/ NUNCA é commitado aqui.
+# AGENDAMENTO DESATIVADO (armazenamento do Actions perto do limite da conta).
+# Para religar, descomente o bloco schedule abaixo.
 on:
   workflow_dispatch:
     inputs:
@@ -18,8 +20,8 @@ on:
         description: "Máximo de insights novos a gerar nesta execução"
         required: false
         default: "5"
-  schedule:
-    - cron: "30 22 * * 1-5"   # após a coleta das 21:00 UTC
+#   schedule:
+#     - cron: "30 22 * * 1-5"   # após a coleta das 21:00 UTC
 
 permissions:
   contents: write

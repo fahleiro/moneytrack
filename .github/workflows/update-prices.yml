@@ -4,9 +4,11 @@ name: Atualizar cotações EOD
 # em dias de semana. O cron do GitHub Actions é sempre UTC e não ajusta
 # horário de verão — 23:00 UTC dá margem o ano todo. Também pode ser
 # disparado manualmente (workflow_dispatch).
+# AGENDAMENTO DESATIVADO (armazenamento do Actions perto do limite da conta).
+# Para religar, descomente o bloco schedule abaixo.
 on:
-  schedule:
-    - cron: "0 23 * * 1-5"
+#   schedule:
+#     - cron: "0 23 * * 1-5"
   workflow_dispatch:
 
 permissions:

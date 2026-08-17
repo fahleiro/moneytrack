@@ -7,9 +7,11 @@ name: Coletar notícias
 #
 # O job só COLETA. A curadoria — ler, filtrar, enriquecer com metadados/tags,
 # escrever insights e derivar bets — é feita depois, em cima do JSON gravado.
+# AGENDAMENTO DESATIVADO (armazenamento do Actions perto do limite da conta).
+# Para religar, descomente o bloco schedule abaixo.
 on:
-  schedule:
-    - cron: "0 10,21 * * 1-5"
+#   schedule:
+#     - cron: "0 10,21 * * 1-5"
   workflow_dispatch:
 
 permissions:

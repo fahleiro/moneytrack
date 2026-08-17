@@ -30,10 +30,12 @@ jobs:
       - name: Testar extração
         run: node scripts/test-extraction.mjs "${{ inputs.amostra || '20' }}" extraction-report.json
 
-      - name: Publicar relatório
+      # Artifact é justamente o que consome o armazenamento do Actions, então o
+      # relatório vai para o LOG do job em vez de virar arquivo guardado. Como
+      # ele é pequeno, o log basta — e não custa armazenamento.
+      - name: Relatório no log
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: extraction-report
-          path: extraction-report.json
-          if-no-files-found: warn
+        run: |
+          echo "::group::extraction-report.json"
+          cat extraction-report.json 2>/dev/null || echo "(sem relatório)"
+          echo "::endgroup::"
